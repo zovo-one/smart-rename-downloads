@@ -1,0 +1,834 @@
+{
+  "extName": {
+    "message": "Smart Rename Downloads",
+    "description": "Extension name shown in the Chrome Web Store and toolbar."
+  },
+  "extDesc": {
+    "message": "Μετονομάστε αυτόματα κάθε λήψη με tokens ημερομηνίας, ιστότοπου και τίτλου. Κανόνες ανά ιστότοπο, regex, δρομολόγηση φακέλων",
+    "description": "Chrome Web Store short description (max 132 chars)."
+  },
+  "popup_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Popup header title."
+  },
+  "popup_open_settings": {
+    "message": "Άνοιγμα ρυθμίσεων",
+    "description": "Aria label for the settings gear button."
+  },
+  "popup_settings": {
+    "message": "Ρυθμίσεις",
+    "description": "Tooltip for the settings gear button."
+  },
+  "popup_health": {
+    "message": "Η μετονομασία σε παύση — αφαιρέθηκε η άδεια Λήψεων.",
+    "description": "Shown when the downloads permission is missing."
+  },
+  "popup_regrant": {
+    "message": "Επανενεργοποίηση",
+    "description": "Link to re-grant the downloads permission."
+  },
+  "popup_hero_label": {
+    "message": "Αρχεία που μετονομάστηκαν",
+    "description": "Label under the big lifetime rename counter."
+  },
+  "popup_hero_sub": {
+    "message": "Κάθε λήψη μετονομάζεται αυτόματα, πριν φτάσει στον δίσκο σας.",
+    "description": "Supporting line under the hero counter."
+  },
+  "popup_master_title": {
+    "message": "Αυτόματη μετονομασία λήψεων",
+    "description": "Master on/off switch title."
+  },
+  "popup_master_aria": {
+    "message": "Εναλλαγή αυτόματης μετονομασίας λήψεων",
+    "description": "Accessible name for the master switch."
+  },
+  "popup_master_on": {
+    "message": "Ενεργό — μετονομασία κάθε λήψης",
+    "description": "Master switch note when enabled."
+  },
+  "popup_master_off": {
+    "message": "Ανενεργό — το Chrome κρατά τα προεπιλεγμένα ονόματα",
+    "description": "Master switch note when disabled."
+  },
+  "popup_recent": {
+    "message": "Πρόσφατες μετονομασίες",
+    "description": "Section label for the recent-renames list."
+  },
+  "popup_empty_title": {
+    "message": "Έτοιμο όποτε είστε",
+    "description": "Empty-state headline in the popup."
+  },
+  "popup_empty_text": {
+    "message": "Η επόμενη λήψη σας θα μετονομαστεί αυτόματα. Θα εμφανιστεί εδώ.",
+    "description": "Empty-state body in the popup."
+  },
+  "popup_milestone_text": {
+    "message": "Το Smart Rename οργάνωσε {n} λήψεις. Το Pro τις ταξινομεί αυτόματα σε φακέλους.",
+    "description": "Post-success upgrade nudge. {n} is the rename count."
+  },
+  "popup_milestone_cta": {
+    "message": "Δείτε το Pro",
+    "description": "CTA on the milestone nudge."
+  },
+  "popup_dismiss": {
+    "message": "Απόρριψη",
+    "description": "Dismiss the milestone nudge."
+  },
+  "popup_trust": {
+    "message": "Τοπικά · Χωρίς λογαριασμό · Χωρίς παρακολούθηση",
+    "description": "Trust line in the popup footer."
+  },
+  "popup_upgrade": {
+    "message": "Αναβάθμιση σε Pro",
+    "description": "Upgrade button in the popup footer."
+  },
+  "flag_timeout": {
+    "message": "κρατήθηκε το προεπιλεγμένο",
+    "description": "Recent-list flag: rename fell back to Chrome's default name (timeout)."
+  },
+  "flag_sanitize": {
+    "message": "κρατήθηκε το προεπιλεγμένο",
+    "description": "Recent-list flag: name could not be sanitized."
+  },
+  "flag_nomatch": {
+    "message": "καμία αντιστοίχιση",
+    "description": "Recent-list flag: no site rule matched."
+  },
+  "opt_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Options brand name."
+  },
+  "opt_trust": {
+    "message": "Όλα παραμένουν σε αυτήν τη συσκευή. Μηδενική παρακολούθηση.",
+    "description": "Options sidebar trust line."
+  },
+  "aria_theme": {
+    "message": "Χρωματικό θέμα",
+    "description": "Aria label for the theme radiogroup."
+  },
+  "theme_system": {
+    "message": "Σύστημα",
+    "description": "Theme option: follow OS."
+  },
+  "theme_light": {
+    "message": "Φωτεινό",
+    "description": "Theme option: light."
+  },
+  "theme_dark": {
+    "message": "Σκοτεινό",
+    "description": "Theme option: dark."
+  },
+  "tier_free": {
+    "message": "Δωρεάν",
+    "description": "Free plan label."
+  },
+  "tier_trial": {
+    "message": "Δοκιμή",
+    "description": "Trial plan label."
+  },
+  "tier_pro": {
+    "message": "Pro",
+    "description": "Pro plan label."
+  },
+  "tab_template": {
+    "message": "Πρότυπο",
+    "description": "Settings tab: naming template."
+  },
+  "tab_sites": {
+    "message": "Κανόνες ανά ιστότοπο",
+    "description": "Settings tab: per-site rules."
+  },
+  "tab_advanced": {
+    "message": "Για προχωρημένους",
+    "description": "Settings tab: advanced naming."
+  },
+  "tab_backup": {
+    "message": "Αντίγραφο ασφαλείας",
+    "description": "Settings tab: backup and restore."
+  },
+  "tab_license": {
+    "message": "Άδεια",
+    "description": "Settings tab: license and plan."
+  },
+  "tpl_h1": {
+    "message": "Πρότυπο ονομασίας",
+    "description": "Template panel heading."
+  },
+  "tpl_lede": {
+    "message": "Δημιουργήστε το όνομα αρχείου που παίρνει κάθε λήψη. Η πραγματική επέκταση αρχείου διατηρείται πάντα.",
+    "description": "Template panel intro."
+  },
+  "tpl_label": {
+    "message": "Πρότυπο",
+    "description": "Template input label."
+  },
+  "tpl_tokens_aria": {
+    "message": "Εισαγωγή token",
+    "description": "Aria label for the token chip row."
+  },
+  "tpl_conflict": {
+    "message": "Αν υπάρχει ήδη αρχείο με αυτό το όνομα",
+    "description": "Conflict-policy select label."
+  },
+  "conflict_uniquify": {
+    "message": "Προσθήκη αριθμού — διατήρηση και των δύο",
+    "description": "Conflict policy: uniquify."
+  },
+  "conflict_overwrite": {
+    "message": "Αντικατάσταση του παλιού αρχείου",
+    "description": "Conflict policy: overwrite."
+  },
+  "conflict_prompt": {
+    "message": "Ερώτηση κάθε φορά",
+    "description": "Conflict policy: prompt."
+  },
+  "tpl_save": {
+    "message": "Αποθήκευση προτύπου",
+    "description": "Save-template button."
+  },
+  "tpl_preview_h": {
+    "message": "Ζωντανή προεπισκόπηση",
+    "description": "Preview section label."
+  },
+  "tpl_pv_host": {
+    "message": "Δείγμα ιστότοπου",
+    "description": "Preview sample-host input label."
+  },
+  "tpl_pv_name": {
+    "message": "Δείγμα λήψης",
+    "description": "Preview sample-name input label."
+  },
+  "tpl_pv_result": {
+    "message": "Αποτέλεσμα",
+    "description": "Preview result label."
+  },
+  "tpl_pv_hint": {
+    "message": "Ένα “/” σε δωρεάν πρότυπο αποθηκεύεται ως “-”. Η δρομολόγηση φακέλων είναι λειτουργία Pro.",
+    "description": "Preview hint about slashes and folder routing."
+  },
+  "sites_h1": {
+    "message": "Κανόνες ανά ιστότοπο",
+    "description": "Sites panel heading."
+  },
+  "sites_lede": {
+    "message": "Δώστε σε έναν συγκεκριμένο ιστότοπο το δικό του πρότυπο — τιμολόγια σε φακέλους, έγγραφα με τίτλους. Το δωρεάν περιλαμβάνει έναν κανόνα για να το δοκιμάσετε· το Pro είναι απεριόριστο.",
+    "description": "Sites panel intro."
+  },
+  "sites_count": {
+    "message": "0 από 1 δωρεάν κανόνες σε χρήση",
+    "description": "Initial site-rule count text."
+  },
+  "sites_count_free": {
+    "message": "{n} από 1 δωρεάν κανόνες σε χρήση",
+    "description": "Site-rule count for Free. {n} is the count."
+  },
+  "sites_count_pro": {
+    "message": "{n} κανόνες",
+    "description": "Site-rule count for Pro. {n} is the count."
+  },
+  "sites_empty": {
+    "message": "Δεν υπάρχουν κανόνες ιστότοπου ακόμη. Προσθέστε έναν παρακάτω.",
+    "description": "Empty state for site rules."
+  },
+  "sites_add_h": {
+    "message": "Προσθήκη κανόνα",
+    "description": "Add-rule section label."
+  },
+  "sites_match": {
+    "message": "Ιστότοπος (host ή *.host)",
+    "description": "Rule match input label."
+  },
+  "sites_match_ph": {
+    "message": "stripe.com",
+    "description": "Rule match placeholder."
+  },
+  "sites_template": {
+    "message": "Πρότυπο για αυτόν τον ιστότοπο",
+    "description": "Rule template input label."
+  },
+  "sites_template_ph": {
+    "message": "{date}-invoice-{original}",
+    "description": "Rule template placeholder."
+  },
+  "sites_add_btn": {
+    "message": "Προσθήκη κανόνα ιστότοπου",
+    "description": "Add-rule button."
+  },
+  "sites_delete": {
+    "message": "Διαγραφή κανόνα",
+    "description": "Aria label for a rule's delete button."
+  },
+  "sites_need_both": {
+    "message": "Εισαγάγετε και ιστότοπο και πρότυπο.",
+    "description": "Validation when a rule field is empty."
+  },
+  "sites_add_err": {
+    "message": "Δεν ήταν δυνατή η προσθήκη αυτού του κανόνα.",
+    "description": "Generic add-rule failure."
+  },
+  "adv_h1": {
+    "message": "Ονομασία για προχωρημένους",
+    "description": "Advanced panel heading."
+  },
+  "adv_lede": {
+    "message": "Ισχυρά εργαλεία για τον τρόπο που πραγματικά ταξινομείτε τις λήψεις. Περιλαμβάνεται στο Zovo Pro.",
+    "description": "Advanced panel intro."
+  },
+  "adv_save": {
+    "message": "Αποθήκευση",
+    "description": "Generic save button."
+  },
+  "adv_clear": {
+    "message": "Καθαρισμός",
+    "description": "Generic clear button."
+  },
+  "adv_unlock": {
+    "message": "Ξεκλείδωμα με Pro",
+    "description": "CTA on a locked Pro card."
+  },
+  "adv_on": {
+    "message": "Ενεργοποιημένο",
+    "description": "Feature toggled on."
+  },
+  "adv_off": {
+    "message": "Απενεργοποιημένο",
+    "description": "Feature toggled off."
+  },
+  "adv_perm_needed": {
+    "message": "Απαιτείται άδεια για την ενεργοποίηση αυτού.",
+    "description": "Shown when an optional permission is denied."
+  },
+  "adv_toggle_err": {
+    "message": "Δεν ήταν δυνατή η ενημέρωση αυτής της ρύθμισης.",
+    "description": "Generic toggle failure."
+  },
+  "adv_folder_h": {
+    "message": "Δρομολόγηση φακέλων",
+    "description": "Folder-routing card heading."
+  },
+  "adv_folder_note": {
+    "message": "Λήψη αρχείων σε υποφακέλους του φακέλου Λήψεων, π.χ. Downloads/{hostname}/…",
+    "description": "Folder-routing explanation."
+  },
+  "adv_folder_label": {
+    "message": "Διαδρομή υποφακέλου (επιτρέπονται tokens)",
+    "description": "Folder-path input label."
+  },
+  "adv_folder_ph": {
+    "message": "{hostname}",
+    "description": "Folder-path placeholder."
+  },
+  "adv_folder_err": {
+    "message": "Δεν ήταν δυνατή η αποθήκευση της δρομολόγησης φακέλων.",
+    "description": "Folder-routing save failure."
+  },
+  "adv_regex_h": {
+    "message": "Εύρεση & αντικατάσταση (regex)",
+    "description": "Regex card heading."
+  },
+  "adv_regex_note": {
+    "message": "Καθαρίστε τα ονόματα με μια κανονική έκφραση πριν αποθηκευτούν.",
+    "description": "Regex explanation."
+  },
+  "adv_regex_find": {
+    "message": "Εύρεση",
+    "description": "Regex find input label."
+  },
+  "adv_regex_find_ph": {
+    "message": "\\s+",
+    "description": "Regex find placeholder."
+  },
+  "adv_regex_replace": {
+    "message": "Αντικατάσταση",
+    "description": "Regex replace input label."
+  },
+  "adv_regex_replace_ph": {
+    "message": "-",
+    "description": "Regex replace placeholder."
+  },
+  "adv_regex_flags": {
+    "message": "Σημαίες",
+    "description": "Regex flags input label."
+  },
+  "adv_regex_need": {
+    "message": "Εισαγάγετε ένα μοτίβο προς εύρεση.",
+    "description": "Validation when the regex find is empty."
+  },
+  "adv_regex_bad": {
+    "message": "Αυτό το μοτίβο είναι μη έγκυρο ή μη ασφαλές.",
+    "description": "Regex validation failure."
+  },
+  "adv_regex_err": {
+    "message": "Δεν ήταν δυνατή η αποθήκευση του μοτίβου.",
+    "description": "Generic regex save failure."
+  },
+  "adv_cleared": {
+    "message": "Καθαρίστηκε",
+    "description": "Regex cleared confirmation."
+  },
+  "adv_title_h": {
+    "message": "Token τίτλου σελίδας {title}",
+    "description": "Title-token card heading."
+  },
+  "adv_title_note": {
+    "message": "Χρησιμοποιήστε τον τίτλο της σελίδας προέλευσης στα ονόματα αρχείων. Η ενεργοποίηση αυτού ζητά από το Chrome την άδεια Καρτελών.",
+    "description": "Title-token explanation."
+  },
+  "adv_title_toggle": {
+    "message": "Ενεργοποίηση του token {title}",
+    "description": "Title-token toggle label."
+  },
+  "adv_title_aria": {
+    "message": "Ενεργοποίηση του token τίτλου σελίδας",
+    "description": "Accessible name for the title-token switch."
+  },
+  "adv_pdf_h": {
+    "message": "Token τίτλου PDF {pdftitle}",
+    "description": "PDF-token card heading."
+  },
+  "adv_pdf_note": {
+    "message": "Ονομάστε τα PDF με τον τίτλο που είναι αποθηκευμένος μέσα στο αρχείο. Αυτό διαβάζει το PDF μέσω του δικτύου, οπότε ζητά πρόσβαση στον ιστότοπο και είναι απενεργοποιημένο από προεπιλογή.",
+    "description": "PDF-token explanation."
+  },
+  "adv_pdf_toggle": {
+    "message": "Ενεργοποίηση του token {pdftitle}",
+    "description": "PDF-token toggle label."
+  },
+  "adv_pdf_aria": {
+    "message": "Ενεργοποίηση του token τίτλου PDF",
+    "description": "Accessible name for the PDF-token switch."
+  },
+  "backup_h1": {
+    "message": "Αντίγραφο ασφαλείας & επαναφορά",
+    "description": "Backup panel heading."
+  },
+  "backup_lede": {
+    "message": "Εξαγάγετε τη διαμόρφωσή σας σε αρχείο ή μεταφέρετέ την σε άλλο μηχάνημα. Περιλαμβάνεται στο Zovo Pro.",
+    "description": "Backup panel intro."
+  },
+  "backup_export_h": {
+    "message": "Εξαγωγή διαμόρφωσης",
+    "description": "Export card heading."
+  },
+  "backup_export_note": {
+    "message": "Κατεβάζει ένα αρχείο JSON με το πρότυπο, τους κανόνες και τις ρυθμίσεις σας. Χωρίς ιστορικό, χωρίς προσωπικά δεδομένα.",
+    "description": "Export explanation."
+  },
+  "backup_export_btn": {
+    "message": "Εξαγωγή σε αρχείο",
+    "description": "Export button."
+  },
+  "backup_exported": {
+    "message": "Εξήχθη",
+    "description": "Export confirmation."
+  },
+  "backup_export_err": {
+    "message": "Η εξαγωγή απέτυχε.",
+    "description": "Export failure."
+  },
+  "backup_import_h": {
+    "message": "Εισαγωγή διαμόρφωσης",
+    "description": "Import card heading."
+  },
+  "backup_import_label": {
+    "message": "Επικολλήστε μια εξαγόμενη διαμόρφωση",
+    "description": "Import textarea label."
+  },
+  "backup_import_ph": {
+    "message": "{\"zovo_template\":\"…\"}",
+    "description": "Import textarea placeholder."
+  },
+  "backup_import_btn": {
+    "message": "Εισαγωγή",
+    "description": "Import button."
+  },
+  "backup_imported": {
+    "message": "Εισήχθη",
+    "description": "Import confirmation."
+  },
+  "backup_need_json": {
+    "message": "Επικολλήστε πρώτα μια διαμόρφωση.",
+    "description": "Validation when import is empty."
+  },
+  "backup_import_err": {
+    "message": "Δεν ήταν δυνατή η εισαγωγή αυτού του αρχείου.",
+    "description": "Import failure."
+  },
+  "lic_h1": {
+    "message": "Το πρόγραμμά σας",
+    "description": "License panel heading."
+  },
+  "lic_lede": {
+    "message": "Μία πληρωμή ξεκλειδώνει κάθε λειτουργία ονομασίας, για πάντα. Χωρίς συνδρομή.",
+    "description": "License panel intro."
+  },
+  "lic_current": {
+    "message": "Τρέχον πρόγραμμα",
+    "description": "Current-plan label."
+  },
+  "lic_free_sub": {
+    "message": "Βασική μετονομασία, ένας κανόνας ιστότοπου, για πάντα.",
+    "description": "Free-plan subtitle."
+  },
+  "lic_pro_sub": {
+    "message": "Κάθε λειτουργία ονομασίας είναι ξεκλειδωμένη. Ευχαριστούμε που στηρίζετε το Zovo.",
+    "description": "Pro-plan subtitle."
+  },
+  "lic_upgrade": {
+    "message": "Αναβάθμιση σε Pro",
+    "description": "Upgrade button on the License tab."
+  },
+  "lic_have_key": {
+    "message": "Έχω κλειδί",
+    "description": "License-key button."
+  },
+  "lic_included_h": {
+    "message": "Τι ξεκλειδώνει το Pro",
+    "description": "Benefits section label."
+  },
+  "lic_b1": {
+    "message": "Απεριόριστοι κανόνες ανά ιστότοπο",
+    "description": "Pro benefit 1."
+  },
+  "lic_b2": {
+    "message": "Δρομολόγηση φακέλων σε υποφακέλους",
+    "description": "Pro benefit 2."
+  },
+  "lic_b3": {
+    "message": "Εύρεση & αντικατάσταση με regex",
+    "description": "Pro benefit 3."
+  },
+  "lic_b4": {
+    "message": "Tokens τίτλου σελίδας και τίτλου PDF",
+    "description": "Pro benefit 4."
+  },
+  "lic_b5": {
+    "message": "Αντίγραφο ασφαλείας, εξαγωγή & εισαγωγή διαμόρφωσης",
+    "description": "Pro benefit 5."
+  },
+  "saved": {
+    "message": "Αποθηκεύτηκε",
+    "description": "Generic saved confirmation."
+  },
+  "err_template": {
+    "message": "Δεν ήταν δυνατή η αποθήκευση αυτού του προτύπου.",
+    "description": "Generic template save failure."
+  },
+  "err_bad_token": {
+    "message": "Άγνωστο token στο πρότυπο: ",
+    "description": "Prefix before the offending token name."
+  },
+  "ob_brand": {
+    "message": "Smart Rename Downloads",
+    "description": "Onboarding brand name."
+  },
+  "ob_by": {
+    "message": "· από τη Zovo",
+    "description": "Onboarding brand attribution suffix."
+  },
+  "ob_skip": {
+    "message": "Παράλειψη εισαγωγής",
+    "description": "Skip onboarding button."
+  },
+  "ob_back": {
+    "message": "Πίσω",
+    "description": "Previous-step button."
+  },
+  "ob_next": {
+    "message": "Επόμενο",
+    "description": "Next-step button."
+  },
+  "ob_later": {
+    "message": "Ίσως αργότερα",
+    "description": "Next-button label on the offer step."
+  },
+  "ob_start": {
+    "message": "Ξεκινήστε να το χρησιμοποιείτε",
+    "description": "Final onboarding button."
+  },
+  "ob_stepno": {
+    "message": "{a} από {b}",
+    "description": "Step counter, e.g. 1 of 6. {a} current, {b} total."
+  },
+  "ob_s1_kicker": {
+    "message": "Το πρόβλημα του φακέλου λήψεων",
+    "description": "Step 1 kicker."
+  },
+  "ob_s1_title": {
+    "message": "Δεν θα βρείτε ποτέ ξανά εκείνο το αρχείο.",
+    "description": "Step 1 title."
+  },
+  "ob_s1_pt": {
+    "message": "Φτιαγμένο για ανθρώπους που κατεβάζουν όλη μέρα. Ερευνητές, λογιστές, όποιον ο φάκελος Λήψεων ξεφεύγει σιωπηλά.",
+    "description": "Step 1 secondary paragraph."
+  },
+  "ob_s2_kicker": {
+    "message": "Ένας κανόνας, ήδη ενεργός",
+    "description": "Step 2 kicker."
+  },
+  "ob_s2_title": {
+    "message": "Δείτε ένα άχρηστο όνομα να γίνεται πραγματικό.",
+    "description": "Step 2 title."
+  },
+  "ob_s2_lede": {
+    "message": "Το προεπιλεγμένο μοτίβο είναι η ημερομηνία, μετά ο ιστότοπος, μετά το αρχικό όνομα. Τη στιγμή που ολοκληρώνεται μια λήψη, το όνομα ξαναγράφεται και αποθηκεύεται απευθείας στον δίσκο. Χωρίς κλικ, χωρίς παράθυρο. Ορίστε το σε ένα πραγματικό αρχείο.",
+    "description": "Step 2 body."
+  },
+  "ob_demo_btn": {
+    "message": "Δείτε τη μετονομασία",
+    "description": "Button that replays the rename demo."
+  },
+  "ob_saved_as": {
+    "message": "Αποθηκεύτηκε ως",
+    "description": "Demo label for the original filename."
+  },
+  "ob_renamed_to": {
+    "message": "Μετονομάστηκε σε",
+    "description": "Demo label for the renamed filename."
+  },
+  "ob_fw_kept": {
+    "message": ".pdf διατηρήθηκε",
+    "description": "Token chip: the real extension is kept."
+  },
+  "ob_s3_kicker": {
+    "message": "Δύο λεπτά, μία φορά",
+    "description": "Step 3 kicker."
+  },
+  "ob_s3_title": {
+    "message": "Ορίστε το μοτίβο ονομασίας που κρατάτε για πάντα.",
+    "description": "Step 3 title."
+  },
+  "ob_s3_lede": {
+    "message": "Δημιουργήστε το από tokens. Κάντε κλικ σε ένα για να το ρίξετε στο μοτίβο και δείτε το δείγμα να ενημερώνεται. Η πραγματική επέκταση αρχείου διατηρείται πάντα στο τέλος. Αποθηκεύστε το και κάθε μελλοντική λήψη το ακολουθεί.",
+    "description": "Step 3 body."
+  },
+  "ob_s3_pt": {
+    "message": "Ζει στο πρόγραμμα περιήγησής σας. Αλλάξτε το ανά πάσα στιγμή από τις ρυθμίσεις, και τίποτα σχετικό με τα αρχεία σας δεν στέλνεται ποτέ πουθενά.",
+    "description": "Step 3 secondary paragraph."
+  },
+  "ob_template_label": {
+    "message": "Το μοτίβο ονομασίας σας",
+    "description": "Onboarding template input label."
+  },
+  "ob_result": {
+    "message": "Αποτέλεσμα",
+    "description": "Onboarding preview result label."
+  },
+  "ob_save_btn": {
+    "message": "Αποθήκευση του μοτίβου μου",
+    "description": "Save-pattern button."
+  },
+  "ob_pattern_saved": {
+    "message": "Το μοτίβο αποθηκεύτηκε",
+    "description": "Save-pattern button after saving."
+  },
+  "ob_saved_msg": {
+    "message": "Αποθηκεύτηκε. Κάθε λήψη το ακολουθεί τώρα.",
+    "description": "Confirmation after the pattern is saved."
+  },
+  "ob_s4_kicker": {
+    "message": "Γιατί μπορείτε να το αφήσετε να τρέχει",
+    "description": "Step 4 kicker."
+  },
+  "ob_s4_title": {
+    "message": "Τοπικό εκ σχεδιασμού, χτισμένο ανοιχτά από έναν προγραμματιστή.",
+    "description": "Step 4 title."
+  },
+  "ob_s4_lede": {
+    "message": "Τα αρχεία σας και το ιστορικό μετονομασιών σας δεν φεύγουν ποτέ από αυτό το μηχάνημα. Στο δωρεάν πρόγραμμα η επέκταση δεν κάνει καμία κλήση δικτύου, και ο κώδικας είναι αρκετά μικρός ώστε να διαβαστεί σε μία καθισιά.",
+    "description": "Step 4 body."
+  },
+  "ob_stat1_n": {
+    "message": "Τοπικά",
+    "description": "Stat 1 value."
+  },
+  "ob_stat1_l": {
+    "message": "κάθε μετονομασία τρέχει στη συσκευή σας",
+    "description": "Stat 1 label."
+  },
+  "ob_stat2_n": {
+    "message": "Ιδιωτικά",
+    "description": "Stat 2 value."
+  },
+  "ob_stat2_l": {
+    "message": "τίποτα δεν φεύγει από αυτό το μηχάνημα",
+    "description": "Stat 2 label."
+  },
+  "ob_stat3_n": {
+    "message": "Ανοιχτά",
+    "description": "Stat 3 value."
+  },
+  "ob_stat3_l": {
+    "message": "χτισμένο δημόσια, κάθε commit",
+    "description": "Stat 3 label."
+  },
+  "ob_s4_pt": {
+    "message": "Ένα εργαλείο μετονομασίας λήψεων είναι εκεί που γνωρίζετε τη Zovo. Το μεγαλύτερο σχέδιο είναι ένα τίμιο επίπεδο για ολόκληρο τον κόσμο των επεκτάσεων, ένα εργαλείο τη φορά, χωρίς spam και χωρίς παρακολούθηση.",
+    "description": "Step 4 secondary paragraph."
+  },
+  "ob_link_why": {
+    "message": "Γιατί χτίζω τη Zovo",
+    "description": "Link: why Zovo."
+  },
+  "ob_link_vision": {
+    "message": "Το όραμα",
+    "description": "Link: the vision."
+  },
+  "ob_link_safe": {
+    "message": "Πώς σας κρατάμε ασφαλείς",
+    "description": "Link: safety."
+  },
+  "ob_trust1_h": {
+    "message": "Όλα παραμένουν στη συσκευή σας",
+    "description": "Trust point 1 heading."
+  },
+  "ob_trust1_b": {
+    "message": "Το μοτίβο, οι κανόνες και το ιστορικό σας ζουν στον τοπικό χώρο αποθήκευσης του προγράμματος περιήγησης. Χωρίς λογαριασμό, χωρίς διακομιστή συγχρονισμού, τίποτα δεν αποστέλλεται.",
+    "description": "Trust point 1 body."
+  },
+  "ob_trust2_h": {
+    "message": "Ένα άτομο, που χτίζει ανοιχτά",
+    "description": "Trust point 2 heading."
+  },
+  "ob_s5_kicker": {
+    "message": "Η τίμια ανταλλαγή",
+    "description": "Step 5 kicker."
+  },
+  "ob_s5_title": {
+    "message": "Δωρεάν μετονομασίες για πάντα. Ή αποκτήστε τα όλα, μία φορά.",
+    "description": "Step 5 title."
+  },
+  "ob_s5_lede": {
+    "message": "Ο σιωπηλός πυρήνας μετονομασίας παραμένει δωρεάν, χωρίς όριο στον αριθμό των αρχείων που αγγίζει. Μία πληρωμή ενενήντα εννέα δολαρίων ενεργοποιεί απεριόριστους κανόνες ανά ιστότοπο, δρομολόγηση φακέλων, καθαρισμό με regex και ονομασία από τίτλο σελίδας ή PDF.",
+    "description": "Step 5 body."
+  },
+  "ob_plan_free": {
+    "message": "Δωρεάν",
+    "description": "Free plan name."
+  },
+  "ob_free_unit": {
+    "message": "για πάντα",
+    "description": "Free plan price unit."
+  },
+  "ob_free1": {
+    "message": "Κάθε λήψη μετονομάζεται μόνη της",
+    "description": "Free benefit 1."
+  },
+  "ob_free2": {
+    "message": "Τα τρία βασικά tokens: ημερομηνία, ιστότοπος, αρχικό όνομα",
+    "description": "Free benefit 2."
+  },
+  "ob_free3": {
+    "message": "Ένας αποθηκευμένος κανόνας ανά ιστότοπο",
+    "description": "Free benefit 3."
+  },
+  "ob_free4": {
+    "message": "Διαχείριση συγκρούσεων και ζωντανός μετρητής",
+    "description": "Free benefit 4."
+  },
+  "ob_ribbon": {
+    "message": "Καλύτερη αξία",
+    "description": "Lifetime plan ribbon."
+  },
+  "ob_plan_life": {
+    "message": "Εφ' όρου ζωής",
+    "description": "Lifetime plan name."
+  },
+  "ob_life_unit": {
+    "message": "μία φορά",
+    "description": "Lifetime plan price unit."
+  },
+  "ob_life1": {
+    "message": "Απεριόριστοι κανόνες ανά ιστότοπο",
+    "description": "Lifetime benefit 1."
+  },
+  "ob_life2": {
+    "message": "Δρομολόγηση αρχείων σε υποφακέλους Λήψεων ανά ιστότοπο ή ημερομηνία",
+    "description": "Lifetime benefit 2."
+  },
+  "ob_life3": {
+    "message": "Καθαρισμός με regex συν tokens τίτλου σελίδας και τίτλου PDF",
+    "description": "Lifetime benefit 3."
+  },
+  "ob_life4": {
+    "message": "Αντίγραφο ασφαλείας και εισαγωγή διαμόρφωσης σε όλα τα μηχανήματα",
+    "description": "Lifetime benefit 4."
+  },
+  "ob_life5": {
+    "message": "Κάθε μελλοντική ενημέρωση αυτού του εργαλείου, περιλαμβάνεται",
+    "description": "Lifetime benefit 5."
+  },
+  "ob_life6": {
+    "message": "Μία πληρωμή, καμία συνδρομή, ποτέ",
+    "description": "Lifetime benefit 6."
+  },
+  "ob_life_cta": {
+    "message": "Αποκτήστε το εφ' όρου ζωής για $$99",
+    "description": "Lifetime purchase CTA."
+  },
+  "ob_guarantee": {
+    "message": "Επιστροφή χρημάτων σε 14 ημέρες, χωρίς ερωτήσεις. Προτιμάτε μηνιαία; Είναι $$4.99 στην ίδια σελίδα.",
+    "description": "Refund guarantee line."
+  },
+  "ob_s6_kicker": {
+    "message": "Είστε έτοιμοι",
+    "description": "Step 6 kicker."
+  },
+  "ob_s6_title": {
+    "message": "Δεν μένει τίποτα να κάνετε. Λειτουργεί ήδη.",
+    "description": "Step 6 title."
+  },
+  "ob_s6_lede": {
+    "message": "Το επόμενο αρχείο που κατεβάζετε παίρνει καθαρό όνομα μόνο του. Κανένα κουμπί να πατήσετε, κανένα παράθυρο να επιβεβαιώσετε. Ορίστε τι συμβαίνει από εδώ και πέρα.",
+    "description": "Step 6 body."
+  },
+  "ob_dev_h": {
+    "message": "Από τον προγραμματιστή",
+    "description": "Developer note heading."
+  },
+  "ob_dev_b": {
+    "message": "Χτίζω τη Zovo μόνος μου, ανοιχτά. Αν κάτι χαλάσει, γράψτε μου και απαντώ. Τα εργαλεία μετονομασίας είναι μόνο η αρχή. Το σχέδιο είναι ένα τίμιο επίπεδο για ολόκληρο το πρόγραμμα περιήγησης, και τα ενενήντα εννέα δολάριά σας φέρνουν το επόμενο κομμάτι του.",
+    "description": "Developer note body."
+  },
+  "ob_link_github": {
+    "message": "Βρείτε με στο GitHub",
+    "description": "Link: GitHub."
+  },
+  "ob_link_going": {
+    "message": "Πού πηγαίνει αυτό",
+    "description": "Link: roadmap."
+  },
+  "ob_cheat1_k": {
+    "message": "Κάθε λήψη",
+    "description": "Cheat-sheet row 1 key."
+  },
+  "ob_cheat1_v": {
+    "message": "Μετονομάζεται κατά την αποθήκευση",
+    "description": "Cheat-sheet row 1 value."
+  },
+  "ob_cheat2_k": {
+    "message": "Το αναδυόμενο παράθυρο",
+    "description": "Cheat-sheet row 2 key."
+  },
+  "ob_cheat2_v": {
+    "message": "Μετρά κάθε μετονομασία",
+    "description": "Cheat-sheet row 2 value."
+  },
+  "ob_cheat3_k": {
+    "message": "Το μοτίβο σας",
+    "description": "Cheat-sheet row 3 key."
+  },
+  "ob_cheat3_v": {
+    "message": "Επεξεργαστείτε το στις ρυθμίσεις",
+    "description": "Cheat-sheet row 3 value."
+  },
+  "ob_cheat4_k": {
+    "message": "Πρώτος κανόνας ιστότοπου",
+    "description": "Cheat-sheet row 4 key."
+  },
+  "ob_cheat4_v": {
+    "message": "Δωρεάν προσθήκη",
+    "description": "Cheat-sheet row 4 value."
+  }
+}

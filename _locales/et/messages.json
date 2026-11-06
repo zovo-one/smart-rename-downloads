@@ -1,0 +1,834 @@
+{
+  "extName": {
+    "message": "Smart Rename Downloads",
+    "description": "Extension name shown in the Chrome Web Store and toolbar."
+  },
+  "extDesc": {
+    "message": "Nimeta iga allalaadimine automaatselt ümber kuupäeva, saidi ja pealkirja märgenditega. Saidipõhised reeglid, regex, kaustad",
+    "description": "Chrome Web Store short description (max 132 chars)."
+  },
+  "popup_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Popup header title."
+  },
+  "popup_open_settings": {
+    "message": "Ava seaded",
+    "description": "Aria label for the settings gear button."
+  },
+  "popup_settings": {
+    "message": "Seaded",
+    "description": "Tooltip for the settings gear button."
+  },
+  "popup_health": {
+    "message": "Ümbernimetamine on peatatud — Allalaadimiste luba eemaldati.",
+    "description": "Shown when the downloads permission is missing."
+  },
+  "popup_regrant": {
+    "message": "Luba uuesti",
+    "description": "Link to re-grant the downloads permission."
+  },
+  "popup_hero_label": {
+    "message": "Ümber nimetatud faile",
+    "description": "Label under the big lifetime rename counter."
+  },
+  "popup_hero_sub": {
+    "message": "Iga allalaadimine nimetatakse automaatselt ümber, enne kui see kettale jõuab.",
+    "description": "Supporting line under the hero counter."
+  },
+  "popup_master_title": {
+    "message": "Nimeta allalaadimised automaatselt ümber",
+    "description": "Master on/off switch title."
+  },
+  "popup_master_aria": {
+    "message": "Lülita allalaadimiste automaatne ümbernimetamine sisse/välja",
+    "description": "Accessible name for the master switch."
+  },
+  "popup_master_on": {
+    "message": "Sees — iga allalaadimine nimetatakse ümber",
+    "description": "Master switch note when enabled."
+  },
+  "popup_master_off": {
+    "message": "Väljas — Chrome hoiab oma vaikenimed",
+    "description": "Master switch note when disabled."
+  },
+  "popup_recent": {
+    "message": "Hiljutised ümbernimetamised",
+    "description": "Section label for the recent-renames list."
+  },
+  "popup_empty_title": {
+    "message": "Valmis, kui sina oled",
+    "description": "Empty-state headline in the popup."
+  },
+  "popup_empty_text": {
+    "message": "Sinu järgmine allalaadimine nimetatakse automaatselt ümber. See ilmub siia.",
+    "description": "Empty-state body in the popup."
+  },
+  "popup_milestone_text": {
+    "message": "Smart Rename on korrastanud {n} allalaadimist. Pro paigutab need automaatselt kaustadesse.",
+    "description": "Post-success upgrade nudge. {n} is the rename count."
+  },
+  "popup_milestone_cta": {
+    "message": "Vaata Pro-d",
+    "description": "CTA on the milestone nudge."
+  },
+  "popup_dismiss": {
+    "message": "Sulge",
+    "description": "Dismiss the milestone nudge."
+  },
+  "popup_trust": {
+    "message": "Kohalik · Kontot pole · Jälgimist pole",
+    "description": "Trust line in the popup footer."
+  },
+  "popup_upgrade": {
+    "message": "Uuenda Pro-le",
+    "description": "Upgrade button in the popup footer."
+  },
+  "flag_timeout": {
+    "message": "jäi vaikimisi",
+    "description": "Recent-list flag: rename fell back to Chrome's default name (timeout)."
+  },
+  "flag_sanitize": {
+    "message": "jäi vaikimisi",
+    "description": "Recent-list flag: name could not be sanitized."
+  },
+  "flag_nomatch": {
+    "message": "vastet pole",
+    "description": "Recent-list flag: no site rule matched."
+  },
+  "opt_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Options brand name."
+  },
+  "opt_trust": {
+    "message": "Kõik jääb sellesse seadmesse. Null jälgimist.",
+    "description": "Options sidebar trust line."
+  },
+  "aria_theme": {
+    "message": "Värviteema",
+    "description": "Aria label for the theme radiogroup."
+  },
+  "theme_system": {
+    "message": "Süsteem",
+    "description": "Theme option: follow OS."
+  },
+  "theme_light": {
+    "message": "Hele",
+    "description": "Theme option: light."
+  },
+  "theme_dark": {
+    "message": "Tume",
+    "description": "Theme option: dark."
+  },
+  "tier_free": {
+    "message": "Tasuta",
+    "description": "Free plan label."
+  },
+  "tier_trial": {
+    "message": "Prooviperiood",
+    "description": "Trial plan label."
+  },
+  "tier_pro": {
+    "message": "Pro",
+    "description": "Pro plan label."
+  },
+  "tab_template": {
+    "message": "Mall",
+    "description": "Settings tab: naming template."
+  },
+  "tab_sites": {
+    "message": "Saidipõhised reeglid",
+    "description": "Settings tab: per-site rules."
+  },
+  "tab_advanced": {
+    "message": "Täpsem",
+    "description": "Settings tab: advanced naming."
+  },
+  "tab_backup": {
+    "message": "Varundus",
+    "description": "Settings tab: backup and restore."
+  },
+  "tab_license": {
+    "message": "Litsents",
+    "description": "Settings tab: license and plan."
+  },
+  "tpl_h1": {
+    "message": "Nimetamise mall",
+    "description": "Template panel heading."
+  },
+  "tpl_lede": {
+    "message": "Koosta failinimi, mille iga allalaadimine saab. Faili tegelik laiend säilitatakse alati.",
+    "description": "Template panel intro."
+  },
+  "tpl_label": {
+    "message": "Mall",
+    "description": "Template input label."
+  },
+  "tpl_tokens_aria": {
+    "message": "Lisa märgend",
+    "description": "Aria label for the token chip row."
+  },
+  "tpl_conflict": {
+    "message": "Kui sellise nimega fail juba eksisteerib",
+    "description": "Conflict-policy select label."
+  },
+  "conflict_uniquify": {
+    "message": "Lisa number — säilita mõlemad",
+    "description": "Conflict policy: uniquify."
+  },
+  "conflict_overwrite": {
+    "message": "Kirjuta vana fail üle",
+    "description": "Conflict policy: overwrite."
+  },
+  "conflict_prompt": {
+    "message": "Küsi minult iga kord",
+    "description": "Conflict policy: prompt."
+  },
+  "tpl_save": {
+    "message": "Salvesta mall",
+    "description": "Save-template button."
+  },
+  "tpl_preview_h": {
+    "message": "Reaalajas eelvaade",
+    "description": "Preview section label."
+  },
+  "tpl_pv_host": {
+    "message": "Näidissait",
+    "description": "Preview sample-host input label."
+  },
+  "tpl_pv_name": {
+    "message": "Näidisallalaadimine",
+    "description": "Preview sample-name input label."
+  },
+  "tpl_pv_result": {
+    "message": "Tulemus",
+    "description": "Preview result label."
+  },
+  "tpl_pv_hint": {
+    "message": "Tasuta mallis salvestatakse „/” kui „-”. Kaustadesse suunamine on Pro funktsioon.",
+    "description": "Preview hint about slashes and folder routing."
+  },
+  "sites_h1": {
+    "message": "Saidipõhised reeglid",
+    "description": "Sites panel heading."
+  },
+  "sites_lede": {
+    "message": "Anna kindlale saidile oma mall — arved kaustadesse, artiklid pealkirjaga. Tasuta versioon sisaldab üht reeglit, et saaksid seda tunnetada; Pro on piiramatu.",
+    "description": "Sites panel intro."
+  },
+  "sites_count": {
+    "message": "0 / 1 tasuta reeglit kasutusel",
+    "description": "Initial site-rule count text."
+  },
+  "sites_count_free": {
+    "message": "{n} / 1 tasuta reeglit kasutusel",
+    "description": "Site-rule count for Free. {n} is the count."
+  },
+  "sites_count_pro": {
+    "message": "{n} reeglit",
+    "description": "Site-rule count for Pro. {n} is the count."
+  },
+  "sites_empty": {
+    "message": "Saidireegleid veel pole. Lisa üks allpool.",
+    "description": "Empty state for site rules."
+  },
+  "sites_add_h": {
+    "message": "Lisa reegel",
+    "description": "Add-rule section label."
+  },
+  "sites_match": {
+    "message": "Sait (host või *.host)",
+    "description": "Rule match input label."
+  },
+  "sites_match_ph": {
+    "message": "stripe.com",
+    "description": "Rule match placeholder."
+  },
+  "sites_template": {
+    "message": "Selle saidi mall",
+    "description": "Rule template input label."
+  },
+  "sites_template_ph": {
+    "message": "{date}-invoice-{original}",
+    "description": "Rule template placeholder."
+  },
+  "sites_add_btn": {
+    "message": "Lisa saidireegel",
+    "description": "Add-rule button."
+  },
+  "sites_delete": {
+    "message": "Kustuta reegel",
+    "description": "Aria label for a rule's delete button."
+  },
+  "sites_need_both": {
+    "message": "Sisesta nii sait kui ka mall.",
+    "description": "Validation when a rule field is empty."
+  },
+  "sites_add_err": {
+    "message": "Seda reeglit ei õnnestunud lisada.",
+    "description": "Generic add-rule failure."
+  },
+  "adv_h1": {
+    "message": "Täpsem nimetamine",
+    "description": "Advanced panel heading."
+  },
+  "adv_lede": {
+    "message": "Võimsad tööriistad selleks, kuidas sa allalaadimisi tegelikult korrastad. Sisaldub Zovo Pro-s.",
+    "description": "Advanced panel intro."
+  },
+  "adv_save": {
+    "message": "Salvesta",
+    "description": "Generic save button."
+  },
+  "adv_clear": {
+    "message": "Tühjenda",
+    "description": "Generic clear button."
+  },
+  "adv_unlock": {
+    "message": "Ava Pro-ga",
+    "description": "CTA on a locked Pro card."
+  },
+  "adv_on": {
+    "message": "Lubatud",
+    "description": "Feature toggled on."
+  },
+  "adv_off": {
+    "message": "Keelatud",
+    "description": "Feature toggled off."
+  },
+  "adv_perm_needed": {
+    "message": "Selle lubamiseks on vaja luba.",
+    "description": "Shown when an optional permission is denied."
+  },
+  "adv_toggle_err": {
+    "message": "Seda seadet ei õnnestunud uuendada.",
+    "description": "Generic toggle failure."
+  },
+  "adv_folder_h": {
+    "message": "Kaustadesse suunamine",
+    "description": "Folder-routing card heading."
+  },
+  "adv_folder_note": {
+    "message": "Laadi failid alla oma Allalaadimiste kausta alamkaustadesse, nt Downloads/{hostname}/…",
+    "description": "Folder-routing explanation."
+  },
+  "adv_folder_label": {
+    "message": "Alamkausta tee (märgendid lubatud)",
+    "description": "Folder-path input label."
+  },
+  "adv_folder_ph": {
+    "message": "{hostname}",
+    "description": "Folder-path placeholder."
+  },
+  "adv_folder_err": {
+    "message": "Kaustadesse suunamist ei õnnestunud salvestada.",
+    "description": "Folder-routing save failure."
+  },
+  "adv_regex_h": {
+    "message": "Otsi ja asenda (regex)",
+    "description": "Regex card heading."
+  },
+  "adv_regex_note": {
+    "message": "Puhasta nimed regulaaravaldisega, enne kui need salvestatakse.",
+    "description": "Regex explanation."
+  },
+  "adv_regex_find": {
+    "message": "Otsi",
+    "description": "Regex find input label."
+  },
+  "adv_regex_find_ph": {
+    "message": "\\s+",
+    "description": "Regex find placeholder."
+  },
+  "adv_regex_replace": {
+    "message": "Asenda",
+    "description": "Regex replace input label."
+  },
+  "adv_regex_replace_ph": {
+    "message": "-",
+    "description": "Regex replace placeholder."
+  },
+  "adv_regex_flags": {
+    "message": "Lipud",
+    "description": "Regex flags input label."
+  },
+  "adv_regex_need": {
+    "message": "Sisesta otsitav muster.",
+    "description": "Validation when the regex find is empty."
+  },
+  "adv_regex_bad": {
+    "message": "See muster on vigane või ebaturvaline.",
+    "description": "Regex validation failure."
+  },
+  "adv_regex_err": {
+    "message": "Mustrit ei õnnestunud salvestada.",
+    "description": "Generic regex save failure."
+  },
+  "adv_cleared": {
+    "message": "Tühjendatud",
+    "description": "Regex cleared confirmation."
+  },
+  "adv_title_h": {
+    "message": "Lehe pealkirja märgend {title}",
+    "description": "Title-token card heading."
+  },
+  "adv_title_note": {
+    "message": "Kasuta lähtelehe pealkirja failinimedes. Selle sisselülitamine küsib Chrome'ilt Vahekaartide luba.",
+    "description": "Title-token explanation."
+  },
+  "adv_title_toggle": {
+    "message": "Luba märgend {title}",
+    "description": "Title-token toggle label."
+  },
+  "adv_title_aria": {
+    "message": "Luba lehe pealkirja märgend",
+    "description": "Accessible name for the title-token switch."
+  },
+  "adv_pdf_h": {
+    "message": "PDF-i pealkirja märgend {pdftitle}",
+    "description": "PDF-token card heading."
+  },
+  "adv_pdf_note": {
+    "message": "Nimeta PDF-id faili sees salvestatud pealkirja järgi. See loeb PDF-i üle võrgu, seega küsib saidi juurdepääsu ja on vaikimisi väljas.",
+    "description": "PDF-token explanation."
+  },
+  "adv_pdf_toggle": {
+    "message": "Luba märgend {pdftitle}",
+    "description": "PDF-token toggle label."
+  },
+  "adv_pdf_aria": {
+    "message": "Luba PDF-i pealkirja märgend",
+    "description": "Accessible name for the PDF-token switch."
+  },
+  "backup_h1": {
+    "message": "Varundus ja taastamine",
+    "description": "Backup panel heading."
+  },
+  "backup_lede": {
+    "message": "Ekspordi oma seadistus faili või vii see teise arvutisse. Sisaldub Zovo Pro-s.",
+    "description": "Backup panel intro."
+  },
+  "backup_export_h": {
+    "message": "Ekspordi seadistus",
+    "description": "Export card heading."
+  },
+  "backup_export_note": {
+    "message": "Laadib alla JSON-faili sinu malli, reeglite ja seadetega. Ajalugu ega isikuandmeid pole.",
+    "description": "Export explanation."
+  },
+  "backup_export_btn": {
+    "message": "Ekspordi faili",
+    "description": "Export button."
+  },
+  "backup_exported": {
+    "message": "Eksporditud",
+    "description": "Export confirmation."
+  },
+  "backup_export_err": {
+    "message": "Eksportimine ebaõnnestus.",
+    "description": "Export failure."
+  },
+  "backup_import_h": {
+    "message": "Impordi seadistus",
+    "description": "Import card heading."
+  },
+  "backup_import_label": {
+    "message": "Kleebi eksporditud seadistus",
+    "description": "Import textarea label."
+  },
+  "backup_import_ph": {
+    "message": "{\"zovo_template\":\"…\"}",
+    "description": "Import textarea placeholder."
+  },
+  "backup_import_btn": {
+    "message": "Impordi",
+    "description": "Import button."
+  },
+  "backup_imported": {
+    "message": "Imporditud",
+    "description": "Import confirmation."
+  },
+  "backup_need_json": {
+    "message": "Kleebi esmalt seadistus.",
+    "description": "Validation when import is empty."
+  },
+  "backup_import_err": {
+    "message": "Seda faili ei õnnestunud importida.",
+    "description": "Import failure."
+  },
+  "lic_h1": {
+    "message": "Sinu pakett",
+    "description": "License panel heading."
+  },
+  "lic_lede": {
+    "message": "Üks makse avab kõik nimetamisfunktsioonid, igaveseks. Tellimust pole.",
+    "description": "License panel intro."
+  },
+  "lic_current": {
+    "message": "Praegune pakett",
+    "description": "Current-plan label."
+  },
+  "lic_free_sub": {
+    "message": "Põhiline ümbernimetamine, üks saidireegel, igaveseks.",
+    "description": "Free-plan subtitle."
+  },
+  "lic_pro_sub": {
+    "message": "Kõik nimetamisfunktsioonid on avatud. Täname, et toetad Zovo-t.",
+    "description": "Pro-plan subtitle."
+  },
+  "lic_upgrade": {
+    "message": "Uuenda Pro-le",
+    "description": "Upgrade button on the License tab."
+  },
+  "lic_have_key": {
+    "message": "Mul on võti",
+    "description": "License-key button."
+  },
+  "lic_included_h": {
+    "message": "Mida Pro avab",
+    "description": "Benefits section label."
+  },
+  "lic_b1": {
+    "message": "Piiramatud saidipõhised reeglid",
+    "description": "Pro benefit 1."
+  },
+  "lic_b2": {
+    "message": "Kaustadesse suunamine alamkaustadesse",
+    "description": "Pro benefit 2."
+  },
+  "lic_b3": {
+    "message": "Regex otsi ja asenda",
+    "description": "Pro benefit 3."
+  },
+  "lic_b4": {
+    "message": "Lehe pealkirja ja PDF-i pealkirja märgendid",
+    "description": "Pro benefit 4."
+  },
+  "lic_b5": {
+    "message": "Seadistuse varundus, eksport ja import",
+    "description": "Pro benefit 5."
+  },
+  "saved": {
+    "message": "Salvestatud",
+    "description": "Generic saved confirmation."
+  },
+  "err_template": {
+    "message": "Seda malli ei õnnestunud salvestada.",
+    "description": "Generic template save failure."
+  },
+  "err_bad_token": {
+    "message": "Tundmatu märgend mallis: ",
+    "description": "Prefix before the offending token name."
+  },
+  "ob_brand": {
+    "message": "Smart Rename Downloads",
+    "description": "Onboarding brand name."
+  },
+  "ob_by": {
+    "message": "· Zovo poolt",
+    "description": "Onboarding brand attribution suffix."
+  },
+  "ob_skip": {
+    "message": "Jäta sissejuhatus vahele",
+    "description": "Skip onboarding button."
+  },
+  "ob_back": {
+    "message": "Tagasi",
+    "description": "Previous-step button."
+  },
+  "ob_next": {
+    "message": "Edasi",
+    "description": "Next-step button."
+  },
+  "ob_later": {
+    "message": "Võib-olla hiljem",
+    "description": "Next-button label on the offer step."
+  },
+  "ob_start": {
+    "message": "Hakka kasutama",
+    "description": "Final onboarding button."
+  },
+  "ob_stepno": {
+    "message": "{a} / {b}",
+    "description": "Step counter, e.g. 1 of 6. {a} current, {b} total."
+  },
+  "ob_s1_kicker": {
+    "message": "Allalaadimiste kausta probleem",
+    "description": "Step 1 kicker."
+  },
+  "ob_s1_title": {
+    "message": "Sa ei leia seda faili enam kunagi üles.",
+    "description": "Step 1 title."
+  },
+  "ob_s1_pt": {
+    "message": "Loodud inimestele, kes laadivad kogu päeva alla. Teadlased, raamatupidajad, kõik, kelle Allalaadimiste kaust on vaikselt käest ära.",
+    "description": "Step 1 secondary paragraph."
+  },
+  "ob_s2_kicker": {
+    "message": "Üks reegel, juba sees",
+    "description": "Step 2 kicker."
+  },
+  "ob_s2_title": {
+    "message": "Vaata, kuidas prügine nimi muutub tõeliseks.",
+    "description": "Step 2 title."
+  },
+  "ob_s2_lede": {
+    "message": "Vaikemuster on kuupäev, siis sait, siis algne nimi. Hetkel, kui allalaadimine lõpeb, kirjutatakse nimi ümber ja kirjutatakse otse kettale. Ei klõpsu, ei dialoogi. Siin see on päris failil.",
+    "description": "Step 2 body."
+  },
+  "ob_demo_btn": {
+    "message": "Vaata ümbernimetamist",
+    "description": "Button that replays the rename demo."
+  },
+  "ob_saved_as": {
+    "message": "Salvestatud kui",
+    "description": "Demo label for the original filename."
+  },
+  "ob_renamed_to": {
+    "message": "Ümber nimetatud kui",
+    "description": "Demo label for the renamed filename."
+  },
+  "ob_fw_kept": {
+    "message": ".pdf säilitatud",
+    "description": "Token chip: the real extension is kept."
+  },
+  "ob_s3_kicker": {
+    "message": "Kaks minutit, ühe korra",
+    "description": "Step 3 kicker."
+  },
+  "ob_s3_title": {
+    "message": "Sea nimetamismuster, mille hoiad alatiseks.",
+    "description": "Step 3 title."
+  },
+  "ob_s3_lede": {
+    "message": "Koosta see märgenditest. Klõpsa ühte, et see mustrisse lisada, ja vaata, kuidas näidis uueneb. Faili tegelik laiend säilitatakse alati lõpus. Salvesta see ja iga tulevane allalaadimine järgib seda.",
+    "description": "Step 3 body."
+  },
+  "ob_s3_pt": {
+    "message": "See elab sinu brauseris. Muuda seda igal ajal seadetest ja mitte midagi sinu failide kohta ei saadeta kunagi kuhugi.",
+    "description": "Step 3 secondary paragraph."
+  },
+  "ob_template_label": {
+    "message": "Sinu nimetamismuster",
+    "description": "Onboarding template input label."
+  },
+  "ob_result": {
+    "message": "Tulemus",
+    "description": "Onboarding preview result label."
+  },
+  "ob_save_btn": {
+    "message": "Salvesta minu muster",
+    "description": "Save-pattern button."
+  },
+  "ob_pattern_saved": {
+    "message": "Muster salvestatud",
+    "description": "Save-pattern button after saving."
+  },
+  "ob_saved_msg": {
+    "message": "Salvestatud. Iga allalaadimine järgib nüüd seda.",
+    "description": "Confirmation after the pattern is saved."
+  },
+  "ob_s4_kicker": {
+    "message": "Miks võid selle jätta töötama",
+    "description": "Step 4 kicker."
+  },
+  "ob_s4_title": {
+    "message": "Kohalik loomu poolest, ehitatud avalikult ühe arendaja poolt.",
+    "description": "Step 4 title."
+  },
+  "ob_s4_lede": {
+    "message": "Sinu failid ja sinu ümbernimetamise ajalugu ei lahku kunagi sellest masinast. Tasuta paketis ei tee laiendus üldse ühtki võrgupäringut ja kood on piisavalt väike, et lugeda ühe istumisega.",
+    "description": "Step 4 body."
+  },
+  "ob_stat1_n": {
+    "message": "Kohalik",
+    "description": "Stat 1 value."
+  },
+  "ob_stat1_l": {
+    "message": "iga ümbernimetamine toimub sinu seadmes",
+    "description": "Stat 1 label."
+  },
+  "ob_stat2_n": {
+    "message": "Privaatne",
+    "description": "Stat 2 value."
+  },
+  "ob_stat2_l": {
+    "message": "mitte midagi ei lahku sellest masinast",
+    "description": "Stat 2 label."
+  },
+  "ob_stat3_n": {
+    "message": "Avatud",
+    "description": "Stat 3 value."
+  },
+  "ob_stat3_l": {
+    "message": "ehitatud avalikult, iga commit",
+    "description": "Stat 3 label."
+  },
+  "ob_s4_pt": {
+    "message": "Allalaadimiste ümbernimetaja on koht, kus sa kohtud Zovo-ga. Suurem plaan on aus kiht kogu laienduste maailmale, üks tööriist korraga, ilma rämpsu ja jälgimiseta.",
+    "description": "Step 4 secondary paragraph."
+  },
+  "ob_link_why": {
+    "message": "Miks ma Zovo-t ehitan",
+    "description": "Link: why Zovo."
+  },
+  "ob_link_vision": {
+    "message": "Visioon",
+    "description": "Link: the vision."
+  },
+  "ob_link_safe": {
+    "message": "Kuidas me sind kaitseme",
+    "description": "Link: safety."
+  },
+  "ob_trust1_h": {
+    "message": "Kõik jääb sinu seadmesse",
+    "description": "Trust point 1 heading."
+  },
+  "ob_trust1_b": {
+    "message": "Sinu muster, reeglid ja ajalugu elavad kohalikus brauserisalvestuses. Kontot pole, sünkroonimisserverit pole, midagi ei saadeta välja.",
+    "description": "Trust point 1 body."
+  },
+  "ob_trust2_h": {
+    "message": "Üks inimene, ehitab avalikult",
+    "description": "Trust point 2 heading."
+  },
+  "ob_s5_kicker": {
+    "message": "Aus vahetus",
+    "description": "Step 5 kicker."
+  },
+  "ob_s5_title": {
+    "message": "Tasuta ümbernimetamised igaveseks. Või oma kõike, ühe korra.",
+    "description": "Step 5 title."
+  },
+  "ob_s5_lede": {
+    "message": "Vaikne ümbernimetamise tuum jääb tasuta, ilma piiranguta, mitut faili see puudutab. Üks üheksakümne üheksa dollari makse lülitab sisse piiramatud saidipõhised reeglid, kaustadesse suunamise, regex-puhastuse ja nimetamise lehe või PDF-i pealkirja järgi.",
+    "description": "Step 5 body."
+  },
+  "ob_plan_free": {
+    "message": "Tasuta",
+    "description": "Free plan name."
+  },
+  "ob_free_unit": {
+    "message": "igaveseks",
+    "description": "Free plan price unit."
+  },
+  "ob_free1": {
+    "message": "Iga allalaadimine nimetatakse iseseisvalt ümber",
+    "description": "Free benefit 1."
+  },
+  "ob_free2": {
+    "message": "Kolm põhimärgendit: kuupäev, sait, algne nimi",
+    "description": "Free benefit 2."
+  },
+  "ob_free3": {
+    "message": "Üks salvestatud saidipõhine reegel",
+    "description": "Free benefit 3."
+  },
+  "ob_free4": {
+    "message": "Konfliktide käsitlus ja reaalajas loendur",
+    "description": "Free benefit 4."
+  },
+  "ob_ribbon": {
+    "message": "Parim väärtus",
+    "description": "Lifetime plan ribbon."
+  },
+  "ob_plan_life": {
+    "message": "Eluaegne",
+    "description": "Lifetime plan name."
+  },
+  "ob_life_unit": {
+    "message": "ühekordne",
+    "description": "Lifetime plan price unit."
+  },
+  "ob_life1": {
+    "message": "Piiramatud saidipõhised reeglid",
+    "description": "Lifetime benefit 1."
+  },
+  "ob_life2": {
+    "message": "Suuna failid Allalaadimiste alamkaustadesse saidi või kuupäeva järgi",
+    "description": "Lifetime benefit 2."
+  },
+  "ob_life3": {
+    "message": "Regex-puhastus pluss lehe pealkirja ja PDF-i pealkirja märgendid",
+    "description": "Lifetime benefit 3."
+  },
+  "ob_life4": {
+    "message": "Seadistuse varundus ja import masinate vahel",
+    "description": "Lifetime benefit 4."
+  },
+  "ob_life5": {
+    "message": "Iga selle tööriista tulevane uuendus, kaasas",
+    "description": "Lifetime benefit 5."
+  },
+  "ob_life6": {
+    "message": "Üks makse, mitte kunagi tellimust",
+    "description": "Lifetime benefit 6."
+  },
+  "ob_life_cta": {
+    "message": "Hangi eluaegne $$99 eest",
+    "description": "Lifetime purchase CTA."
+  },
+  "ob_guarantee": {
+    "message": "14-päevane raha tagasi, küsimusteta. Eelistad kuutasu? See on $$4.99 samal lehel.",
+    "description": "Refund guarantee line."
+  },
+  "ob_s6_kicker": {
+    "message": "Kõik on valmis",
+    "description": "Step 6 kicker."
+  },
+  "ob_s6_title": {
+    "message": "Midagi pole vaja teha. See juba töötab.",
+    "description": "Step 6 title."
+  },
+  "ob_s6_lede": {
+    "message": "Järgmine fail, mille alla laadid, saab iseseisvalt puhta nime. Ei ühtki nuppu vajutada, ei ühtki dialoogi kinnitada. Siin on, mis edasi juhtub.",
+    "description": "Step 6 body."
+  },
+  "ob_dev_h": {
+    "message": "Arendajalt",
+    "description": "Developer note heading."
+  },
+  "ob_dev_b": {
+    "message": "Ma ehitan Zovo-t üksinda, avalikult. Kui midagi katki läheb, kirjuta mulle ja ma vastan. Ümbernimetajad on alles algus. Plaan on aus kiht kogu brauserile ja sinu üheksakümmend üheksa dollarit toimetab järgmise osa kohale.",
+    "description": "Developer note body."
+  },
+  "ob_link_github": {
+    "message": "Võta minuga ühendust GitHubis",
+    "description": "Link: GitHub."
+  },
+  "ob_link_going": {
+    "message": "Kuhu see suundub",
+    "description": "Link: roadmap."
+  },
+  "ob_cheat1_k": {
+    "message": "Iga allalaadimine",
+    "description": "Cheat-sheet row 1 key."
+  },
+  "ob_cheat1_v": {
+    "message": "Nimetatakse salvestamisel ümber",
+    "description": "Cheat-sheet row 1 value."
+  },
+  "ob_cheat2_k": {
+    "message": "Hüpikaken",
+    "description": "Cheat-sheet row 2 key."
+  },
+  "ob_cheat2_v": {
+    "message": "Loeb iga ümbernimetamise",
+    "description": "Cheat-sheet row 2 value."
+  },
+  "ob_cheat3_k": {
+    "message": "Sinu muster",
+    "description": "Cheat-sheet row 3 key."
+  },
+  "ob_cheat3_v": {
+    "message": "Muuda seda seadetes",
+    "description": "Cheat-sheet row 3 value."
+  },
+  "ob_cheat4_k": {
+    "message": "Esimene saidireegel",
+    "description": "Cheat-sheet row 4 key."
+  },
+  "ob_cheat4_v": {
+    "message": "Tasuta lisada",
+    "description": "Cheat-sheet row 4 value."
+  }
+}

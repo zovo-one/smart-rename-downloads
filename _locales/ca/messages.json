@@ -1,0 +1,834 @@
+{
+  "extName": {
+    "message": "Smart Rename Downloads",
+    "description": "Extension name shown in the Chrome Web Store and toolbar."
+  },
+  "extDesc": {
+    "message": "Reanomena cada baixada automàticament amb data, lloc i títol. Regles per lloc, regex, carpetes. Local, zero clics.",
+    "description": "Chrome Web Store short description (max 132 chars)."
+  },
+  "popup_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Popup header title."
+  },
+  "popup_open_settings": {
+    "message": "Obre la configuració",
+    "description": "Aria label for the settings gear button."
+  },
+  "popup_settings": {
+    "message": "Configuració",
+    "description": "Tooltip for the settings gear button."
+  },
+  "popup_health": {
+    "message": "Canvi de nom en pausa — s'ha eliminat el permís de baixades.",
+    "description": "Shown when the downloads permission is missing."
+  },
+  "popup_regrant": {
+    "message": "Torna a activar",
+    "description": "Link to re-grant the downloads permission."
+  },
+  "popup_hero_label": {
+    "message": "Fitxers reanomenats",
+    "description": "Label under the big lifetime rename counter."
+  },
+  "popup_hero_sub": {
+    "message": "Cada baixada es reanomena automàticament, abans d'arribar al disc.",
+    "description": "Supporting line under the hero counter."
+  },
+  "popup_master_title": {
+    "message": "Canvi de nom automàtic de baixades",
+    "description": "Master on/off switch title."
+  },
+  "popup_master_aria": {
+    "message": "Activa o desactiva el canvi de nom automàtic de baixades",
+    "description": "Accessible name for the master switch."
+  },
+  "popup_master_on": {
+    "message": "Activat — reanomena cada baixada",
+    "description": "Master switch note when enabled."
+  },
+  "popup_master_off": {
+    "message": "Desactivat — el Chrome manté els noms per defecte",
+    "description": "Master switch note when disabled."
+  },
+  "popup_recent": {
+    "message": "Canvis de nom recents",
+    "description": "Section label for the recent-renames list."
+  },
+  "popup_empty_title": {
+    "message": "A punt quan tu vulguis",
+    "description": "Empty-state headline in the popup."
+  },
+  "popup_empty_text": {
+    "message": "La teva propera baixada es reanomenarà automàticament. Apareixerà aquí.",
+    "description": "Empty-state body in the popup."
+  },
+  "popup_milestone_text": {
+    "message": "Smart Rename ha organitzat {n} baixades. La versió Pro les arxiva en carpetes automàticament.",
+    "description": "Post-success upgrade nudge. {n} is the rename count."
+  },
+  "popup_milestone_cta": {
+    "message": "Descobreix Pro",
+    "description": "CTA on the milestone nudge."
+  },
+  "popup_dismiss": {
+    "message": "Descarta",
+    "description": "Dismiss the milestone nudge."
+  },
+  "popup_trust": {
+    "message": "Local · Sense compte · Sense seguiment",
+    "description": "Trust line in the popup footer."
+  },
+  "popup_upgrade": {
+    "message": "Passa a Pro",
+    "description": "Upgrade button in the popup footer."
+  },
+  "flag_timeout": {
+    "message": "s'ha mantingut el nom per defecte",
+    "description": "Recent-list flag: rename fell back to Chrome's default name (timeout)."
+  },
+  "flag_sanitize": {
+    "message": "s'ha mantingut el nom per defecte",
+    "description": "Recent-list flag: name could not be sanitized."
+  },
+  "flag_nomatch": {
+    "message": "sense coincidència",
+    "description": "Recent-list flag: no site rule matched."
+  },
+  "opt_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Options brand name."
+  },
+  "opt_trust": {
+    "message": "Tot es queda en aquest dispositiu. Sense cap seguiment.",
+    "description": "Options sidebar trust line."
+  },
+  "aria_theme": {
+    "message": "Tema de color",
+    "description": "Aria label for the theme radiogroup."
+  },
+  "theme_system": {
+    "message": "Sistema",
+    "description": "Theme option: follow OS."
+  },
+  "theme_light": {
+    "message": "Clar",
+    "description": "Theme option: light."
+  },
+  "theme_dark": {
+    "message": "Fosc",
+    "description": "Theme option: dark."
+  },
+  "tier_free": {
+    "message": "Gratuït",
+    "description": "Free plan label."
+  },
+  "tier_trial": {
+    "message": "Prova",
+    "description": "Trial plan label."
+  },
+  "tier_pro": {
+    "message": "Pro",
+    "description": "Pro plan label."
+  },
+  "tab_template": {
+    "message": "Plantilla",
+    "description": "Settings tab: naming template."
+  },
+  "tab_sites": {
+    "message": "Regles per lloc",
+    "description": "Settings tab: per-site rules."
+  },
+  "tab_advanced": {
+    "message": "Avançat",
+    "description": "Settings tab: advanced naming."
+  },
+  "tab_backup": {
+    "message": "Còpia de seguretat",
+    "description": "Settings tab: backup and restore."
+  },
+  "tab_license": {
+    "message": "Llicència",
+    "description": "Settings tab: license and plan."
+  },
+  "tpl_h1": {
+    "message": "Plantilla de noms",
+    "description": "Template panel heading."
+  },
+  "tpl_lede": {
+    "message": "Crea el nom que rep cada baixada. L'extensió real del fitxer sempre es manté.",
+    "description": "Template panel intro."
+  },
+  "tpl_label": {
+    "message": "Plantilla",
+    "description": "Template input label."
+  },
+  "tpl_tokens_aria": {
+    "message": "Insereix un testimoni",
+    "description": "Aria label for the token chip row."
+  },
+  "tpl_conflict": {
+    "message": "Si ja existeix un fitxer amb aquest nom",
+    "description": "Conflict-policy select label."
+  },
+  "conflict_uniquify": {
+    "message": "Afegeix un número — conserva'ls tots dos",
+    "description": "Conflict policy: uniquify."
+  },
+  "conflict_overwrite": {
+    "message": "Sobreescriu el fitxer antic",
+    "description": "Conflict policy: overwrite."
+  },
+  "conflict_prompt": {
+    "message": "Pregunta-m'ho cada cop",
+    "description": "Conflict policy: prompt."
+  },
+  "tpl_save": {
+    "message": "Desa la plantilla",
+    "description": "Save-template button."
+  },
+  "tpl_preview_h": {
+    "message": "Vista prèvia en directe",
+    "description": "Preview section label."
+  },
+  "tpl_pv_host": {
+    "message": "Lloc d'exemple",
+    "description": "Preview sample-host input label."
+  },
+  "tpl_pv_name": {
+    "message": "Baixada d'exemple",
+    "description": "Preview sample-name input label."
+  },
+  "tpl_pv_result": {
+    "message": "Resultat",
+    "description": "Preview result label."
+  },
+  "tpl_pv_hint": {
+    "message": "Una „/“ en una plantilla gratuïta es desa com a „-“. L'encaminament a carpetes és una funció Pro.",
+    "description": "Preview hint about slashes and folder routing."
+  },
+  "sites_h1": {
+    "message": "Regles per lloc",
+    "description": "Sites panel heading."
+  },
+  "sites_lede": {
+    "message": "Dona a un lloc concret la seva pròpia plantilla — factures arxivades, articles amb títol. La versió gratuïta inclou una regla perquè la provis; la Pro és il·limitada.",
+    "description": "Sites panel intro."
+  },
+  "sites_count": {
+    "message": "0 d'1 regles gratuïtes utilitzades",
+    "description": "Initial site-rule count text."
+  },
+  "sites_count_free": {
+    "message": "{n} d'1 regles gratuïtes utilitzades",
+    "description": "Site-rule count for Free. {n} is the count."
+  },
+  "sites_count_pro": {
+    "message": "{n} regles",
+    "description": "Site-rule count for Pro. {n} is the count."
+  },
+  "sites_empty": {
+    "message": "Encara no hi ha regles de lloc. Afegeix-ne una a sota.",
+    "description": "Empty state for site rules."
+  },
+  "sites_add_h": {
+    "message": "Afegeix una regla",
+    "description": "Add-rule section label."
+  },
+  "sites_match": {
+    "message": "Lloc (host o *.host)",
+    "description": "Rule match input label."
+  },
+  "sites_match_ph": {
+    "message": "stripe.com",
+    "description": "Rule match placeholder."
+  },
+  "sites_template": {
+    "message": "Plantilla per a aquest lloc",
+    "description": "Rule template input label."
+  },
+  "sites_template_ph": {
+    "message": "{date}-invoice-{original}",
+    "description": "Rule template placeholder."
+  },
+  "sites_add_btn": {
+    "message": "Afegeix regla de lloc",
+    "description": "Add-rule button."
+  },
+  "sites_delete": {
+    "message": "Suprimeix la regla",
+    "description": "Aria label for a rule's delete button."
+  },
+  "sites_need_both": {
+    "message": "Introdueix un lloc i una plantilla.",
+    "description": "Validation when a rule field is empty."
+  },
+  "sites_add_err": {
+    "message": "No s'ha pogut afegir aquesta regla.",
+    "description": "Generic add-rule failure."
+  },
+  "adv_h1": {
+    "message": "Noms avançats",
+    "description": "Advanced panel heading."
+  },
+  "adv_lede": {
+    "message": "Eines potents per a la manera com realment arxives les baixades. Inclòs a Zovo Pro.",
+    "description": "Advanced panel intro."
+  },
+  "adv_save": {
+    "message": "Desa",
+    "description": "Generic save button."
+  },
+  "adv_clear": {
+    "message": "Neteja",
+    "description": "Generic clear button."
+  },
+  "adv_unlock": {
+    "message": "Desbloqueja amb Pro",
+    "description": "CTA on a locked Pro card."
+  },
+  "adv_on": {
+    "message": "Activat",
+    "description": "Feature toggled on."
+  },
+  "adv_off": {
+    "message": "Desactivat",
+    "description": "Feature toggled off."
+  },
+  "adv_perm_needed": {
+    "message": "Cal un permís per activar això.",
+    "description": "Shown when an optional permission is denied."
+  },
+  "adv_toggle_err": {
+    "message": "No s'ha pogut actualitzar aquesta configuració.",
+    "description": "Generic toggle failure."
+  },
+  "adv_folder_h": {
+    "message": "Encaminament a carpetes",
+    "description": "Folder-routing card heading."
+  },
+  "adv_folder_note": {
+    "message": "Baixa els fitxers a subcarpetes de la teva carpeta de Baixades, p. ex. Downloads/{hostname}/…",
+    "description": "Folder-routing explanation."
+  },
+  "adv_folder_label": {
+    "message": "Ruta de la subcarpeta (s'admeten testimonis)",
+    "description": "Folder-path input label."
+  },
+  "adv_folder_ph": {
+    "message": "{hostname}",
+    "description": "Folder-path placeholder."
+  },
+  "adv_folder_err": {
+    "message": "No s'ha pogut desar l'encaminament a carpetes.",
+    "description": "Folder-routing save failure."
+  },
+  "adv_regex_h": {
+    "message": "Cerca i substitueix (regex)",
+    "description": "Regex card heading."
+  },
+  "adv_regex_note": {
+    "message": "Neteja els noms amb una expressió regular abans que es desin.",
+    "description": "Regex explanation."
+  },
+  "adv_regex_find": {
+    "message": "Cerca",
+    "description": "Regex find input label."
+  },
+  "adv_regex_find_ph": {
+    "message": "\\s+",
+    "description": "Regex find placeholder."
+  },
+  "adv_regex_replace": {
+    "message": "Substitueix",
+    "description": "Regex replace input label."
+  },
+  "adv_regex_replace_ph": {
+    "message": "-",
+    "description": "Regex replace placeholder."
+  },
+  "adv_regex_flags": {
+    "message": "Indicadors",
+    "description": "Regex flags input label."
+  },
+  "adv_regex_need": {
+    "message": "Introdueix un patró per cercar.",
+    "description": "Validation when the regex find is empty."
+  },
+  "adv_regex_bad": {
+    "message": "Aquest patró no és vàlid o no és segur.",
+    "description": "Regex validation failure."
+  },
+  "adv_regex_err": {
+    "message": "No s'ha pogut desar el patró.",
+    "description": "Generic regex save failure."
+  },
+  "adv_cleared": {
+    "message": "Netejat",
+    "description": "Regex cleared confirmation."
+  },
+  "adv_title_h": {
+    "message": "Testimoni de títol de pàgina {title}",
+    "description": "Title-token card heading."
+  },
+  "adv_title_note": {
+    "message": "Utilitza el títol de la pàgina d'origen als noms dels fitxers. Activar-ho demana el permís de Pestanyes al Chrome.",
+    "description": "Title-token explanation."
+  },
+  "adv_title_toggle": {
+    "message": "Activa el testimoni {title}",
+    "description": "Title-token toggle label."
+  },
+  "adv_title_aria": {
+    "message": "Activa el testimoni de títol de pàgina",
+    "description": "Accessible name for the title-token switch."
+  },
+  "adv_pdf_h": {
+    "message": "Testimoni de títol de PDF {pdftitle}",
+    "description": "PDF-token card heading."
+  },
+  "adv_pdf_note": {
+    "message": "Anomena els PDF pel títol emmagatzemat dins del fitxer. Això llegeix el PDF per la xarxa, així que demana accés al lloc i està desactivat per defecte.",
+    "description": "PDF-token explanation."
+  },
+  "adv_pdf_toggle": {
+    "message": "Activa el testimoni {pdftitle}",
+    "description": "PDF-token toggle label."
+  },
+  "adv_pdf_aria": {
+    "message": "Activa el testimoni de títol de PDF",
+    "description": "Accessible name for the PDF-token switch."
+  },
+  "backup_h1": {
+    "message": "Còpia de seguretat i restauració",
+    "description": "Backup panel heading."
+  },
+  "backup_lede": {
+    "message": "Exporta la teva configuració a un fitxer o mou-la a un altre ordinador. Inclòs a Zovo Pro.",
+    "description": "Backup panel intro."
+  },
+  "backup_export_h": {
+    "message": "Exporta la configuració",
+    "description": "Export card heading."
+  },
+  "backup_export_note": {
+    "message": "Baixa un fitxer JSON amb la teva plantilla, regles i configuració. Sense historial, sense dades personals.",
+    "description": "Export explanation."
+  },
+  "backup_export_btn": {
+    "message": "Exporta a un fitxer",
+    "description": "Export button."
+  },
+  "backup_exported": {
+    "message": "Exportat",
+    "description": "Export confirmation."
+  },
+  "backup_export_err": {
+    "message": "L'exportació ha fallat.",
+    "description": "Export failure."
+  },
+  "backup_import_h": {
+    "message": "Importa la configuració",
+    "description": "Import card heading."
+  },
+  "backup_import_label": {
+    "message": "Enganxa una configuració exportada",
+    "description": "Import textarea label."
+  },
+  "backup_import_ph": {
+    "message": "{\"zovo_template\":\"…\"}",
+    "description": "Import textarea placeholder."
+  },
+  "backup_import_btn": {
+    "message": "Importa",
+    "description": "Import button."
+  },
+  "backup_imported": {
+    "message": "Importat",
+    "description": "Import confirmation."
+  },
+  "backup_need_json": {
+    "message": "Primer enganxa una configuració.",
+    "description": "Validation when import is empty."
+  },
+  "backup_import_err": {
+    "message": "No s'ha pogut importar aquest fitxer.",
+    "description": "Import failure."
+  },
+  "lic_h1": {
+    "message": "El teu pla",
+    "description": "License panel heading."
+  },
+  "lic_lede": {
+    "message": "Un sol pagament desbloqueja totes les funcions de noms, per sempre. Sense subscripció.",
+    "description": "License panel intro."
+  },
+  "lic_current": {
+    "message": "Pla actual",
+    "description": "Current-plan label."
+  },
+  "lic_free_sub": {
+    "message": "Canvi de nom bàsic, una regla de lloc, per sempre.",
+    "description": "Free-plan subtitle."
+  },
+  "lic_pro_sub": {
+    "message": "Totes les funcions de noms estan desbloquejades. Gràcies per donar suport a Zovo.",
+    "description": "Pro-plan subtitle."
+  },
+  "lic_upgrade": {
+    "message": "Passa a Pro",
+    "description": "Upgrade button on the License tab."
+  },
+  "lic_have_key": {
+    "message": "Tinc una clau",
+    "description": "License-key button."
+  },
+  "lic_included_h": {
+    "message": "Què desbloqueja Pro",
+    "description": "Benefits section label."
+  },
+  "lic_b1": {
+    "message": "Regles per lloc il·limitades",
+    "description": "Pro benefit 1."
+  },
+  "lic_b2": {
+    "message": "Encaminament a subcarpetes",
+    "description": "Pro benefit 2."
+  },
+  "lic_b3": {
+    "message": "Cerca i substitució amb regex",
+    "description": "Pro benefit 3."
+  },
+  "lic_b4": {
+    "message": "Testimonis de títol de pàgina i de PDF",
+    "description": "Pro benefit 4."
+  },
+  "lic_b5": {
+    "message": "Còpia de seguretat, exportació i importació de la configuració",
+    "description": "Pro benefit 5."
+  },
+  "saved": {
+    "message": "Desat",
+    "description": "Generic saved confirmation."
+  },
+  "err_template": {
+    "message": "No s'ha pogut desar aquesta plantilla.",
+    "description": "Generic template save failure."
+  },
+  "err_bad_token": {
+    "message": "Testimoni desconegut a la plantilla: ",
+    "description": "Prefix before the offending token name."
+  },
+  "ob_brand": {
+    "message": "Smart Rename Downloads",
+    "description": "Onboarding brand name."
+  },
+  "ob_by": {
+    "message": "· de Zovo",
+    "description": "Onboarding brand attribution suffix."
+  },
+  "ob_skip": {
+    "message": "Omet la introducció",
+    "description": "Skip onboarding button."
+  },
+  "ob_back": {
+    "message": "Enrere",
+    "description": "Previous-step button."
+  },
+  "ob_next": {
+    "message": "Següent",
+    "description": "Next-step button."
+  },
+  "ob_later": {
+    "message": "Potser més tard",
+    "description": "Next-button label on the offer step."
+  },
+  "ob_start": {
+    "message": "Comença a fer-lo servir",
+    "description": "Final onboarding button."
+  },
+  "ob_stepno": {
+    "message": "{a} de {b}",
+    "description": "Step counter, e.g. 1 of 6. {a} current, {b} total."
+  },
+  "ob_s1_kicker": {
+    "message": "El problema de la carpeta de baixades",
+    "description": "Step 1 kicker."
+  },
+  "ob_s1_title": {
+    "message": "Mai més trobaràs aquell fitxer.",
+    "description": "Step 1 title."
+  },
+  "ob_s1_pt": {
+    "message": "Fet per a persones que baixen fitxers tot el dia. Investigadors, comptables, qualsevol persona amb la carpeta de Baixades descontrolada.",
+    "description": "Step 1 secondary paragraph."
+  },
+  "ob_s2_kicker": {
+    "message": "Una regla, ja activada",
+    "description": "Step 2 kicker."
+  },
+  "ob_s2_title": {
+    "message": "Mira com un nom inútil es converteix en un de real.",
+    "description": "Step 2 title."
+  },
+  "ob_s2_lede": {
+    "message": "El patró per defecte és la data, després el lloc, després el nom original. En el moment que una baixada acaba, el nom es reescriu i es desa directament al disc. Sense clic, sense diàleg. Aquí el tens en un fitxer real.",
+    "description": "Step 2 body."
+  },
+  "ob_demo_btn": {
+    "message": "Mira com canvia el nom",
+    "description": "Button that replays the rename demo."
+  },
+  "ob_saved_as": {
+    "message": "Desat com a",
+    "description": "Demo label for the original filename."
+  },
+  "ob_renamed_to": {
+    "message": "Reanomenat a",
+    "description": "Demo label for the renamed filename."
+  },
+  "ob_fw_kept": {
+    "message": ".pdf mantingut",
+    "description": "Token chip: the real extension is kept."
+  },
+  "ob_s3_kicker": {
+    "message": "Dos minuts, un sol cop",
+    "description": "Step 3 kicker."
+  },
+  "ob_s3_title": {
+    "message": "Estableix el patró de noms que conservaràs per sempre.",
+    "description": "Step 3 title."
+  },
+  "ob_s3_lede": {
+    "message": "Crea'l a partir de testimonis. Fes clic en un per afegir-lo al patró i mira com s'actualitza l'exemple. L'extensió real del fitxer sempre es manté al final. Desa'l i cada baixada futura seguirà això.",
+    "description": "Step 3 body."
+  },
+  "ob_s3_pt": {
+    "message": "Viu al teu navegador. Canvia'l quan vulguis des de la configuració, i res dels teus fitxers no s'envia mai enlloc.",
+    "description": "Step 3 secondary paragraph."
+  },
+  "ob_template_label": {
+    "message": "El teu patró de noms",
+    "description": "Onboarding template input label."
+  },
+  "ob_result": {
+    "message": "Resultat",
+    "description": "Onboarding preview result label."
+  },
+  "ob_save_btn": {
+    "message": "Desa el meu patró",
+    "description": "Save-pattern button."
+  },
+  "ob_pattern_saved": {
+    "message": "Patró desat",
+    "description": "Save-pattern button after saving."
+  },
+  "ob_saved_msg": {
+    "message": "Desat. Cada baixada segueix això ara.",
+    "description": "Confirmation after the pattern is saved."
+  },
+  "ob_s4_kicker": {
+    "message": "Per què pots deixar-lo funcionant",
+    "description": "Step 4 kicker."
+  },
+  "ob_s4_title": {
+    "message": "Local per disseny, creat obertament per un sol desenvolupador.",
+    "description": "Step 4 title."
+  },
+  "ob_s4_lede": {
+    "message": "Els teus fitxers i el teu historial de canvis de nom mai surten d'aquesta màquina. Al pla gratuït l'extensió no fa cap crida de xarxa, i el codi és prou petit per llegir-lo d'una sola tirada.",
+    "description": "Step 4 body."
+  },
+  "ob_stat1_n": {
+    "message": "Local",
+    "description": "Stat 1 value."
+  },
+  "ob_stat1_l": {
+    "message": "cada canvi de nom s'executa al teu dispositiu",
+    "description": "Stat 1 label."
+  },
+  "ob_stat2_n": {
+    "message": "Privat",
+    "description": "Stat 2 value."
+  },
+  "ob_stat2_l": {
+    "message": "res no surt d'aquesta màquina",
+    "description": "Stat 2 label."
+  },
+  "ob_stat3_n": {
+    "message": "Obert",
+    "description": "Stat 3 value."
+  },
+  "ob_stat3_l": {
+    "message": "creat en públic, cada commit",
+    "description": "Stat 3 label."
+  },
+  "ob_s4_pt": {
+    "message": "Un reanomenador de baixades és on coneixes Zovo. El pla més gran és una capa honesta per a tot el món de les extensions, una eina a la vegada, sense correu brossa i sense seguiment.",
+    "description": "Step 4 secondary paragraph."
+  },
+  "ob_link_why": {
+    "message": "Per què creo Zovo",
+    "description": "Link: why Zovo."
+  },
+  "ob_link_vision": {
+    "message": "La visió",
+    "description": "Link: the vision."
+  },
+  "ob_link_safe": {
+    "message": "Com et protegim",
+    "description": "Link: safety."
+  },
+  "ob_trust1_h": {
+    "message": "Tot es queda al teu dispositiu",
+    "description": "Trust point 1 heading."
+  },
+  "ob_trust1_b": {
+    "message": "El teu patró, regles i historial viuen a l'emmagatzematge local del navegador. Sense compte, sense servidor de sincronització, res no s'envia enfora.",
+    "description": "Trust point 1 body."
+  },
+  "ob_trust2_h": {
+    "message": "Una sola persona, creant obertament",
+    "description": "Trust point 2 heading."
+  },
+  "ob_s5_kicker": {
+    "message": "El tracte honest",
+    "description": "Step 5 kicker."
+  },
+  "ob_s5_title": {
+    "message": "Canvis de nom gratuïts per sempre. O tingues-ho tot, un sol cop.",
+    "description": "Step 5 title."
+  },
+  "ob_s5_lede": {
+    "message": "El nucli silenciós de canvi de nom continua sent gratuït, sense límit de quants fitxers toca. Un sol pagament de noranta-nou dòlars activa regles per lloc il·limitades, encaminament a carpetes, neteja amb regex i noms a partir del títol d'una pàgina o d'un PDF.",
+    "description": "Step 5 body."
+  },
+  "ob_plan_free": {
+    "message": "Gratuït",
+    "description": "Free plan name."
+  },
+  "ob_free_unit": {
+    "message": "per sempre",
+    "description": "Free plan price unit."
+  },
+  "ob_free1": {
+    "message": "Cada baixada reanomenada tota sola",
+    "description": "Free benefit 1."
+  },
+  "ob_free2": {
+    "message": "Els tres testimonis bàsics: data, lloc, nom original",
+    "description": "Free benefit 2."
+  },
+  "ob_free3": {
+    "message": "Una regla per lloc desada",
+    "description": "Free benefit 3."
+  },
+  "ob_free4": {
+    "message": "Gestió de conflictes i un comptador en directe",
+    "description": "Free benefit 4."
+  },
+  "ob_ribbon": {
+    "message": "Millor valor",
+    "description": "Lifetime plan ribbon."
+  },
+  "ob_plan_life": {
+    "message": "De per vida",
+    "description": "Lifetime plan name."
+  },
+  "ob_life_unit": {
+    "message": "un sol cop",
+    "description": "Lifetime plan price unit."
+  },
+  "ob_life1": {
+    "message": "Regles per lloc il·limitades",
+    "description": "Lifetime benefit 1."
+  },
+  "ob_life2": {
+    "message": "Encamina els fitxers a subcarpetes de Baixades per lloc o data",
+    "description": "Lifetime benefit 2."
+  },
+  "ob_life3": {
+    "message": "Neteja amb regex més testimonis de títol de pàgina i de PDF",
+    "description": "Lifetime benefit 3."
+  },
+  "ob_life4": {
+    "message": "Còpia de seguretat i importació de la configuració entre màquines",
+    "description": "Lifetime benefit 4."
+  },
+  "ob_life5": {
+    "message": "Cada actualització futura d'aquesta eina, inclosa",
+    "description": "Lifetime benefit 5."
+  },
+  "ob_life6": {
+    "message": "Un sol pagament, sense subscripció, mai",
+    "description": "Lifetime benefit 6."
+  },
+  "ob_life_cta": {
+    "message": "Aconsegueix la versió de per vida per $$99",
+    "description": "Lifetime purchase CTA."
+  },
+  "ob_guarantee": {
+    "message": "Devolució de 14 dies, sense preguntes. Prefereixes mensual? Són $$4.99 a la mateixa pàgina.",
+    "description": "Refund guarantee line."
+  },
+  "ob_s6_kicker": {
+    "message": "Ja ho tens tot a punt",
+    "description": "Step 6 kicker."
+  },
+  "ob_s6_title": {
+    "message": "No queda res per fer. Ja està funcionant.",
+    "description": "Step 6 title."
+  },
+  "ob_s6_lede": {
+    "message": "El proper fitxer que baixis rebrà un nom net tot sol. Cap botó per prémer, cap diàleg per confirmar. Això és el que passa a partir d'ara.",
+    "description": "Step 6 body."
+  },
+  "ob_dev_h": {
+    "message": "Del desenvolupador",
+    "description": "Developer note heading."
+  },
+  "ob_dev_b": {
+    "message": "Creo Zovo tot sol, obertament. Si alguna cosa es trenca, escriu-me i et responc. Els reanomenadors només són el començament. El pla és una capa honesta per a tot el navegador, i els teus noranta-nou dòlars fan possible la propera peça.",
+    "description": "Developer note body."
+  },
+  "ob_link_github": {
+    "message": "Contacta amb mi a GitHub",
+    "description": "Link: GitHub."
+  },
+  "ob_link_going": {
+    "message": "Cap on va això",
+    "description": "Link: roadmap."
+  },
+  "ob_cheat1_k": {
+    "message": "Cada baixada",
+    "description": "Cheat-sheet row 1 key."
+  },
+  "ob_cheat1_v": {
+    "message": "Reanomenada en desar",
+    "description": "Cheat-sheet row 1 value."
+  },
+  "ob_cheat2_k": {
+    "message": "La finestra emergent",
+    "description": "Cheat-sheet row 2 key."
+  },
+  "ob_cheat2_v": {
+    "message": "Compta cada canvi de nom",
+    "description": "Cheat-sheet row 2 value."
+  },
+  "ob_cheat3_k": {
+    "message": "El teu patró",
+    "description": "Cheat-sheet row 3 key."
+  },
+  "ob_cheat3_v": {
+    "message": "Edita'l a la configuració",
+    "description": "Cheat-sheet row 3 value."
+  },
+  "ob_cheat4_k": {
+    "message": "Primera regla de lloc",
+    "description": "Cheat-sheet row 4 key."
+  },
+  "ob_cheat4_v": {
+    "message": "Gratuïta per afegir",
+    "description": "Cheat-sheet row 4 value."
+  }
+}

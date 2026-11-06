@@ -1,0 +1,215 @@
+/* ============================================================================
+ * options.css — Smart Rename Downloads settings. Depends on zovo-base.css.
+ * Two-column shell (nav aside + content). Fully theme-aware via zovo tokens.
+ * ========================================================================== */
+
+body.zovo { background: var(--zovo-surface); min-height: 100vh; }
+
+.opt {
+  display: grid;
+  grid-template-columns: 248px minmax(0, 1fr) 312px;
+  gap: 0;
+  max-width: 1320px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: var(--zovo-bg);
+  box-shadow: var(--zovo-shadow);
+}
+
+/* ---- Conversion rail (right) --------------------------------------------- */
+.opt__rail {
+  padding: var(--zovo-space-7) var(--zovo-space-5);
+  border-left: 1px solid var(--zovo-border);
+  background: var(--zovo-surface);
+}
+.opt__rail .zovo-sidebar { width: 100%; position: sticky; top: var(--zovo-space-7); }
+
+/* ---- Aside / nav ---------------------------------------------------------- */
+.opt__aside {
+  display: flex; flex-direction: column;
+  padding: var(--zovo-space-5) var(--zovo-space-4);
+  border-right: 1px solid var(--zovo-border);
+  background: var(--zovo-surface);
+}
+.opt__brand { display: flex; align-items: center; gap: var(--zovo-space-3); margin-bottom: var(--zovo-space-6); }
+.opt__mark {
+  display: grid; place-items: center;
+  width: 36px; height: 36px; color: #fff;
+  background: linear-gradient(135deg, var(--zovo-primary), var(--zovo-primary-light));
+  border-radius: var(--zovo-radius-input);
+  flex: 0 0 auto;
+}
+.opt__brand-name { font-weight: var(--zovo-fw-heading); font-size: var(--zovo-fs-body); letter-spacing: -0.01em; }
+.opt__brand-tier { margin-top: 4px; }
+
+.opt__tabs { display: flex; flex-direction: column; gap: 2px; }
+.opt__tab {
+  text-align: left;
+  padding: 10px var(--zovo-space-3);
+  font: inherit; font-size: var(--zovo-fs-body); font-weight: var(--zovo-fw-medium);
+  color: var(--zovo-text-secondary);
+  background: transparent; border: 1px solid transparent;
+  border-radius: var(--zovo-radius-btn);
+  cursor: pointer;
+  transition: background var(--zovo-transition), color var(--zovo-transition);
+}
+.opt__tab:hover { background: var(--zovo-surface-2); color: var(--zovo-text); }
+.opt__tab[aria-selected='true'] { background: var(--zovo-primary-50); color: var(--zovo-primary); font-weight: var(--zovo-fw-heading); }
+.opt__tab:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--zovo-bg), 0 0 0 4px var(--zovo-primary); }
+
+.opt__aside-foot { margin-top: auto; padding-top: var(--zovo-space-6); }
+.opt__theme {
+  display: grid; grid-auto-flow: column; grid-auto-columns: 1fr;
+  gap: 2px; padding: 3px;
+  background: var(--zovo-surface-2);
+  border: 1px solid var(--zovo-border);
+  border-radius: var(--zovo-radius-btn);
+}
+.opt__theme-btn {
+  padding: 6px 4px; font: inherit; font-size: 11px; font-weight: var(--zovo-fw-medium);
+  color: var(--zovo-text-secondary);
+  background: transparent; border: none; border-radius: 6px; cursor: pointer;
+  transition: background var(--zovo-transition), color var(--zovo-transition);
+}
+.opt__theme-btn:hover { color: var(--zovo-text); }
+.opt__theme-btn[aria-checked='true'] { background: var(--zovo-bg); color: var(--zovo-text); box-shadow: var(--zovo-shadow-sm); }
+.opt__theme-btn:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--zovo-primary); }
+.opt__trust { margin: var(--zovo-space-3) 0 0; font-size: 11px; color: var(--zovo-text-secondary); }
+
+/* ---- Main / panels -------------------------------------------------------- */
+.opt__main { padding: var(--zovo-space-7) var(--zovo-space-7); min-width: 0; }
+.opt__panel { display: flex; flex-direction: column; gap: var(--zovo-space-5); max-width: 620px; }
+.opt__panel[hidden] { display: none; }
+.opt__panel:focus-visible { outline: none; }
+.opt__panel-head { margin-bottom: var(--zovo-space-1); }
+.opt__h1 { margin: 0 0 var(--zovo-space-2); font-size: var(--zovo-fs-title); font-weight: var(--zovo-fw-heading); letter-spacing: -0.02em; }
+.opt__lede { margin: 0; color: var(--zovo-text-secondary); }
+
+.opt__card { display: flex; flex-direction: column; }
+.opt__card + .opt__card { margin-top: 0; }
+.opt__card-h { margin: 0 0 var(--zovo-space-2); font-size: var(--zovo-fs-subheading); font-weight: var(--zovo-fw-heading); }
+.opt__card-note { margin: 0 0 var(--zovo-space-4); font-size: var(--zovo-fs-caption); color: var(--zovo-text-secondary); }
+.opt__card-note code, .opt__card-h code { font-family: var(--zovo-font-mono); font-size: 0.92em; background: var(--zovo-surface-2); padding: 1px 5px; border-radius: 4px; }
+.opt__mt { margin-top: var(--zovo-space-5); }
+.opt__hint { margin: var(--zovo-space-3) 0 0; font-size: 11px; color: var(--zovo-text-secondary); }
+
+.opt__actions { display: flex; align-items: center; gap: var(--zovo-space-3); margin-top: var(--zovo-space-4); flex-wrap: wrap; }
+.opt__saved { font-size: var(--zovo-fs-caption); color: var(--zovo-success); min-height: 16px; }
+.opt__saved.is-err { color: var(--zovo-error); }
+.opt__saved.is-busy { color: var(--zovo-text-secondary); }
+.opt__err { margin: var(--zovo-space-2) 0 0; min-height: 16px; font-size: var(--zovo-fs-caption); color: var(--zovo-error); }
+
+/* ---- Token chips ---------------------------------------------------------- */
+.opt__tokens { display: flex; flex-wrap: wrap; gap: var(--zovo-space-2); margin-top: var(--zovo-space-3); }
+.opt__token {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 10px;
+  font-family: var(--zovo-font-mono); font-size: var(--zovo-fs-caption);
+  color: var(--zovo-primary);
+  background: var(--zovo-primary-50);
+  border: 1px solid transparent; border-radius: var(--zovo-radius-pill);
+  cursor: pointer; transition: background var(--zovo-transition);
+}
+.opt__token:hover { background: color-mix(in srgb, var(--zovo-primary) 16%, var(--zovo-bg)); }
+.opt__token:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--zovo-primary); }
+.opt__token--pro { color: var(--zovo-pro-dark); background: color-mix(in srgb, var(--zovo-pro) 12%, var(--zovo-bg)); }
+.opt__token-badge { font-size: 9px; padding: 0 5px; }
+
+/* ---- Preview -------------------------------------------------------------- */
+.opt__preview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--zovo-space-4); margin-bottom: var(--zovo-space-4); }
+.opt__preview-out {
+  display: flex; align-items: center; gap: var(--zovo-space-3);
+  padding: var(--zovo-space-3) var(--zovo-space-4);
+  background: var(--zovo-surface-2); border-radius: var(--zovo-radius-btn);
+}
+.opt__preview-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--zovo-text-secondary); flex: 0 0 auto; }
+.opt__preview-value { font-family: var(--zovo-font-mono); font-size: var(--zovo-fs-body); color: var(--zovo-text); word-break: break-all; }
+
+/* ---- Sites / rules -------------------------------------------------------- */
+.opt__cap { margin-bottom: var(--zovo-space-3); font-size: var(--zovo-fs-caption); font-weight: var(--zovo-fw-medium); color: var(--zovo-text-secondary); }
+.opt__rules { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--zovo-space-2); }
+.opt__rule {
+  display: flex; align-items: center; gap: var(--zovo-space-3);
+  padding: var(--zovo-space-3) var(--zovo-space-4);
+  background: var(--zovo-bg); border: 1px solid var(--zovo-border); border-radius: var(--zovo-radius-btn);
+}
+.opt__rule-info { flex: 1; min-width: 0; }
+.opt__rule-match { font-family: var(--zovo-font-mono); font-size: var(--zovo-fs-body); font-weight: var(--zovo-fw-medium); }
+.opt__rule-template { font-family: var(--zovo-font-mono); font-size: var(--zovo-fs-caption); color: var(--zovo-text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.opt__rule-del {
+  flex: 0 0 auto; width: 30px; height: 30px; display: grid; place-items: center;
+  color: var(--zovo-text-secondary); background: transparent; border: 1px solid transparent;
+  border-radius: var(--zovo-radius-btn); cursor: pointer; transition: background var(--zovo-transition), color var(--zovo-transition);
+}
+.opt__rule-del:hover { background: color-mix(in srgb, var(--zovo-error) 12%, var(--zovo-bg)); color: var(--zovo-error); }
+.opt__rule-del:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--zovo-primary); }
+.opt__rules-empty { margin: 0; font-size: var(--zovo-fs-caption); }
+.opt__rules-empty[hidden] { display: none; }
+.opt__rule-form { display: grid; grid-template-columns: 1fr 1fr; gap: var(--zovo-space-4); }
+
+/* ---- Pro-locked cards ----------------------------------------------------- */
+.opt__pro-head { display: flex; align-items: center; justify-content: space-between; gap: var(--zovo-space-3); margin-bottom: var(--zovo-space-1); }
+.opt__pro-head .opt__card-h { margin: 0; }
+.opt__pro-badge { flex: 0 0 auto; }
+.opt__unlock { display: none; margin-top: var(--zovo-space-4); }
+/* When locked (free tier): dim the real controls, reveal the unlock CTA. */
+.opt__pro[data-locked='true'] .opt__actions,
+.opt__pro[data-locked='true'] .opt__regex-grid,
+.opt__pro[data-locked='true'] .opt__toggle-row,
+.opt__pro[data-locked='true'] > label.zovo-label,
+.opt__pro[data-locked='true'] > input,
+.opt__pro[data-locked='true'] > textarea {
+  opacity: 0.5; pointer-events: none; filter: saturate(0.6);
+}
+.opt__pro[data-locked='true'] .opt__unlock { display: inline-flex; }
+
+.opt__toggle-row { display: flex; align-items: center; justify-content: space-between; gap: var(--zovo-space-4); padding: var(--zovo-space-2) 0; }
+.opt__regex-grid { display: grid; grid-template-columns: 1fr 1fr 80px; gap: var(--zovo-space-3); }
+
+/* ---- Switch (shared with popup look) -------------------------------------- */
+.opt__switch {
+  position: relative; flex: 0 0 auto;
+  width: 44px; height: 26px; padding: 0;
+  background: var(--zovo-surface-2); border: 1px solid var(--zovo-border);
+  border-radius: var(--zovo-radius-pill); cursor: pointer;
+  transition: background var(--zovo-transition), border-color var(--zovo-transition);
+}
+.opt__switch .srp__switch-knob {
+  position: absolute; top: 2px; left: 2px; width: 20px; height: 20px;
+  background: #fff; border-radius: 50%; box-shadow: var(--zovo-shadow-sm);
+  transition: transform var(--zovo-transition);
+}
+.opt__switch[aria-checked='true'] { background: var(--zovo-primary); border-color: var(--zovo-primary); }
+.opt__switch[aria-checked='true'] .srp__switch-knob { transform: translateX(18px); }
+.opt__switch:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--zovo-bg), 0 0 0 4px var(--zovo-primary); }
+
+/* ---- Backup --------------------------------------------------------------- */
+.opt__import { resize: vertical; min-height: 96px; line-height: 1.4; }
+
+/* ---- License / plan ------------------------------------------------------- */
+.opt__plan-row { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--zovo-space-4); }
+.opt__plan-name { font-size: var(--zovo-fs-heading); font-weight: 700; letter-spacing: -0.01em; margin-top: 2px; }
+.opt__plan-sub { margin-top: var(--zovo-space-1); font-size: var(--zovo-fs-caption); color: var(--zovo-text-secondary); }
+.opt__plan-actions { margin-top: var(--zovo-space-5); }
+.opt__benefits { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--zovo-space-2); }
+.opt__benefits li { position: relative; padding-left: 24px; font-size: var(--zovo-fs-body); }
+.opt__benefits li::before {
+  content: ''; position: absolute; left: 4px; top: 6px;
+  width: 6px; height: 10px; border: solid var(--zovo-success); border-width: 0 2px 2px 0; transform: rotate(45deg);
+}
+
+/* ---- Responsive ----------------------------------------------------------- */
+@media (max-width: 1080px) {
+  .opt { grid-template-columns: 248px minmax(0, 1fr); }
+  .opt__rail { grid-column: 1 / -1; border-left: none; border-top: 1px solid var(--zovo-border); }
+  .opt__rail .zovo-sidebar { position: static; max-width: 420px; }
+}
+@media (max-width: 720px) {
+  .opt { grid-template-columns: 1fr; }
+  .opt__aside { flex-direction: column; border-right: none; border-bottom: 1px solid var(--zovo-border); }
+  .opt__tabs { flex-direction: row; flex-wrap: wrap; }
+  .opt__aside-foot { margin-top: var(--zovo-space-5); }
+  .opt__main { padding: var(--zovo-space-5); }
+  .opt__preview-grid, .opt__rule-form { grid-template-columns: 1fr; }
+  .opt__regex-grid { grid-template-columns: 1fr 1fr; }
+}

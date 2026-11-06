@@ -1,0 +1,834 @@
+{
+  "extName": {
+    "message": "Smart Rename Downloads",
+    "description": "Extension name shown in the Chrome Web Store and toolbar."
+  },
+  "extDesc": {
+    "message": "Аутоматски преименујте свако преузимање помоћу токена датума, сајта и наслова. Правила по сајту, регекс, рутирање у фасцикле",
+    "description": "Chrome Web Store short description (max 132 chars)."
+  },
+  "popup_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Popup header title."
+  },
+  "popup_open_settings": {
+    "message": "Отвори подешавања",
+    "description": "Aria label for the settings gear button."
+  },
+  "popup_settings": {
+    "message": "Подешавања",
+    "description": "Tooltip for the settings gear button."
+  },
+  "popup_health": {
+    "message": "Преименовање је паузирано — дозвола за Преузимања је уклоњена.",
+    "description": "Shown when the downloads permission is missing."
+  },
+  "popup_regrant": {
+    "message": "Поново омогући",
+    "description": "Link to re-grant the downloads permission."
+  },
+  "popup_hero_label": {
+    "message": "Преименованих датотека",
+    "description": "Label under the big lifetime rename counter."
+  },
+  "popup_hero_sub": {
+    "message": "Свако преузимање се аутоматски преименује пре него што стигне на диск.",
+    "description": "Supporting line under the hero counter."
+  },
+  "popup_master_title": {
+    "message": "Аутоматско преименовање преузимања",
+    "description": "Master on/off switch title."
+  },
+  "popup_master_aria": {
+    "message": "Укључи/искључи аутоматско преименовање преузимања",
+    "description": "Accessible name for the master switch."
+  },
+  "popup_master_on": {
+    "message": "Укључено — преименује се свако преузимање",
+    "description": "Master switch note when enabled."
+  },
+  "popup_master_off": {
+    "message": "Искључено — Chrome задржава подразумевана имена",
+    "description": "Master switch note when disabled."
+  },
+  "popup_recent": {
+    "message": "Недавна преименовања",
+    "description": "Section label for the recent-renames list."
+  },
+  "popup_empty_title": {
+    "message": "Спремно кад и ви",
+    "description": "Empty-state headline in the popup."
+  },
+  "popup_empty_text": {
+    "message": "Ваше следеће преузимање биће аутоматски преименовано. Појавиће се овде.",
+    "description": "Empty-state body in the popup."
+  },
+  "popup_milestone_text": {
+    "message": "Smart Rename је организовао {n} преузимања. Pro их аутоматски распоређује у фасцикле.",
+    "description": "Post-success upgrade nudge. {n} is the rename count."
+  },
+  "popup_milestone_cta": {
+    "message": "Погледај Pro",
+    "description": "CTA on the milestone nudge."
+  },
+  "popup_dismiss": {
+    "message": "Одбаци",
+    "description": "Dismiss the milestone nudge."
+  },
+  "popup_trust": {
+    "message": "Локално · Без налога · Без праћења",
+    "description": "Trust line in the popup footer."
+  },
+  "popup_upgrade": {
+    "message": "Пређи на Pro",
+    "description": "Upgrade button in the popup footer."
+  },
+  "flag_timeout": {
+    "message": "задржано подразумевано",
+    "description": "Recent-list flag: rename fell back to Chrome's default name (timeout)."
+  },
+  "flag_sanitize": {
+    "message": "задржано подразумевано",
+    "description": "Recent-list flag: name could not be sanitized."
+  },
+  "flag_nomatch": {
+    "message": "нема поклапања",
+    "description": "Recent-list flag: no site rule matched."
+  },
+  "opt_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Options brand name."
+  },
+  "opt_trust": {
+    "message": "Све остаје на овом уређају. Без праћења.",
+    "description": "Options sidebar trust line."
+  },
+  "aria_theme": {
+    "message": "Тема боја",
+    "description": "Aria label for the theme radiogroup."
+  },
+  "theme_system": {
+    "message": "Систем",
+    "description": "Theme option: follow OS."
+  },
+  "theme_light": {
+    "message": "Светла",
+    "description": "Theme option: light."
+  },
+  "theme_dark": {
+    "message": "Тамна",
+    "description": "Theme option: dark."
+  },
+  "tier_free": {
+    "message": "Бесплатно",
+    "description": "Free plan label."
+  },
+  "tier_trial": {
+    "message": "Проба",
+    "description": "Trial plan label."
+  },
+  "tier_pro": {
+    "message": "Pro",
+    "description": "Pro plan label."
+  },
+  "tab_template": {
+    "message": "Шаблон",
+    "description": "Settings tab: naming template."
+  },
+  "tab_sites": {
+    "message": "Правила по сајту",
+    "description": "Settings tab: per-site rules."
+  },
+  "tab_advanced": {
+    "message": "Напредно",
+    "description": "Settings tab: advanced naming."
+  },
+  "tab_backup": {
+    "message": "Резервна копија",
+    "description": "Settings tab: backup and restore."
+  },
+  "tab_license": {
+    "message": "Лиценца",
+    "description": "Settings tab: license and plan."
+  },
+  "tpl_h1": {
+    "message": "Шаблон именовања",
+    "description": "Template panel heading."
+  },
+  "tpl_lede": {
+    "message": "Направите име датотеке које добија свако преузимање. Права екстензија датотеке се увек задржава.",
+    "description": "Template panel intro."
+  },
+  "tpl_label": {
+    "message": "Шаблон",
+    "description": "Template input label."
+  },
+  "tpl_tokens_aria": {
+    "message": "Уметни токен",
+    "description": "Aria label for the token chip row."
+  },
+  "tpl_conflict": {
+    "message": "Ако датотека са тим именом већ постоји",
+    "description": "Conflict-policy select label."
+  },
+  "conflict_uniquify": {
+    "message": "Додај број — задржи обе",
+    "description": "Conflict policy: uniquify."
+  },
+  "conflict_overwrite": {
+    "message": "Замени стару датотеку",
+    "description": "Conflict policy: overwrite."
+  },
+  "conflict_prompt": {
+    "message": "Питај ме сваки пут",
+    "description": "Conflict policy: prompt."
+  },
+  "tpl_save": {
+    "message": "Сачувај шаблон",
+    "description": "Save-template button."
+  },
+  "tpl_preview_h": {
+    "message": "Преглед уживо",
+    "description": "Preview section label."
+  },
+  "tpl_pv_host": {
+    "message": "Пример сајта",
+    "description": "Preview sample-host input label."
+  },
+  "tpl_pv_name": {
+    "message": "Пример преузимања",
+    "description": "Preview sample-name input label."
+  },
+  "tpl_pv_result": {
+    "message": "Резултат",
+    "description": "Preview result label."
+  },
+  "tpl_pv_hint": {
+    "message": "„/” у бесплатном шаблону се чува као „-”. Рутирање у фасцикле је Pro функција.",
+    "description": "Preview hint about slashes and folder routing."
+  },
+  "sites_h1": {
+    "message": "Правила по сајту",
+    "description": "Sites panel heading."
+  },
+  "sites_lede": {
+    "message": "Дајте одређеном сајту сопствени шаблон — фактуре у фасциклама, радови са насловима. Бесплатна верзија укључује једно правило да осетите; Pro је неограничен.",
+    "description": "Sites panel intro."
+  },
+  "sites_count": {
+    "message": "0 од 1 бесплатних правила искоришћено",
+    "description": "Initial site-rule count text."
+  },
+  "sites_count_free": {
+    "message": "{n} од 1 бесплатних правила искоришћено",
+    "description": "Site-rule count for Free. {n} is the count."
+  },
+  "sites_count_pro": {
+    "message": "{n} правила",
+    "description": "Site-rule count for Pro. {n} is the count."
+  },
+  "sites_empty": {
+    "message": "Још нема правила за сајтове. Додајте једно испод.",
+    "description": "Empty state for site rules."
+  },
+  "sites_add_h": {
+    "message": "Додај правило",
+    "description": "Add-rule section label."
+  },
+  "sites_match": {
+    "message": "Сајт (домаћин или *.домаћин)",
+    "description": "Rule match input label."
+  },
+  "sites_match_ph": {
+    "message": "stripe.com",
+    "description": "Rule match placeholder."
+  },
+  "sites_template": {
+    "message": "Шаблон за овај сајт",
+    "description": "Rule template input label."
+  },
+  "sites_template_ph": {
+    "message": "{date}-invoice-{original}",
+    "description": "Rule template placeholder."
+  },
+  "sites_add_btn": {
+    "message": "Додај правило за сајт",
+    "description": "Add-rule button."
+  },
+  "sites_delete": {
+    "message": "Обриши правило",
+    "description": "Aria label for a rule's delete button."
+  },
+  "sites_need_both": {
+    "message": "Унесите и сајт и шаблон.",
+    "description": "Validation when a rule field is empty."
+  },
+  "sites_add_err": {
+    "message": "То правило није могло да се дода.",
+    "description": "Generic add-rule failure."
+  },
+  "adv_h1": {
+    "message": "Напредно именовање",
+    "description": "Advanced panel heading."
+  },
+  "adv_lede": {
+    "message": "Моћни алати за начин на који заиста распоређујете преузимања. Укључено у Zovo Pro.",
+    "description": "Advanced panel intro."
+  },
+  "adv_save": {
+    "message": "Сачувај",
+    "description": "Generic save button."
+  },
+  "adv_clear": {
+    "message": "Обриши",
+    "description": "Generic clear button."
+  },
+  "adv_unlock": {
+    "message": "Откључај уз Pro",
+    "description": "CTA on a locked Pro card."
+  },
+  "adv_on": {
+    "message": "Омогућено",
+    "description": "Feature toggled on."
+  },
+  "adv_off": {
+    "message": "Онемогућено",
+    "description": "Feature toggled off."
+  },
+  "adv_perm_needed": {
+    "message": "Потребна је дозвола да бисте ово омогућили.",
+    "description": "Shown when an optional permission is denied."
+  },
+  "adv_toggle_err": {
+    "message": "Ово подешавање није могло да се ажурира.",
+    "description": "Generic toggle failure."
+  },
+  "adv_folder_h": {
+    "message": "Рутирање у фасцикле",
+    "description": "Folder-routing card heading."
+  },
+  "adv_folder_note": {
+    "message": "Преузима датотеке у подфасцикле ваше фасцикле Преузимања, нпр. Downloads/{hostname}/…",
+    "description": "Folder-routing explanation."
+  },
+  "adv_folder_label": {
+    "message": "Путања подфасцикле (токени дозвољени)",
+    "description": "Folder-path input label."
+  },
+  "adv_folder_ph": {
+    "message": "{hostname}",
+    "description": "Folder-path placeholder."
+  },
+  "adv_folder_err": {
+    "message": "Рутирање у фасцикле није могло да се сачува.",
+    "description": "Folder-routing save failure."
+  },
+  "adv_regex_h": {
+    "message": "Пронађи и замени (регекс)",
+    "description": "Regex card heading."
+  },
+  "adv_regex_note": {
+    "message": "Очистите имена помоћу регуларног израза пре него што се сачувају.",
+    "description": "Regex explanation."
+  },
+  "adv_regex_find": {
+    "message": "Пронађи",
+    "description": "Regex find input label."
+  },
+  "adv_regex_find_ph": {
+    "message": "\\s+",
+    "description": "Regex find placeholder."
+  },
+  "adv_regex_replace": {
+    "message": "Замени",
+    "description": "Regex replace input label."
+  },
+  "adv_regex_replace_ph": {
+    "message": "-",
+    "description": "Regex replace placeholder."
+  },
+  "adv_regex_flags": {
+    "message": "Заставице",
+    "description": "Regex flags input label."
+  },
+  "adv_regex_need": {
+    "message": "Унесите шаблон за проналажење.",
+    "description": "Validation when the regex find is empty."
+  },
+  "adv_regex_bad": {
+    "message": "Тај шаблон је неважећи или небезбедан.",
+    "description": "Regex validation failure."
+  },
+  "adv_regex_err": {
+    "message": "Шаблон није могао да се сачува.",
+    "description": "Generic regex save failure."
+  },
+  "adv_cleared": {
+    "message": "Обрисано",
+    "description": "Regex cleared confirmation."
+  },
+  "adv_title_h": {
+    "message": "Токен наслова странице {title}",
+    "description": "Title-token card heading."
+  },
+  "adv_title_note": {
+    "message": "Користите наслов изворне странице у именима датотека. Укључивање овога тражи дозволу Tabs од Chrome-а.",
+    "description": "Title-token explanation."
+  },
+  "adv_title_toggle": {
+    "message": "Омогући токен {title}",
+    "description": "Title-token toggle label."
+  },
+  "adv_title_aria": {
+    "message": "Омогући токен наслова странице",
+    "description": "Accessible name for the title-token switch."
+  },
+  "adv_pdf_h": {
+    "message": "Токен наслова PDF-а {pdftitle}",
+    "description": "PDF-token card heading."
+  },
+  "adv_pdf_note": {
+    "message": "Именујте PDF-ове према наслову сачуваном унутар датотеке. Ово чита PDF преко мреже, па тражи приступ сајту и подразумевано је искључено.",
+    "description": "PDF-token explanation."
+  },
+  "adv_pdf_toggle": {
+    "message": "Омогући токен {pdftitle}",
+    "description": "PDF-token toggle label."
+  },
+  "adv_pdf_aria": {
+    "message": "Омогући токен наслова PDF-а",
+    "description": "Accessible name for the PDF-token switch."
+  },
+  "backup_h1": {
+    "message": "Резервна копија и враћање",
+    "description": "Backup panel heading."
+  },
+  "backup_lede": {
+    "message": "Извезите своје поставке у датотеку или их пренесите на другу машину. Укључено у Zovo Pro.",
+    "description": "Backup panel intro."
+  },
+  "backup_export_h": {
+    "message": "Извези конфигурацију",
+    "description": "Export card heading."
+  },
+  "backup_export_note": {
+    "message": "Преузима JSON датотеку са вашим шаблоном, правилима и подешавањима. Без историје, без личних података.",
+    "description": "Export explanation."
+  },
+  "backup_export_btn": {
+    "message": "Извези у датотеку",
+    "description": "Export button."
+  },
+  "backup_exported": {
+    "message": "Извезено",
+    "description": "Export confirmation."
+  },
+  "backup_export_err": {
+    "message": "Извоз није успео.",
+    "description": "Export failure."
+  },
+  "backup_import_h": {
+    "message": "Увези конфигурацију",
+    "description": "Import card heading."
+  },
+  "backup_import_label": {
+    "message": "Налепите извезену конфигурацију",
+    "description": "Import textarea label."
+  },
+  "backup_import_ph": {
+    "message": "{\"zovo_template\":\"…\"}",
+    "description": "Import textarea placeholder."
+  },
+  "backup_import_btn": {
+    "message": "Увези",
+    "description": "Import button."
+  },
+  "backup_imported": {
+    "message": "Увезено",
+    "description": "Import confirmation."
+  },
+  "backup_need_json": {
+    "message": "Прво налепите конфигурацију.",
+    "description": "Validation when import is empty."
+  },
+  "backup_import_err": {
+    "message": "Та датотека није могла да се увезе.",
+    "description": "Import failure."
+  },
+  "lic_h1": {
+    "message": "Ваш план",
+    "description": "License panel heading."
+  },
+  "lic_lede": {
+    "message": "Једно плаћање заувек откључава сваку функцију именовања. Без претплате.",
+    "description": "License panel intro."
+  },
+  "lic_current": {
+    "message": "Тренутни план",
+    "description": "Current-plan label."
+  },
+  "lic_free_sub": {
+    "message": "Основно преименовање, једно правило за сајт, заувек.",
+    "description": "Free-plan subtitle."
+  },
+  "lic_pro_sub": {
+    "message": "Свака функција именовања је откључана. Хвала што подржавате Zovo.",
+    "description": "Pro-plan subtitle."
+  },
+  "lic_upgrade": {
+    "message": "Пређи на Pro",
+    "description": "Upgrade button on the License tab."
+  },
+  "lic_have_key": {
+    "message": "Имам кључ",
+    "description": "License-key button."
+  },
+  "lic_included_h": {
+    "message": "Шта Pro откључава",
+    "description": "Benefits section label."
+  },
+  "lic_b1": {
+    "message": "Неограничена правила по сајту",
+    "description": "Pro benefit 1."
+  },
+  "lic_b2": {
+    "message": "Рутирање у подфасцикле",
+    "description": "Pro benefit 2."
+  },
+  "lic_b3": {
+    "message": "Регекс пронађи и замени",
+    "description": "Pro benefit 3."
+  },
+  "lic_b4": {
+    "message": "Токени наслова странице и наслова PDF-а",
+    "description": "Pro benefit 4."
+  },
+  "lic_b5": {
+    "message": "Резервна копија, извоз и увоз конфигурације",
+    "description": "Pro benefit 5."
+  },
+  "saved": {
+    "message": "Сачувано",
+    "description": "Generic saved confirmation."
+  },
+  "err_template": {
+    "message": "Тај шаблон није могао да се сачува.",
+    "description": "Generic template save failure."
+  },
+  "err_bad_token": {
+    "message": "Непознат токен у шаблону: ",
+    "description": "Prefix before the offending token name."
+  },
+  "ob_brand": {
+    "message": "Smart Rename Downloads",
+    "description": "Onboarding brand name."
+  },
+  "ob_by": {
+    "message": "· од Zovo",
+    "description": "Onboarding brand attribution suffix."
+  },
+  "ob_skip": {
+    "message": "Прескочи увод",
+    "description": "Skip onboarding button."
+  },
+  "ob_back": {
+    "message": "Назад",
+    "description": "Previous-step button."
+  },
+  "ob_next": {
+    "message": "Даље",
+    "description": "Next-step button."
+  },
+  "ob_later": {
+    "message": "Можда касније",
+    "description": "Next-button label on the offer step."
+  },
+  "ob_start": {
+    "message": "Почни да користиш",
+    "description": "Final onboarding button."
+  },
+  "ob_stepno": {
+    "message": "{a} од {b}",
+    "description": "Step counter, e.g. 1 of 6. {a} current, {b} total."
+  },
+  "ob_s1_kicker": {
+    "message": "Проблем фасцикле за преузимања",
+    "description": "Step 1 kicker."
+  },
+  "ob_s1_title": {
+    "message": "Ту датотеку више никада нећете пронаћи.",
+    "description": "Step 1 title."
+  },
+  "ob_s1_pt": {
+    "message": "Направљено за људе који преузимају цео дан. Истраживаче, рачуновође, свакога чија фасцикла Преузимања тихо измиче контроли.",
+    "description": "Step 1 secondary paragraph."
+  },
+  "ob_s2_kicker": {
+    "message": "Једно правило, већ укључено",
+    "description": "Step 2 kicker."
+  },
+  "ob_s2_title": {
+    "message": "Гледајте како безвредно име постаје право.",
+    "description": "Step 2 title."
+  },
+  "ob_s2_lede": {
+    "message": "Подразумевани образац је датум, затим сајт, па оригинално име. Оног тренутка када се преузимање заврши, име се преписује и уписује право на диск. Без клика, без дијалога. Ево га на правој датотеци.",
+    "description": "Step 2 body."
+  },
+  "ob_demo_btn": {
+    "message": "Погледај преименовање",
+    "description": "Button that replays the rename demo."
+  },
+  "ob_saved_as": {
+    "message": "Сачувано као",
+    "description": "Demo label for the original filename."
+  },
+  "ob_renamed_to": {
+    "message": "Преименовано у",
+    "description": "Demo label for the renamed filename."
+  },
+  "ob_fw_kept": {
+    "message": ".pdf задржано",
+    "description": "Token chip: the real extension is kept."
+  },
+  "ob_s3_kicker": {
+    "message": "Два минута, једном",
+    "description": "Step 3 kicker."
+  },
+  "ob_s3_title": {
+    "message": "Поставите образац именовања који задржавате заувек.",
+    "description": "Step 3 title."
+  },
+  "ob_s3_lede": {
+    "message": "Направите га од токена. Кликните на један да га убаците у образац и гледајте како се узорак ажурира. Права екстензија датотеке се увек задржава на крају. Сачувајте га и свако будуће преузимање ће га пратити.",
+    "description": "Step 3 body."
+  },
+  "ob_s3_pt": {
+    "message": "Он живи у вашем прегледачу. Промените га било кад из подешавања и ништа о вашим датотекама се никада ни куда не шаље.",
+    "description": "Step 3 secondary paragraph."
+  },
+  "ob_template_label": {
+    "message": "Ваш образац именовања",
+    "description": "Onboarding template input label."
+  },
+  "ob_result": {
+    "message": "Резултат",
+    "description": "Onboarding preview result label."
+  },
+  "ob_save_btn": {
+    "message": "Сачувај мој образац",
+    "description": "Save-pattern button."
+  },
+  "ob_pattern_saved": {
+    "message": "Образац сачуван",
+    "description": "Save-pattern button after saving."
+  },
+  "ob_saved_msg": {
+    "message": "Сачувано. Свако преузимање сада прати овај образац.",
+    "description": "Confirmation after the pattern is saved."
+  },
+  "ob_s4_kicker": {
+    "message": "Зашто можете да га оставите да ради",
+    "description": "Step 4 kicker."
+  },
+  "ob_s4_title": {
+    "message": "Локално по дизајну, направљено отворено од стране једног програмера.",
+    "description": "Step 4 title."
+  },
+  "ob_s4_lede": {
+    "message": "Ваше датотеке и историја преименовања никада не напуштају ову машину. У бесплатном плану екстензија уопште не прави мрежни позив, а код је довољно мали да се прочита у једном седењу.",
+    "description": "Step 4 body."
+  },
+  "ob_stat1_n": {
+    "message": "Локално",
+    "description": "Stat 1 value."
+  },
+  "ob_stat1_l": {
+    "message": "свако преименовање се извршава на вашем уређају",
+    "description": "Stat 1 label."
+  },
+  "ob_stat2_n": {
+    "message": "Приватно",
+    "description": "Stat 2 value."
+  },
+  "ob_stat2_l": {
+    "message": "ништа не напушта ову машину",
+    "description": "Stat 2 label."
+  },
+  "ob_stat3_n": {
+    "message": "Отворено",
+    "description": "Stat 3 value."
+  },
+  "ob_stat3_l": {
+    "message": "изграђено јавно, сваки комит",
+    "description": "Stat 3 label."
+  },
+  "ob_s4_pt": {
+    "message": "Преименовач преузимања је место где упознајете Zovo. Већи план је поштен слој за цео свет екстензија, један по један алат, без нежељене поште и без праћења.",
+    "description": "Step 4 secondary paragraph."
+  },
+  "ob_link_why": {
+    "message": "Зашто правим Zovo",
+    "description": "Link: why Zovo."
+  },
+  "ob_link_vision": {
+    "message": "Визија",
+    "description": "Link: the vision."
+  },
+  "ob_link_safe": {
+    "message": "Како вас чувамо безбедним",
+    "description": "Link: safety."
+  },
+  "ob_trust1_h": {
+    "message": "Све остаје на вашем уређају",
+    "description": "Trust point 1 heading."
+  },
+  "ob_trust1_b": {
+    "message": "Ваш образац, правила и историја живе у локалном складишту прегледача. Без налога, без сервера за синхронизацију, ништа се не шаље напоље.",
+    "description": "Trust point 1 body."
+  },
+  "ob_trust2_h": {
+    "message": "Једна особа, гради отворено",
+    "description": "Trust point 2 heading."
+  },
+  "ob_s5_kicker": {
+    "message": "Поштена размена",
+    "description": "Step 5 kicker."
+  },
+  "ob_s5_title": {
+    "message": "Бесплатна преименовања заувек. Или поседујте све, једном.",
+    "description": "Step 5 title."
+  },
+  "ob_s5_lede": {
+    "message": "Тихо језгро за преименовање остаје бесплатно, без ограничења колико датотека дира. Једно плаћање од деведесет девет долара укључује неограничена правила по сајту, рутирање у фасцикле, чишћење регексом и именовање према наслову странице или PDF-а.",
+    "description": "Step 5 body."
+  },
+  "ob_plan_free": {
+    "message": "Бесплатно",
+    "description": "Free plan name."
+  },
+  "ob_free_unit": {
+    "message": "заувек",
+    "description": "Free plan price unit."
+  },
+  "ob_free1": {
+    "message": "Свако преузимање преименовано само од себе",
+    "description": "Free benefit 1."
+  },
+  "ob_free2": {
+    "message": "Три основна токена: датум, сајт, оригинално име",
+    "description": "Free benefit 2."
+  },
+  "ob_free3": {
+    "message": "Једно сачувано правило по сајту",
+    "description": "Free benefit 3."
+  },
+  "ob_free4": {
+    "message": "Руковање конфликтима и бројач уживо",
+    "description": "Free benefit 4."
+  },
+  "ob_ribbon": {
+    "message": "Најбоља вредност",
+    "description": "Lifetime plan ribbon."
+  },
+  "ob_plan_life": {
+    "message": "Доживотно",
+    "description": "Lifetime plan name."
+  },
+  "ob_life_unit": {
+    "message": "једнократно",
+    "description": "Lifetime plan price unit."
+  },
+  "ob_life1": {
+    "message": "Неограничена правила по сајту",
+    "description": "Lifetime benefit 1."
+  },
+  "ob_life2": {
+    "message": "Рутирање датотека у подфасцикле Преузимања по сајту или датуму",
+    "description": "Lifetime benefit 2."
+  },
+  "ob_life3": {
+    "message": "Чишћење регексом плус токени наслова странице и наслова PDF-а",
+    "description": "Lifetime benefit 3."
+  },
+  "ob_life4": {
+    "message": "Резервна копија и увоз конфигурације међу машинама",
+    "description": "Lifetime benefit 4."
+  },
+  "ob_life5": {
+    "message": "Свако будуће ажурирање овог алата, укључено",
+    "description": "Lifetime benefit 5."
+  },
+  "ob_life6": {
+    "message": "Једно плаћање, без претплате, икада",
+    "description": "Lifetime benefit 6."
+  },
+  "ob_life_cta": {
+    "message": "Набави доживотно за $$99",
+    "description": "Lifetime purchase CTA."
+  },
+  "ob_guarantee": {
+    "message": "Повраћај новца у року од 14 дана, без питања. Више волите месечно? То је $$4.99 на истој страници.",
+    "description": "Refund guarantee line."
+  },
+  "ob_s6_kicker": {
+    "message": "Спремни сте",
+    "description": "Step 6 kicker."
+  },
+  "ob_s6_title": {
+    "message": "Нема шта да се ради. Већ ради.",
+    "description": "Step 6 title."
+  },
+  "ob_s6_lede": {
+    "message": "Следећа датотека коју преузмете добија чисто име сама од себе. Нема дугмета за притискање, нема дијалога за потврду. Ево шта се дешава одавде.",
+    "description": "Step 6 body."
+  },
+  "ob_dev_h": {
+    "message": "Од програмера",
+    "description": "Developer note heading."
+  },
+  "ob_dev_b": {
+    "message": "Правим Zovo сам, отворено. Ако се нешто поквари, пишите ми и одговорим. Преименовачи су само почетак. План је поштен слој за цео прегледач, а ваших деведесет девет долара испоручује следећи део тога.",
+    "description": "Developer note body."
+  },
+  "ob_link_github": {
+    "message": "Контактирај ме на GitHub",
+    "description": "Link: GitHub."
+  },
+  "ob_link_going": {
+    "message": "Куда ово иде",
+    "description": "Link: roadmap."
+  },
+  "ob_cheat1_k": {
+    "message": "Свако преузимање",
+    "description": "Cheat-sheet row 1 key."
+  },
+  "ob_cheat1_v": {
+    "message": "Преименовано при чувању",
+    "description": "Cheat-sheet row 1 value."
+  },
+  "ob_cheat2_k": {
+    "message": "Искачући прозор",
+    "description": "Cheat-sheet row 2 key."
+  },
+  "ob_cheat2_v": {
+    "message": "Броји свако преименовање",
+    "description": "Cheat-sheet row 2 value."
+  },
+  "ob_cheat3_k": {
+    "message": "Ваш образац",
+    "description": "Cheat-sheet row 3 key."
+  },
+  "ob_cheat3_v": {
+    "message": "Уредите га у подешавањима",
+    "description": "Cheat-sheet row 3 value."
+  },
+  "ob_cheat4_k": {
+    "message": "Прво правило за сајт",
+    "description": "Cheat-sheet row 4 key."
+  },
+  "ob_cheat4_v": {
+    "message": "Бесплатно за додавање",
+    "description": "Cheat-sheet row 4 value."
+  }
+}

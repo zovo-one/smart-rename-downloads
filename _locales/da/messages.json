@@ -1,0 +1,834 @@
+{
+  "extName": {
+    "message": "Smart Rename Downloads",
+    "description": "Extension name shown in the Chrome Web Store and toolbar."
+  },
+  "extDesc": {
+    "message": "Omdøb hver download automatisk med dato, side og titel. Regler pr. side, regex, mappedirigering. Lokalt, nul klik.",
+    "description": "Chrome Web Store short description (max 132 chars)."
+  },
+  "popup_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Popup header title."
+  },
+  "popup_open_settings": {
+    "message": "Åbn indstillinger",
+    "description": "Aria label for the settings gear button."
+  },
+  "popup_settings": {
+    "message": "Indstillinger",
+    "description": "Tooltip for the settings gear button."
+  },
+  "popup_health": {
+    "message": "Omdøbning sat på pause — tilladelsen til Downloads blev fjernet.",
+    "description": "Shown when the downloads permission is missing."
+  },
+  "popup_regrant": {
+    "message": "Aktivér igen",
+    "description": "Link to re-grant the downloads permission."
+  },
+  "popup_hero_label": {
+    "message": "Filer omdøbt",
+    "description": "Label under the big lifetime rename counter."
+  },
+  "popup_hero_sub": {
+    "message": "Hver download omdøbes automatisk, før den rammer din disk.",
+    "description": "Supporting line under the hero counter."
+  },
+  "popup_master_title": {
+    "message": "Omdøb downloads automatisk",
+    "description": "Master on/off switch title."
+  },
+  "popup_master_aria": {
+    "message": "Slå automatisk omdøbning af downloads til/fra",
+    "description": "Accessible name for the master switch."
+  },
+  "popup_master_on": {
+    "message": "Til — omdøber hver download",
+    "description": "Master switch note when enabled."
+  },
+  "popup_master_off": {
+    "message": "Fra — Chrome beholder standardnavnene",
+    "description": "Master switch note when disabled."
+  },
+  "popup_recent": {
+    "message": "Seneste omdøbninger",
+    "description": "Section label for the recent-renames list."
+  },
+  "popup_empty_title": {
+    "message": "Klar når du er",
+    "description": "Empty-state headline in the popup."
+  },
+  "popup_empty_text": {
+    "message": "Din næste download omdøbes automatisk. Den vises her.",
+    "description": "Empty-state body in the popup."
+  },
+  "popup_milestone_text": {
+    "message": "Smart Rename har organiseret {n} downloads. Pro sorterer dem automatisk i mapper.",
+    "description": "Post-success upgrade nudge. {n} is the rename count."
+  },
+  "popup_milestone_cta": {
+    "message": "Se Pro",
+    "description": "CTA on the milestone nudge."
+  },
+  "popup_dismiss": {
+    "message": "Afvis",
+    "description": "Dismiss the milestone nudge."
+  },
+  "popup_trust": {
+    "message": "Lokalt · Ingen konto · Ingen sporing",
+    "description": "Trust line in the popup footer."
+  },
+  "popup_upgrade": {
+    "message": "Opgrader til Pro",
+    "description": "Upgrade button in the popup footer."
+  },
+  "flag_timeout": {
+    "message": "beholdt standard",
+    "description": "Recent-list flag: rename fell back to Chrome's default name (timeout)."
+  },
+  "flag_sanitize": {
+    "message": "beholdt standard",
+    "description": "Recent-list flag: name could not be sanitized."
+  },
+  "flag_nomatch": {
+    "message": "intet match",
+    "description": "Recent-list flag: no site rule matched."
+  },
+  "opt_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Options brand name."
+  },
+  "opt_trust": {
+    "message": "Alt bliver på denne enhed. Nul sporing.",
+    "description": "Options sidebar trust line."
+  },
+  "aria_theme": {
+    "message": "Farvetema",
+    "description": "Aria label for the theme radiogroup."
+  },
+  "theme_system": {
+    "message": "System",
+    "description": "Theme option: follow OS."
+  },
+  "theme_light": {
+    "message": "Lyst",
+    "description": "Theme option: light."
+  },
+  "theme_dark": {
+    "message": "Mørkt",
+    "description": "Theme option: dark."
+  },
+  "tier_free": {
+    "message": "Gratis",
+    "description": "Free plan label."
+  },
+  "tier_trial": {
+    "message": "Prøve",
+    "description": "Trial plan label."
+  },
+  "tier_pro": {
+    "message": "Pro",
+    "description": "Pro plan label."
+  },
+  "tab_template": {
+    "message": "Skabelon",
+    "description": "Settings tab: naming template."
+  },
+  "tab_sites": {
+    "message": "Regler pr. side",
+    "description": "Settings tab: per-site rules."
+  },
+  "tab_advanced": {
+    "message": "Avanceret",
+    "description": "Settings tab: advanced naming."
+  },
+  "tab_backup": {
+    "message": "Backup",
+    "description": "Settings tab: backup and restore."
+  },
+  "tab_license": {
+    "message": "Licens",
+    "description": "Settings tab: license and plan."
+  },
+  "tpl_h1": {
+    "message": "Navngivningsskabelon",
+    "description": "Template panel heading."
+  },
+  "tpl_lede": {
+    "message": "Byg det filnavn, hver download får. Den rigtige filendelse beholdes altid.",
+    "description": "Template panel intro."
+  },
+  "tpl_label": {
+    "message": "Skabelon",
+    "description": "Template input label."
+  },
+  "tpl_tokens_aria": {
+    "message": "Indsæt et token",
+    "description": "Aria label for the token chip row."
+  },
+  "tpl_conflict": {
+    "message": "Hvis en fil med det navn allerede findes",
+    "description": "Conflict-policy select label."
+  },
+  "conflict_uniquify": {
+    "message": "Tilføj et tal — behold begge",
+    "description": "Conflict policy: uniquify."
+  },
+  "conflict_overwrite": {
+    "message": "Overskriv den gamle fil",
+    "description": "Conflict policy: overwrite."
+  },
+  "conflict_prompt": {
+    "message": "Spørg mig hver gang",
+    "description": "Conflict policy: prompt."
+  },
+  "tpl_save": {
+    "message": "Gem skabelon",
+    "description": "Save-template button."
+  },
+  "tpl_preview_h": {
+    "message": "Live-forhåndsvisning",
+    "description": "Preview section label."
+  },
+  "tpl_pv_host": {
+    "message": "Eksempelside",
+    "description": "Preview sample-host input label."
+  },
+  "tpl_pv_name": {
+    "message": "Eksempeldownload",
+    "description": "Preview sample-name input label."
+  },
+  "tpl_pv_result": {
+    "message": "Resultat",
+    "description": "Preview result label."
+  },
+  "tpl_pv_hint": {
+    "message": "En “/” i en gratis skabelon gemmes som “-”. Mappedirigering er en Pro-funktion.",
+    "description": "Preview hint about slashes and folder routing."
+  },
+  "sites_h1": {
+    "message": "Regler pr. side",
+    "description": "Sites panel heading."
+  },
+  "sites_lede": {
+    "message": "Giv en bestemt side sin egen skabelon — fakturaer i mapper, artikler med titel. Gratis inkluderer én regel, så du kan mærke det; Pro er ubegrænset.",
+    "description": "Sites panel intro."
+  },
+  "sites_count": {
+    "message": "0 af 1 gratis regler brugt",
+    "description": "Initial site-rule count text."
+  },
+  "sites_count_free": {
+    "message": "{n} af 1 gratis regler brugt",
+    "description": "Site-rule count for Free. {n} is the count."
+  },
+  "sites_count_pro": {
+    "message": "{n} regler",
+    "description": "Site-rule count for Pro. {n} is the count."
+  },
+  "sites_empty": {
+    "message": "Ingen sideregler endnu. Tilføj en nedenfor.",
+    "description": "Empty state for site rules."
+  },
+  "sites_add_h": {
+    "message": "Tilføj en regel",
+    "description": "Add-rule section label."
+  },
+  "sites_match": {
+    "message": "Side (vært eller *.vært)",
+    "description": "Rule match input label."
+  },
+  "sites_match_ph": {
+    "message": "stripe.com",
+    "description": "Rule match placeholder."
+  },
+  "sites_template": {
+    "message": "Skabelon for denne side",
+    "description": "Rule template input label."
+  },
+  "sites_template_ph": {
+    "message": "{date}-invoice-{original}",
+    "description": "Rule template placeholder."
+  },
+  "sites_add_btn": {
+    "message": "Tilføj sideregel",
+    "description": "Add-rule button."
+  },
+  "sites_delete": {
+    "message": "Slet regel",
+    "description": "Aria label for a rule's delete button."
+  },
+  "sites_need_both": {
+    "message": "Angiv både en side og en skabelon.",
+    "description": "Validation when a rule field is empty."
+  },
+  "sites_add_err": {
+    "message": "Reglen kunne ikke tilføjes.",
+    "description": "Generic add-rule failure."
+  },
+  "adv_h1": {
+    "message": "Avanceret navngivning",
+    "description": "Advanced panel heading."
+  },
+  "adv_lede": {
+    "message": "Kraftfulde værktøjer til den måde, du faktisk sorterer downloads på. Inkluderet i Zovo Pro.",
+    "description": "Advanced panel intro."
+  },
+  "adv_save": {
+    "message": "Gem",
+    "description": "Generic save button."
+  },
+  "adv_clear": {
+    "message": "Ryd",
+    "description": "Generic clear button."
+  },
+  "adv_unlock": {
+    "message": "Lås op med Pro",
+    "description": "CTA on a locked Pro card."
+  },
+  "adv_on": {
+    "message": "Aktiveret",
+    "description": "Feature toggled on."
+  },
+  "adv_off": {
+    "message": "Deaktiveret",
+    "description": "Feature toggled off."
+  },
+  "adv_perm_needed": {
+    "message": "Der kræves tilladelse for at aktivere dette.",
+    "description": "Shown when an optional permission is denied."
+  },
+  "adv_toggle_err": {
+    "message": "Denne indstilling kunne ikke opdateres.",
+    "description": "Generic toggle failure."
+  },
+  "adv_folder_h": {
+    "message": "Mappedirigering",
+    "description": "Folder-routing card heading."
+  },
+  "adv_folder_note": {
+    "message": "Gem downloads i undermapper til din Downloads-mappe, f.eks. Downloads/{hostname}/…",
+    "description": "Folder-routing explanation."
+  },
+  "adv_folder_label": {
+    "message": "Undermappesti (tokens tilladt)",
+    "description": "Folder-path input label."
+  },
+  "adv_folder_ph": {
+    "message": "{hostname}",
+    "description": "Folder-path placeholder."
+  },
+  "adv_folder_err": {
+    "message": "Mappedirigering kunne ikke gemmes.",
+    "description": "Folder-routing save failure."
+  },
+  "adv_regex_h": {
+    "message": "Søg og erstat (regex)",
+    "description": "Regex card heading."
+  },
+  "adv_regex_note": {
+    "message": "Ryd op i navne med et regulært udtryk, før de gemmes.",
+    "description": "Regex explanation."
+  },
+  "adv_regex_find": {
+    "message": "Søg",
+    "description": "Regex find input label."
+  },
+  "adv_regex_find_ph": {
+    "message": "\\s+",
+    "description": "Regex find placeholder."
+  },
+  "adv_regex_replace": {
+    "message": "Erstat",
+    "description": "Regex replace input label."
+  },
+  "adv_regex_replace_ph": {
+    "message": "-",
+    "description": "Regex replace placeholder."
+  },
+  "adv_regex_flags": {
+    "message": "Flag",
+    "description": "Regex flags input label."
+  },
+  "adv_regex_need": {
+    "message": "Angiv et mønster at søge efter.",
+    "description": "Validation when the regex find is empty."
+  },
+  "adv_regex_bad": {
+    "message": "Det mønster er ugyldigt eller usikkert.",
+    "description": "Regex validation failure."
+  },
+  "adv_regex_err": {
+    "message": "Mønsteret kunne ikke gemmes.",
+    "description": "Generic regex save failure."
+  },
+  "adv_cleared": {
+    "message": "Ryddet",
+    "description": "Regex cleared confirmation."
+  },
+  "adv_title_h": {
+    "message": "Sidetitel-token {title}",
+    "description": "Title-token card heading."
+  },
+  "adv_title_note": {
+    "message": "Brug kildesidens titel i filnavne. Når du slår dette til, beder Chrome om Faner-tilladelsen.",
+    "description": "Title-token explanation."
+  },
+  "adv_title_toggle": {
+    "message": "Aktivér {title}-token",
+    "description": "Title-token toggle label."
+  },
+  "adv_title_aria": {
+    "message": "Aktivér sidetitel-token",
+    "description": "Accessible name for the title-token switch."
+  },
+  "adv_pdf_h": {
+    "message": "PDF-titel-token {pdftitle}",
+    "description": "PDF-token card heading."
+  },
+  "adv_pdf_note": {
+    "message": "Navngiv PDF'er efter titlen gemt inde i filen. Dette læser PDF'en over netværket, så det beder om webstedsadgang og er slået fra som standard.",
+    "description": "PDF-token explanation."
+  },
+  "adv_pdf_toggle": {
+    "message": "Aktivér {pdftitle}-token",
+    "description": "PDF-token toggle label."
+  },
+  "adv_pdf_aria": {
+    "message": "Aktivér PDF-titel-token",
+    "description": "Accessible name for the PDF-token switch."
+  },
+  "backup_h1": {
+    "message": "Backup og gendannelse",
+    "description": "Backup panel heading."
+  },
+  "backup_lede": {
+    "message": "Eksportér din opsætning til en fil, eller flyt den til en anden maskine. Inkluderet i Zovo Pro.",
+    "description": "Backup panel intro."
+  },
+  "backup_export_h": {
+    "message": "Eksportér konfiguration",
+    "description": "Export card heading."
+  },
+  "backup_export_note": {
+    "message": "Downloader en JSON-fil med din skabelon, regler og indstillinger. Ingen historik, ingen personlige data.",
+    "description": "Export explanation."
+  },
+  "backup_export_btn": {
+    "message": "Eksportér til fil",
+    "description": "Export button."
+  },
+  "backup_exported": {
+    "message": "Eksporteret",
+    "description": "Export confirmation."
+  },
+  "backup_export_err": {
+    "message": "Eksport mislykkedes.",
+    "description": "Export failure."
+  },
+  "backup_import_h": {
+    "message": "Importér konfiguration",
+    "description": "Import card heading."
+  },
+  "backup_import_label": {
+    "message": "Indsæt en eksporteret konfiguration",
+    "description": "Import textarea label."
+  },
+  "backup_import_ph": {
+    "message": "{\"zovo_template\":\"…\"}",
+    "description": "Import textarea placeholder."
+  },
+  "backup_import_btn": {
+    "message": "Importér",
+    "description": "Import button."
+  },
+  "backup_imported": {
+    "message": "Importeret",
+    "description": "Import confirmation."
+  },
+  "backup_need_json": {
+    "message": "Indsæt en konfiguration først.",
+    "description": "Validation when import is empty."
+  },
+  "backup_import_err": {
+    "message": "Den fil kunne ikke importeres.",
+    "description": "Import failure."
+  },
+  "lic_h1": {
+    "message": "Din plan",
+    "description": "License panel heading."
+  },
+  "lic_lede": {
+    "message": "Én betaling låser op for alle navngivningsfunktioner, for altid. Intet abonnement.",
+    "description": "License panel intro."
+  },
+  "lic_current": {
+    "message": "Nuværende plan",
+    "description": "Current-plan label."
+  },
+  "lic_free_sub": {
+    "message": "Kerneomdøbning, én sideregel, for altid.",
+    "description": "Free-plan subtitle."
+  },
+  "lic_pro_sub": {
+    "message": "Alle navngivningsfunktioner er låst op. Tak, fordi du støtter Zovo.",
+    "description": "Pro-plan subtitle."
+  },
+  "lic_upgrade": {
+    "message": "Opgrader til Pro",
+    "description": "Upgrade button on the License tab."
+  },
+  "lic_have_key": {
+    "message": "Jeg har en nøgle",
+    "description": "License-key button."
+  },
+  "lic_included_h": {
+    "message": "Hvad Pro låser op",
+    "description": "Benefits section label."
+  },
+  "lic_b1": {
+    "message": "Ubegrænsede regler pr. side",
+    "description": "Pro benefit 1."
+  },
+  "lic_b2": {
+    "message": "Mappedirigering til undermapper",
+    "description": "Pro benefit 2."
+  },
+  "lic_b3": {
+    "message": "Regex søg og erstat",
+    "description": "Pro benefit 3."
+  },
+  "lic_b4": {
+    "message": "Sidetitel- og PDF-titel-tokens",
+    "description": "Pro benefit 4."
+  },
+  "lic_b5": {
+    "message": "Backup, eksport og import af konfiguration",
+    "description": "Pro benefit 5."
+  },
+  "saved": {
+    "message": "Gemt",
+    "description": "Generic saved confirmation."
+  },
+  "err_template": {
+    "message": "Den skabelon kunne ikke gemmes.",
+    "description": "Generic template save failure."
+  },
+  "err_bad_token": {
+    "message": "Ukendt token i skabelon: ",
+    "description": "Prefix before the offending token name."
+  },
+  "ob_brand": {
+    "message": "Smart Rename Downloads",
+    "description": "Onboarding brand name."
+  },
+  "ob_by": {
+    "message": "· af Zovo",
+    "description": "Onboarding brand attribution suffix."
+  },
+  "ob_skip": {
+    "message": "Spring intro over",
+    "description": "Skip onboarding button."
+  },
+  "ob_back": {
+    "message": "Tilbage",
+    "description": "Previous-step button."
+  },
+  "ob_next": {
+    "message": "Næste",
+    "description": "Next-step button."
+  },
+  "ob_later": {
+    "message": "Måske senere",
+    "description": "Next-button label on the offer step."
+  },
+  "ob_start": {
+    "message": "Begynd at bruge det",
+    "description": "Final onboarding button."
+  },
+  "ob_stepno": {
+    "message": "{a} af {b}",
+    "description": "Step counter, e.g. 1 of 6. {a} current, {b} total."
+  },
+  "ob_s1_kicker": {
+    "message": "Problemet med downloadmappen",
+    "description": "Step 1 kicker."
+  },
+  "ob_s1_title": {
+    "message": "Du finder aldrig den fil igen.",
+    "description": "Step 1 title."
+  },
+  "ob_s1_pt": {
+    "message": "Bygget til folk, der downloader hele dagen. Forskere, revisorer, alle hvis Downloads-mappe stille og roligt er ude af kontrol.",
+    "description": "Step 1 secondary paragraph."
+  },
+  "ob_s2_kicker": {
+    "message": "Én regel, allerede slået til",
+    "description": "Step 2 kicker."
+  },
+  "ob_s2_title": {
+    "message": "Se et junk-navn blive til et rigtigt et.",
+    "description": "Step 2 title."
+  },
+  "ob_s2_lede": {
+    "message": "Standardmønsteret er datoen, så siden, så det oprindelige navn. I det øjeblik en download er færdig, omskrives navnet og gemmes direkte på disken. Intet klik, ingen dialog. Her er det på en rigtig fil.",
+    "description": "Step 2 body."
+  },
+  "ob_demo_btn": {
+    "message": "Se den omdøbe",
+    "description": "Button that replays the rename demo."
+  },
+  "ob_saved_as": {
+    "message": "Gemt som",
+    "description": "Demo label for the original filename."
+  },
+  "ob_renamed_to": {
+    "message": "Omdøbt til",
+    "description": "Demo label for the renamed filename."
+  },
+  "ob_fw_kept": {
+    "message": ".pdf beholdt",
+    "description": "Token chip: the real extension is kept."
+  },
+  "ob_s3_kicker": {
+    "message": "To minutter, én gang",
+    "description": "Step 3 kicker."
+  },
+  "ob_s3_title": {
+    "message": "Angiv det navngivningsmønster, du beholder for altid.",
+    "description": "Step 3 title."
+  },
+  "ob_s3_lede": {
+    "message": "Byg det af tokens. Klik på et for at indsætte det i mønsteret og se eksemplet opdatere. Den rigtige filendelse beholdes altid til sidst. Gem det, og hver fremtidig download følger dette.",
+    "description": "Step 3 body."
+  },
+  "ob_s3_pt": {
+    "message": "Det bor i din browser. Skift det når som helst i indstillingerne, og intet om dine filer sendes nogensinde nogen steder.",
+    "description": "Step 3 secondary paragraph."
+  },
+  "ob_template_label": {
+    "message": "Dit navngivningsmønster",
+    "description": "Onboarding template input label."
+  },
+  "ob_result": {
+    "message": "Resultat",
+    "description": "Onboarding preview result label."
+  },
+  "ob_save_btn": {
+    "message": "Gem mit mønster",
+    "description": "Save-pattern button."
+  },
+  "ob_pattern_saved": {
+    "message": "Mønster gemt",
+    "description": "Save-pattern button after saving."
+  },
+  "ob_saved_msg": {
+    "message": "Gemt. Hver download følger dette nu.",
+    "description": "Confirmation after the pattern is saved."
+  },
+  "ob_s4_kicker": {
+    "message": "Hvorfor du roligt kan lade det køre",
+    "description": "Step 4 kicker."
+  },
+  "ob_s4_title": {
+    "message": "Lokal af design, bygget i det åbne af én udvikler.",
+    "description": "Step 4 title."
+  },
+  "ob_s4_lede": {
+    "message": "Dine filer og din omdøbningshistorik forlader aldrig denne maskine. På gratisplanen foretager udvidelsen slet ingen netværkskald, og koden er lille nok til at læse i én omgang.",
+    "description": "Step 4 body."
+  },
+  "ob_stat1_n": {
+    "message": "Lokal",
+    "description": "Stat 1 value."
+  },
+  "ob_stat1_l": {
+    "message": "hver omdøbning kører på din enhed",
+    "description": "Stat 1 label."
+  },
+  "ob_stat2_n": {
+    "message": "Privat",
+    "description": "Stat 2 value."
+  },
+  "ob_stat2_l": {
+    "message": "intet forlader denne maskine",
+    "description": "Stat 2 label."
+  },
+  "ob_stat3_n": {
+    "message": "Åben",
+    "description": "Stat 3 value."
+  },
+  "ob_stat3_l": {
+    "message": "bygget i det åbne, hver commit",
+    "description": "Stat 3 label."
+  },
+  "ob_s4_pt": {
+    "message": "En download-omdøber er der, hvor du møder Zovo. Den større plan er et ærligt lag for hele udvidelsesverdenen, ét værktøj ad gangen, uden spam og uden sporing.",
+    "description": "Step 4 secondary paragraph."
+  },
+  "ob_link_why": {
+    "message": "Hvorfor jeg bygger Zovo",
+    "description": "Link: why Zovo."
+  },
+  "ob_link_vision": {
+    "message": "Visionen",
+    "description": "Link: the vision."
+  },
+  "ob_link_safe": {
+    "message": "Hvordan vi holder dig sikker",
+    "description": "Link: safety."
+  },
+  "ob_trust1_h": {
+    "message": "Alt bliver på din enhed",
+    "description": "Trust point 1 heading."
+  },
+  "ob_trust1_b": {
+    "message": "Dit mønster, dine regler og din historik bor i lokal browserlagring. Ingen konto, ingen synkroniseringsserver, intet sendt ud.",
+    "description": "Trust point 1 body."
+  },
+  "ob_trust2_h": {
+    "message": "Én person, der bygger i det åbne",
+    "description": "Trust point 2 heading."
+  },
+  "ob_s5_kicker": {
+    "message": "Den ærlige handel",
+    "description": "Step 5 kicker."
+  },
+  "ob_s5_title": {
+    "message": "Gratis omdøbninger for altid. Eller ej det hele, én gang.",
+    "description": "Step 5 title."
+  },
+  "ob_s5_lede": {
+    "message": "Den lydløse omdøbningskerne forbliver gratis, uden loft over hvor mange filer den rører. Én betaling på nioghalvfems dollars slår ubegrænsede regler pr. side, mappedirigering, regex-oprydning og navngivning fra en side- eller PDF-titel til.",
+    "description": "Step 5 body."
+  },
+  "ob_plan_free": {
+    "message": "Gratis",
+    "description": "Free plan name."
+  },
+  "ob_free_unit": {
+    "message": "for altid",
+    "description": "Free plan price unit."
+  },
+  "ob_free1": {
+    "message": "Hver download omdøbt af sig selv",
+    "description": "Free benefit 1."
+  },
+  "ob_free2": {
+    "message": "De tre kernetokens: dato, side, oprindeligt navn",
+    "description": "Free benefit 2."
+  },
+  "ob_free3": {
+    "message": "Én gemt regel pr. side",
+    "description": "Free benefit 3."
+  },
+  "ob_free4": {
+    "message": "Konflikthåndtering og en live-tæller",
+    "description": "Free benefit 4."
+  },
+  "ob_ribbon": {
+    "message": "Bedste værdi",
+    "description": "Lifetime plan ribbon."
+  },
+  "ob_plan_life": {
+    "message": "Livstid",
+    "description": "Lifetime plan name."
+  },
+  "ob_life_unit": {
+    "message": "engangsbeløb",
+    "description": "Lifetime plan price unit."
+  },
+  "ob_life1": {
+    "message": "Ubegrænsede regler pr. side",
+    "description": "Lifetime benefit 1."
+  },
+  "ob_life2": {
+    "message": "Dirigér filer i Downloads-undermapper efter side eller dato",
+    "description": "Lifetime benefit 2."
+  },
+  "ob_life3": {
+    "message": "Regex-oprydning plus sidetitel- og PDF-titel-tokens",
+    "description": "Lifetime benefit 3."
+  },
+  "ob_life4": {
+    "message": "Backup og import af konfiguration på tværs af maskiner",
+    "description": "Lifetime benefit 4."
+  },
+  "ob_life5": {
+    "message": "Hver fremtidig opdatering til dette værktøj, inkluderet",
+    "description": "Lifetime benefit 5."
+  },
+  "ob_life6": {
+    "message": "Én betaling, intet abonnement, nogensinde",
+    "description": "Lifetime benefit 6."
+  },
+  "ob_life_cta": {
+    "message": "Få livstid for $$99",
+    "description": "Lifetime purchase CTA."
+  },
+  "ob_guarantee": {
+    "message": "14 dages returret, ingen spørgsmål. Foretrækker du månedligt? Det er $$4.99 på samme side.",
+    "description": "Refund guarantee line."
+  },
+  "ob_s6_kicker": {
+    "message": "Du er klar",
+    "description": "Step 6 kicker."
+  },
+  "ob_s6_title": {
+    "message": "Intet tilbage at gøre. Det virker allerede.",
+    "description": "Step 6 title."
+  },
+  "ob_s6_lede": {
+    "message": "Den næste fil, du downloader, får et rent navn af sig selv. Ingen knap at trykke på, ingen dialog at bekræfte. Her er, hvad der sker herfra.",
+    "description": "Step 6 body."
+  },
+  "ob_dev_h": {
+    "message": "Fra udvikleren",
+    "description": "Developer note heading."
+  },
+  "ob_dev_b": {
+    "message": "Jeg bygger Zovo på egen hånd, i det åbne. Hvis noget går i stykker, så skriv til mig, og jeg svarer. Omdøbere er kun begyndelsen. Planen er et ærligt lag for hele browseren, og dine nioghalvfems dollars sender den næste del af den.",
+    "description": "Developer note body."
+  },
+  "ob_link_github": {
+    "message": "Kontakt mig på GitHub",
+    "description": "Link: GitHub."
+  },
+  "ob_link_going": {
+    "message": "Hvor dette er på vej hen",
+    "description": "Link: roadmap."
+  },
+  "ob_cheat1_k": {
+    "message": "Hver download",
+    "description": "Cheat-sheet row 1 key."
+  },
+  "ob_cheat1_v": {
+    "message": "Omdøbt ved lagring",
+    "description": "Cheat-sheet row 1 value."
+  },
+  "ob_cheat2_k": {
+    "message": "Pop op-vinduet",
+    "description": "Cheat-sheet row 2 key."
+  },
+  "ob_cheat2_v": {
+    "message": "Tæller hver omdøbning",
+    "description": "Cheat-sheet row 2 value."
+  },
+  "ob_cheat3_k": {
+    "message": "Dit mønster",
+    "description": "Cheat-sheet row 3 key."
+  },
+  "ob_cheat3_v": {
+    "message": "Rediger det i indstillinger",
+    "description": "Cheat-sheet row 3 value."
+  },
+  "ob_cheat4_k": {
+    "message": "Første sideregel",
+    "description": "Cheat-sheet row 4 key."
+  },
+  "ob_cheat4_v": {
+    "message": "Gratis at tilføje",
+    "description": "Cheat-sheet row 4 value."
+  }
+}

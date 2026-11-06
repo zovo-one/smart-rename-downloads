@@ -1,0 +1,834 @@
+{
+  "extName": {
+    "message": "Smart Rename Downloads",
+    "description": "Extension name shown in the Chrome Web Store and toolbar."
+  },
+  "extDesc": {
+    "message": "Hernoem elke download automatisch met datum, site en titel. Regels per site, regex, mappen. Lokaal, nul klikken.",
+    "description": "Chrome Web Store short description (max 132 chars)."
+  },
+  "popup_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Popup header title."
+  },
+  "popup_open_settings": {
+    "message": "Instellingen openen",
+    "description": "Aria label for the settings gear button."
+  },
+  "popup_settings": {
+    "message": "Instellingen",
+    "description": "Tooltip for the settings gear button."
+  },
+  "popup_health": {
+    "message": "Hernoemen gepauzeerd — de Downloads-machtiging is verwijderd.",
+    "description": "Shown when the downloads permission is missing."
+  },
+  "popup_regrant": {
+    "message": "Opnieuw inschakelen",
+    "description": "Link to re-grant the downloads permission."
+  },
+  "popup_hero_label": {
+    "message": "Bestanden hernoemd",
+    "description": "Label under the big lifetime rename counter."
+  },
+  "popup_hero_sub": {
+    "message": "Elke download wordt automatisch hernoemd voordat hij op je schijf staat.",
+    "description": "Supporting line under the hero counter."
+  },
+  "popup_master_title": {
+    "message": "Downloads automatisch hernoemen",
+    "description": "Master on/off switch title."
+  },
+  "popup_master_aria": {
+    "message": "Automatisch hernoemen van downloads in-/uitschakelen",
+    "description": "Accessible name for the master switch."
+  },
+  "popup_master_on": {
+    "message": "Aan — elke download wordt hernoemd",
+    "description": "Master switch note when enabled."
+  },
+  "popup_master_off": {
+    "message": "Uit — Chrome houdt zijn standaardnamen",
+    "description": "Master switch note when disabled."
+  },
+  "popup_recent": {
+    "message": "Recente hernoemingen",
+    "description": "Section label for the recent-renames list."
+  },
+  "popup_empty_title": {
+    "message": "Klaar wanneer jij dat bent",
+    "description": "Empty-state headline in the popup."
+  },
+  "popup_empty_text": {
+    "message": "Je volgende download wordt automatisch hernoemd. Hij verschijnt hier.",
+    "description": "Empty-state body in the popup."
+  },
+  "popup_milestone_text": {
+    "message": "Smart Rename heeft {n} downloads georganiseerd. Pro sorteert ze automatisch in mappen.",
+    "description": "Post-success upgrade nudge. {n} is the rename count."
+  },
+  "popup_milestone_cta": {
+    "message": "Bekijk Pro",
+    "description": "CTA on the milestone nudge."
+  },
+  "popup_dismiss": {
+    "message": "Sluiten",
+    "description": "Dismiss the milestone nudge."
+  },
+  "popup_trust": {
+    "message": "Lokaal · Geen account · Geen tracking",
+    "description": "Trust line in the popup footer."
+  },
+  "popup_upgrade": {
+    "message": "Upgraden naar Pro",
+    "description": "Upgrade button in the popup footer."
+  },
+  "flag_timeout": {
+    "message": "standaard behouden",
+    "description": "Recent-list flag: rename fell back to Chrome's default name (timeout)."
+  },
+  "flag_sanitize": {
+    "message": "standaard behouden",
+    "description": "Recent-list flag: name could not be sanitized."
+  },
+  "flag_nomatch": {
+    "message": "geen match",
+    "description": "Recent-list flag: no site rule matched."
+  },
+  "opt_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Options brand name."
+  },
+  "opt_trust": {
+    "message": "Alles blijft op dit apparaat. Geen tracking.",
+    "description": "Options sidebar trust line."
+  },
+  "aria_theme": {
+    "message": "Kleurthema",
+    "description": "Aria label for the theme radiogroup."
+  },
+  "theme_system": {
+    "message": "Systeem",
+    "description": "Theme option: follow OS."
+  },
+  "theme_light": {
+    "message": "Licht",
+    "description": "Theme option: light."
+  },
+  "theme_dark": {
+    "message": "Donker",
+    "description": "Theme option: dark."
+  },
+  "tier_free": {
+    "message": "Gratis",
+    "description": "Free plan label."
+  },
+  "tier_trial": {
+    "message": "Proef",
+    "description": "Trial plan label."
+  },
+  "tier_pro": {
+    "message": "Pro",
+    "description": "Pro plan label."
+  },
+  "tab_template": {
+    "message": "Sjabloon",
+    "description": "Settings tab: naming template."
+  },
+  "tab_sites": {
+    "message": "Regels per site",
+    "description": "Settings tab: per-site rules."
+  },
+  "tab_advanced": {
+    "message": "Geavanceerd",
+    "description": "Settings tab: advanced naming."
+  },
+  "tab_backup": {
+    "message": "Back-up",
+    "description": "Settings tab: backup and restore."
+  },
+  "tab_license": {
+    "message": "Licentie",
+    "description": "Settings tab: license and plan."
+  },
+  "tpl_h1": {
+    "message": "Naamgevingssjabloon",
+    "description": "Template panel heading."
+  },
+  "tpl_lede": {
+    "message": "Bouw de bestandsnaam die elke download krijgt. De echte bestandsextensie blijft altijd behouden.",
+    "description": "Template panel intro."
+  },
+  "tpl_label": {
+    "message": "Sjabloon",
+    "description": "Template input label."
+  },
+  "tpl_tokens_aria": {
+    "message": "Een token invoegen",
+    "description": "Aria label for the token chip row."
+  },
+  "tpl_conflict": {
+    "message": "Als een bestand met die naam al bestaat",
+    "description": "Conflict-policy select label."
+  },
+  "conflict_uniquify": {
+    "message": "Voeg een nummer toe — beide behouden",
+    "description": "Conflict policy: uniquify."
+  },
+  "conflict_overwrite": {
+    "message": "Het oude bestand overschrijven",
+    "description": "Conflict policy: overwrite."
+  },
+  "conflict_prompt": {
+    "message": "Vraag het me elke keer",
+    "description": "Conflict policy: prompt."
+  },
+  "tpl_save": {
+    "message": "Sjabloon opslaan",
+    "description": "Save-template button."
+  },
+  "tpl_preview_h": {
+    "message": "Live voorbeeld",
+    "description": "Preview section label."
+  },
+  "tpl_pv_host": {
+    "message": "Voorbeeldsite",
+    "description": "Preview sample-host input label."
+  },
+  "tpl_pv_name": {
+    "message": "Voorbeelddownload",
+    "description": "Preview sample-name input label."
+  },
+  "tpl_pv_result": {
+    "message": "Resultaat",
+    "description": "Preview result label."
+  },
+  "tpl_pv_hint": {
+    "message": "Een “/” in een gratis sjabloon wordt opgeslagen als “-”. Mappen-routing is een Pro-functie.",
+    "description": "Preview hint about slashes and folder routing."
+  },
+  "sites_h1": {
+    "message": "Regels per site",
+    "description": "Sites panel heading."
+  },
+  "sites_lede": {
+    "message": "Geef een specifieke site zijn eigen sjabloon — facturen in mappen, papers met titel. Gratis bevat één regel zodat je het kunt ervaren; Pro is onbeperkt.",
+    "description": "Sites panel intro."
+  },
+  "sites_count": {
+    "message": "0 van 1 gratis regels gebruikt",
+    "description": "Initial site-rule count text."
+  },
+  "sites_count_free": {
+    "message": "{n} van 1 gratis regels gebruikt",
+    "description": "Site-rule count for Free. {n} is the count."
+  },
+  "sites_count_pro": {
+    "message": "{n} regels",
+    "description": "Site-rule count for Pro. {n} is the count."
+  },
+  "sites_empty": {
+    "message": "Nog geen siteregels. Voeg er hieronder een toe.",
+    "description": "Empty state for site rules."
+  },
+  "sites_add_h": {
+    "message": "Een regel toevoegen",
+    "description": "Add-rule section label."
+  },
+  "sites_match": {
+    "message": "Site (host of *.host)",
+    "description": "Rule match input label."
+  },
+  "sites_match_ph": {
+    "message": "stripe.com",
+    "description": "Rule match placeholder."
+  },
+  "sites_template": {
+    "message": "Sjabloon voor deze site",
+    "description": "Rule template input label."
+  },
+  "sites_template_ph": {
+    "message": "{date}-invoice-{original}",
+    "description": "Rule template placeholder."
+  },
+  "sites_add_btn": {
+    "message": "Siteregel toevoegen",
+    "description": "Add-rule button."
+  },
+  "sites_delete": {
+    "message": "Regel verwijderen",
+    "description": "Aria label for a rule's delete button."
+  },
+  "sites_need_both": {
+    "message": "Voer zowel een site als een sjabloon in.",
+    "description": "Validation when a rule field is empty."
+  },
+  "sites_add_err": {
+    "message": "Die regel kon niet worden toegevoegd.",
+    "description": "Generic add-rule failure."
+  },
+  "adv_h1": {
+    "message": "Geavanceerde naamgeving",
+    "description": "Advanced panel heading."
+  },
+  "adv_lede": {
+    "message": "Krachtige tools voor hoe je downloads echt ordent. Inbegrepen in Zovo Pro.",
+    "description": "Advanced panel intro."
+  },
+  "adv_save": {
+    "message": "Opslaan",
+    "description": "Generic save button."
+  },
+  "adv_clear": {
+    "message": "Wissen",
+    "description": "Generic clear button."
+  },
+  "adv_unlock": {
+    "message": "Ontgrendelen met Pro",
+    "description": "CTA on a locked Pro card."
+  },
+  "adv_on": {
+    "message": "Ingeschakeld",
+    "description": "Feature toggled on."
+  },
+  "adv_off": {
+    "message": "Uitgeschakeld",
+    "description": "Feature toggled off."
+  },
+  "adv_perm_needed": {
+    "message": "Er is een machtiging nodig om dit in te schakelen.",
+    "description": "Shown when an optional permission is denied."
+  },
+  "adv_toggle_err": {
+    "message": "Deze instelling kon niet worden bijgewerkt.",
+    "description": "Generic toggle failure."
+  },
+  "adv_folder_h": {
+    "message": "Mappen-routing",
+    "description": "Folder-routing card heading."
+  },
+  "adv_folder_note": {
+    "message": "Sla downloads op in submappen van je Downloads-map, bijv. Downloads/{hostname}/…",
+    "description": "Folder-routing explanation."
+  },
+  "adv_folder_label": {
+    "message": "Submappad (tokens toegestaan)",
+    "description": "Folder-path input label."
+  },
+  "adv_folder_ph": {
+    "message": "{hostname}",
+    "description": "Folder-path placeholder."
+  },
+  "adv_folder_err": {
+    "message": "Mappen-routing kon niet worden opgeslagen.",
+    "description": "Folder-routing save failure."
+  },
+  "adv_regex_h": {
+    "message": "Zoeken en vervangen (regex)",
+    "description": "Regex card heading."
+  },
+  "adv_regex_note": {
+    "message": "Ruim namen op met een reguliere expressie voordat ze worden opgeslagen.",
+    "description": "Regex explanation."
+  },
+  "adv_regex_find": {
+    "message": "Zoeken",
+    "description": "Regex find input label."
+  },
+  "adv_regex_find_ph": {
+    "message": "\\s+",
+    "description": "Regex find placeholder."
+  },
+  "adv_regex_replace": {
+    "message": "Vervangen",
+    "description": "Regex replace input label."
+  },
+  "adv_regex_replace_ph": {
+    "message": "-",
+    "description": "Regex replace placeholder."
+  },
+  "adv_regex_flags": {
+    "message": "Vlaggen",
+    "description": "Regex flags input label."
+  },
+  "adv_regex_need": {
+    "message": "Voer een patroon in om te zoeken.",
+    "description": "Validation when the regex find is empty."
+  },
+  "adv_regex_bad": {
+    "message": "Dat patroon is ongeldig of onveilig.",
+    "description": "Regex validation failure."
+  },
+  "adv_regex_err": {
+    "message": "Het patroon kon niet worden opgeslagen.",
+    "description": "Generic regex save failure."
+  },
+  "adv_cleared": {
+    "message": "Gewist",
+    "description": "Regex cleared confirmation."
+  },
+  "adv_title_h": {
+    "message": "Paginatitel-token {title}",
+    "description": "Title-token card heading."
+  },
+  "adv_title_note": {
+    "message": "Gebruik de titel van de bronpagina in bestandsnamen. Als je dit inschakelt, vraagt Chrome om de Tabbladen-machtiging.",
+    "description": "Title-token explanation."
+  },
+  "adv_title_toggle": {
+    "message": "Schakel het {title}-token in",
+    "description": "Title-token toggle label."
+  },
+  "adv_title_aria": {
+    "message": "Paginatitel-token inschakelen",
+    "description": "Accessible name for the title-token switch."
+  },
+  "adv_pdf_h": {
+    "message": "PDF-titel-token {pdftitle}",
+    "description": "PDF-token card heading."
+  },
+  "adv_pdf_note": {
+    "message": "Geef PDF's een naam op basis van de titel die in het bestand is opgeslagen. Dit leest de PDF via het netwerk, dus het vraagt om sitetoegang en staat standaard uit.",
+    "description": "PDF-token explanation."
+  },
+  "adv_pdf_toggle": {
+    "message": "Schakel het {pdftitle}-token in",
+    "description": "PDF-token toggle label."
+  },
+  "adv_pdf_aria": {
+    "message": "PDF-titel-token inschakelen",
+    "description": "Accessible name for the PDF-token switch."
+  },
+  "backup_h1": {
+    "message": "Back-up en herstel",
+    "description": "Backup panel heading."
+  },
+  "backup_lede": {
+    "message": "Exporteer je configuratie naar een bestand, of verplaats hem naar een andere machine. Inbegrepen in Zovo Pro.",
+    "description": "Backup panel intro."
+  },
+  "backup_export_h": {
+    "message": "Configuratie exporteren",
+    "description": "Export card heading."
+  },
+  "backup_export_note": {
+    "message": "Downloadt een JSON-bestand met je sjabloon, regels en instellingen. Geen geschiedenis, geen persoonlijke gegevens.",
+    "description": "Export explanation."
+  },
+  "backup_export_btn": {
+    "message": "Naar bestand exporteren",
+    "description": "Export button."
+  },
+  "backup_exported": {
+    "message": "Geëxporteerd",
+    "description": "Export confirmation."
+  },
+  "backup_export_err": {
+    "message": "Exporteren mislukt.",
+    "description": "Export failure."
+  },
+  "backup_import_h": {
+    "message": "Configuratie importeren",
+    "description": "Import card heading."
+  },
+  "backup_import_label": {
+    "message": "Plak een geëxporteerde configuratie",
+    "description": "Import textarea label."
+  },
+  "backup_import_ph": {
+    "message": "{\"zovo_template\":\"…\"}",
+    "description": "Import textarea placeholder."
+  },
+  "backup_import_btn": {
+    "message": "Importeren",
+    "description": "Import button."
+  },
+  "backup_imported": {
+    "message": "Geïmporteerd",
+    "description": "Import confirmation."
+  },
+  "backup_need_json": {
+    "message": "Plak eerst een configuratie.",
+    "description": "Validation when import is empty."
+  },
+  "backup_import_err": {
+    "message": "Dat bestand kon niet worden geïmporteerd.",
+    "description": "Import failure."
+  },
+  "lic_h1": {
+    "message": "Je plan",
+    "description": "License panel heading."
+  },
+  "lic_lede": {
+    "message": "Eén betaling ontgrendelt elke naamgevingsfunctie, voor altijd. Geen abonnement.",
+    "description": "License panel intro."
+  },
+  "lic_current": {
+    "message": "Huidig plan",
+    "description": "Current-plan label."
+  },
+  "lic_free_sub": {
+    "message": "Kernhernoemen, één siteregel, voor altijd.",
+    "description": "Free-plan subtitle."
+  },
+  "lic_pro_sub": {
+    "message": "Elke naamgevingsfunctie is ontgrendeld. Bedankt dat je Zovo steunt.",
+    "description": "Pro-plan subtitle."
+  },
+  "lic_upgrade": {
+    "message": "Upgraden naar Pro",
+    "description": "Upgrade button on the License tab."
+  },
+  "lic_have_key": {
+    "message": "Ik heb een sleutel",
+    "description": "License-key button."
+  },
+  "lic_included_h": {
+    "message": "Wat Pro ontgrendelt",
+    "description": "Benefits section label."
+  },
+  "lic_b1": {
+    "message": "Onbeperkte regels per site",
+    "description": "Pro benefit 1."
+  },
+  "lic_b2": {
+    "message": "Mappen-routing naar submappen",
+    "description": "Pro benefit 2."
+  },
+  "lic_b3": {
+    "message": "Regex zoeken en vervangen",
+    "description": "Pro benefit 3."
+  },
+  "lic_b4": {
+    "message": "Paginatitel- en PDF-titel-tokens",
+    "description": "Pro benefit 4."
+  },
+  "lic_b5": {
+    "message": "Configuratie back-up, export en import",
+    "description": "Pro benefit 5."
+  },
+  "saved": {
+    "message": "Opgeslagen",
+    "description": "Generic saved confirmation."
+  },
+  "err_template": {
+    "message": "Die sjabloon kon niet worden opgeslagen.",
+    "description": "Generic template save failure."
+  },
+  "err_bad_token": {
+    "message": "Onbekend token in sjabloon: ",
+    "description": "Prefix before the offending token name."
+  },
+  "ob_brand": {
+    "message": "Smart Rename Downloads",
+    "description": "Onboarding brand name."
+  },
+  "ob_by": {
+    "message": "· door Zovo",
+    "description": "Onboarding brand attribution suffix."
+  },
+  "ob_skip": {
+    "message": "Intro overslaan",
+    "description": "Skip onboarding button."
+  },
+  "ob_back": {
+    "message": "Terug",
+    "description": "Previous-step button."
+  },
+  "ob_next": {
+    "message": "Volgende",
+    "description": "Next-step button."
+  },
+  "ob_later": {
+    "message": "Misschien later",
+    "description": "Next-button label on the offer step."
+  },
+  "ob_start": {
+    "message": "Beginnen met gebruiken",
+    "description": "Final onboarding button."
+  },
+  "ob_stepno": {
+    "message": "{a} van {b}",
+    "description": "Step counter, e.g. 1 of 6. {a} current, {b} total."
+  },
+  "ob_s1_kicker": {
+    "message": "Het probleem met de downloadmap",
+    "description": "Step 1 kicker."
+  },
+  "ob_s1_title": {
+    "message": "Je vindt dat bestand nooit meer terug.",
+    "description": "Step 1 title."
+  },
+  "ob_s1_pt": {
+    "message": "Gemaakt voor mensen die de hele dag downloaden. Onderzoekers, accountants, iedereen wiens Downloads-map stilletjes uit de hand loopt.",
+    "description": "Step 1 secondary paragraph."
+  },
+  "ob_s2_kicker": {
+    "message": "Eén regel, al aan",
+    "description": "Step 2 kicker."
+  },
+  "ob_s2_title": {
+    "message": "Zie een rommelnaam veranderen in een echte.",
+    "description": "Step 2 title."
+  },
+  "ob_s2_lede": {
+    "message": "Het standaardpatroon is de datum, dan de site, dan de originele naam. Zodra een download klaar is, wordt de naam herschreven en direct naar schijf geschreven. Geen klik, geen dialoogvenster. Hier is het op een echt bestand.",
+    "description": "Step 2 body."
+  },
+  "ob_demo_btn": {
+    "message": "Zie het hernoemen",
+    "description": "Button that replays the rename demo."
+  },
+  "ob_saved_as": {
+    "message": "Opgeslagen als",
+    "description": "Demo label for the original filename."
+  },
+  "ob_renamed_to": {
+    "message": "Hernoemd naar",
+    "description": "Demo label for the renamed filename."
+  },
+  "ob_fw_kept": {
+    "message": ".pdf behouden",
+    "description": "Token chip: the real extension is kept."
+  },
+  "ob_s3_kicker": {
+    "message": "Twee minuten, één keer",
+    "description": "Step 3 kicker."
+  },
+  "ob_s3_title": {
+    "message": "Stel het naamgevingspatroon in dat je voorgoed houdt.",
+    "description": "Step 3 title."
+  },
+  "ob_s3_lede": {
+    "message": "Bouw het op uit tokens. Klik er een om het in het patroon te plaatsen en zie het voorbeeld bijwerken. De echte bestandsextensie blijft altijd aan het eind behouden. Sla het op en elke toekomstige download volgt dit.",
+    "description": "Step 3 body."
+  },
+  "ob_s3_pt": {
+    "message": "Het leeft in je browser. Wijzig het op elk moment in de instellingen, en niets over je bestanden wordt ooit ergens naartoe gestuurd.",
+    "description": "Step 3 secondary paragraph."
+  },
+  "ob_template_label": {
+    "message": "Je naamgevingspatroon",
+    "description": "Onboarding template input label."
+  },
+  "ob_result": {
+    "message": "Resultaat",
+    "description": "Onboarding preview result label."
+  },
+  "ob_save_btn": {
+    "message": "Mijn patroon opslaan",
+    "description": "Save-pattern button."
+  },
+  "ob_pattern_saved": {
+    "message": "Patroon opgeslagen",
+    "description": "Save-pattern button after saving."
+  },
+  "ob_saved_msg": {
+    "message": "Opgeslagen. Elke download volgt dit nu.",
+    "description": "Confirmation after the pattern is saved."
+  },
+  "ob_s4_kicker": {
+    "message": "Waarom je het kunt laten draaien",
+    "description": "Step 4 kicker."
+  },
+  "ob_s4_title": {
+    "message": "Lokaal van opzet, in het openbaar gebouwd door één ontwikkelaar.",
+    "description": "Step 4 title."
+  },
+  "ob_s4_lede": {
+    "message": "Je bestanden en je hernoemgeschiedenis verlaten deze machine nooit. Op het gratis plan doet de extensie helemaal geen netwerkoproep, en de code is klein genoeg om in één keer te lezen.",
+    "description": "Step 4 body."
+  },
+  "ob_stat1_n": {
+    "message": "Lokaal",
+    "description": "Stat 1 value."
+  },
+  "ob_stat1_l": {
+    "message": "elke hernoeming draait op je apparaat",
+    "description": "Stat 1 label."
+  },
+  "ob_stat2_n": {
+    "message": "Privé",
+    "description": "Stat 2 value."
+  },
+  "ob_stat2_l": {
+    "message": "niets verlaat deze machine",
+    "description": "Stat 2 label."
+  },
+  "ob_stat3_n": {
+    "message": "Open",
+    "description": "Stat 3 value."
+  },
+  "ob_stat3_l": {
+    "message": "in het openbaar gebouwd, elke commit",
+    "description": "Stat 3 label."
+  },
+  "ob_s4_pt": {
+    "message": "Een download-hernoemer is waar je Zovo ontmoet. Het grotere plan is een eerlijke laag voor de hele extensiewereld, één tool tegelijk, zonder spam en zonder tracking.",
+    "description": "Step 4 secondary paragraph."
+  },
+  "ob_link_why": {
+    "message": "Waarom ik Zovo bouw",
+    "description": "Link: why Zovo."
+  },
+  "ob_link_vision": {
+    "message": "De visie",
+    "description": "Link: the vision."
+  },
+  "ob_link_safe": {
+    "message": "Hoe we je veilig houden",
+    "description": "Link: safety."
+  },
+  "ob_trust1_h": {
+    "message": "Alles blijft op je apparaat",
+    "description": "Trust point 1 heading."
+  },
+  "ob_trust1_b": {
+    "message": "Je patroon, regels en geschiedenis leven in lokale browseropslag. Geen account, geen synchronisatieserver, niets verzonden.",
+    "description": "Trust point 1 body."
+  },
+  "ob_trust2_h": {
+    "message": "Eén persoon, die in het openbaar bouwt",
+    "description": "Trust point 2 heading."
+  },
+  "ob_s5_kicker": {
+    "message": "De eerlijke ruil",
+    "description": "Step 5 kicker."
+  },
+  "ob_s5_title": {
+    "message": "Gratis hernoemen voor altijd. Of bezit alles, één keer.",
+    "description": "Step 5 title."
+  },
+  "ob_s5_lede": {
+    "message": "De stille hernoemkern blijft gratis, zonder limiet op hoeveel bestanden hij aanraakt. Eén betaling van negenennegentig dollar schakelt onbeperkte regels per site, mappen-routing, regex-opschoning en naamgeving vanuit een pagina- of PDF-titel in.",
+    "description": "Step 5 body."
+  },
+  "ob_plan_free": {
+    "message": "Gratis",
+    "description": "Free plan name."
+  },
+  "ob_free_unit": {
+    "message": "voor altijd",
+    "description": "Free plan price unit."
+  },
+  "ob_free1": {
+    "message": "Elke download vanzelf hernoemd",
+    "description": "Free benefit 1."
+  },
+  "ob_free2": {
+    "message": "De drie kerntokens: datum, site, originele naam",
+    "description": "Free benefit 2."
+  },
+  "ob_free3": {
+    "message": "Eén opgeslagen siteregel",
+    "description": "Free benefit 3."
+  },
+  "ob_free4": {
+    "message": "Conflictafhandeling en een live teller",
+    "description": "Free benefit 4."
+  },
+  "ob_ribbon": {
+    "message": "Beste waarde",
+    "description": "Lifetime plan ribbon."
+  },
+  "ob_plan_life": {
+    "message": "Levenslang",
+    "description": "Lifetime plan name."
+  },
+  "ob_life_unit": {
+    "message": "eenmalig",
+    "description": "Lifetime plan price unit."
+  },
+  "ob_life1": {
+    "message": "Onbeperkte regels per site",
+    "description": "Lifetime benefit 1."
+  },
+  "ob_life2": {
+    "message": "Route bestanden naar Downloads-submappen per site of datum",
+    "description": "Lifetime benefit 2."
+  },
+  "ob_life3": {
+    "message": "Regex-opschoning plus paginatitel- en PDF-titel-tokens",
+    "description": "Lifetime benefit 3."
+  },
+  "ob_life4": {
+    "message": "Configuratie back-up en import tussen machines",
+    "description": "Lifetime benefit 4."
+  },
+  "ob_life5": {
+    "message": "Elke toekomstige update van deze tool, inbegrepen",
+    "description": "Lifetime benefit 5."
+  },
+  "ob_life6": {
+    "message": "Eén betaling, geen abonnement, ooit",
+    "description": "Lifetime benefit 6."
+  },
+  "ob_life_cta": {
+    "message": "Koop levenslang voor $$99",
+    "description": "Lifetime purchase CTA."
+  },
+  "ob_guarantee": {
+    "message": "14 dagen terugbetaling, geen vragen. Liever maandelijks? Het is $$4.99 op dezelfde pagina.",
+    "description": "Refund guarantee line."
+  },
+  "ob_s6_kicker": {
+    "message": "Je bent klaar",
+    "description": "Step 6 kicker."
+  },
+  "ob_s6_title": {
+    "message": "Niets meer te doen. Het werkt al.",
+    "description": "Step 6 title."
+  },
+  "ob_s6_lede": {
+    "message": "Het volgende bestand dat je downloadt krijgt vanzelf een nette naam. Geen knop om in te drukken, geen dialoogvenster om te bevestigen. Dit is wat er vanaf hier gebeurt.",
+    "description": "Step 6 body."
+  },
+  "ob_dev_h": {
+    "message": "Van de ontwikkelaar",
+    "description": "Developer note heading."
+  },
+  "ob_dev_b": {
+    "message": "Ik bouw Zovo in mijn eentje, in het openbaar. Als er iets kapotgaat, schrijf me en ik antwoord. Hernoemers zijn nog maar het begin. Het plan is een eerlijke laag voor de hele browser, en jouw negenennegentig dollar verscheept het volgende stuk ervan.",
+    "description": "Developer note body."
+  },
+  "ob_link_github": {
+    "message": "Bereik me op GitHub",
+    "description": "Link: GitHub."
+  },
+  "ob_link_going": {
+    "message": "Waar dit naartoe gaat",
+    "description": "Link: roadmap."
+  },
+  "ob_cheat1_k": {
+    "message": "Elke download",
+    "description": "Cheat-sheet row 1 key."
+  },
+  "ob_cheat1_v": {
+    "message": "Hernoemd bij opslaan",
+    "description": "Cheat-sheet row 1 value."
+  },
+  "ob_cheat2_k": {
+    "message": "De pop-up",
+    "description": "Cheat-sheet row 2 key."
+  },
+  "ob_cheat2_v": {
+    "message": "Telt elke hernoeming",
+    "description": "Cheat-sheet row 2 value."
+  },
+  "ob_cheat3_k": {
+    "message": "Je patroon",
+    "description": "Cheat-sheet row 3 key."
+  },
+  "ob_cheat3_v": {
+    "message": "Bewerk het in instellingen",
+    "description": "Cheat-sheet row 3 value."
+  },
+  "ob_cheat4_k": {
+    "message": "Eerste siteregel",
+    "description": "Cheat-sheet row 4 key."
+  },
+  "ob_cheat4_v": {
+    "message": "Gratis toe te voegen",
+    "description": "Cheat-sheet row 4 value."
+  }
+}

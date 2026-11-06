@@ -1,0 +1,834 @@
+{
+  "extName": {
+    "message": "Smart Rename Downloads",
+    "description": "Extension name shown in the Chrome Web Store and toolbar."
+  },
+  "extDesc": {
+    "message": "Byt namn på varje nedladdning automatiskt med datum-, webbplats- och titeltokens. Regler per webbplats, regex, mappstyrning",
+    "description": "Chrome Web Store short description (max 132 chars)."
+  },
+  "popup_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Popup header title."
+  },
+  "popup_open_settings": {
+    "message": "Öppna inställningar",
+    "description": "Aria label for the settings gear button."
+  },
+  "popup_settings": {
+    "message": "Inställningar",
+    "description": "Tooltip for the settings gear button."
+  },
+  "popup_health": {
+    "message": "Namnbyte pausat — behörigheten för Nedladdningar togs bort.",
+    "description": "Shown when the downloads permission is missing."
+  },
+  "popup_regrant": {
+    "message": "Aktivera igen",
+    "description": "Link to re-grant the downloads permission."
+  },
+  "popup_hero_label": {
+    "message": "Filer omdöpta",
+    "description": "Label under the big lifetime rename counter."
+  },
+  "popup_hero_sub": {
+    "message": "Varje nedladdning döps om automatiskt, innan den når din disk.",
+    "description": "Supporting line under the hero counter."
+  },
+  "popup_master_title": {
+    "message": "Byt namn på nedladdningar automatiskt",
+    "description": "Master on/off switch title."
+  },
+  "popup_master_aria": {
+    "message": "Växla automatiskt namnbyte av nedladdningar",
+    "description": "Accessible name for the master switch."
+  },
+  "popup_master_on": {
+    "message": "På — döper om varje nedladdning",
+    "description": "Master switch note when enabled."
+  },
+  "popup_master_off": {
+    "message": "Av — Chrome behåller sina standardnamn",
+    "description": "Master switch note when disabled."
+  },
+  "popup_recent": {
+    "message": "Senaste namnbyten",
+    "description": "Section label for the recent-renames list."
+  },
+  "popup_empty_title": {
+    "message": "Redo när du är det",
+    "description": "Empty-state headline in the popup."
+  },
+  "popup_empty_text": {
+    "message": "Din nästa nedladdning döps om automatiskt. Den visas här.",
+    "description": "Empty-state body in the popup."
+  },
+  "popup_milestone_text": {
+    "message": "Smart Rename har organiserat {n} nedladdningar. Pro sorterar dem i mappar automatiskt.",
+    "description": "Post-success upgrade nudge. {n} is the rename count."
+  },
+  "popup_milestone_cta": {
+    "message": "Se Pro",
+    "description": "CTA on the milestone nudge."
+  },
+  "popup_dismiss": {
+    "message": "Avfärda",
+    "description": "Dismiss the milestone nudge."
+  },
+  "popup_trust": {
+    "message": "Lokalt · Inget konto · Ingen spårning",
+    "description": "Trust line in the popup footer."
+  },
+  "popup_upgrade": {
+    "message": "Uppgradera till Pro",
+    "description": "Upgrade button in the popup footer."
+  },
+  "flag_timeout": {
+    "message": "behöll standard",
+    "description": "Recent-list flag: rename fell back to Chrome's default name (timeout)."
+  },
+  "flag_sanitize": {
+    "message": "behöll standard",
+    "description": "Recent-list flag: name could not be sanitized."
+  },
+  "flag_nomatch": {
+    "message": "ingen träff",
+    "description": "Recent-list flag: no site rule matched."
+  },
+  "opt_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Options brand name."
+  },
+  "opt_trust": {
+    "message": "Allt stannar på den här enheten. Noll spårning.",
+    "description": "Options sidebar trust line."
+  },
+  "aria_theme": {
+    "message": "Färgtema",
+    "description": "Aria label for the theme radiogroup."
+  },
+  "theme_system": {
+    "message": "System",
+    "description": "Theme option: follow OS."
+  },
+  "theme_light": {
+    "message": "Ljust",
+    "description": "Theme option: light."
+  },
+  "theme_dark": {
+    "message": "Mörkt",
+    "description": "Theme option: dark."
+  },
+  "tier_free": {
+    "message": "Gratis",
+    "description": "Free plan label."
+  },
+  "tier_trial": {
+    "message": "Testperiod",
+    "description": "Trial plan label."
+  },
+  "tier_pro": {
+    "message": "Pro",
+    "description": "Pro plan label."
+  },
+  "tab_template": {
+    "message": "Mall",
+    "description": "Settings tab: naming template."
+  },
+  "tab_sites": {
+    "message": "Regler per webbplats",
+    "description": "Settings tab: per-site rules."
+  },
+  "tab_advanced": {
+    "message": "Avancerat",
+    "description": "Settings tab: advanced naming."
+  },
+  "tab_backup": {
+    "message": "Säkerhetskopia",
+    "description": "Settings tab: backup and restore."
+  },
+  "tab_license": {
+    "message": "Licens",
+    "description": "Settings tab: license and plan."
+  },
+  "tpl_h1": {
+    "message": "Namngivningsmall",
+    "description": "Template panel heading."
+  },
+  "tpl_lede": {
+    "message": "Bygg filnamnet som varje nedladdning får. Den riktiga filändelsen behålls alltid.",
+    "description": "Template panel intro."
+  },
+  "tpl_label": {
+    "message": "Mall",
+    "description": "Template input label."
+  },
+  "tpl_tokens_aria": {
+    "message": "Infoga en token",
+    "description": "Aria label for the token chip row."
+  },
+  "tpl_conflict": {
+    "message": "Om en fil med det namnet redan finns",
+    "description": "Conflict-policy select label."
+  },
+  "conflict_uniquify": {
+    "message": "Lägg till en siffra — behåll båda",
+    "description": "Conflict policy: uniquify."
+  },
+  "conflict_overwrite": {
+    "message": "Skriv över den gamla filen",
+    "description": "Conflict policy: overwrite."
+  },
+  "conflict_prompt": {
+    "message": "Fråga mig varje gång",
+    "description": "Conflict policy: prompt."
+  },
+  "tpl_save": {
+    "message": "Spara mall",
+    "description": "Save-template button."
+  },
+  "tpl_preview_h": {
+    "message": "Direktförhandsvisning",
+    "description": "Preview section label."
+  },
+  "tpl_pv_host": {
+    "message": "Exempelwebbplats",
+    "description": "Preview sample-host input label."
+  },
+  "tpl_pv_name": {
+    "message": "Exempelnedladdning",
+    "description": "Preview sample-name input label."
+  },
+  "tpl_pv_result": {
+    "message": "Resultat",
+    "description": "Preview result label."
+  },
+  "tpl_pv_hint": {
+    "message": "Ett ”/” i en gratismall sparas som ”-”. Mappstyrning är en Pro-funktion.",
+    "description": "Preview hint about slashes and folder routing."
+  },
+  "sites_h1": {
+    "message": "Regler per webbplats",
+    "description": "Sites panel heading."
+  },
+  "sites_lede": {
+    "message": "Ge en specifik webbplats sin egen mall — fakturor i mappar, dokument med titel. Gratis inkluderar en regel så att du kan känna på det; Pro är obegränsat.",
+    "description": "Sites panel intro."
+  },
+  "sites_count": {
+    "message": "0 av 1 gratisregler använda",
+    "description": "Initial site-rule count text."
+  },
+  "sites_count_free": {
+    "message": "{n} av 1 gratisregler använda",
+    "description": "Site-rule count for Free. {n} is the count."
+  },
+  "sites_count_pro": {
+    "message": "{n} regler",
+    "description": "Site-rule count for Pro. {n} is the count."
+  },
+  "sites_empty": {
+    "message": "Inga webbplatsregler ännu. Lägg till en nedan.",
+    "description": "Empty state for site rules."
+  },
+  "sites_add_h": {
+    "message": "Lägg till en regel",
+    "description": "Add-rule section label."
+  },
+  "sites_match": {
+    "message": "Webbplats (värd eller *.värd)",
+    "description": "Rule match input label."
+  },
+  "sites_match_ph": {
+    "message": "stripe.com",
+    "description": "Rule match placeholder."
+  },
+  "sites_template": {
+    "message": "Mall för den här webbplatsen",
+    "description": "Rule template input label."
+  },
+  "sites_template_ph": {
+    "message": "{date}-invoice-{original}",
+    "description": "Rule template placeholder."
+  },
+  "sites_add_btn": {
+    "message": "Lägg till webbplatsregel",
+    "description": "Add-rule button."
+  },
+  "sites_delete": {
+    "message": "Ta bort regel",
+    "description": "Aria label for a rule's delete button."
+  },
+  "sites_need_both": {
+    "message": "Ange både en webbplats och en mall.",
+    "description": "Validation when a rule field is empty."
+  },
+  "sites_add_err": {
+    "message": "Den regeln kunde inte läggas till.",
+    "description": "Generic add-rule failure."
+  },
+  "adv_h1": {
+    "message": "Avancerad namngivning",
+    "description": "Advanced panel heading."
+  },
+  "adv_lede": {
+    "message": "Kraftfulla verktyg för hur du faktiskt sorterar nedladdningar. Ingår i Zovo Pro.",
+    "description": "Advanced panel intro."
+  },
+  "adv_save": {
+    "message": "Spara",
+    "description": "Generic save button."
+  },
+  "adv_clear": {
+    "message": "Rensa",
+    "description": "Generic clear button."
+  },
+  "adv_unlock": {
+    "message": "Lås upp med Pro",
+    "description": "CTA on a locked Pro card."
+  },
+  "adv_on": {
+    "message": "Aktiverad",
+    "description": "Feature toggled on."
+  },
+  "adv_off": {
+    "message": "Inaktiverad",
+    "description": "Feature toggled off."
+  },
+  "adv_perm_needed": {
+    "message": "Behörighet krävs för att aktivera detta.",
+    "description": "Shown when an optional permission is denied."
+  },
+  "adv_toggle_err": {
+    "message": "Kunde inte uppdatera den här inställningen.",
+    "description": "Generic toggle failure."
+  },
+  "adv_folder_h": {
+    "message": "Mappstyrning",
+    "description": "Folder-routing card heading."
+  },
+  "adv_folder_note": {
+    "message": "Ladda ner filer till undermappar i din Nedladdningar-mapp, t.ex. Nedladdningar/{hostname}/…",
+    "description": "Folder-routing explanation."
+  },
+  "adv_folder_label": {
+    "message": "Undermappssökväg (tokens tillåtna)",
+    "description": "Folder-path input label."
+  },
+  "adv_folder_ph": {
+    "message": "{hostname}",
+    "description": "Folder-path placeholder."
+  },
+  "adv_folder_err": {
+    "message": "Kunde inte spara mappstyrning.",
+    "description": "Folder-routing save failure."
+  },
+  "adv_regex_h": {
+    "message": "Sök och ersätt (regex)",
+    "description": "Regex card heading."
+  },
+  "adv_regex_note": {
+    "message": "Städa upp namn med ett reguljärt uttryck innan de sparas.",
+    "description": "Regex explanation."
+  },
+  "adv_regex_find": {
+    "message": "Sök",
+    "description": "Regex find input label."
+  },
+  "adv_regex_find_ph": {
+    "message": "\\s+",
+    "description": "Regex find placeholder."
+  },
+  "adv_regex_replace": {
+    "message": "Ersätt",
+    "description": "Regex replace input label."
+  },
+  "adv_regex_replace_ph": {
+    "message": "-",
+    "description": "Regex replace placeholder."
+  },
+  "adv_regex_flags": {
+    "message": "Flaggor",
+    "description": "Regex flags input label."
+  },
+  "adv_regex_need": {
+    "message": "Ange ett mönster att söka efter.",
+    "description": "Validation when the regex find is empty."
+  },
+  "adv_regex_bad": {
+    "message": "Det mönstret är ogiltigt eller osäkert.",
+    "description": "Regex validation failure."
+  },
+  "adv_regex_err": {
+    "message": "Kunde inte spara mönstret.",
+    "description": "Generic regex save failure."
+  },
+  "adv_cleared": {
+    "message": "Rensat",
+    "description": "Regex cleared confirmation."
+  },
+  "adv_title_h": {
+    "message": "Sidtiteltoken {title}",
+    "description": "Title-token card heading."
+  },
+  "adv_title_note": {
+    "message": "Använd källsidans titel i filnamn. Att aktivera detta ber Chrome om behörigheten Flikar.",
+    "description": "Title-token explanation."
+  },
+  "adv_title_toggle": {
+    "message": "Aktivera token {title}",
+    "description": "Title-token toggle label."
+  },
+  "adv_title_aria": {
+    "message": "Aktivera sidtiteltoken",
+    "description": "Accessible name for the title-token switch."
+  },
+  "adv_pdf_h": {
+    "message": "PDF-titeltoken {pdftitle}",
+    "description": "PDF-token card heading."
+  },
+  "adv_pdf_note": {
+    "message": "Namnge PDF-filer efter titeln som lagras inuti filen. Detta läser PDF:en över nätverket, så det ber om webbplatsåtkomst och är avstängt som standard.",
+    "description": "PDF-token explanation."
+  },
+  "adv_pdf_toggle": {
+    "message": "Aktivera token {pdftitle}",
+    "description": "PDF-token toggle label."
+  },
+  "adv_pdf_aria": {
+    "message": "Aktivera PDF-titeltoken",
+    "description": "Accessible name for the PDF-token switch."
+  },
+  "backup_h1": {
+    "message": "Säkerhetskopiera och återställ",
+    "description": "Backup panel heading."
+  },
+  "backup_lede": {
+    "message": "Exportera din konfiguration till en fil, eller flytta den till en annan dator. Ingår i Zovo Pro.",
+    "description": "Backup panel intro."
+  },
+  "backup_export_h": {
+    "message": "Exportera konfiguration",
+    "description": "Export card heading."
+  },
+  "backup_export_note": {
+    "message": "Laddar ner en JSON-fil med din mall, dina regler och inställningar. Ingen historik, inga personuppgifter.",
+    "description": "Export explanation."
+  },
+  "backup_export_btn": {
+    "message": "Exportera till fil",
+    "description": "Export button."
+  },
+  "backup_exported": {
+    "message": "Exporterat",
+    "description": "Export confirmation."
+  },
+  "backup_export_err": {
+    "message": "Exporten misslyckades.",
+    "description": "Export failure."
+  },
+  "backup_import_h": {
+    "message": "Importera konfiguration",
+    "description": "Import card heading."
+  },
+  "backup_import_label": {
+    "message": "Klistra in en exporterad konfiguration",
+    "description": "Import textarea label."
+  },
+  "backup_import_ph": {
+    "message": "{\"zovo_template\":\"…\"}",
+    "description": "Import textarea placeholder."
+  },
+  "backup_import_btn": {
+    "message": "Importera",
+    "description": "Import button."
+  },
+  "backup_imported": {
+    "message": "Importerat",
+    "description": "Import confirmation."
+  },
+  "backup_need_json": {
+    "message": "Klistra in en konfiguration först.",
+    "description": "Validation when import is empty."
+  },
+  "backup_import_err": {
+    "message": "Den filen kunde inte importeras.",
+    "description": "Import failure."
+  },
+  "lic_h1": {
+    "message": "Din plan",
+    "description": "License panel heading."
+  },
+  "lic_lede": {
+    "message": "En betalning låser upp varje namngivningsfunktion, för alltid. Ingen prenumeration.",
+    "description": "License panel intro."
+  },
+  "lic_current": {
+    "message": "Nuvarande plan",
+    "description": "Current-plan label."
+  },
+  "lic_free_sub": {
+    "message": "Grundläggande namnbyte, en webbplatsregel, för alltid.",
+    "description": "Free-plan subtitle."
+  },
+  "lic_pro_sub": {
+    "message": "Varje namngivningsfunktion är upplåst. Tack för att du stöttar Zovo.",
+    "description": "Pro-plan subtitle."
+  },
+  "lic_upgrade": {
+    "message": "Uppgradera till Pro",
+    "description": "Upgrade button on the License tab."
+  },
+  "lic_have_key": {
+    "message": "Jag har en nyckel",
+    "description": "License-key button."
+  },
+  "lic_included_h": {
+    "message": "Vad Pro låser upp",
+    "description": "Benefits section label."
+  },
+  "lic_b1": {
+    "message": "Obegränsade regler per webbplats",
+    "description": "Pro benefit 1."
+  },
+  "lic_b2": {
+    "message": "Mappstyrning till undermappar",
+    "description": "Pro benefit 2."
+  },
+  "lic_b3": {
+    "message": "Sök och ersätt med regex",
+    "description": "Pro benefit 3."
+  },
+  "lic_b4": {
+    "message": "Tokens för sidtitel och PDF-titel",
+    "description": "Pro benefit 4."
+  },
+  "lic_b5": {
+    "message": "Säkerhetskopiering, export och import av konfiguration",
+    "description": "Pro benefit 5."
+  },
+  "saved": {
+    "message": "Sparat",
+    "description": "Generic saved confirmation."
+  },
+  "err_template": {
+    "message": "Den mallen kunde inte sparas.",
+    "description": "Generic template save failure."
+  },
+  "err_bad_token": {
+    "message": "Okänd token i mallen: ",
+    "description": "Prefix before the offending token name."
+  },
+  "ob_brand": {
+    "message": "Smart Rename Downloads",
+    "description": "Onboarding brand name."
+  },
+  "ob_by": {
+    "message": "· av Zovo",
+    "description": "Onboarding brand attribution suffix."
+  },
+  "ob_skip": {
+    "message": "Hoppa över introduktionen",
+    "description": "Skip onboarding button."
+  },
+  "ob_back": {
+    "message": "Tillbaka",
+    "description": "Previous-step button."
+  },
+  "ob_next": {
+    "message": "Nästa",
+    "description": "Next-step button."
+  },
+  "ob_later": {
+    "message": "Kanske senare",
+    "description": "Next-button label on the offer step."
+  },
+  "ob_start": {
+    "message": "Börja använda det",
+    "description": "Final onboarding button."
+  },
+  "ob_stepno": {
+    "message": "{a} av {b}",
+    "description": "Step counter, e.g. 1 of 6. {a} current, {b} total."
+  },
+  "ob_s1_kicker": {
+    "message": "Problemet med nedladdningsmappen",
+    "description": "Step 1 kicker."
+  },
+  "ob_s1_title": {
+    "message": "Du kommer aldrig att hitta den filen igen.",
+    "description": "Step 1 title."
+  },
+  "ob_s1_pt": {
+    "message": "Byggd för människor som laddar ner hela dagen. Forskare, revisorer, alla vars Nedladdningar-mapp tyst har spårat ur.",
+    "description": "Step 1 secondary paragraph."
+  },
+  "ob_s2_kicker": {
+    "message": "En regel, redan på",
+    "description": "Step 2 kicker."
+  },
+  "ob_s2_title": {
+    "message": "Se ett skräpnamn förvandlas till ett riktigt.",
+    "description": "Step 2 title."
+  },
+  "ob_s2_lede": {
+    "message": "Standardmönstret är datumet, sedan webbplatsen, sedan originalnamnet. I samma stund som en nedladdning är klar skrivs namnet om och sparas direkt till disk. Inget klick, ingen dialog. Här är det på en riktig fil.",
+    "description": "Step 2 body."
+  },
+  "ob_demo_btn": {
+    "message": "Se namnbytet",
+    "description": "Button that replays the rename demo."
+  },
+  "ob_saved_as": {
+    "message": "Sparad som",
+    "description": "Demo label for the original filename."
+  },
+  "ob_renamed_to": {
+    "message": "Omdöpt till",
+    "description": "Demo label for the renamed filename."
+  },
+  "ob_fw_kept": {
+    "message": ".pdf behållen",
+    "description": "Token chip: the real extension is kept."
+  },
+  "ob_s3_kicker": {
+    "message": "Två minuter, en gång",
+    "description": "Step 3 kicker."
+  },
+  "ob_s3_title": {
+    "message": "Ställ in namngivningsmönstret du behåller för gott.",
+    "description": "Step 3 title."
+  },
+  "ob_s3_lede": {
+    "message": "Bygg det från tokens. Klicka på en för att lägga in den i mönstret och se exemplet uppdateras. Den riktiga filändelsen behålls alltid på slutet. Spara det och varje framtida nedladdning följer detta.",
+    "description": "Step 3 body."
+  },
+  "ob_s3_pt": {
+    "message": "Det finns i din webbläsare. Ändra det när som helst i inställningarna, och ingenting om dina filer skickas någonsin någonstans.",
+    "description": "Step 3 secondary paragraph."
+  },
+  "ob_template_label": {
+    "message": "Ditt namngivningsmönster",
+    "description": "Onboarding template input label."
+  },
+  "ob_result": {
+    "message": "Resultat",
+    "description": "Onboarding preview result label."
+  },
+  "ob_save_btn": {
+    "message": "Spara mitt mönster",
+    "description": "Save-pattern button."
+  },
+  "ob_pattern_saved": {
+    "message": "Mönstret sparat",
+    "description": "Save-pattern button after saving."
+  },
+  "ob_saved_msg": {
+    "message": "Sparat. Varje nedladdning följer detta nu.",
+    "description": "Confirmation after the pattern is saved."
+  },
+  "ob_s4_kicker": {
+    "message": "Varför du kan låta det köra",
+    "description": "Step 4 kicker."
+  },
+  "ob_s4_title": {
+    "message": "Lokal i grunden, byggd i det öppna av en utvecklare.",
+    "description": "Step 4 title."
+  },
+  "ob_s4_lede": {
+    "message": "Dina filer och din namnbyteshistorik lämnar aldrig den här maskinen. På gratisplanen gör tillägget inget nätverksanrop alls, och koden är liten nog att läsa i ett svep.",
+    "description": "Step 4 body."
+  },
+  "ob_stat1_n": {
+    "message": "Lokalt",
+    "description": "Stat 1 value."
+  },
+  "ob_stat1_l": {
+    "message": "varje namnbyte körs på din enhet",
+    "description": "Stat 1 label."
+  },
+  "ob_stat2_n": {
+    "message": "Privat",
+    "description": "Stat 2 value."
+  },
+  "ob_stat2_l": {
+    "message": "ingenting lämnar den här maskinen",
+    "description": "Stat 2 label."
+  },
+  "ob_stat3_n": {
+    "message": "Öppet",
+    "description": "Stat 3 value."
+  },
+  "ob_stat3_l": {
+    "message": "byggt offentligt, varje commit",
+    "description": "Stat 3 label."
+  },
+  "ob_s4_pt": {
+    "message": "En nedladdningsomdöpare är där du möter Zovo. Den större planen är ett ärligt lager för hela tilläggsvärlden, ett verktyg i taget, utan skräppost och utan spårning.",
+    "description": "Step 4 secondary paragraph."
+  },
+  "ob_link_why": {
+    "message": "Varför jag bygger Zovo",
+    "description": "Link: why Zovo."
+  },
+  "ob_link_vision": {
+    "message": "Visionen",
+    "description": "Link: the vision."
+  },
+  "ob_link_safe": {
+    "message": "Hur vi håller dig trygg",
+    "description": "Link: safety."
+  },
+  "ob_trust1_h": {
+    "message": "Allt stannar på din enhet",
+    "description": "Trust point 1 heading."
+  },
+  "ob_trust1_b": {
+    "message": "Ditt mönster, dina regler och din historik finns i lokal webbläsarlagring. Inget konto, ingen synkserver, ingenting skickas ut.",
+    "description": "Trust point 1 body."
+  },
+  "ob_trust2_h": {
+    "message": "En person, bygger i det öppna",
+    "description": "Trust point 2 heading."
+  },
+  "ob_s5_kicker": {
+    "message": "Den ärliga bytesaffären",
+    "description": "Step 5 kicker."
+  },
+  "ob_s5_title": {
+    "message": "Gratis namnbyten för alltid. Eller äg allt, en gång.",
+    "description": "Step 5 title."
+  },
+  "ob_s5_lede": {
+    "message": "Den tysta namnbyteskärnan förblir gratis, utan tak för hur många filer den berör. En betalning på nittionio dollar aktiverar obegränsade regler per webbplats, mappstyrning, regex-städning och namngivning från en sid- eller PDF-titel.",
+    "description": "Step 5 body."
+  },
+  "ob_plan_free": {
+    "message": "Gratis",
+    "description": "Free plan name."
+  },
+  "ob_free_unit": {
+    "message": "för alltid",
+    "description": "Free plan price unit."
+  },
+  "ob_free1": {
+    "message": "Varje nedladdning omdöpt av sig själv",
+    "description": "Free benefit 1."
+  },
+  "ob_free2": {
+    "message": "De tre kärntokens: datum, webbplats, originalnamn",
+    "description": "Free benefit 2."
+  },
+  "ob_free3": {
+    "message": "En sparad regel per webbplats",
+    "description": "Free benefit 3."
+  },
+  "ob_free4": {
+    "message": "Konflikthantering och en live-räknare",
+    "description": "Free benefit 4."
+  },
+  "ob_ribbon": {
+    "message": "Bästa värdet",
+    "description": "Lifetime plan ribbon."
+  },
+  "ob_plan_life": {
+    "message": "Livstid",
+    "description": "Lifetime plan name."
+  },
+  "ob_life_unit": {
+    "message": "engångsbetalning",
+    "description": "Lifetime plan price unit."
+  },
+  "ob_life1": {
+    "message": "Obegränsade regler per webbplats",
+    "description": "Lifetime benefit 1."
+  },
+  "ob_life2": {
+    "message": "Dirigera filer till undermappar i Nedladdningar efter webbplats eller datum",
+    "description": "Lifetime benefit 2."
+  },
+  "ob_life3": {
+    "message": "Regex-städning plus tokens för sidtitel och PDF-titel",
+    "description": "Lifetime benefit 3."
+  },
+  "ob_life4": {
+    "message": "Säkerhetskopiering och import av konfiguration mellan datorer",
+    "description": "Lifetime benefit 4."
+  },
+  "ob_life5": {
+    "message": "Varje framtida uppdatering av det här verktyget, inkluderad",
+    "description": "Lifetime benefit 5."
+  },
+  "ob_life6": {
+    "message": "En betalning, ingen prenumeration, någonsin",
+    "description": "Lifetime benefit 6."
+  },
+  "ob_life_cta": {
+    "message": "Skaffa livstid för $$99",
+    "description": "Lifetime purchase CTA."
+  },
+  "ob_guarantee": {
+    "message": "14 dagars återbetalning, inga frågor. Föredrar du månadsvis? Det kostar $$4.99 på samma sida.",
+    "description": "Refund guarantee line."
+  },
+  "ob_s6_kicker": {
+    "message": "Du är klar",
+    "description": "Step 6 kicker."
+  },
+  "ob_s6_title": {
+    "message": "Inget kvar att göra. Det fungerar redan.",
+    "description": "Step 6 title."
+  },
+  "ob_s6_lede": {
+    "message": "Nästa fil du laddar ner får ett rent namn av sig själv. Ingen knapp att trycka på, ingen dialog att bekräfta. Så här händer det härifrån.",
+    "description": "Step 6 body."
+  },
+  "ob_dev_h": {
+    "message": "Från utvecklaren",
+    "description": "Developer note heading."
+  },
+  "ob_dev_b": {
+    "message": "Jag bygger Zovo på egen hand, i det öppna. Om något går sönder, skriv till mig så svarar jag. Omdöpare är bara början. Planen är ett ärligt lager för hela webbläsaren, och dina nittionio dollar levererar nästa del av det.",
+    "description": "Developer note body."
+  },
+  "ob_link_github": {
+    "message": "Nå mig på GitHub",
+    "description": "Link: GitHub."
+  },
+  "ob_link_going": {
+    "message": "Vart detta är på väg",
+    "description": "Link: roadmap."
+  },
+  "ob_cheat1_k": {
+    "message": "Varje nedladdning",
+    "description": "Cheat-sheet row 1 key."
+  },
+  "ob_cheat1_v": {
+    "message": "Omdöpt vid sparning",
+    "description": "Cheat-sheet row 1 value."
+  },
+  "ob_cheat2_k": {
+    "message": "Popupen",
+    "description": "Cheat-sheet row 2 key."
+  },
+  "ob_cheat2_v": {
+    "message": "Räknar varje namnbyte",
+    "description": "Cheat-sheet row 2 value."
+  },
+  "ob_cheat3_k": {
+    "message": "Ditt mönster",
+    "description": "Cheat-sheet row 3 key."
+  },
+  "ob_cheat3_v": {
+    "message": "Redigera det i inställningarna",
+    "description": "Cheat-sheet row 3 value."
+  },
+  "ob_cheat4_k": {
+    "message": "Första webbplatsregeln",
+    "description": "Cheat-sheet row 4 key."
+  },
+  "ob_cheat4_v": {
+    "message": "Gratis att lägga till",
+    "description": "Cheat-sheet row 4 value."
+  }
+}

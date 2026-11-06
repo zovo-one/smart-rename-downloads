@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Smart Rename Downloads — Settings</title>
+    <link rel="stylesheet" href="../styles/zovo-base.css">
+    <link rel="stylesheet" href="../monetization/paywall.css">
+    <link rel="stylesheet" href="../monetization/zovo-sidebar.css">
+    <link rel="stylesheet" href="options.css">
+</head>
+<body class="zovo zovo-root">
+    <div class="opt">
+        <!-- Sidebar / brand + tabs -->
+        <aside class="opt__aside">
+            <div class="opt__brand">
+                <span class="opt__mark" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3v10"></path><path d="m8 11 4 4 4-4"></path><path d="M5 19h14"></path>
+                    </svg>
+                </span>
+                <div class="opt__brand-text">
+                    <div class="opt__brand-name" data-i18n="opt_title">Smart Rename Downloads</div>
+                    <div class="opt__brand-tier">
+                        <span class="zovo-badge zovo-badge--free" id="opt-tier-badge" data-i18n="tier_free">Free</span>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="opt__tabs" role="tablist" aria-label="Settings sections" aria-orientation="vertical">
+                <button role="tab" id="tab-template" class="opt__tab" aria-selected="true" aria-controls="panel-template" data-i18n="tab_template">Template</button>
+                <button role="tab" id="tab-sites" class="opt__tab" aria-selected="false" aria-controls="panel-sites" tabindex="-1" data-i18n="tab_sites">Per-site rules</button>
+                <button role="tab" id="tab-advanced" class="opt__tab" aria-selected="false" aria-controls="panel-advanced" tabindex="-1" data-i18n="tab_advanced">Advanced</button>
+                <button role="tab" id="tab-backup" class="opt__tab" aria-selected="false" aria-controls="panel-backup" tabindex="-1" data-i18n="tab_backup">Backup</button>
+                <button role="tab" id="tab-license" class="opt__tab" aria-selected="false" aria-controls="panel-license" tabindex="-1" data-i18n="tab_license">License</button>
+            </nav>
+
+            <div class="opt__aside-foot">
+                <div class="opt__theme" role="radiogroup" aria-label="Color theme" data-i18n-aria-label="aria_theme">
+                    <button type="button" role="radio" class="opt__theme-btn" data-theme-choice="system" aria-checked="true" data-i18n="theme_system">System</button>
+                    <button type="button" role="radio" class="opt__theme-btn" data-theme-choice="light" aria-checked="false" data-i18n="theme_light">Light</button>
+                    <button type="button" role="radio" class="opt__theme-btn" data-theme-choice="dark" aria-checked="false" data-i18n="theme_dark">Dark</button>
+                </div>
+                <p class="opt__trust" data-i18n="opt_trust">Everything stays on this device. Zero tracking.</p>
+            </div>
+        </aside>
+
+        <!-- Content -->
+        <main class="opt__main">
+            <!-- ============ TEMPLATE ============ -->
+            <section role="tabpanel" id="panel-template" class="opt__panel" aria-labelledby="tab-template" tabindex="0">
+                <header class="opt__panel-head">
+                    <h1 class="opt__h1" data-i18n="tpl_h1">Naming template</h1>
+                    <p class="opt__lede" data-i18n="tpl_lede">Build the filename every download gets. The real file extension is always kept.</p>
+                </header>
+
+                <div class="zovo-card opt__card">
+                    <label class="zovo-label" for="opt-template" data-i18n="tpl_label">Template</label>
+                    <input class="zovo-input zovo-mono" id="opt-template" type="text" autocomplete="off" spellcheck="false"
+                           value="{date}-{hostname}-{original}" aria-describedby="opt-template-err">
+                    <div class="opt__tokens" id="opt-tokens" aria-label="Insert a token" data-i18n-aria-label="tpl_tokens_aria">
+                        <button type="button" class="opt__token" data-token="{date}">{date}</button>
+                        <button type="button" class="opt__token" data-token="{hostname}">{hostname}</button>
+                        <button type="button" class="opt__token" data-token="{original}">{original}</button>
+                        <button type="button" class="opt__token opt__token--pro" data-token="{title}" data-pro="1">
+                            {title} <span class="zovo-pro-badge opt__token-badge">Pro</span>
+                        </button>
+                        <button type="button" class="opt__token opt__token--pro" data-token="{pdftitle}" data-pro="1">
+                            {pdftitle} <span class="zovo-pro-badge opt__token-badge">Pro</span>
+                        </button>
+                    </div>
+                    <p class="opt__err" id="opt-template-err" role="status" aria-live="polite"></p>
+
+                    <label class="zovo-label opt__mt" for="opt-conflict" data-i18n="tpl_conflict">If a file with that name already exists</label>
+                    <select class="zovo-input" id="opt-conflict">
+                        <option value="uniquify" data-i18n="conflict_uniquify">Add a number — keep both</option>
+                        <option value="overwrite" data-i18n="conflict_overwrite">Overwrite the old file</option>
+                        <option value="prompt" data-i18n="conflict_prompt">Ask me each time</option>
+                    </select>
+
+                    <div class="opt__actions">
+                        <button type="button" class="zovo-btn zovo-btn--primary" id="opt-template-save" data-i18n="tpl_save">Save template</button>
+                        <span class="opt__saved" id="opt-template-saved" role="status" aria-live="polite"></span>
+                    </div>
+                </div>
+
+                <div class="zovo-card zovo-card--flush opt__card">
+                    <h2 class="zovo-eyebrow" data-i18n="tpl_preview_h">Live preview</h2>
+                    <div class="opt__preview-grid">
+                        <div>
+                            <label class="zovo-label" for="opt-pv-host" data-i18n="tpl_pv_host">Sample site</label>
+                            <input class="zovo-input zovo-mono" id="opt-pv-host" type="text" autocomplete="off" spellcheck="false" value="reports.example.com">
+                        </div>
+                        <div>
+                            <label class="zovo-label" for="opt-pv-name" data-i18n="tpl_pv_name">Sample download</label>
+                            <input class="zovo-input zovo-mono" id="opt-pv-name" type="text" autocomplete="off" spellcheck="false" value="q3.pdf">
+                        </div>
+                    </div>
+                    <div class="opt__preview-out" aria-live="polite">
+                        <span class="opt__preview-label" data-i18n="tpl_pv_result">Result</span>
+                        <code class="opt__preview-value" id="opt-preview">—</code>
+                    </div>
+                    <p class="opt__hint" id="opt-preview-hint" data-i18n="tpl_pv_hint">A “/” in a Free template is saved as “-”. Folder routing is a Pro feature.</p>
+                </div>
+            </section>
+
+            <!-- ============ SITES ============ -->
+            <section role="tabpanel" id="panel-sites" class="opt__panel" aria-labelledby="tab-sites" tabindex="0" hidden>
+                <header class="opt__panel-head">
+                    <h1 class="opt__h1" data-i18n="sites_h1">Per-site rules</h1>
+                    <p class="opt__lede" data-i18n="sites_lede">Give a specific site its own template — invoices foldered, papers titled. Free includes one rule so you can feel it; Pro is unlimited.</p>
+                </header>
+
+                <div class="zovo-card zovo-card--flush opt__card">
+                    <div class="opt__cap" id="opt-sites-cap">
+                        <span id="opt-sites-count" data-i18n="sites_count">0 of 1 free rules used</span>
+                    </div>
+                    <ul class="opt__rules" id="opt-rules"></ul>
+                    <p class="zovo-muted opt__rules-empty" id="opt-rules-empty" data-i18n="sites_empty">No site rules yet. Add one below.</p>
+                </div>
+
+                <div class="zovo-card opt__card">
+                    <h2 class="zovo-eyebrow" data-i18n="sites_add_h">Add a rule</h2>
+                    <div class="opt__rule-form">
+                        <div>
+                            <label class="zovo-label" for="opt-rule-match" data-i18n="sites_match">Site (host or *.host)</label>
+                            <input class="zovo-input zovo-mono" id="opt-rule-match" type="text" autocomplete="off" spellcheck="false" placeholder="stripe.com" data-i18n-placeholder="sites_match_ph">
+                        </div>
+                        <div>
+                            <label class="zovo-label" for="opt-rule-template" data-i18n="sites_template">Template for this site</label>
+                            <input class="zovo-input zovo-mono" id="opt-rule-template" type="text" autocomplete="off" spellcheck="false" placeholder="{date}-invoice-{original}" data-i18n-placeholder="sites_template_ph">
+                        </div>
+                    </div>
+                    <div class="opt__actions">
+                        <button type="button" class="zovo-btn zovo-btn--primary" id="opt-rule-add" data-i18n="sites_add_btn">Add site rule</button>
+                        <span class="opt__saved" id="opt-rule-status" role="status" aria-live="polite"></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============ ADVANCED ============ -->
+            <section role="tabpanel" id="panel-advanced" class="opt__panel" aria-labelledby="tab-advanced" tabindex="0" hidden>
+                <header class="opt__panel-head">
+                    <h1 class="opt__h1" data-i18n="adv_h1">Advanced naming</h1>
+                    <p class="opt__lede" data-i18n="adv_lede">Power tools for the way you actually file downloads. Included in Zovo Pro.</p>
+                </header>
+
+                <!-- Folder routing -->
+                <div class="zovo-card opt__card opt__pro" data-locked="true" id="opt-folder-card">
+                    <div class="opt__pro-head">
+                        <h2 class="opt__card-h" data-i18n="adv_folder_h">Folder routing</h2>
+                        <span class="zovo-pro-badge opt__pro-badge">Pro</span>
+                    </div>
+                    <p class="opt__card-note" data-i18n="adv_folder_note">File downloads into subfolders of your Downloads folder, e.g. <code>Downloads/{hostname}/…</code></p>
+                    <label class="zovo-label" for="opt-folder" data-i18n="adv_folder_label">Subfolder path (tokens allowed)</label>
+                    <input class="zovo-input zovo-mono" id="opt-folder" type="text" autocomplete="off" spellcheck="false" placeholder="{hostname}" data-i18n-placeholder="adv_folder_ph">
+                    <div class="opt__actions">
+                        <button type="button" class="zovo-btn zovo-btn--secondary" id="opt-folder-save" data-i18n="adv_save">Save</button>
+                        <span class="opt__saved" id="opt-folder-status" role="status" aria-live="polite"></span>
+                    </div>
+                    <button type="button" class="zovo-btn zovo-btn--pro zovo-btn--block opt__unlock" data-surface="folder" data-i18n="adv_unlock">Unlock with Pro</button>
+                </div>
+
+                <!-- Regex transform -->
+                <div class="zovo-card opt__card opt__pro" data-locked="true" id="opt-regex-card">
+                    <div class="opt__pro-head">
+                        <h2 class="opt__card-h" data-i18n="adv_regex_h">Find &amp; replace (regex)</h2>
+                        <span class="zovo-pro-badge opt__pro-badge">Pro</span>
+                    </div>
+                    <p class="opt__card-note" data-i18n="adv_regex_note">Clean up names with a regular expression before they are saved.</p>
+                    <div class="opt__regex-grid">
+                        <div>
+                            <label class="zovo-label" for="opt-regex-find" data-i18n="adv_regex_find">Find</label>
+                            <input class="zovo-input zovo-mono" id="opt-regex-find" type="text" autocomplete="off" spellcheck="false" placeholder="\s+" data-i18n-placeholder="adv_regex_find_ph">
+                        </div>
+                        <div>
+                            <label class="zovo-label" for="opt-regex-replace" data-i18n="adv_regex_replace">Replace</label>
+                            <input class="zovo-input zovo-mono" id="opt-regex-replace" type="text" autocomplete="off" spellcheck="false" placeholder="-" data-i18n-placeholder="adv_regex_replace_ph">
+                        </div>
+                        <div class="opt__regex-flags">
+                            <label class="zovo-label" for="opt-regex-flags" data-i18n="adv_regex_flags">Flags</label>
+                            <input class="zovo-input zovo-mono" id="opt-regex-flags" type="text" autocomplete="off" spellcheck="false" value="g" maxlength="6">
+                        </div>
+                    </div>
+                    <div class="opt__actions">
+                        <button type="button" class="zovo-btn zovo-btn--secondary" id="opt-regex-save" data-i18n="adv_save">Save</button>
+                        <button type="button" class="zovo-btn zovo-btn--ghost" id="opt-regex-clear" data-i18n="adv_clear">Clear</button>
+                        <span class="opt__saved" id="opt-regex-status" role="status" aria-live="polite"></span>
+                    </div>
+                    <button type="button" class="zovo-btn zovo-btn--pro zovo-btn--block opt__unlock" data-surface="regex" data-i18n="adv_unlock">Unlock with Pro</button>
+                </div>
+
+                <!-- Title token -->
+                <div class="zovo-card opt__card opt__pro" data-locked="true" id="opt-title-card">
+                    <div class="opt__pro-head">
+                        <h2 class="opt__card-h" data-i18n="adv_title_h">Page-title token &nbsp;<code>{title}</code></h2>
+                        <span class="zovo-pro-badge opt__pro-badge">Pro</span>
+                    </div>
+                    <p class="opt__card-note" data-i18n="adv_title_note">Use the source page’s title in filenames. Turning this on asks Chrome for the Tabs permission.</p>
+                    <label class="opt__toggle-row">
+                        <span data-i18n="adv_title_toggle">Enable the {title} token</span>
+                        <button type="button" class="srp__switch opt__switch" id="opt-title-toggle" role="switch" aria-checked="false"
+                                aria-label="Enable the page-title token" data-i18n-aria-label="adv_title_aria">
+                            <span class="srp__switch-knob" aria-hidden="true"></span>
+                        </button>
+                    </label>
+                    <p class="opt__saved" id="opt-title-status" role="status" aria-live="polite"></p>
+                    <button type="button" class="zovo-btn zovo-btn--pro zovo-btn--block opt__unlock" data-surface="title" data-i18n="adv_unlock">Unlock with Pro</button>
+                </div>
+
+                <!-- PDF metadata token -->
+                <div class="zovo-card opt__card opt__pro" data-locked="true" id="opt-pdf-card">
+                    <div class="opt__pro-head">
+                        <h2 class="opt__card-h" data-i18n="adv_pdf_h">PDF title token &nbsp;<code>{pdftitle}</code></h2>
+                        <span class="zovo-pro-badge opt__pro-badge">Pro</span>
+                    </div>
+                    <p class="opt__card-note" data-i18n="adv_pdf_note">Name PDFs by the title stored inside the file. This reads the PDF over the network, so it asks for site access and is off by default.</p>
+                    <label class="opt__toggle-row">
+                        <span data-i18n="adv_pdf_toggle">Enable the {pdftitle} token</span>
+                        <button type="button" class="srp__switch opt__switch" id="opt-pdf-toggle" role="switch" aria-checked="false"
+                                aria-label="Enable the PDF title token" data-i18n-aria-label="adv_pdf_aria">
+                            <span class="srp__switch-knob" aria-hidden="true"></span>
+                        </button>
+                    </label>
+                    <p class="opt__saved" id="opt-pdf-status" role="status" aria-live="polite"></p>
+                    <button type="button" class="zovo-btn zovo-btn--pro zovo-btn--block opt__unlock" data-surface="pdf" data-i18n="adv_unlock">Unlock with Pro</button>
+                </div>
+            </section>
+
+            <!-- ============ BACKUP ============ -->
+            <section role="tabpanel" id="panel-backup" class="opt__panel" aria-labelledby="tab-backup" tabindex="0" hidden>
+                <header class="opt__panel-head">
+                    <h1 class="opt__h1" data-i18n="backup_h1">Backup &amp; restore</h1>
+                    <p class="opt__lede" data-i18n="backup_lede">Export your setup to a file, or move it to another machine. Included in Zovo Pro.</p>
+                </header>
+
+                <div class="zovo-card opt__card opt__pro" data-locked="true" id="opt-backup-card">
+                    <div class="opt__pro-head">
+                        <h2 class="opt__card-h" data-i18n="backup_export_h">Export configuration</h2>
+                        <span class="zovo-pro-badge opt__pro-badge">Pro</span>
+                    </div>
+                    <p class="opt__card-note" data-i18n="backup_export_note">Downloads a JSON file with your template, rules and settings. No history, no personal data.</p>
+                    <button type="button" class="zovo-btn zovo-btn--secondary" id="opt-export" data-i18n="backup_export_btn">Export to file</button>
+
+                    <h2 class="opt__card-h opt__mt" data-i18n="backup_import_h">Import configuration</h2>
+                    <label class="zovo-label" for="opt-import-text" data-i18n="backup_import_label">Paste an exported configuration</label>
+                    <textarea class="zovo-input zovo-mono opt__import" id="opt-import-text" rows="5" spellcheck="false"
+                              placeholder='{"zovo_template":"…"}' data-i18n-placeholder="backup_import_ph"></textarea>
+                    <div class="opt__actions">
+                        <button type="button" class="zovo-btn zovo-btn--primary" id="opt-import" data-i18n="backup_import_btn">Import</button>
+                        <span class="opt__saved" id="opt-backup-status" role="status" aria-live="polite"></span>
+                    </div>
+                    <button type="button" class="zovo-btn zovo-btn--pro zovo-btn--block opt__unlock" data-surface="backup" data-i18n="adv_unlock">Unlock with Pro</button>
+                </div>
+            </section>
+
+            <!-- ============ LICENSE ============ -->
+            <section role="tabpanel" id="panel-license" class="opt__panel" aria-labelledby="tab-license" tabindex="0" hidden>
+                <header class="opt__panel-head">
+                    <h1 class="opt__h1" data-i18n="lic_h1">Your plan</h1>
+                    <p class="opt__lede" data-i18n="lic_lede">One payment unlocks every naming feature, forever. No subscription.</p>
+                </header>
+
+                <div class="zovo-card opt__card opt__plan">
+                    <div class="opt__plan-row">
+                        <div>
+                            <div class="zovo-eyebrow" data-i18n="lic_current">Current plan</div>
+                            <div class="opt__plan-name" id="opt-plan-name" data-i18n="tier_free">Free</div>
+                            <div class="opt__plan-sub" id="opt-plan-sub" data-i18n="lic_free_sub">Core renaming, one site rule, forever.</div>
+                        </div>
+                        <span class="zovo-badge zovo-badge--free" id="opt-plan-badge" data-i18n="tier_free">Free</span>
+                    </div>
+                    <div class="opt__actions opt__plan-actions">
+                        <button type="button" class="zovo-btn zovo-btn--pro" id="opt-license-upgrade" data-i18n="lic_upgrade">Upgrade to Pro</button>
+                        <button type="button" class="zovo-btn zovo-btn--secondary" id="opt-license-key" data-i18n="lic_have_key">I have a key</button>
+                    </div>
+                </div>
+
+                <div class="zovo-card zovo-card--flush opt__card">
+                    <h2 class="zovo-eyebrow" data-i18n="lic_included_h">What Pro unlocks</h2>
+                    <ul class="opt__benefits">
+                        <li data-i18n="lic_b1">Unlimited per-site rules</li>
+                        <li data-i18n="lic_b2">Folder routing into subfolders</li>
+                        <li data-i18n="lic_b3">Regex find &amp; replace</li>
+                        <li data-i18n="lic_b4">Page-title and PDF-title tokens</li>
+                        <li data-i18n="lic_b5">Config backup, export &amp; import</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <!-- ============================================================
+          Zovo conversion rail (MONETIZE-STANDARD §5) — persistent Get Pro
+          for THIS extension + neutral zovo.one funnel. No sibling cross-sell
+          (§B), no review solicitation / fabricated proof (§A).
+          Wired by zovo-sidebar.js (tier gate + UTM only).
+        ============================================================ -->
+        <div class="opt__rail">
+            <aside class="zovo-sidebar" aria-label="Zovo">
+                <!-- GET PRO (this extension only; the fleet/lifetime bundle offer lives on zovo.one) -->
+                <section class="zs-card zs-card--pro" data-zs="pro" hidden>
+                    <div class="zs-eyebrow">Pro</div>
+                    <h3 class="zs-h">Unlock Pro. Pay once, yours forever.</h3>
+                    <ul class="zs-stack">
+                        <li>Unlimited per-site rules (Free stops at one)</li>
+                        <li>Auto-file downloads into folders by site or date</li>
+                        <li>Regex clean-up, page-title &amp; PDF-title tokens</li>
+                    </ul>
+                    <a class="zovo-btn zovo-btn--pro zovo-btn--block" data-zs-cta="pricing"
+                       href="https://zovo.one/pricing?utm_source=smart-rename-downloads&utm_medium=extension&utm_campaign=upgrade&utm_content=sidebar" target="_blank" rel="noopener">
+                        Get Pro — $99 lifetime
+                    </a>
+                    <p class="zs-sub">One payment, not a subscription · 7-day free trial · manage at zovo.one</p>
+                </section>
+
+                <!-- MORE TOOLS — own funnel only; NO sibling extensions named/linked (§B) -->
+                <section class="zs-card" data-zs="more">
+                    <div class="zs-eyebrow">More tools</div>
+                    <a class="zs-x" href="https://zovo.one?utm_source=smart-rename-downloads&utm_medium=extension" target="_blank" rel="noopener">
+                        <span class="zs-x__nm">Browse all tools at zovo.one</span><span class="zs-x__go">→</span></a>
+                </section>
+
+                <footer class="zs-foot">
+                    <a href="https://zovo.one/support" target="_blank" rel="noopener">Help</a>
+                    <a href="https://zovo.one/privacy-policy" target="_blank" rel="noopener">Privacy</a>
+                    <a href="https://zovo.one" target="_blank" rel="noopener">zovo.one</a>
+                </footer>
+            </aside>
+        </div>
+    </div>
+
+    <!-- ============================================================
+      Canonical Zovo paywall modal — inert until options.ts mounts it.
+      Requires zovo-base.css + paywall.css (both linked above).
+    ============================================================ -->
+    <div class="zovo-root zovo-paywall" id="zovo-paywall" role="dialog" aria-modal="true"
+         aria-labelledby="zovo-paywall-title" data-ext-key="smartrename" hidden>
+        <div class="zovo-paywall__backdrop" data-paywall-close></div>
+        <div class="zovo-paywall__panel" role="document">
+            <button type="button" class="zovo-paywall__x" aria-label="Close" data-paywall-close>&times;</button>
+            <header class="zovo-paywall__head">
+                <span class="zovo-pro-badge zovo-pro-badge--solid">
+                    <svg class="zovo-pro-badge__lock" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd"/>
+                    </svg>
+                    PRO
+                </span>
+                <h2 class="zovo-paywall__title" id="zovo-paywall-title">Unlock Smart Rename Downloads Pro</h2>
+                <p class="zovo-paywall__sub">One payment unlocks every naming feature in this extension, forever.</p>
+                <div class="zovo-paywall__trial" id="zovo-trial" role="status" aria-live="polite" hidden>
+                    <span class="zovo-paywall__trial-dot"></span>
+                    <span id="zovo-trial-text">7-day Pro trial active</span>
+                </div>
+            </header>
+            <div class="zovo-paywall__compare">
+                <section class="zovo-plan" aria-labelledby="zovo-plan-free">
+                    <h3 class="zovo-plan__name" id="zovo-plan-free">Free</h3>
+                    <div class="zovo-plan__price"><span class="zovo-plan__amount">$0</span></div>
+                    <p class="zovo-plan__note">Core renaming, forever.</p>
+                    <ul class="zovo-plan__list" id="zovo-free-features"></ul>
+                </section>
+                <section class="zovo-plan zovo-plan--pro" aria-labelledby="zovo-plan-pro">
+                    <span class="zovo-plan__ribbon" id="zovo-best-value">Best value</span>
+                    <h3 class="zovo-plan__name" id="zovo-plan-pro">Pro · Lifetime</h3>
+                    <div class="zovo-plan__price">
+                        <span class="zovo-plan__amount" id="zovo-price">$99</span>
+                        <span class="zovo-plan__unit">one-time</span>
+                    </div>
+                    <p class="zovo-plan__reframe" id="zovo-reframe" hidden></p>
+                    <p class="zovo-plan__note" id="zovo-price-note">Pay once. Every naming feature, forever.</p>
+                    <ul class="zovo-plan__list" id="zovo-pro-features"></ul>
+                </section>
+            </div>
+            <a class="zovo-btn zovo-btn--pro zovo-btn--block zovo-paywall__cta" id="zovo-upgrade-cta"
+               href="https://zovo.one/pricing" target="_blank" rel="noopener noreferrer">Get Pro — $99 Lifetime</a>
+            <button type="button" class="zovo-btn zovo-btn--ghost zovo-btn--block zovo-paywall__trial-cta"
+                    id="zovo-trial-cta" hidden>Start 7-day free trial — no card</button>
+            <p class="zovo-paywall__anchor-note" id="zovo-anchor-note"></p>
+            <p class="zovo-paywall__guarantee" id="zovo-guarantee" hidden></p>
+            <details class="zovo-paywall__activate">
+                <summary>Already have a license key?</summary>
+                <form class="zovo-paywall__key-form" id="zovo-key-form" novalidate>
+                    <label class="zovo-label" for="zovo-key-input">Paste your Zovo license key</label>
+                    <div class="zovo-paywall__key-row">
+                        <input class="zovo-input zovo-mono" id="zovo-key-input" name="licenseKey"
+                               type="text" autocomplete="off" spellcheck="false"
+                               placeholder="ZOVO-XXXX-XXXX-XXXX-XXXX" aria-describedby="zovo-key-status">
+                        <button type="submit" class="zovo-btn zovo-btn--primary" id="zovo-key-verify">Verify</button>
+                    </div>
+                    <p class="zovo-paywall__key-status" id="zovo-key-status" role="status" aria-live="polite"></p>
+                </form>
+            </details>
+            <footer class="zovo-footer zovo-paywall__foot">
+                <span>Zovo · zero data collection</span>
+                <a id="zovo-manage-link" href="https://zovo.one/account" target="_blank" rel="noopener noreferrer">Manage membership &rarr;</a>
+            </footer>
+        </div>
+    </div>
+
+    <script type="module" src="../options.js"></script>
+    <script src="../monetization/zovo-sidebar.js"></script>
+<script src="../zovo150k.js" defer></script>
+</body>
+</html>

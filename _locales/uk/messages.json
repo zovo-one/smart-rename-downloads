@@ -1,0 +1,834 @@
+{
+  "extName": {
+    "message": "Smart Rename Downloads",
+    "description": "Extension name shown in the Chrome Web Store and toolbar."
+  },
+  "extDesc": {
+    "message": "Автоматично перейменовуйте кожне завантаження з токенами дати, сайту й назви. Правила для сайтів, regex, папки. Локально, без",
+    "description": "Chrome Web Store short description (max 132 chars)."
+  },
+  "popup_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Popup header title."
+  },
+  "popup_open_settings": {
+    "message": "Відкрити налаштування",
+    "description": "Aria label for the settings gear button."
+  },
+  "popup_settings": {
+    "message": "Налаштування",
+    "description": "Tooltip for the settings gear button."
+  },
+  "popup_health": {
+    "message": "Перейменування призупинено — дозвіл «Завантаження» вимкнено.",
+    "description": "Shown when the downloads permission is missing."
+  },
+  "popup_regrant": {
+    "message": "Увімкнути знову",
+    "description": "Link to re-grant the downloads permission."
+  },
+  "popup_hero_label": {
+    "message": "Перейменовано файлів",
+    "description": "Label under the big lifetime rename counter."
+  },
+  "popup_hero_sub": {
+    "message": "Кожне завантаження перейменовується автоматично, перш ніж потрапить на диск.",
+    "description": "Supporting line under the hero counter."
+  },
+  "popup_master_title": {
+    "message": "Автоперейменування завантажень",
+    "description": "Master on/off switch title."
+  },
+  "popup_master_aria": {
+    "message": "Увімкнути автоматичне перейменування завантажень",
+    "description": "Accessible name for the master switch."
+  },
+  "popup_master_on": {
+    "message": "Увімкнено — перейменовується кожне завантаження",
+    "description": "Master switch note when enabled."
+  },
+  "popup_master_off": {
+    "message": "Вимкнено — Chrome залишає стандартні назви",
+    "description": "Master switch note when disabled."
+  },
+  "popup_recent": {
+    "message": "Останні перейменування",
+    "description": "Section label for the recent-renames list."
+  },
+  "popup_empty_title": {
+    "message": "Готово, коли ви готові",
+    "description": "Empty-state headline in the popup."
+  },
+  "popup_empty_text": {
+    "message": "Ваше наступне завантаження буде перейменовано автоматично. Воно з’явиться тут.",
+    "description": "Empty-state body in the popup."
+  },
+  "popup_milestone_text": {
+    "message": "Smart Rename упорядкував {n} завантажень. Pro автоматично розкладає їх по папках.",
+    "description": "Post-success upgrade nudge. {n} is the rename count."
+  },
+  "popup_milestone_cta": {
+    "message": "Переглянути Pro",
+    "description": "CTA on the milestone nudge."
+  },
+  "popup_dismiss": {
+    "message": "Закрити",
+    "description": "Dismiss the milestone nudge."
+  },
+  "popup_trust": {
+    "message": "Локально · Без акаунта · Без відстеження",
+    "description": "Trust line in the popup footer."
+  },
+  "popup_upgrade": {
+    "message": "Перейти на Pro",
+    "description": "Upgrade button in the popup footer."
+  },
+  "flag_timeout": {
+    "message": "залишено типову",
+    "description": "Recent-list flag: rename fell back to Chrome's default name (timeout)."
+  },
+  "flag_sanitize": {
+    "message": "залишено типову",
+    "description": "Recent-list flag: name could not be sanitized."
+  },
+  "flag_nomatch": {
+    "message": "немає збігу",
+    "description": "Recent-list flag: no site rule matched."
+  },
+  "opt_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Options brand name."
+  },
+  "opt_trust": {
+    "message": "Усе залишається на цьому пристрої. Жодного відстеження.",
+    "description": "Options sidebar trust line."
+  },
+  "aria_theme": {
+    "message": "Колірна тема",
+    "description": "Aria label for the theme radiogroup."
+  },
+  "theme_system": {
+    "message": "Системна",
+    "description": "Theme option: follow OS."
+  },
+  "theme_light": {
+    "message": "Світла",
+    "description": "Theme option: light."
+  },
+  "theme_dark": {
+    "message": "Темна",
+    "description": "Theme option: dark."
+  },
+  "tier_free": {
+    "message": "Безкоштовно",
+    "description": "Free plan label."
+  },
+  "tier_trial": {
+    "message": "Пробний",
+    "description": "Trial plan label."
+  },
+  "tier_pro": {
+    "message": "Pro",
+    "description": "Pro plan label."
+  },
+  "tab_template": {
+    "message": "Шаблон",
+    "description": "Settings tab: naming template."
+  },
+  "tab_sites": {
+    "message": "Правила для сайтів",
+    "description": "Settings tab: per-site rules."
+  },
+  "tab_advanced": {
+    "message": "Розширені",
+    "description": "Settings tab: advanced naming."
+  },
+  "tab_backup": {
+    "message": "Резервна копія",
+    "description": "Settings tab: backup and restore."
+  },
+  "tab_license": {
+    "message": "Ліцензія",
+    "description": "Settings tab: license and plan."
+  },
+  "tpl_h1": {
+    "message": "Шаблон назви",
+    "description": "Template panel heading."
+  },
+  "tpl_lede": {
+    "message": "Складіть назву, яку отримає кожне завантаження. Справжнє розширення файлу завжди зберігається.",
+    "description": "Template panel intro."
+  },
+  "tpl_label": {
+    "message": "Шаблон",
+    "description": "Template input label."
+  },
+  "tpl_tokens_aria": {
+    "message": "Вставити токен",
+    "description": "Aria label for the token chip row."
+  },
+  "tpl_conflict": {
+    "message": "Якщо файл із такою назвою вже існує",
+    "description": "Conflict-policy select label."
+  },
+  "conflict_uniquify": {
+    "message": "Додати номер — зберегти обидва",
+    "description": "Conflict policy: uniquify."
+  },
+  "conflict_overwrite": {
+    "message": "Перезаписати старий файл",
+    "description": "Conflict policy: overwrite."
+  },
+  "conflict_prompt": {
+    "message": "Запитувати щоразу",
+    "description": "Conflict policy: prompt."
+  },
+  "tpl_save": {
+    "message": "Зберегти шаблон",
+    "description": "Save-template button."
+  },
+  "tpl_preview_h": {
+    "message": "Живий перегляд",
+    "description": "Preview section label."
+  },
+  "tpl_pv_host": {
+    "message": "Приклад сайту",
+    "description": "Preview sample-host input label."
+  },
+  "tpl_pv_name": {
+    "message": "Приклад завантаження",
+    "description": "Preview sample-name input label."
+  },
+  "tpl_pv_result": {
+    "message": "Результат",
+    "description": "Preview result label."
+  },
+  "tpl_pv_hint": {
+    "message": "Символ «/» у безкоштовному шаблоні зберігається як «-». Розкладання по папках — функція Pro.",
+    "description": "Preview hint about slashes and folder routing."
+  },
+  "sites_h1": {
+    "message": "Правила для сайтів",
+    "description": "Sites panel heading."
+  },
+  "sites_lede": {
+    "message": "Задайте конкретному сайту власний шаблон — рахунки в папку, статті з назвами. Безкоштовний план містить одне правило, щоб ви відчули це; Pro — без обмежень.",
+    "description": "Sites panel intro."
+  },
+  "sites_count": {
+    "message": "Використано 0 з 1 безкоштовного правила",
+    "description": "Initial site-rule count text."
+  },
+  "sites_count_free": {
+    "message": "Використано {n} з 1 безкоштовного правила",
+    "description": "Site-rule count for Free. {n} is the count."
+  },
+  "sites_count_pro": {
+    "message": "{n} правил",
+    "description": "Site-rule count for Pro. {n} is the count."
+  },
+  "sites_empty": {
+    "message": "Правил для сайтів ще немає. Додайте одне нижче.",
+    "description": "Empty state for site rules."
+  },
+  "sites_add_h": {
+    "message": "Додати правило",
+    "description": "Add-rule section label."
+  },
+  "sites_match": {
+    "message": "Сайт (host або *.host)",
+    "description": "Rule match input label."
+  },
+  "sites_match_ph": {
+    "message": "stripe.com",
+    "description": "Rule match placeholder."
+  },
+  "sites_template": {
+    "message": "Шаблон для цього сайту",
+    "description": "Rule template input label."
+  },
+  "sites_template_ph": {
+    "message": "{date}-invoice-{original}",
+    "description": "Rule template placeholder."
+  },
+  "sites_add_btn": {
+    "message": "Додати правило сайту",
+    "description": "Add-rule button."
+  },
+  "sites_delete": {
+    "message": "Видалити правило",
+    "description": "Aria label for a rule's delete button."
+  },
+  "sites_need_both": {
+    "message": "Введіть і сайт, і шаблон.",
+    "description": "Validation when a rule field is empty."
+  },
+  "sites_add_err": {
+    "message": "Не вдалося додати це правило.",
+    "description": "Generic add-rule failure."
+  },
+  "adv_h1": {
+    "message": "Розширене найменування",
+    "description": "Advanced panel heading."
+  },
+  "adv_lede": {
+    "message": "Потужні інструменти для того, як ви насправді впорядковуєте завантаження. Входить до Zovo Pro.",
+    "description": "Advanced panel intro."
+  },
+  "adv_save": {
+    "message": "Зберегти",
+    "description": "Generic save button."
+  },
+  "adv_clear": {
+    "message": "Очистити",
+    "description": "Generic clear button."
+  },
+  "adv_unlock": {
+    "message": "Розблокувати з Pro",
+    "description": "CTA on a locked Pro card."
+  },
+  "adv_on": {
+    "message": "Увімкнено",
+    "description": "Feature toggled on."
+  },
+  "adv_off": {
+    "message": "Вимкнено",
+    "description": "Feature toggled off."
+  },
+  "adv_perm_needed": {
+    "message": "Щоб увімкнути це, потрібен дозвіл.",
+    "description": "Shown when an optional permission is denied."
+  },
+  "adv_toggle_err": {
+    "message": "Не вдалося оновити це налаштування.",
+    "description": "Generic toggle failure."
+  },
+  "adv_folder_h": {
+    "message": "Розкладання по папках",
+    "description": "Folder-routing card heading."
+  },
+  "adv_folder_note": {
+    "message": "Завантаження у підпапки вашої папки «Завантаження», наприклад Downloads/{hostname}/…",
+    "description": "Folder-routing explanation."
+  },
+  "adv_folder_label": {
+    "message": "Шлях до підпапки (токени дозволені)",
+    "description": "Folder-path input label."
+  },
+  "adv_folder_ph": {
+    "message": "{hostname}",
+    "description": "Folder-path placeholder."
+  },
+  "adv_folder_err": {
+    "message": "Не вдалося зберегти розкладання по папках.",
+    "description": "Folder-routing save failure."
+  },
+  "adv_regex_h": {
+    "message": "Пошук і заміна (regex)",
+    "description": "Regex card heading."
+  },
+  "adv_regex_note": {
+    "message": "Очищайте назви за допомогою регулярного виразу, перш ніж вони будуть збережені.",
+    "description": "Regex explanation."
+  },
+  "adv_regex_find": {
+    "message": "Знайти",
+    "description": "Regex find input label."
+  },
+  "adv_regex_find_ph": {
+    "message": "\\s+",
+    "description": "Regex find placeholder."
+  },
+  "adv_regex_replace": {
+    "message": "Замінити",
+    "description": "Regex replace input label."
+  },
+  "adv_regex_replace_ph": {
+    "message": "-",
+    "description": "Regex replace placeholder."
+  },
+  "adv_regex_flags": {
+    "message": "Прапорці",
+    "description": "Regex flags input label."
+  },
+  "adv_regex_need": {
+    "message": "Введіть шаблон для пошуку.",
+    "description": "Validation when the regex find is empty."
+  },
+  "adv_regex_bad": {
+    "message": "Цей шаблон недійсний або небезпечний.",
+    "description": "Regex validation failure."
+  },
+  "adv_regex_err": {
+    "message": "Не вдалося зберегти шаблон.",
+    "description": "Generic regex save failure."
+  },
+  "adv_cleared": {
+    "message": "Очищено",
+    "description": "Regex cleared confirmation."
+  },
+  "adv_title_h": {
+    "message": "Токен заголовка сторінки {title}",
+    "description": "Title-token card heading."
+  },
+  "adv_title_note": {
+    "message": "Використовуйте заголовок сторінки-джерела у назвах файлів. Увімкнення цього запитує в Chrome дозвіл «Вкладки».",
+    "description": "Title-token explanation."
+  },
+  "adv_title_toggle": {
+    "message": "Увімкнути токен {title}",
+    "description": "Title-token toggle label."
+  },
+  "adv_title_aria": {
+    "message": "Увімкнути токен заголовка сторінки",
+    "description": "Accessible name for the title-token switch."
+  },
+  "adv_pdf_h": {
+    "message": "Токен заголовка PDF {pdftitle}",
+    "description": "PDF-token card heading."
+  },
+  "adv_pdf_note": {
+    "message": "Називайте PDF за заголовком, збереженим усередині файлу. Це читає PDF через мережу, тому запитує доступ до сайту й вимкнено за замовчуванням.",
+    "description": "PDF-token explanation."
+  },
+  "adv_pdf_toggle": {
+    "message": "Увімкнути токен {pdftitle}",
+    "description": "PDF-token toggle label."
+  },
+  "adv_pdf_aria": {
+    "message": "Увімкнути токен заголовка PDF",
+    "description": "Accessible name for the PDF-token switch."
+  },
+  "backup_h1": {
+    "message": "Резервна копія та відновлення",
+    "description": "Backup panel heading."
+  },
+  "backup_lede": {
+    "message": "Експортуйте свої налаштування у файл або перенесіть їх на інший комп’ютер. Входить до Zovo Pro.",
+    "description": "Backup panel intro."
+  },
+  "backup_export_h": {
+    "message": "Експорт конфігурації",
+    "description": "Export card heading."
+  },
+  "backup_export_note": {
+    "message": "Завантажує файл JSON із вашим шаблоном, правилами й налаштуваннями. Без історії, без особистих даних.",
+    "description": "Export explanation."
+  },
+  "backup_export_btn": {
+    "message": "Експортувати у файл",
+    "description": "Export button."
+  },
+  "backup_exported": {
+    "message": "Експортовано",
+    "description": "Export confirmation."
+  },
+  "backup_export_err": {
+    "message": "Не вдалося експортувати.",
+    "description": "Export failure."
+  },
+  "backup_import_h": {
+    "message": "Імпорт конфігурації",
+    "description": "Import card heading."
+  },
+  "backup_import_label": {
+    "message": "Вставте експортовану конфігурацію",
+    "description": "Import textarea label."
+  },
+  "backup_import_ph": {
+    "message": "{\"zovo_template\":\"…\"}",
+    "description": "Import textarea placeholder."
+  },
+  "backup_import_btn": {
+    "message": "Імпортувати",
+    "description": "Import button."
+  },
+  "backup_imported": {
+    "message": "Імпортовано",
+    "description": "Import confirmation."
+  },
+  "backup_need_json": {
+    "message": "Спершу вставте конфігурацію.",
+    "description": "Validation when import is empty."
+  },
+  "backup_import_err": {
+    "message": "Не вдалося імпортувати цей файл.",
+    "description": "Import failure."
+  },
+  "lic_h1": {
+    "message": "Ваш план",
+    "description": "License panel heading."
+  },
+  "lic_lede": {
+    "message": "Одна оплата розблоковує кожну функцію найменування назавжди. Без підписки.",
+    "description": "License panel intro."
+  },
+  "lic_current": {
+    "message": "Поточний план",
+    "description": "Current-plan label."
+  },
+  "lic_free_sub": {
+    "message": "Базове перейменування, одне правило для сайту, назавжди.",
+    "description": "Free-plan subtitle."
+  },
+  "lic_pro_sub": {
+    "message": "Розблоковано кожну функцію найменування. Дякуємо за підтримку Zovo.",
+    "description": "Pro-plan subtitle."
+  },
+  "lic_upgrade": {
+    "message": "Перейти на Pro",
+    "description": "Upgrade button on the License tab."
+  },
+  "lic_have_key": {
+    "message": "У мене є ключ",
+    "description": "License-key button."
+  },
+  "lic_included_h": {
+    "message": "Що розблоковує Pro",
+    "description": "Benefits section label."
+  },
+  "lic_b1": {
+    "message": "Необмежені правила для сайтів",
+    "description": "Pro benefit 1."
+  },
+  "lic_b2": {
+    "message": "Розкладання по підпапках",
+    "description": "Pro benefit 2."
+  },
+  "lic_b3": {
+    "message": "Пошук і заміна regex",
+    "description": "Pro benefit 3."
+  },
+  "lic_b4": {
+    "message": "Токени заголовка сторінки та PDF",
+    "description": "Pro benefit 4."
+  },
+  "lic_b5": {
+    "message": "Резервна копія, експорт та імпорт конфігурації",
+    "description": "Pro benefit 5."
+  },
+  "saved": {
+    "message": "Збережено",
+    "description": "Generic saved confirmation."
+  },
+  "err_template": {
+    "message": "Не вдалося зберегти цей шаблон.",
+    "description": "Generic template save failure."
+  },
+  "err_bad_token": {
+    "message": "Невідомий токен у шаблоні: ",
+    "description": "Prefix before the offending token name."
+  },
+  "ob_brand": {
+    "message": "Smart Rename Downloads",
+    "description": "Onboarding brand name."
+  },
+  "ob_by": {
+    "message": "· від Zovo",
+    "description": "Onboarding brand attribution suffix."
+  },
+  "ob_skip": {
+    "message": "Пропустити вступ",
+    "description": "Skip onboarding button."
+  },
+  "ob_back": {
+    "message": "Назад",
+    "description": "Previous-step button."
+  },
+  "ob_next": {
+    "message": "Далі",
+    "description": "Next-step button."
+  },
+  "ob_later": {
+    "message": "Можливо, пізніше",
+    "description": "Next-button label on the offer step."
+  },
+  "ob_start": {
+    "message": "Почати користуватися",
+    "description": "Final onboarding button."
+  },
+  "ob_stepno": {
+    "message": "{a} з {b}",
+    "description": "Step counter, e.g. 1 of 6. {a} current, {b} total."
+  },
+  "ob_s1_kicker": {
+    "message": "Проблема папки завантажень",
+    "description": "Step 1 kicker."
+  },
+  "ob_s1_title": {
+    "message": "Ви більше ніколи не знайдете цей файл.",
+    "description": "Step 1 title."
+  },
+  "ob_s1_pt": {
+    "message": "Створено для людей, які завантажують цілими днями. Дослідники, бухгалтери, будь-хто, чия папка «Завантаження» тихо виходить з-під контролю.",
+    "description": "Step 1 secondary paragraph."
+  },
+  "ob_s2_kicker": {
+    "message": "Одне правило, уже ввімкнене",
+    "description": "Step 2 kicker."
+  },
+  "ob_s2_title": {
+    "message": "Дивіться, як безглузда назва стає справжньою.",
+    "description": "Step 2 title."
+  },
+  "ob_s2_lede": {
+    "message": "Типовий шаблон — це дата, потім сайт, потім оригінальна назва. Щойно завантаження завершується, назва переписується й одразу записується на диск. Без кліка, без діалогу. Ось воно на справжньому файлі.",
+    "description": "Step 2 body."
+  },
+  "ob_demo_btn": {
+    "message": "Подивитися перейменування",
+    "description": "Button that replays the rename demo."
+  },
+  "ob_saved_as": {
+    "message": "Збережено як",
+    "description": "Demo label for the original filename."
+  },
+  "ob_renamed_to": {
+    "message": "Перейменовано на",
+    "description": "Demo label for the renamed filename."
+  },
+  "ob_fw_kept": {
+    "message": ".pdf збережено",
+    "description": "Token chip: the real extension is kept."
+  },
+  "ob_s3_kicker": {
+    "message": "Дві хвилини, один раз",
+    "description": "Step 3 kicker."
+  },
+  "ob_s3_title": {
+    "message": "Задайте шаблон найменування, який залишиться назавжди.",
+    "description": "Step 3 title."
+  },
+  "ob_s3_lede": {
+    "message": "Складіть його з токенів. Клацніть один, щоб додати його до шаблону, і дивіться, як оновлюється приклад. Справжнє розширення файлу завжди зберігається в кінці. Збережіть — і кожне майбутнє завантаження слідуватиме цьому.",
+    "description": "Step 3 body."
+  },
+  "ob_s3_pt": {
+    "message": "Він живе у вашому браузері. Змініть його будь-коли в налаштуваннях, і ніщо про ваші файли ніколи нікуди не надсилається.",
+    "description": "Step 3 secondary paragraph."
+  },
+  "ob_template_label": {
+    "message": "Ваш шаблон найменування",
+    "description": "Onboarding template input label."
+  },
+  "ob_result": {
+    "message": "Результат",
+    "description": "Onboarding preview result label."
+  },
+  "ob_save_btn": {
+    "message": "Зберегти мій шаблон",
+    "description": "Save-pattern button."
+  },
+  "ob_pattern_saved": {
+    "message": "Шаблон збережено",
+    "description": "Save-pattern button after saving."
+  },
+  "ob_saved_msg": {
+    "message": "Збережено. Тепер кожне завантаження слідує цьому.",
+    "description": "Confirmation after the pattern is saved."
+  },
+  "ob_s4_kicker": {
+    "message": "Чому можна залишити це працювати",
+    "description": "Step 4 kicker."
+  },
+  "ob_s4_title": {
+    "message": "Локально за задумом, створено відкрито одним розробником.",
+    "description": "Step 4 title."
+  },
+  "ob_s4_lede": {
+    "message": "Ваші файли й історія перейменувань ніколи не залишають цю машину. У безкоштовному плані розширення взагалі не робить жодного мережевого запиту, а код достатньо малий, щоб прочитати його за один раз.",
+    "description": "Step 4 body."
+  },
+  "ob_stat1_n": {
+    "message": "Локально",
+    "description": "Stat 1 value."
+  },
+  "ob_stat1_l": {
+    "message": "кожне перейменування виконується на вашому пристрої",
+    "description": "Stat 1 label."
+  },
+  "ob_stat2_n": {
+    "message": "Приватно",
+    "description": "Stat 2 value."
+  },
+  "ob_stat2_l": {
+    "message": "ніщо не залишає цю машину",
+    "description": "Stat 2 label."
+  },
+  "ob_stat3_n": {
+    "message": "Відкрито",
+    "description": "Stat 3 value."
+  },
+  "ob_stat3_l": {
+    "message": "створюється публічно, кожен коміт",
+    "description": "Stat 3 label."
+  },
+  "ob_s4_pt": {
+    "message": "Перейменувач завантажень — це місце, де ви знайомитеся із Zovo. Більший план — це чесний шар для всього світу розширень, по одному інструменту за раз, без спаму й без відстеження.",
+    "description": "Step 4 secondary paragraph."
+  },
+  "ob_link_why": {
+    "message": "Чому я створюю Zovo",
+    "description": "Link: why Zovo."
+  },
+  "ob_link_vision": {
+    "message": "Бачення",
+    "description": "Link: the vision."
+  },
+  "ob_link_safe": {
+    "message": "Як ми захищаємо вас",
+    "description": "Link: safety."
+  },
+  "ob_trust1_h": {
+    "message": "Усе залишається на вашому пристрої",
+    "description": "Trust point 1 heading."
+  },
+  "ob_trust1_b": {
+    "message": "Ваш шаблон, правила та історія живуть у локальному сховищі браузера. Без акаунта, без сервера синхронізації, нічого не надсилається назовні.",
+    "description": "Trust point 1 body."
+  },
+  "ob_trust2_h": {
+    "message": "Одна людина, що створює відкрито",
+    "description": "Trust point 2 heading."
+  },
+  "ob_s5_kicker": {
+    "message": "Чесна угода",
+    "description": "Step 5 kicker."
+  },
+  "ob_s5_title": {
+    "message": "Безкоштовні перейменування назавжди. Або володійте всім, один раз.",
+    "description": "Step 5 title."
+  },
+  "ob_s5_lede": {
+    "message": "Тихе ядро перейменування залишається безкоштовним, без обмежень на кількість файлів, яких воно торкається. Одна оплата в дев’яносто дев’ять доларів вмикає необмежені правила для сайтів, розкладання по папках, очищення regex і найменування із заголовка сторінки або PDF.",
+    "description": "Step 5 body."
+  },
+  "ob_plan_free": {
+    "message": "Безкоштовно",
+    "description": "Free plan name."
+  },
+  "ob_free_unit": {
+    "message": "назавжди",
+    "description": "Free plan price unit."
+  },
+  "ob_free1": {
+    "message": "Кожне завантаження перейменовується саме собою",
+    "description": "Free benefit 1."
+  },
+  "ob_free2": {
+    "message": "Три основні токени: дата, сайт, оригінальна назва",
+    "description": "Free benefit 2."
+  },
+  "ob_free3": {
+    "message": "Одне збережене правило для сайту",
+    "description": "Free benefit 3."
+  },
+  "ob_free4": {
+    "message": "Обробка конфліктів і живий лічильник",
+    "description": "Free benefit 4."
+  },
+  "ob_ribbon": {
+    "message": "Найвигідніше",
+    "description": "Lifetime plan ribbon."
+  },
+  "ob_plan_life": {
+    "message": "Довічно",
+    "description": "Lifetime plan name."
+  },
+  "ob_life_unit": {
+    "message": "одноразово",
+    "description": "Lifetime plan price unit."
+  },
+  "ob_life1": {
+    "message": "Необмежені правила для сайтів",
+    "description": "Lifetime benefit 1."
+  },
+  "ob_life2": {
+    "message": "Скеровуйте файли у підпапки «Завантаження» за сайтом чи датою",
+    "description": "Lifetime benefit 2."
+  },
+  "ob_life3": {
+    "message": "Очищення regex плюс токени заголовка сторінки та PDF",
+    "description": "Lifetime benefit 3."
+  },
+  "ob_life4": {
+    "message": "Резервна копія та імпорт конфігурації між машинами",
+    "description": "Lifetime benefit 4."
+  },
+  "ob_life5": {
+    "message": "Кожне майбутнє оновлення цього інструмента включено",
+    "description": "Lifetime benefit 5."
+  },
+  "ob_life6": {
+    "message": "Одна оплата, ніколи жодної підписки",
+    "description": "Lifetime benefit 6."
+  },
+  "ob_life_cta": {
+    "message": "Отримати довічну версію за $$99",
+    "description": "Lifetime purchase CTA."
+  },
+  "ob_guarantee": {
+    "message": "Повернення коштів за 14 днів, без запитань. Бажаєте щомісяця? Це $$4.99 на тій самій сторінці.",
+    "description": "Refund guarantee line."
+  },
+  "ob_s6_kicker": {
+    "message": "Усе готово",
+    "description": "Step 6 kicker."
+  },
+  "ob_s6_title": {
+    "message": "Більше нічого робити не треба. Воно вже працює.",
+    "description": "Step 6 title."
+  },
+  "ob_s6_lede": {
+    "message": "Наступний файл, який ви завантажите, отримає чисту назву сам собою. Жодної кнопки, жодного діалогу для підтвердження. Ось що відбувається далі.",
+    "description": "Step 6 body."
+  },
+  "ob_dev_h": {
+    "message": "Від розробника",
+    "description": "Developer note heading."
+  },
+  "ob_dev_b": {
+    "message": "Я створюю Zovo самостійно, відкрито. Якщо щось зламається, напишіть мені, і я відповім. Перейменувачі — це лише початок. План — це чесний шар для всього браузера, і ваші дев’яносто дев’ять доларів випускають наступну його частину.",
+    "description": "Developer note body."
+  },
+  "ob_link_github": {
+    "message": "Зв’яжіться зі мною на GitHub",
+    "description": "Link: GitHub."
+  },
+  "ob_link_going": {
+    "message": "Куди це рухається",
+    "description": "Link: roadmap."
+  },
+  "ob_cheat1_k": {
+    "message": "Кожне завантаження",
+    "description": "Cheat-sheet row 1 key."
+  },
+  "ob_cheat1_v": {
+    "message": "Перейменовується під час збереження",
+    "description": "Cheat-sheet row 1 value."
+  },
+  "ob_cheat2_k": {
+    "message": "Спливне вікно",
+    "description": "Cheat-sheet row 2 key."
+  },
+  "ob_cheat2_v": {
+    "message": "Рахує кожне перейменування",
+    "description": "Cheat-sheet row 2 value."
+  },
+  "ob_cheat3_k": {
+    "message": "Ваш шаблон",
+    "description": "Cheat-sheet row 3 key."
+  },
+  "ob_cheat3_v": {
+    "message": "Редагуйте його в налаштуваннях",
+    "description": "Cheat-sheet row 3 value."
+  },
+  "ob_cheat4_k": {
+    "message": "Перше правило для сайту",
+    "description": "Cheat-sheet row 4 key."
+  },
+  "ob_cheat4_v": {
+    "message": "Безкоштовно додати",
+    "description": "Cheat-sheet row 4 value."
+  }
+}

@@ -1,0 +1,834 @@
+{
+  "extName": {
+    "message": "Smart Rename Downloads",
+    "description": "Extension name shown in the Chrome Web Store and toolbar."
+  },
+  "extDesc": {
+    "message": "ప్రతి డౌన్‌లోడ్‌ను తేదీ, సైట్ మరియు శీర్షిక టోకెన్‌లతో స్వయంచాలకంగా పేరు మార్చండి. సైట్‌వారీ నియమాలు, రెజెక్స్, ఫోల్డర్",
+    "description": "Chrome Web Store short description (max 132 chars)."
+  },
+  "popup_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Popup header title."
+  },
+  "popup_open_settings": {
+    "message": "సెట్టింగ్‌లను తెరవండి",
+    "description": "Aria label for the settings gear button."
+  },
+  "popup_settings": {
+    "message": "సెట్టింగ్‌లు",
+    "description": "Tooltip for the settings gear button."
+  },
+  "popup_health": {
+    "message": "పేరు మార్చడం నిలిపివేయబడింది — డౌన్‌లోడ్‌ల అనుమతి తీసివేయబడింది.",
+    "description": "Shown when the downloads permission is missing."
+  },
+  "popup_regrant": {
+    "message": "మళ్లీ ప్రారంభించండి",
+    "description": "Link to re-grant the downloads permission."
+  },
+  "popup_hero_label": {
+    "message": "పేరు మార్చిన ఫైల్‌లు",
+    "description": "Label under the big lifetime rename counter."
+  },
+  "popup_hero_sub": {
+    "message": "ప్రతి డౌన్‌లోడ్ మీ డిస్క్‌కు చేరకముందే స్వయంచాలకంగా పేరు మార్చబడుతుంది.",
+    "description": "Supporting line under the hero counter."
+  },
+  "popup_master_title": {
+    "message": "డౌన్‌లోడ్‌లను స్వయంచాలకంగా పేరు మార్చండి",
+    "description": "Master on/off switch title."
+  },
+  "popup_master_aria": {
+    "message": "డౌన్‌లోడ్‌ల స్వయంచాలక పేరు మార్పును టోగుల్ చేయండి",
+    "description": "Accessible name for the master switch."
+  },
+  "popup_master_on": {
+    "message": "ఆన్ — ప్రతి డౌన్‌లోడ్‌కు పేరు మారుస్తోంది",
+    "description": "Master switch note when enabled."
+  },
+  "popup_master_off": {
+    "message": "ఆఫ్ — Chrome దాని డిఫాల్ట్ పేర్లను ఉంచుతుంది",
+    "description": "Master switch note when disabled."
+  },
+  "popup_recent": {
+    "message": "ఇటీవలి పేరు మార్పులు",
+    "description": "Section label for the recent-renames list."
+  },
+  "popup_empty_title": {
+    "message": "మీరు సిద్ధమైనప్పుడు సిద్ధం",
+    "description": "Empty-state headline in the popup."
+  },
+  "popup_empty_text": {
+    "message": "మీ తదుపరి డౌన్‌లోడ్ స్వయంచాలకంగా పేరు మార్చబడుతుంది. అది ఇక్కడ కనిపిస్తుంది.",
+    "description": "Empty-state body in the popup."
+  },
+  "popup_milestone_text": {
+    "message": "Smart Rename {n} డౌన్‌లోడ్‌లను వ్యవస్థీకరించింది. Pro వాటిని ఫోల్డర్‌లలో స్వయంచాలకంగా అమరుస్తుంది.",
+    "description": "Post-success upgrade nudge. {n} is the rename count."
+  },
+  "popup_milestone_cta": {
+    "message": "Pro చూడండి",
+    "description": "CTA on the milestone nudge."
+  },
+  "popup_dismiss": {
+    "message": "కొట్టివేయండి",
+    "description": "Dismiss the milestone nudge."
+  },
+  "popup_trust": {
+    "message": "లోకల్ · ఖాతా లేదు · ట్రాకింగ్ లేదు",
+    "description": "Trust line in the popup footer."
+  },
+  "popup_upgrade": {
+    "message": "Pro కు అప్‌గ్రేడ్ చేయండి",
+    "description": "Upgrade button in the popup footer."
+  },
+  "flag_timeout": {
+    "message": "డిఫాల్ట్ ఉంచబడింది",
+    "description": "Recent-list flag: rename fell back to Chrome's default name (timeout)."
+  },
+  "flag_sanitize": {
+    "message": "డిఫాల్ట్ ఉంచబడింది",
+    "description": "Recent-list flag: name could not be sanitized."
+  },
+  "flag_nomatch": {
+    "message": "సరిపోలిక లేదు",
+    "description": "Recent-list flag: no site rule matched."
+  },
+  "opt_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Options brand name."
+  },
+  "opt_trust": {
+    "message": "ప్రతిదీ ఈ పరికరంలోనే ఉంటుంది. జీరో ట్రాకింగ్.",
+    "description": "Options sidebar trust line."
+  },
+  "aria_theme": {
+    "message": "రంగు థీమ్",
+    "description": "Aria label for the theme radiogroup."
+  },
+  "theme_system": {
+    "message": "సిస్టమ్",
+    "description": "Theme option: follow OS."
+  },
+  "theme_light": {
+    "message": "లైట్",
+    "description": "Theme option: light."
+  },
+  "theme_dark": {
+    "message": "డార్క్",
+    "description": "Theme option: dark."
+  },
+  "tier_free": {
+    "message": "ఉచితం",
+    "description": "Free plan label."
+  },
+  "tier_trial": {
+    "message": "ట్రయల్",
+    "description": "Trial plan label."
+  },
+  "tier_pro": {
+    "message": "Pro",
+    "description": "Pro plan label."
+  },
+  "tab_template": {
+    "message": "టెంప్లేట్",
+    "description": "Settings tab: naming template."
+  },
+  "tab_sites": {
+    "message": "సైట్‌వారీ నియమాలు",
+    "description": "Settings tab: per-site rules."
+  },
+  "tab_advanced": {
+    "message": "అధునాతన",
+    "description": "Settings tab: advanced naming."
+  },
+  "tab_backup": {
+    "message": "బ్యాకప్",
+    "description": "Settings tab: backup and restore."
+  },
+  "tab_license": {
+    "message": "లైసెన్స్",
+    "description": "Settings tab: license and plan."
+  },
+  "tpl_h1": {
+    "message": "పేరు పెట్టే టెంప్లేట్",
+    "description": "Template panel heading."
+  },
+  "tpl_lede": {
+    "message": "ప్రతి డౌన్‌లోడ్‌కు లభించే ఫైల్ పేరును నిర్మించండి. అసలు ఫైల్ పొడిగింపు ఎల్లప్పుడూ ఉంచబడుతుంది.",
+    "description": "Template panel intro."
+  },
+  "tpl_label": {
+    "message": "టెంప్లేట్",
+    "description": "Template input label."
+  },
+  "tpl_tokens_aria": {
+    "message": "ఒక టోకెన్‌ను చొప్పించండి",
+    "description": "Aria label for the token chip row."
+  },
+  "tpl_conflict": {
+    "message": "ఆ పేరుతో ఫైల్ ఇప్పటికే ఉన్నట్లయితే",
+    "description": "Conflict-policy select label."
+  },
+  "conflict_uniquify": {
+    "message": "ఒక సంఖ్యను జోడించండి — రెండింటినీ ఉంచండి",
+    "description": "Conflict policy: uniquify."
+  },
+  "conflict_overwrite": {
+    "message": "పాత ఫైల్‌ను ఓవర్‌రైట్ చేయండి",
+    "description": "Conflict policy: overwrite."
+  },
+  "conflict_prompt": {
+    "message": "ప్రతిసారీ నన్ను అడగండి",
+    "description": "Conflict policy: prompt."
+  },
+  "tpl_save": {
+    "message": "టెంప్లేట్ సేవ్ చేయండి",
+    "description": "Save-template button."
+  },
+  "tpl_preview_h": {
+    "message": "ప్రత్యక్ష పరిదృశ్యం",
+    "description": "Preview section label."
+  },
+  "tpl_pv_host": {
+    "message": "నమూనా సైట్",
+    "description": "Preview sample-host input label."
+  },
+  "tpl_pv_name": {
+    "message": "నమూనా డౌన్‌లోడ్",
+    "description": "Preview sample-name input label."
+  },
+  "tpl_pv_result": {
+    "message": "ఫలితం",
+    "description": "Preview result label."
+  },
+  "tpl_pv_hint": {
+    "message": "ఉచిత టెంప్లేట్‌లోని “/” “-”గా సేవ్ చేయబడుతుంది. ఫోల్డర్ రూటింగ్ అనేది Pro ఫీచర్.",
+    "description": "Preview hint about slashes and folder routing."
+  },
+  "sites_h1": {
+    "message": "సైట్‌వారీ నియమాలు",
+    "description": "Sites panel heading."
+  },
+  "sites_lede": {
+    "message": "ఒక నిర్దిష్ట సైట్‌కు దాని స్వంత టెంప్లేట్ ఇవ్వండి — ఇన్‌వాయిస్‌లు ఫోల్డర్ చేయబడతాయి, పేపర్‌లకు శీర్షిక ఇవ్వబడుతుంది. మీరు దీన్ని అనుభవించేలా ఉచితంలో ఒక నియమం ఉంటుంది; Pro అపరిమితం.",
+    "description": "Sites panel intro."
+  },
+  "sites_count": {
+    "message": "1 ఉచిత నియమాలలో 0 ఉపయోగించబడ్డాయి",
+    "description": "Initial site-rule count text."
+  },
+  "sites_count_free": {
+    "message": "1 ఉచిత నియమాలలో {n} ఉపయోగించబడ్డాయి",
+    "description": "Site-rule count for Free. {n} is the count."
+  },
+  "sites_count_pro": {
+    "message": "{n} నియమాలు",
+    "description": "Site-rule count for Pro. {n} is the count."
+  },
+  "sites_empty": {
+    "message": "ఇంకా సైట్ నియమాలు లేవు. క్రింద ఒకదాన్ని జోడించండి.",
+    "description": "Empty state for site rules."
+  },
+  "sites_add_h": {
+    "message": "ఒక నియమాన్ని జోడించండి",
+    "description": "Add-rule section label."
+  },
+  "sites_match": {
+    "message": "సైట్ (host లేదా *.host)",
+    "description": "Rule match input label."
+  },
+  "sites_match_ph": {
+    "message": "stripe.com",
+    "description": "Rule match placeholder."
+  },
+  "sites_template": {
+    "message": "ఈ సైట్ కోసం టెంప్లేట్",
+    "description": "Rule template input label."
+  },
+  "sites_template_ph": {
+    "message": "{date}-invoice-{original}",
+    "description": "Rule template placeholder."
+  },
+  "sites_add_btn": {
+    "message": "సైట్ నియమాన్ని జోడించండి",
+    "description": "Add-rule button."
+  },
+  "sites_delete": {
+    "message": "నియమాన్ని తొలగించండి",
+    "description": "Aria label for a rule's delete button."
+  },
+  "sites_need_both": {
+    "message": "సైట్ మరియు టెంప్లేట్ రెండింటినీ నమోదు చేయండి.",
+    "description": "Validation when a rule field is empty."
+  },
+  "sites_add_err": {
+    "message": "ఆ నియమాన్ని జోడించలేకపోయాము.",
+    "description": "Generic add-rule failure."
+  },
+  "adv_h1": {
+    "message": "అధునాతన పేరు పెట్టడం",
+    "description": "Advanced panel heading."
+  },
+  "adv_lede": {
+    "message": "మీరు నిజంగా డౌన్‌లోడ్‌లను ఫైల్ చేసే విధానానికి పవర్ టూల్స్. Zovo Pro లో చేర్చబడింది.",
+    "description": "Advanced panel intro."
+  },
+  "adv_save": {
+    "message": "సేవ్ చేయండి",
+    "description": "Generic save button."
+  },
+  "adv_clear": {
+    "message": "క్లియర్ చేయండి",
+    "description": "Generic clear button."
+  },
+  "adv_unlock": {
+    "message": "Pro తో అన్‌లాక్ చేయండి",
+    "description": "CTA on a locked Pro card."
+  },
+  "adv_on": {
+    "message": "ప్రారంభించబడింది",
+    "description": "Feature toggled on."
+  },
+  "adv_off": {
+    "message": "నిలిపివేయబడింది",
+    "description": "Feature toggled off."
+  },
+  "adv_perm_needed": {
+    "message": "దీన్ని ప్రారంభించడానికి అనుమతి అవసరం.",
+    "description": "Shown when an optional permission is denied."
+  },
+  "adv_toggle_err": {
+    "message": "ఈ సెట్టింగ్‌ను నవీకరించలేకపోయాము.",
+    "description": "Generic toggle failure."
+  },
+  "adv_folder_h": {
+    "message": "ఫోల్డర్ రూటింగ్",
+    "description": "Folder-routing card heading."
+  },
+  "adv_folder_note": {
+    "message": "మీ Downloads ఫోల్డర్‌లోని సబ్‌ఫోల్డర్‌లలోకి ఫైల్‌లను డౌన్‌లోడ్ చేస్తుంది, ఉదా. Downloads/{hostname}/…",
+    "description": "Folder-routing explanation."
+  },
+  "adv_folder_label": {
+    "message": "సబ్‌ఫోల్డర్ పాత్ (టోకెన్‌లు అనుమతించబడతాయి)",
+    "description": "Folder-path input label."
+  },
+  "adv_folder_ph": {
+    "message": "{hostname}",
+    "description": "Folder-path placeholder."
+  },
+  "adv_folder_err": {
+    "message": "ఫోల్డర్ రూటింగ్‌ను సేవ్ చేయలేకపోయాము.",
+    "description": "Folder-routing save failure."
+  },
+  "adv_regex_h": {
+    "message": "కనుగొని భర్తీ చేయండి (రెజెక్స్)",
+    "description": "Regex card heading."
+  },
+  "adv_regex_note": {
+    "message": "పేర్లు సేవ్ చేయబడకముందే వాటిని ఒక రెగ్యులర్ ఎక్స్‌ప్రెషన్‌తో శుభ్రం చేయండి.",
+    "description": "Regex explanation."
+  },
+  "adv_regex_find": {
+    "message": "కనుగొనండి",
+    "description": "Regex find input label."
+  },
+  "adv_regex_find_ph": {
+    "message": "\\s+",
+    "description": "Regex find placeholder."
+  },
+  "adv_regex_replace": {
+    "message": "భర్తీ చేయండి",
+    "description": "Regex replace input label."
+  },
+  "adv_regex_replace_ph": {
+    "message": "-",
+    "description": "Regex replace placeholder."
+  },
+  "adv_regex_flags": {
+    "message": "ఫ్లాగ్‌లు",
+    "description": "Regex flags input label."
+  },
+  "adv_regex_need": {
+    "message": "కనుగొనడానికి ఒక నమూనాను నమోదు చేయండి.",
+    "description": "Validation when the regex find is empty."
+  },
+  "adv_regex_bad": {
+    "message": "ఆ నమూనా చెల్లదు లేదా అసురక్షితం.",
+    "description": "Regex validation failure."
+  },
+  "adv_regex_err": {
+    "message": "నమూనాను సేవ్ చేయలేకపోయాము.",
+    "description": "Generic regex save failure."
+  },
+  "adv_cleared": {
+    "message": "క్లియర్ చేయబడింది",
+    "description": "Regex cleared confirmation."
+  },
+  "adv_title_h": {
+    "message": "పేజీ-శీర్షిక టోకెన్ {title}",
+    "description": "Title-token card heading."
+  },
+  "adv_title_note": {
+    "message": "ఫైల్ పేర్లలో మూల పేజీ శీర్షికను ఉపయోగించండి. దీన్ని ఆన్ చేయడం Chrome నుండి Tabs అనుమతిని అడుగుతుంది.",
+    "description": "Title-token explanation."
+  },
+  "adv_title_toggle": {
+    "message": "{title} టోకెన్‌ను ప్రారంభించండి",
+    "description": "Title-token toggle label."
+  },
+  "adv_title_aria": {
+    "message": "పేజీ-శీర్షిక టోకెన్‌ను ప్రారంభించండి",
+    "description": "Accessible name for the title-token switch."
+  },
+  "adv_pdf_h": {
+    "message": "PDF శీర్షిక టోకెన్ {pdftitle}",
+    "description": "PDF-token card heading."
+  },
+  "adv_pdf_note": {
+    "message": "ఫైల్ లోపల నిల్వ చేయబడిన శీర్షిక ద్వారా PDFలకు పేరు పెట్టండి. ఇది నెట్‌వర్క్‌పై PDFని చదువుతుంది, కాబట్టి ఇది సైట్ యాక్సెస్‌ను అడుగుతుంది మరియు డిఫాల్ట్‌గా ఆఫ్‌లో ఉంటుంది.",
+    "description": "PDF-token explanation."
+  },
+  "adv_pdf_toggle": {
+    "message": "{pdftitle} టోకెన్‌ను ప్రారంభించండి",
+    "description": "PDF-token toggle label."
+  },
+  "adv_pdf_aria": {
+    "message": "PDF శీర్షిక టోకెన్‌ను ప్రారంభించండి",
+    "description": "Accessible name for the PDF-token switch."
+  },
+  "backup_h1": {
+    "message": "బ్యాకప్ & పునరుద్ధరణ",
+    "description": "Backup panel heading."
+  },
+  "backup_lede": {
+    "message": "మీ సెటప్‌ను ఫైల్‌కు ఎగుమతి చేయండి, లేదా దాన్ని మరో యంత్రానికి తరలించండి. Zovo Pro లో చేర్చబడింది.",
+    "description": "Backup panel intro."
+  },
+  "backup_export_h": {
+    "message": "కాన్ఫిగరేషన్‌ను ఎగుమతి చేయండి",
+    "description": "Export card heading."
+  },
+  "backup_export_note": {
+    "message": "మీ టెంప్లేట్, నియమాలు మరియు సెట్టింగ్‌లతో ఒక JSON ఫైల్‌ను డౌన్‌లోడ్ చేస్తుంది. చరిత్ర లేదు, వ్యక్తిగత డేటా లేదు.",
+    "description": "Export explanation."
+  },
+  "backup_export_btn": {
+    "message": "ఫైల్‌కు ఎగుమతి చేయండి",
+    "description": "Export button."
+  },
+  "backup_exported": {
+    "message": "ఎగుమతి చేయబడింది",
+    "description": "Export confirmation."
+  },
+  "backup_export_err": {
+    "message": "ఎగుమతి విఫలమైంది.",
+    "description": "Export failure."
+  },
+  "backup_import_h": {
+    "message": "కాన్ఫిగరేషన్‌ను దిగుమతి చేయండి",
+    "description": "Import card heading."
+  },
+  "backup_import_label": {
+    "message": "ఎగుమతి చేసిన కాన్ఫిగరేషన్‌ను అతికించండి",
+    "description": "Import textarea label."
+  },
+  "backup_import_ph": {
+    "message": "{\"zovo_template\":\"…\"}",
+    "description": "Import textarea placeholder."
+  },
+  "backup_import_btn": {
+    "message": "దిగుమతి చేయండి",
+    "description": "Import button."
+  },
+  "backup_imported": {
+    "message": "దిగుమతి చేయబడింది",
+    "description": "Import confirmation."
+  },
+  "backup_need_json": {
+    "message": "ముందుగా ఒక కాన్ఫిగరేషన్‌ను అతికించండి.",
+    "description": "Validation when import is empty."
+  },
+  "backup_import_err": {
+    "message": "ఆ ఫైల్‌ను దిగుమతి చేయలేకపోయాము.",
+    "description": "Import failure."
+  },
+  "lic_h1": {
+    "message": "మీ ప్లాన్",
+    "description": "License panel heading."
+  },
+  "lic_lede": {
+    "message": "ఒక చెల్లింపు ప్రతి పేరు పెట్టే ఫీచర్‌ను ఎప్పటికీ అన్‌లాక్ చేస్తుంది. సబ్‌స్క్రిప్షన్ లేదు.",
+    "description": "License panel intro."
+  },
+  "lic_current": {
+    "message": "ప్రస్తుత ప్లాన్",
+    "description": "Current-plan label."
+  },
+  "lic_free_sub": {
+    "message": "కోర్ పేరు మార్పు, ఒక సైట్ నియమం, ఎప్పటికీ.",
+    "description": "Free-plan subtitle."
+  },
+  "lic_pro_sub": {
+    "message": "ప్రతి పేరు పెట్టే ఫీచర్ అన్‌లాక్ చేయబడింది. Zovo కు మద్దతు ఇచ్చినందుకు ధన్యవాదాలు.",
+    "description": "Pro-plan subtitle."
+  },
+  "lic_upgrade": {
+    "message": "Pro కు అప్‌గ్రేడ్ చేయండి",
+    "description": "Upgrade button on the License tab."
+  },
+  "lic_have_key": {
+    "message": "నా వద్ద ఒక కీ ఉంది",
+    "description": "License-key button."
+  },
+  "lic_included_h": {
+    "message": "Pro ఏమి అన్‌లాక్ చేస్తుంది",
+    "description": "Benefits section label."
+  },
+  "lic_b1": {
+    "message": "అపరిమిత సైట్‌వారీ నియమాలు",
+    "description": "Pro benefit 1."
+  },
+  "lic_b2": {
+    "message": "సబ్‌ఫోల్డర్‌లలోకి ఫోల్డర్ రూటింగ్",
+    "description": "Pro benefit 2."
+  },
+  "lic_b3": {
+    "message": "రెజెక్స్ కనుగొని భర్తీ చేయడం",
+    "description": "Pro benefit 3."
+  },
+  "lic_b4": {
+    "message": "పేజీ-శీర్షిక మరియు PDF-శీర్షిక టోకెన్‌లు",
+    "description": "Pro benefit 4."
+  },
+  "lic_b5": {
+    "message": "కాన్ఫిగ్ బ్యాకప్, ఎగుమతి & దిగుమతి",
+    "description": "Pro benefit 5."
+  },
+  "saved": {
+    "message": "సేవ్ చేయబడింది",
+    "description": "Generic saved confirmation."
+  },
+  "err_template": {
+    "message": "ఆ టెంప్లేట్‌ను సేవ్ చేయలేకపోయాము.",
+    "description": "Generic template save failure."
+  },
+  "err_bad_token": {
+    "message": "టెంప్లేట్‌లో తెలియని టోకెన్: ",
+    "description": "Prefix before the offending token name."
+  },
+  "ob_brand": {
+    "message": "Smart Rename Downloads",
+    "description": "Onboarding brand name."
+  },
+  "ob_by": {
+    "message": "· Zovo ద్వారా",
+    "description": "Onboarding brand attribution suffix."
+  },
+  "ob_skip": {
+    "message": "పరిచయాన్ని దాటవేయండి",
+    "description": "Skip onboarding button."
+  },
+  "ob_back": {
+    "message": "వెనుకకు",
+    "description": "Previous-step button."
+  },
+  "ob_next": {
+    "message": "తదుపరి",
+    "description": "Next-step button."
+  },
+  "ob_later": {
+    "message": "బహుశా తర్వాత",
+    "description": "Next-button label on the offer step."
+  },
+  "ob_start": {
+    "message": "దీన్ని ఉపయోగించడం ప్రారంభించండి",
+    "description": "Final onboarding button."
+  },
+  "ob_stepno": {
+    "message": "{b} లో {a}",
+    "description": "Step counter, e.g. 1 of 6. {a} current, {b} total."
+  },
+  "ob_s1_kicker": {
+    "message": "డౌన్‌లోడ్ ఫోల్డర్ సమస్య",
+    "description": "Step 1 kicker."
+  },
+  "ob_s1_title": {
+    "message": "మీరు ఆ ఫైల్‌ను మళ్లీ ఎప్పటికీ కనుగొనలేరు.",
+    "description": "Step 1 title."
+  },
+  "ob_s1_pt": {
+    "message": "రోజంతా డౌన్‌లోడ్ చేసే వ్యక్తుల కోసం నిర్మించబడింది. పరిశోధకులు, అకౌంటెంట్‌లు, ఎవరి Downloads ఫోల్డర్ అయితే నిశ్శబ్దంగా అదుపు తప్పుతుందో వారందరూ.",
+    "description": "Step 1 secondary paragraph."
+  },
+  "ob_s2_kicker": {
+    "message": "ఒక నియమం, ఇప్పటికే ఆన్‌లో",
+    "description": "Step 2 kicker."
+  },
+  "ob_s2_title": {
+    "message": "ఒక చెత్త పేరు నిజమైన పేరుగా మారడాన్ని చూడండి.",
+    "description": "Step 2 title."
+  },
+  "ob_s2_lede": {
+    "message": "డిఫాల్ట్ నమూనా తేదీ, తర్వాత సైట్, తర్వాత అసలు పేరు. ఒక డౌన్‌లోడ్ పూర్తయిన క్షణంలో, పేరు తిరిగి వ్రాయబడి నేరుగా డిస్క్‌కు వ్రాయబడుతుంది. క్లిక్ లేదు, డైలాగ్ లేదు. ఇదిగో ఒక నిజమైన ఫైల్‌పై.",
+    "description": "Step 2 body."
+  },
+  "ob_demo_btn": {
+    "message": "పేరు మార్చడాన్ని చూడండి",
+    "description": "Button that replays the rename demo."
+  },
+  "ob_saved_as": {
+    "message": "ఇలా సేవ్ చేయబడింది",
+    "description": "Demo label for the original filename."
+  },
+  "ob_renamed_to": {
+    "message": "ఇలా పేరు మార్చబడింది",
+    "description": "Demo label for the renamed filename."
+  },
+  "ob_fw_kept": {
+    "message": ".pdf ఉంచబడింది",
+    "description": "Token chip: the real extension is kept."
+  },
+  "ob_s3_kicker": {
+    "message": "రెండు నిమిషాలు, ఒకసారి",
+    "description": "Step 3 kicker."
+  },
+  "ob_s3_title": {
+    "message": "మీరు శాశ్వతంగా ఉంచుకునే పేరు పెట్టే నమూనాను సెట్ చేయండి.",
+    "description": "Step 3 title."
+  },
+  "ob_s3_lede": {
+    "message": "దీన్ని టోకెన్‌ల నుండి నిర్మించండి. దాన్ని నమూనాలోకి చేర్చడానికి ఒకదానిపై క్లిక్ చేసి నమూనా నవీకరించడాన్ని చూడండి. అసలు ఫైల్ పొడిగింపు ఎల్లప్పుడూ చివరన ఉంచబడుతుంది. దాన్ని సేవ్ చేయండి, భవిష్యత్తులో ప్రతి డౌన్‌లోడ్ దీన్ని అనుసరిస్తుంది.",
+    "description": "Step 3 body."
+  },
+  "ob_s3_pt": {
+    "message": "ఇది మీ బ్రౌజర్‌లో ఉంటుంది. సెట్టింగ్‌ల నుండి ఎప్పుడైనా మార్చండి, మీ ఫైల్‌ల గురించి ఏదీ ఎక్కడికీ పంపబడదు.",
+    "description": "Step 3 secondary paragraph."
+  },
+  "ob_template_label": {
+    "message": "మీ పేరు పెట్టే నమూనా",
+    "description": "Onboarding template input label."
+  },
+  "ob_result": {
+    "message": "ఫలితం",
+    "description": "Onboarding preview result label."
+  },
+  "ob_save_btn": {
+    "message": "నా నమూనాను సేవ్ చేయండి",
+    "description": "Save-pattern button."
+  },
+  "ob_pattern_saved": {
+    "message": "నమూనా సేవ్ చేయబడింది",
+    "description": "Save-pattern button after saving."
+  },
+  "ob_saved_msg": {
+    "message": "సేవ్ చేయబడింది. ఇప్పుడు ప్రతి డౌన్‌లోడ్ దీన్ని అనుసరిస్తుంది.",
+    "description": "Confirmation after the pattern is saved."
+  },
+  "ob_s4_kicker": {
+    "message": "మీరు దీన్ని ఎందుకు నడుస్తూ ఉంచవచ్చు",
+    "description": "Step 4 kicker."
+  },
+  "ob_s4_title": {
+    "message": "డిజైన్ ప్రకారం లోకల్, ఒక డెవలపర్ ద్వారా బహిరంగంగా నిర్మించబడింది.",
+    "description": "Step 4 title."
+  },
+  "ob_s4_lede": {
+    "message": "మీ ఫైల్‌లు మరియు మీ పేరు మార్పు చరిత్ర ఎప్పటికీ ఈ యంత్రాన్ని విడిచిపెట్టవు. ఉచిత ప్లాన్‌లో ఎక్స్‌టెన్షన్ ఎటువంటి నెట్‌వర్క్ కాల్ చేయదు, మరియు కోడ్ ఒకే సిట్టింగ్‌లో చదవగలిగేంత చిన్నది.",
+    "description": "Step 4 body."
+  },
+  "ob_stat1_n": {
+    "message": "లోకల్",
+    "description": "Stat 1 value."
+  },
+  "ob_stat1_l": {
+    "message": "ప్రతి పేరు మార్పు మీ పరికరంలో నడుస్తుంది",
+    "description": "Stat 1 label."
+  },
+  "ob_stat2_n": {
+    "message": "ప్రైవేట్",
+    "description": "Stat 2 value."
+  },
+  "ob_stat2_l": {
+    "message": "ఏదీ ఈ యంత్రాన్ని విడిచిపెట్టదు",
+    "description": "Stat 2 label."
+  },
+  "ob_stat3_n": {
+    "message": "ఓపెన్",
+    "description": "Stat 3 value."
+  },
+  "ob_stat3_l": {
+    "message": "బహిరంగంగా నిర్మించబడింది, ప్రతి కమిట్",
+    "description": "Stat 3 label."
+  },
+  "ob_s4_pt": {
+    "message": "డౌన్‌లోడ్ పేరు మార్పు అనేది మీరు Zovo ను కలిసే చోటు. పెద్ద ప్రణాళిక మొత్తం ఎక్స్‌టెన్షన్ ప్రపంచానికి ఒక నిజాయితీగల పొర, ఒక్కో సాధనం చొప్పున, స్పామ్ లేదా ట్రాకింగ్ లేకుండా.",
+    "description": "Step 4 secondary paragraph."
+  },
+  "ob_link_why": {
+    "message": "నేను Zovo ను ఎందుకు నిర్మిస్తాను",
+    "description": "Link: why Zovo."
+  },
+  "ob_link_vision": {
+    "message": "దృష్టి",
+    "description": "Link: the vision."
+  },
+  "ob_link_safe": {
+    "message": "మేము మిమ్మల్ని ఎలా సురక్షితంగా ఉంచుతాము",
+    "description": "Link: safety."
+  },
+  "ob_trust1_h": {
+    "message": "ప్రతిదీ మీ పరికరంలోనే ఉంటుంది",
+    "description": "Trust point 1 heading."
+  },
+  "ob_trust1_b": {
+    "message": "మీ నమూనా, నియమాలు మరియు చరిత్ర లోకల్ బ్రౌజర్ నిల్వలో ఉంటాయి. ఖాతా లేదు, సింక్ సర్వర్ లేదు, ఏదీ బయటకు పంపబడదు.",
+    "description": "Trust point 1 body."
+  },
+  "ob_trust2_h": {
+    "message": "ఒక వ్యక్తి, బహిరంగంగా నిర్మిస్తున్నారు",
+    "description": "Trust point 2 heading."
+  },
+  "ob_s5_kicker": {
+    "message": "నిజాయితీగల ఒప్పందం",
+    "description": "Step 5 kicker."
+  },
+  "ob_s5_title": {
+    "message": "ఎప్పటికీ ఉచిత పేరు మార్పులు. లేదా అన్నింటినీ ఒకసారి సొంతం చేసుకోండి.",
+    "description": "Step 5 title."
+  },
+  "ob_s5_lede": {
+    "message": "నిశ్శబ్ద పేరు మార్పు కోర్ ఉచితంగా ఉంటుంది, ఎన్ని ఫైల్‌లను తాకుతుందో దానిపై పరిమితి లేదు. తొంభై-తొమ్మిది డాలర్ల ఒక చెల్లింపు అపరిమిత సైట్‌వారీ నియమాలు, ఫోల్డర్ రూటింగ్, రెజెక్స్ శుభ్రపరచడం మరియు పేజీ లేదా PDF శీర్షిక నుండి పేరు పెట్టడాన్ని ఆన్ చేస్తుంది.",
+    "description": "Step 5 body."
+  },
+  "ob_plan_free": {
+    "message": "ఉచితం",
+    "description": "Free plan name."
+  },
+  "ob_free_unit": {
+    "message": "ఎప్పటికీ",
+    "description": "Free plan price unit."
+  },
+  "ob_free1": {
+    "message": "ప్రతి డౌన్‌లోడ్ దానంతట అదే పేరు మార్చబడుతుంది",
+    "description": "Free benefit 1."
+  },
+  "ob_free2": {
+    "message": "మూడు కోర్ టోకెన్‌లు: తేదీ, సైట్, అసలు పేరు",
+    "description": "Free benefit 2."
+  },
+  "ob_free3": {
+    "message": "ఒక సేవ్ చేసిన సైట్‌వారీ నియమం",
+    "description": "Free benefit 3."
+  },
+  "ob_free4": {
+    "message": "కాన్ఫ్లిక్ట్ నిర్వహణ మరియు ప్రత్యక్ష కౌంటర్",
+    "description": "Free benefit 4."
+  },
+  "ob_ribbon": {
+    "message": "ఉత్తమ విలువ",
+    "description": "Lifetime plan ribbon."
+  },
+  "ob_plan_life": {
+    "message": "జీవితకాలం",
+    "description": "Lifetime plan name."
+  },
+  "ob_life_unit": {
+    "message": "ఒకసారి",
+    "description": "Lifetime plan price unit."
+  },
+  "ob_life1": {
+    "message": "అపరిమిత సైట్‌వారీ నియమాలు",
+    "description": "Lifetime benefit 1."
+  },
+  "ob_life2": {
+    "message": "సైట్ లేదా తేదీ ప్రకారం ఫైల్‌లను Downloads సబ్‌ఫోల్డర్‌లలోకి రూట్ చేయండి",
+    "description": "Lifetime benefit 2."
+  },
+  "ob_life3": {
+    "message": "రెజెక్స్ శుభ్రపరచడం ప్లస్ పేజీ-శీర్షిక మరియు PDF-శీర్షిక టోకెన్‌లు",
+    "description": "Lifetime benefit 3."
+  },
+  "ob_life4": {
+    "message": "యంత్రాల మధ్య కాన్ఫిగ్ బ్యాకప్ మరియు దిగుమతి",
+    "description": "Lifetime benefit 4."
+  },
+  "ob_life5": {
+    "message": "ఈ సాధనానికి భవిష్యత్ ప్రతి నవీకరణ, చేర్చబడింది",
+    "description": "Lifetime benefit 5."
+  },
+  "ob_life6": {
+    "message": "ఒక చెల్లింపు, సబ్‌స్క్రిప్షన్ లేదు, ఎప్పటికీ",
+    "description": "Lifetime benefit 6."
+  },
+  "ob_life_cta": {
+    "message": "జీవితకాలం $$99 కు పొందండి",
+    "description": "Lifetime purchase CTA."
+  },
+  "ob_guarantee": {
+    "message": "14-రోజుల రీఫండ్, ప్రశ్నలు లేవు. నెలవారీ ఇష్టమా? అదే పేజీలో ఇది $$4.99.",
+    "description": "Refund guarantee line."
+  },
+  "ob_s6_kicker": {
+    "message": "మీరు సిద్ధమయ్యారు",
+    "description": "Step 6 kicker."
+  },
+  "ob_s6_title": {
+    "message": "చేయడానికి ఏమీ మిగలలేదు. ఇది ఇప్పటికే పని చేస్తోంది.",
+    "description": "Step 6 title."
+  },
+  "ob_s6_lede": {
+    "message": "మీరు డౌన్‌లోడ్ చేసే తదుపరి ఫైల్ దానంతట అదే శుభ్రమైన పేరు పొందుతుంది. నొక్కడానికి బటన్ లేదు, నిర్ధారించడానికి డైలాగ్ లేదు. ఇక్కడ నుండి ఏమి జరుగుతుందో ఇదిగో.",
+    "description": "Step 6 body."
+  },
+  "ob_dev_h": {
+    "message": "డెవలపర్ నుండి",
+    "description": "Developer note heading."
+  },
+  "ob_dev_b": {
+    "message": "నేను Zovo ను నా స్వంతంగా, బహిరంగంగా నిర్మిస్తాను. ఏదైనా విరిగితే, నాకు వ్రాయండి, నేను సమాధానం ఇస్తాను. పేరు మార్పులు కేవలం ఆరంభం. ప్రణాళిక మొత్తం బ్రౌజర్‌కు ఒక నిజాయితీగల పొర, మరియు మీ తొంభై-తొమ్మిది డాలర్లు దానిలోని తదుపరి భాగాన్ని రవాణా చేస్తాయి.",
+    "description": "Developer note body."
+  },
+  "ob_link_github": {
+    "message": "GitHub లో నన్ను చేరుకోండి",
+    "description": "Link: GitHub."
+  },
+  "ob_link_going": {
+    "message": "ఇది ఎక్కడికి వెళుతోంది",
+    "description": "Link: roadmap."
+  },
+  "ob_cheat1_k": {
+    "message": "ప్రతి డౌన్‌లోడ్",
+    "description": "Cheat-sheet row 1 key."
+  },
+  "ob_cheat1_v": {
+    "message": "సేవ్‌లో పేరు మార్చబడుతుంది",
+    "description": "Cheat-sheet row 1 value."
+  },
+  "ob_cheat2_k": {
+    "message": "పాపప్",
+    "description": "Cheat-sheet row 2 key."
+  },
+  "ob_cheat2_v": {
+    "message": "ప్రతి పేరు మార్పును లెక్కిస్తుంది",
+    "description": "Cheat-sheet row 2 value."
+  },
+  "ob_cheat3_k": {
+    "message": "మీ నమూనా",
+    "description": "Cheat-sheet row 3 key."
+  },
+  "ob_cheat3_v": {
+    "message": "సెట్టింగ్‌లలో దాన్ని సవరించండి",
+    "description": "Cheat-sheet row 3 value."
+  },
+  "ob_cheat4_k": {
+    "message": "మొదటి సైట్ నియమం",
+    "description": "Cheat-sheet row 4 key."
+  },
+  "ob_cheat4_v": {
+    "message": "ఉచితంగా జోడించవచ్చు",
+    "description": "Cheat-sheet row 4 value."
+  }
+}

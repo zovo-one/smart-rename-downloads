@@ -1,0 +1,834 @@
+{
+  "extName": {
+    "message": "Smart Rename Downloads",
+    "description": "Extension name shown in the Chrome Web Store and toolbar."
+  },
+  "extDesc": {
+    "message": "Automaticky přejmenuje každé stažení pomocí tokenů data, webu a názvu. Pravidla podle webu, regex, směrování do složek.",
+    "description": "Chrome Web Store short description (max 132 chars)."
+  },
+  "popup_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Popup header title."
+  },
+  "popup_open_settings": {
+    "message": "Otevřít nastavení",
+    "description": "Aria label for the settings gear button."
+  },
+  "popup_settings": {
+    "message": "Nastavení",
+    "description": "Tooltip for the settings gear button."
+  },
+  "popup_health": {
+    "message": "Přejmenování pozastaveno — oprávnění ke Stahování bylo odebráno.",
+    "description": "Shown when the downloads permission is missing."
+  },
+  "popup_regrant": {
+    "message": "Znovu povolit",
+    "description": "Link to re-grant the downloads permission."
+  },
+  "popup_hero_label": {
+    "message": "Přejmenovaných souborů",
+    "description": "Label under the big lifetime rename counter."
+  },
+  "popup_hero_sub": {
+    "message": "Každé stažení se automaticky přejmenuje ještě než se uloží na disk.",
+    "description": "Supporting line under the hero counter."
+  },
+  "popup_master_title": {
+    "message": "Automatické přejmenování stahování",
+    "description": "Master on/off switch title."
+  },
+  "popup_master_aria": {
+    "message": "Přepnout automatické přejmenování stahování",
+    "description": "Accessible name for the master switch."
+  },
+  "popup_master_on": {
+    "message": "Zapnuto — přejmenuje každé stažení",
+    "description": "Master switch note when enabled."
+  },
+  "popup_master_off": {
+    "message": "Vypnuto — Chrome ponechává výchozí názvy",
+    "description": "Master switch note when disabled."
+  },
+  "popup_recent": {
+    "message": "Nedávná přejmenování",
+    "description": "Section label for the recent-renames list."
+  },
+  "popup_empty_title": {
+    "message": "Připraveno, až budete chtít",
+    "description": "Empty-state headline in the popup."
+  },
+  "popup_empty_text": {
+    "message": "Vaše příští stažení bude automaticky přejmenováno. Objeví se zde.",
+    "description": "Empty-state body in the popup."
+  },
+  "popup_milestone_text": {
+    "message": "Smart Rename uspořádal {n} stažení. Pro je automaticky třídí do složek.",
+    "description": "Post-success upgrade nudge. {n} is the rename count."
+  },
+  "popup_milestone_cta": {
+    "message": "Zobrazit Pro",
+    "description": "CTA on the milestone nudge."
+  },
+  "popup_dismiss": {
+    "message": "Zavřít",
+    "description": "Dismiss the milestone nudge."
+  },
+  "popup_trust": {
+    "message": "Lokálně · Bez účtu · Bez sledování",
+    "description": "Trust line in the popup footer."
+  },
+  "popup_upgrade": {
+    "message": "Přejít na Pro",
+    "description": "Upgrade button in the popup footer."
+  },
+  "flag_timeout": {
+    "message": "ponechán výchozí",
+    "description": "Recent-list flag: rename fell back to Chrome's default name (timeout)."
+  },
+  "flag_sanitize": {
+    "message": "ponechán výchozí",
+    "description": "Recent-list flag: name could not be sanitized."
+  },
+  "flag_nomatch": {
+    "message": "žádná shoda",
+    "description": "Recent-list flag: no site rule matched."
+  },
+  "opt_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Options brand name."
+  },
+  "opt_trust": {
+    "message": "Vše zůstává na tomto zařízení. Žádné sledování.",
+    "description": "Options sidebar trust line."
+  },
+  "aria_theme": {
+    "message": "Barevné téma",
+    "description": "Aria label for the theme radiogroup."
+  },
+  "theme_system": {
+    "message": "Systém",
+    "description": "Theme option: follow OS."
+  },
+  "theme_light": {
+    "message": "Světlé",
+    "description": "Theme option: light."
+  },
+  "theme_dark": {
+    "message": "Tmavé",
+    "description": "Theme option: dark."
+  },
+  "tier_free": {
+    "message": "Zdarma",
+    "description": "Free plan label."
+  },
+  "tier_trial": {
+    "message": "Zkušební",
+    "description": "Trial plan label."
+  },
+  "tier_pro": {
+    "message": "Pro",
+    "description": "Pro plan label."
+  },
+  "tab_template": {
+    "message": "Šablona",
+    "description": "Settings tab: naming template."
+  },
+  "tab_sites": {
+    "message": "Pravidla podle webu",
+    "description": "Settings tab: per-site rules."
+  },
+  "tab_advanced": {
+    "message": "Pokročilé",
+    "description": "Settings tab: advanced naming."
+  },
+  "tab_backup": {
+    "message": "Záloha",
+    "description": "Settings tab: backup and restore."
+  },
+  "tab_license": {
+    "message": "Licence",
+    "description": "Settings tab: license and plan."
+  },
+  "tpl_h1": {
+    "message": "Šablona názvu",
+    "description": "Template panel heading."
+  },
+  "tpl_lede": {
+    "message": "Sestavte název, který dostane každé stažení. Skutečná přípona souboru se vždy zachová.",
+    "description": "Template panel intro."
+  },
+  "tpl_label": {
+    "message": "Šablona",
+    "description": "Template input label."
+  },
+  "tpl_tokens_aria": {
+    "message": "Vložit token",
+    "description": "Aria label for the token chip row."
+  },
+  "tpl_conflict": {
+    "message": "Pokud soubor s tímto názvem již existuje",
+    "description": "Conflict-policy select label."
+  },
+  "conflict_uniquify": {
+    "message": "Přidat číslo — zachovat oba",
+    "description": "Conflict policy: uniquify."
+  },
+  "conflict_overwrite": {
+    "message": "Přepsat starý soubor",
+    "description": "Conflict policy: overwrite."
+  },
+  "conflict_prompt": {
+    "message": "Zeptat se pokaždé",
+    "description": "Conflict policy: prompt."
+  },
+  "tpl_save": {
+    "message": "Uložit šablonu",
+    "description": "Save-template button."
+  },
+  "tpl_preview_h": {
+    "message": "Živý náhled",
+    "description": "Preview section label."
+  },
+  "tpl_pv_host": {
+    "message": "Ukázkový web",
+    "description": "Preview sample-host input label."
+  },
+  "tpl_pv_name": {
+    "message": "Ukázkové stažení",
+    "description": "Preview sample-name input label."
+  },
+  "tpl_pv_result": {
+    "message": "Výsledek",
+    "description": "Preview result label."
+  },
+  "tpl_pv_hint": {
+    "message": "„/“ ve šabloně Zdarma se uloží jako „-“. Směrování do složek je funkce Pro.",
+    "description": "Preview hint about slashes and folder routing."
+  },
+  "sites_h1": {
+    "message": "Pravidla podle webu",
+    "description": "Sites panel heading."
+  },
+  "sites_lede": {
+    "message": "Dejte konkrétnímu webu vlastní šablonu — faktury do složek, dokumenty s názvem. Verze Zdarma obsahuje jedno pravidlo, abyste to vyzkoušeli; Pro je neomezené.",
+    "description": "Sites panel intro."
+  },
+  "sites_count": {
+    "message": "Využito 0 z 1 pravidla zdarma",
+    "description": "Initial site-rule count text."
+  },
+  "sites_count_free": {
+    "message": "Využito {n} z 1 pravidla zdarma",
+    "description": "Site-rule count for Free. {n} is the count."
+  },
+  "sites_count_pro": {
+    "message": "{n} pravidel",
+    "description": "Site-rule count for Pro. {n} is the count."
+  },
+  "sites_empty": {
+    "message": "Zatím žádná pravidla pro weby. Přidejte jedno níže.",
+    "description": "Empty state for site rules."
+  },
+  "sites_add_h": {
+    "message": "Přidat pravidlo",
+    "description": "Add-rule section label."
+  },
+  "sites_match": {
+    "message": "Web (host nebo *.host)",
+    "description": "Rule match input label."
+  },
+  "sites_match_ph": {
+    "message": "stripe.com",
+    "description": "Rule match placeholder."
+  },
+  "sites_template": {
+    "message": "Šablona pro tento web",
+    "description": "Rule template input label."
+  },
+  "sites_template_ph": {
+    "message": "{date}-invoice-{original}",
+    "description": "Rule template placeholder."
+  },
+  "sites_add_btn": {
+    "message": "Přidat pravidlo webu",
+    "description": "Add-rule button."
+  },
+  "sites_delete": {
+    "message": "Smazat pravidlo",
+    "description": "Aria label for a rule's delete button."
+  },
+  "sites_need_both": {
+    "message": "Zadejte web i šablonu.",
+    "description": "Validation when a rule field is empty."
+  },
+  "sites_add_err": {
+    "message": "Toto pravidlo nešlo přidat.",
+    "description": "Generic add-rule failure."
+  },
+  "adv_h1": {
+    "message": "Pokročilé pojmenování",
+    "description": "Advanced panel heading."
+  },
+  "adv_lede": {
+    "message": "Výkonné nástroje pro způsob, jakým stahování skutečně třídíte. Součást Zovo Pro.",
+    "description": "Advanced panel intro."
+  },
+  "adv_save": {
+    "message": "Uložit",
+    "description": "Generic save button."
+  },
+  "adv_clear": {
+    "message": "Vymazat",
+    "description": "Generic clear button."
+  },
+  "adv_unlock": {
+    "message": "Odemknout s Pro",
+    "description": "CTA on a locked Pro card."
+  },
+  "adv_on": {
+    "message": "Povoleno",
+    "description": "Feature toggled on."
+  },
+  "adv_off": {
+    "message": "Zakázáno",
+    "description": "Feature toggled off."
+  },
+  "adv_perm_needed": {
+    "message": "K povolení tohoto je potřeba oprávnění.",
+    "description": "Shown when an optional permission is denied."
+  },
+  "adv_toggle_err": {
+    "message": "Toto nastavení nešlo aktualizovat.",
+    "description": "Generic toggle failure."
+  },
+  "adv_folder_h": {
+    "message": "Směrování do složek",
+    "description": "Folder-routing card heading."
+  },
+  "adv_folder_note": {
+    "message": "Stahuje soubory do podsložek vaší složky Stažené, např. Downloads/{hostname}/…",
+    "description": "Folder-routing explanation."
+  },
+  "adv_folder_label": {
+    "message": "Cesta k podsložce (tokeny povoleny)",
+    "description": "Folder-path input label."
+  },
+  "adv_folder_ph": {
+    "message": "{hostname}",
+    "description": "Folder-path placeholder."
+  },
+  "adv_folder_err": {
+    "message": "Směrování do složek nešlo uložit.",
+    "description": "Folder-routing save failure."
+  },
+  "adv_regex_h": {
+    "message": "Najít a nahradit (regex)",
+    "description": "Regex card heading."
+  },
+  "adv_regex_note": {
+    "message": "Vyčistěte názvy pomocí regulárního výrazu, než se uloží.",
+    "description": "Regex explanation."
+  },
+  "adv_regex_find": {
+    "message": "Najít",
+    "description": "Regex find input label."
+  },
+  "adv_regex_find_ph": {
+    "message": "\\s+",
+    "description": "Regex find placeholder."
+  },
+  "adv_regex_replace": {
+    "message": "Nahradit",
+    "description": "Regex replace input label."
+  },
+  "adv_regex_replace_ph": {
+    "message": "-",
+    "description": "Regex replace placeholder."
+  },
+  "adv_regex_flags": {
+    "message": "Příznaky",
+    "description": "Regex flags input label."
+  },
+  "adv_regex_need": {
+    "message": "Zadejte vzor k vyhledání.",
+    "description": "Validation when the regex find is empty."
+  },
+  "adv_regex_bad": {
+    "message": "Tento vzor je neplatný nebo nebezpečný.",
+    "description": "Regex validation failure."
+  },
+  "adv_regex_err": {
+    "message": "Vzor nešlo uložit.",
+    "description": "Generic regex save failure."
+  },
+  "adv_cleared": {
+    "message": "Vymazáno",
+    "description": "Regex cleared confirmation."
+  },
+  "adv_title_h": {
+    "message": "Token názvu stránky {title}",
+    "description": "Title-token card heading."
+  },
+  "adv_title_note": {
+    "message": "Použijte název zdrojové stránky v názvech souborů. Zapnutím tohoto Chrome požádá o oprávnění ke Kartám.",
+    "description": "Title-token explanation."
+  },
+  "adv_title_toggle": {
+    "message": "Povolit token {title}",
+    "description": "Title-token toggle label."
+  },
+  "adv_title_aria": {
+    "message": "Povolit token názvu stránky",
+    "description": "Accessible name for the title-token switch."
+  },
+  "adv_pdf_h": {
+    "message": "Token názvu PDF {pdftitle}",
+    "description": "PDF-token card heading."
+  },
+  "adv_pdf_note": {
+    "message": "Pojmenujte PDF podle názvu uloženého uvnitř souboru. Toto čte PDF přes síť, takže žádá o přístup k webu a je ve výchozím nastavení vypnuto.",
+    "description": "PDF-token explanation."
+  },
+  "adv_pdf_toggle": {
+    "message": "Povolit token {pdftitle}",
+    "description": "PDF-token toggle label."
+  },
+  "adv_pdf_aria": {
+    "message": "Povolit token názvu PDF",
+    "description": "Accessible name for the PDF-token switch."
+  },
+  "backup_h1": {
+    "message": "Záloha a obnovení",
+    "description": "Backup panel heading."
+  },
+  "backup_lede": {
+    "message": "Exportujte své nastavení do souboru nebo je přeneste na jiný počítač. Součást Zovo Pro.",
+    "description": "Backup panel intro."
+  },
+  "backup_export_h": {
+    "message": "Exportovat konfiguraci",
+    "description": "Export card heading."
+  },
+  "backup_export_note": {
+    "message": "Stáhne soubor JSON s vaší šablonou, pravidly a nastaveními. Bez historie, bez osobních údajů.",
+    "description": "Export explanation."
+  },
+  "backup_export_btn": {
+    "message": "Exportovat do souboru",
+    "description": "Export button."
+  },
+  "backup_exported": {
+    "message": "Exportováno",
+    "description": "Export confirmation."
+  },
+  "backup_export_err": {
+    "message": "Export se nezdařil.",
+    "description": "Export failure."
+  },
+  "backup_import_h": {
+    "message": "Importovat konfiguraci",
+    "description": "Import card heading."
+  },
+  "backup_import_label": {
+    "message": "Vložte exportovanou konfiguraci",
+    "description": "Import textarea label."
+  },
+  "backup_import_ph": {
+    "message": "{\"zovo_template\":\"…\"}",
+    "description": "Import textarea placeholder."
+  },
+  "backup_import_btn": {
+    "message": "Importovat",
+    "description": "Import button."
+  },
+  "backup_imported": {
+    "message": "Importováno",
+    "description": "Import confirmation."
+  },
+  "backup_need_json": {
+    "message": "Nejprve vložte konfiguraci.",
+    "description": "Validation when import is empty."
+  },
+  "backup_import_err": {
+    "message": "Tento soubor nešlo importovat.",
+    "description": "Import failure."
+  },
+  "lic_h1": {
+    "message": "Váš plán",
+    "description": "License panel heading."
+  },
+  "lic_lede": {
+    "message": "Jedna platba navždy odemkne každou funkci pojmenování. Bez předplatného.",
+    "description": "License panel intro."
+  },
+  "lic_current": {
+    "message": "Aktuální plán",
+    "description": "Current-plan label."
+  },
+  "lic_free_sub": {
+    "message": "Základní přejmenování, jedno pravidlo webu, navždy.",
+    "description": "Free-plan subtitle."
+  },
+  "lic_pro_sub": {
+    "message": "Každá funkce pojmenování je odemčena. Děkujeme, že podporujete Zovo.",
+    "description": "Pro-plan subtitle."
+  },
+  "lic_upgrade": {
+    "message": "Přejít na Pro",
+    "description": "Upgrade button on the License tab."
+  },
+  "lic_have_key": {
+    "message": "Mám klíč",
+    "description": "License-key button."
+  },
+  "lic_included_h": {
+    "message": "Co Pro odemyká",
+    "description": "Benefits section label."
+  },
+  "lic_b1": {
+    "message": "Neomezená pravidla podle webu",
+    "description": "Pro benefit 1."
+  },
+  "lic_b2": {
+    "message": "Směrování do podsložek",
+    "description": "Pro benefit 2."
+  },
+  "lic_b3": {
+    "message": "Regex najít a nahradit",
+    "description": "Pro benefit 3."
+  },
+  "lic_b4": {
+    "message": "Tokeny názvu stránky a názvu PDF",
+    "description": "Pro benefit 4."
+  },
+  "lic_b5": {
+    "message": "Záloha konfigurace, export a import",
+    "description": "Pro benefit 5."
+  },
+  "saved": {
+    "message": "Uloženo",
+    "description": "Generic saved confirmation."
+  },
+  "err_template": {
+    "message": "Tuto šablonu nešlo uložit.",
+    "description": "Generic template save failure."
+  },
+  "err_bad_token": {
+    "message": "Neznámý token v šabloně: ",
+    "description": "Prefix before the offending token name."
+  },
+  "ob_brand": {
+    "message": "Smart Rename Downloads",
+    "description": "Onboarding brand name."
+  },
+  "ob_by": {
+    "message": "· od Zovo",
+    "description": "Onboarding brand attribution suffix."
+  },
+  "ob_skip": {
+    "message": "Přeskočit úvod",
+    "description": "Skip onboarding button."
+  },
+  "ob_back": {
+    "message": "Zpět",
+    "description": "Previous-step button."
+  },
+  "ob_next": {
+    "message": "Dále",
+    "description": "Next-step button."
+  },
+  "ob_later": {
+    "message": "Možná později",
+    "description": "Next-button label on the offer step."
+  },
+  "ob_start": {
+    "message": "Začít používat",
+    "description": "Final onboarding button."
+  },
+  "ob_stepno": {
+    "message": "{a} z {b}",
+    "description": "Step counter, e.g. 1 of 6. {a} current, {b} total."
+  },
+  "ob_s1_kicker": {
+    "message": "Problém složky stažených souborů",
+    "description": "Step 1 kicker."
+  },
+  "ob_s1_title": {
+    "message": "Tento soubor už nikdy nenajdete.",
+    "description": "Step 1 title."
+  },
+  "ob_s1_pt": {
+    "message": "Vytvořeno pro lidi, kteří stahují celý den. Výzkumníky, účetní, každého, jehož složka Stažené se tiše vymkla kontrole.",
+    "description": "Step 1 secondary paragraph."
+  },
+  "ob_s2_kicker": {
+    "message": "Jedno pravidlo, už zapnuté",
+    "description": "Step 2 kicker."
+  },
+  "ob_s2_title": {
+    "message": "Sledujte, jak se nesmyslný název promění ve skutečný.",
+    "description": "Step 2 title."
+  },
+  "ob_s2_lede": {
+    "message": "Výchozí vzor je datum, pak web, poté původní název. Jakmile stahování skončí, název se přepíše a uloží přímo na disk. Bez kliknutí, bez dialogu. Tady je to na skutečném souboru.",
+    "description": "Step 2 body."
+  },
+  "ob_demo_btn": {
+    "message": "Sledovat přejmenování",
+    "description": "Button that replays the rename demo."
+  },
+  "ob_saved_as": {
+    "message": "Uloženo jako",
+    "description": "Demo label for the original filename."
+  },
+  "ob_renamed_to": {
+    "message": "Přejmenováno na",
+    "description": "Demo label for the renamed filename."
+  },
+  "ob_fw_kept": {
+    "message": ".pdf zachováno",
+    "description": "Token chip: the real extension is kept."
+  },
+  "ob_s3_kicker": {
+    "message": "Dvě minuty, jednou",
+    "description": "Step 3 kicker."
+  },
+  "ob_s3_title": {
+    "message": "Nastavte vzor pojmenování, který si ponecháte natrvalo.",
+    "description": "Step 3 title."
+  },
+  "ob_s3_lede": {
+    "message": "Sestavte jej z tokenů. Klikněte na jeden, aby se vložil do vzoru, a sledujte, jak se ukázka aktualizuje. Skutečná přípona souboru se vždy zachová na konci. Uložte jej a každé budoucí stažení bude následovat tento.",
+    "description": "Step 3 body."
+  },
+  "ob_s3_pt": {
+    "message": "Žije ve vašem prohlížeči. Změňte jej kdykoli v nastavení a nic o vašich souborech se nikdy nikam neodešle.",
+    "description": "Step 3 secondary paragraph."
+  },
+  "ob_template_label": {
+    "message": "Váš vzor pojmenování",
+    "description": "Onboarding template input label."
+  },
+  "ob_result": {
+    "message": "Výsledek",
+    "description": "Onboarding preview result label."
+  },
+  "ob_save_btn": {
+    "message": "Uložit můj vzor",
+    "description": "Save-pattern button."
+  },
+  "ob_pattern_saved": {
+    "message": "Vzor uložen",
+    "description": "Save-pattern button after saving."
+  },
+  "ob_saved_msg": {
+    "message": "Uloženo. Každé stažení nyní následuje tento.",
+    "description": "Confirmation after the pattern is saved."
+  },
+  "ob_s4_kicker": {
+    "message": "Proč jej můžete nechat běžet",
+    "description": "Step 4 kicker."
+  },
+  "ob_s4_title": {
+    "message": "Lokální už z principu, vytvořeno veřejně jedním vývojářem.",
+    "description": "Step 4 title."
+  },
+  "ob_s4_lede": {
+    "message": "Vaše soubory a historie přejmenování nikdy neopustí tento počítač. V bezplatném plánu rozšíření neprovádí vůbec žádné síťové volání a kód je dostatečně malý, aby se dal přečíst najednou.",
+    "description": "Step 4 body."
+  },
+  "ob_stat1_n": {
+    "message": "Lokální",
+    "description": "Stat 1 value."
+  },
+  "ob_stat1_l": {
+    "message": "každé přejmenování běží na vašem zařízení",
+    "description": "Stat 1 label."
+  },
+  "ob_stat2_n": {
+    "message": "Soukromé",
+    "description": "Stat 2 value."
+  },
+  "ob_stat2_l": {
+    "message": "nic neopouští tento počítač",
+    "description": "Stat 2 label."
+  },
+  "ob_stat3_n": {
+    "message": "Otevřené",
+    "description": "Stat 3 value."
+  },
+  "ob_stat3_l": {
+    "message": "vytvořeno veřejně, každý commit",
+    "description": "Stat 3 label."
+  },
+  "ob_s4_pt": {
+    "message": "Přejmenovávač stahování je místo, kde se seznámíte se Zovo. Větší plán je poctivá vrstva pro celý svět rozšíření, jeden nástroj po druhém, bez spamu a bez sledování.",
+    "description": "Step 4 secondary paragraph."
+  },
+  "ob_link_why": {
+    "message": "Proč tvořím Zovo",
+    "description": "Link: why Zovo."
+  },
+  "ob_link_vision": {
+    "message": "Vize",
+    "description": "Link: the vision."
+  },
+  "ob_link_safe": {
+    "message": "Jak vás chráníme",
+    "description": "Link: safety."
+  },
+  "ob_trust1_h": {
+    "message": "Vše zůstává na vašem zařízení",
+    "description": "Trust point 1 heading."
+  },
+  "ob_trust1_b": {
+    "message": "Váš vzor, pravidla a historie žijí v lokálním úložišti prohlížeče. Bez účtu, bez synchronizačního serveru, nic se neodesílá ven.",
+    "description": "Trust point 1 body."
+  },
+  "ob_trust2_h": {
+    "message": "Jeden člověk, tvořící veřejně",
+    "description": "Trust point 2 heading."
+  },
+  "ob_s5_kicker": {
+    "message": "Poctivá výměna",
+    "description": "Step 5 kicker."
+  },
+  "ob_s5_title": {
+    "message": "Přejmenování zdarma navždy. Nebo vlastněte vše, jednou.",
+    "description": "Step 5 title."
+  },
+  "ob_s5_lede": {
+    "message": "Tiché jádro přejmenování zůstává zdarma, bez omezení počtu souborů, kterých se dotkne. Jedna platba devadesát devět dolarů zapne neomezená pravidla podle webu, směrování do složek, čištění regexem a pojmenování podle názvu stránky nebo PDF.",
+    "description": "Step 5 body."
+  },
+  "ob_plan_free": {
+    "message": "Zdarma",
+    "description": "Free plan name."
+  },
+  "ob_free_unit": {
+    "message": "navždy",
+    "description": "Free plan price unit."
+  },
+  "ob_free1": {
+    "message": "Každé stažení přejmenované samo",
+    "description": "Free benefit 1."
+  },
+  "ob_free2": {
+    "message": "Tři základní tokeny: datum, web, původní název",
+    "description": "Free benefit 2."
+  },
+  "ob_free3": {
+    "message": "Jedno uložené pravidlo podle webu",
+    "description": "Free benefit 3."
+  },
+  "ob_free4": {
+    "message": "Řešení konfliktů a živé počítadlo",
+    "description": "Free benefit 4."
+  },
+  "ob_ribbon": {
+    "message": "Nejlepší hodnota",
+    "description": "Lifetime plan ribbon."
+  },
+  "ob_plan_life": {
+    "message": "Doživotní",
+    "description": "Lifetime plan name."
+  },
+  "ob_life_unit": {
+    "message": "jednorázově",
+    "description": "Lifetime plan price unit."
+  },
+  "ob_life1": {
+    "message": "Neomezená pravidla podle webu",
+    "description": "Lifetime benefit 1."
+  },
+  "ob_life2": {
+    "message": "Směrujte soubory do podsložek Stažené podle webu nebo data",
+    "description": "Lifetime benefit 2."
+  },
+  "ob_life3": {
+    "message": "Čištění regexem plus tokeny názvu stránky a názvu PDF",
+    "description": "Lifetime benefit 3."
+  },
+  "ob_life4": {
+    "message": "Záloha konfigurace a import mezi počítači",
+    "description": "Lifetime benefit 4."
+  },
+  "ob_life5": {
+    "message": "Každá budoucí aktualizace tohoto nástroje, v ceně",
+    "description": "Lifetime benefit 5."
+  },
+  "ob_life6": {
+    "message": "Jedna platba, bez předplatného, navždy",
+    "description": "Lifetime benefit 6."
+  },
+  "ob_life_cta": {
+    "message": "Získat doživotní za $$99",
+    "description": "Lifetime purchase CTA."
+  },
+  "ob_guarantee": {
+    "message": "14denní vrácení peněz, bez otázek. Preferujete měsíčně? Stojí $$4.99 na stejné stránce.",
+    "description": "Refund guarantee line."
+  },
+  "ob_s6_kicker": {
+    "message": "Máte hotovo",
+    "description": "Step 6 kicker."
+  },
+  "ob_s6_title": {
+    "message": "Není co dělat. Už to funguje.",
+    "description": "Step 6 title."
+  },
+  "ob_s6_lede": {
+    "message": "Příští soubor, který stáhnete, dostane čistý název sám od sebe. Žádné tlačítko ke stisknutí, žádný dialog k potvrzení. Tady je, co se děje odteď.",
+    "description": "Step 6 body."
+  },
+  "ob_dev_h": {
+    "message": "Od vývojáře",
+    "description": "Developer note heading."
+  },
+  "ob_dev_b": {
+    "message": "Tvořím Zovo sám, veřejně. Pokud se něco pokazí, napište mi a odpovím. Přejmenovávače jsou jen začátek. Plánem je poctivá vrstva pro celý prohlížeč a vašich devadesát devět dolarů dodá další díl.",
+    "description": "Developer note body."
+  },
+  "ob_link_github": {
+    "message": "Kontaktujte mě na GitHubu",
+    "description": "Link: GitHub."
+  },
+  "ob_link_going": {
+    "message": "Kam to směřuje",
+    "description": "Link: roadmap."
+  },
+  "ob_cheat1_k": {
+    "message": "Každé stažení",
+    "description": "Cheat-sheet row 1 key."
+  },
+  "ob_cheat1_v": {
+    "message": "Přejmenováno při uložení",
+    "description": "Cheat-sheet row 1 value."
+  },
+  "ob_cheat2_k": {
+    "message": "Vyskakovací okno",
+    "description": "Cheat-sheet row 2 key."
+  },
+  "ob_cheat2_v": {
+    "message": "Počítá každé přejmenování",
+    "description": "Cheat-sheet row 2 value."
+  },
+  "ob_cheat3_k": {
+    "message": "Váš vzor",
+    "description": "Cheat-sheet row 3 key."
+  },
+  "ob_cheat3_v": {
+    "message": "Upravte jej v nastavení",
+    "description": "Cheat-sheet row 3 value."
+  },
+  "ob_cheat4_k": {
+    "message": "První pravidlo webu",
+    "description": "Cheat-sheet row 4 key."
+  },
+  "ob_cheat4_v": {
+    "message": "Zdarma k přidání",
+    "description": "Cheat-sheet row 4 value."
+  }
+}

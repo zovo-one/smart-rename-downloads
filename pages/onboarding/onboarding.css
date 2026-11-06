@@ -1,0 +1,142 @@
+/* ============================================================================
+ * onboarding.css — first-run welcome for Smart Rename Downloads.
+ * Full-page, premium, theme-aware. Built on zovo-base.css tokens only — no
+ * external fonts or assets, so the zero-network-egress promise holds even here.
+ * ========================================================================== */
+
+body.zovo { background: var(--zovo-surface); }
+
+.ob {
+  display: flex; flex-direction: column;
+  min-height: 100vh;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 var(--zovo-space-5);
+}
+
+/* Soft brand glow behind the stage */
+.ob::before {
+  content: ''; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(60% 40% at 50% 0%, color-mix(in srgb, var(--zovo-primary) 16%, transparent), transparent 70%),
+    radial-gradient(40% 30% at 85% 8%, color-mix(in srgb, var(--zovo-accent) 12%, transparent), transparent 70%);
+}
+
+/* ---- Top bar -------------------------------------------------------------- */
+.ob__top { display: flex; align-items: center; justify-content: space-between; padding: var(--zovo-space-5) 0; }
+.ob__brand { display: flex; align-items: center; gap: var(--zovo-space-3); }
+.ob__mark {
+  display: grid; place-items: center; width: 32px; height: 32px; color: #fff;
+  background: linear-gradient(135deg, var(--zovo-primary), var(--zovo-primary-light));
+  border-radius: var(--zovo-radius-input);
+}
+.ob__brand-name { font-weight: var(--zovo-fw-heading); letter-spacing: -0.01em; }
+.ob__skip {
+  font: inherit; font-size: var(--zovo-fs-caption); color: var(--zovo-text-secondary);
+  background: none; border: none; cursor: pointer; padding: 6px 8px; border-radius: var(--zovo-radius-btn);
+}
+.ob__skip:hover { color: var(--zovo-text); background: var(--zovo-surface-2); }
+.ob__skip:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--zovo-primary); }
+
+/* ---- Stage ---------------------------------------------------------------- */
+.ob__stage { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: var(--zovo-space-5) 0; }
+.ob__progress { margin-bottom: var(--zovo-space-7); }
+.ob__progress-track { max-width: 220px; }
+
+.ob__step { animation: ob-fade 320ms var(--zovo-transition, ease); }
+.ob__step[hidden] { display: none; }
+@keyframes ob-fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .ob__step { animation: none; } }
+
+.ob__kicker {
+  margin: 0 0 var(--zovo-space-3);
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--zovo-primary);
+}
+.ob__kicker::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--zovo-primary); box-shadow: 0 0 10px var(--zovo-primary); }
+.ob__kicker--pro { color: var(--zovo-pro-dark); }
+.ob__kicker--pro::before { background: var(--zovo-pro); box-shadow: 0 0 10px var(--zovo-pro); }
+
+.ob__h { margin: 0 0 var(--zovo-space-4); font-size: var(--zovo-fs-hero); line-height: 1.08; font-weight: 700; letter-spacing: -0.02em; }
+.ob__lede { margin: 0 0 var(--zovo-space-6); font-size: var(--zovo-fs-subheading); color: var(--zovo-text-secondary); max-width: 56ch; }
+.ob__note { margin: var(--zovo-space-4) 0 0; font-size: var(--zovo-fs-caption); color: var(--zovo-text-secondary); }
+
+/* ---- Step 1 demo ---------------------------------------------------------- */
+.ob__demo { display: grid; grid-template-columns: 1fr; gap: var(--zovo-space-3); padding: var(--zovo-space-6); }
+.ob__demo-row { display: flex; align-items: center; gap: var(--zovo-space-4); min-width: 0; }
+.ob__demo-tag {
+  flex: 0 0 auto; width: 58px;
+  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--zovo-text-secondary);
+}
+.ob__demo-tag--after { color: var(--zovo-success); }
+.ob__demo-file {
+  font-family: var(--zovo-font-mono); font-size: var(--zovo-fs-body);
+  color: var(--zovo-text-secondary);
+  padding: 10px 14px; border-radius: var(--zovo-radius-btn);
+  background: var(--zovo-surface); border: 1px solid var(--zovo-border);
+  word-break: break-all; flex: 1; min-width: 0;
+}
+.ob__demo-file--after {
+  color: var(--zovo-text); font-weight: var(--zovo-fw-medium);
+  background: color-mix(in srgb, var(--zovo-success) 8%, var(--zovo-bg));
+  border-color: color-mix(in srgb, var(--zovo-success) 30%, transparent);
+}
+.ob__demo-arrow { display: grid; place-items: center; color: var(--zovo-primary); padding-left: 66px; }
+
+.ob__badges { display: flex; flex-wrap: wrap; gap: var(--zovo-space-4); margin-top: var(--zovo-space-6); }
+.ob__badge { display: inline-flex; align-items: center; gap: 8px; font-size: var(--zovo-fs-caption); color: var(--zovo-text-secondary); }
+.ob__badge-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--zovo-success); }
+
+/* ---- Step 2 builder ------------------------------------------------------- */
+.ob__builder { padding: var(--zovo-space-6); }
+.ob__tokens { display: flex; flex-wrap: wrap; gap: var(--zovo-space-2); margin-top: var(--zovo-space-3); }
+.ob__token {
+  font-family: var(--zovo-font-mono); font-size: var(--zovo-fs-caption);
+  color: var(--zovo-primary); background: var(--zovo-primary-50);
+  border: 1px solid transparent; border-radius: var(--zovo-radius-pill);
+  padding: 6px 12px; cursor: pointer; transition: background var(--zovo-transition);
+}
+.ob__token:hover { background: color-mix(in srgb, var(--zovo-primary) 16%, var(--zovo-bg)); }
+.ob__token:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--zovo-primary); }
+.ob__result {
+  display: flex; align-items: center; gap: var(--zovo-space-3);
+  margin-top: var(--zovo-space-5); padding: var(--zovo-space-4);
+  background: var(--zovo-surface-2); border-radius: var(--zovo-radius-btn);
+}
+.ob__result-label { flex: 0 0 auto; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--zovo-text-secondary); }
+.ob__result-value { font-family: var(--zovo-font-mono); font-size: var(--zovo-fs-body); color: var(--zovo-text); word-break: break-all; }
+
+/* ---- Step 3 pro ----------------------------------------------------------- */
+.ob__pro-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--zovo-space-4); }
+.ob__pro-item { display: flex; gap: var(--zovo-space-3); }
+.ob__pro-ic {
+  flex: 0 0 auto; display: grid; place-items: center; width: 24px; height: 24px;
+  color: var(--zovo-pro-dark); font-weight: 700;
+  background: color-mix(in srgb, var(--zovo-pro) 14%, var(--zovo-bg)); border-radius: 50%;
+}
+.ob__pro-item strong { display: block; font-weight: var(--zovo-fw-heading); }
+.ob__pro-item span { font-size: var(--zovo-fs-caption); color: var(--zovo-text-secondary); }
+.ob__price { display: flex; align-items: baseline; gap: var(--zovo-space-3); margin-top: var(--zovo-space-6); }
+.ob__price-amount { font-size: var(--zovo-fs-title); font-weight: 700; letter-spacing: -0.02em; color: var(--zovo-pro-dark); }
+.ob__price-unit { font-size: var(--zovo-fs-caption); color: var(--zovo-text-secondary); }
+
+/* ---- Nav ------------------------------------------------------------------ */
+.ob__nav {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--zovo-space-4);
+  padding: var(--zovo-space-5) 0 var(--zovo-space-7);
+  border-top: 1px solid var(--zovo-border);
+  margin-top: var(--zovo-space-6);
+}
+.ob__nav-right { display: flex; align-items: center; gap: var(--zovo-space-3); }
+.ob__dots { display: flex; align-items: center; gap: 8px; }
+.ob__dot { width: 8px; height: 8px; border-radius: 999px; background: var(--zovo-border); transition: width var(--zovo-transition), background var(--zovo-transition); }
+.ob__dot[data-active='true'] { width: 22px; background: var(--zovo-primary); }
+.ob__dot[data-done='true'] { background: var(--zovo-primary-light); }
+
+@media (max-width: 560px) {
+  .ob__h { font-size: var(--zovo-fs-title); }
+  .ob__demo-arrow { padding-left: 0; }
+  .ob__nav { flex-wrap: wrap; }
+}

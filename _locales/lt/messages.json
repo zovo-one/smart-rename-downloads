@@ -1,0 +1,834 @@
+{
+  "extName": {
+    "message": "Smart Rename Downloads",
+    "description": "Extension name shown in the Chrome Web Store and toolbar."
+  },
+  "extDesc": {
+    "message": "Automatiškai pervadinkite kiekvieną atsisiuntimą naudodami datos, svetainės ir pavadinimo žymes. Taisyklės pagal svetainę",
+    "description": "Chrome Web Store short description (max 132 chars)."
+  },
+  "popup_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Popup header title."
+  },
+  "popup_open_settings": {
+    "message": "Atidaryti nustatymus",
+    "description": "Aria label for the settings gear button."
+  },
+  "popup_settings": {
+    "message": "Nustatymai",
+    "description": "Tooltip for the settings gear button."
+  },
+  "popup_health": {
+    "message": "Pervadinimas pristabdytas — atsisiuntimų leidimas buvo pašalintas.",
+    "description": "Shown when the downloads permission is missing."
+  },
+  "popup_regrant": {
+    "message": "Įjungti iš naujo",
+    "description": "Link to re-grant the downloads permission."
+  },
+  "popup_hero_label": {
+    "message": "Pervadinta failų",
+    "description": "Label under the big lifetime rename counter."
+  },
+  "popup_hero_sub": {
+    "message": "Kiekvienas atsisiuntimas pervadinamas automatiškai, dar prieš patekdamas į diską.",
+    "description": "Supporting line under the hero counter."
+  },
+  "popup_master_title": {
+    "message": "Automatiškai pervadinti atsisiuntimus",
+    "description": "Master on/off switch title."
+  },
+  "popup_master_aria": {
+    "message": "Perjungti automatinį atsisiuntimų pervadinimą",
+    "description": "Accessible name for the master switch."
+  },
+  "popup_master_on": {
+    "message": "Įjungta — pervadinamas kiekvienas atsisiuntimas",
+    "description": "Master switch note when enabled."
+  },
+  "popup_master_off": {
+    "message": "Išjungta — „Chrome“ palieka numatytuosius pavadinimus",
+    "description": "Master switch note when disabled."
+  },
+  "popup_recent": {
+    "message": "Naujausi pervadinimai",
+    "description": "Section label for the recent-renames list."
+  },
+  "popup_empty_title": {
+    "message": "Pasiruošę, kai tik būsite",
+    "description": "Empty-state headline in the popup."
+  },
+  "popup_empty_text": {
+    "message": "Kitas jūsų atsisiuntimas bus pervadintas automatiškai. Jis pasirodys čia.",
+    "description": "Empty-state body in the popup."
+  },
+  "popup_milestone_text": {
+    "message": "„Smart Rename“ sutvarkė {n} atsisiuntimų. „Pro“ automatiškai suskirsto juos į aplankus.",
+    "description": "Post-success upgrade nudge. {n} is the rename count."
+  },
+  "popup_milestone_cta": {
+    "message": "Peržiūrėti „Pro“",
+    "description": "CTA on the milestone nudge."
+  },
+  "popup_dismiss": {
+    "message": "Atmesti",
+    "description": "Dismiss the milestone nudge."
+  },
+  "popup_trust": {
+    "message": "Vietinis · Be paskyros · Be sekimo",
+    "description": "Trust line in the popup footer."
+  },
+  "popup_upgrade": {
+    "message": "Atnaujinti į „Pro“",
+    "description": "Upgrade button in the popup footer."
+  },
+  "flag_timeout": {
+    "message": "paliktas numatytasis",
+    "description": "Recent-list flag: rename fell back to Chrome's default name (timeout)."
+  },
+  "flag_sanitize": {
+    "message": "paliktas numatytasis",
+    "description": "Recent-list flag: name could not be sanitized."
+  },
+  "flag_nomatch": {
+    "message": "nėra atitikmens",
+    "description": "Recent-list flag: no site rule matched."
+  },
+  "opt_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Options brand name."
+  },
+  "opt_trust": {
+    "message": "Viskas lieka šiame įrenginyje. Jokio sekimo.",
+    "description": "Options sidebar trust line."
+  },
+  "aria_theme": {
+    "message": "Spalvų tema",
+    "description": "Aria label for the theme radiogroup."
+  },
+  "theme_system": {
+    "message": "Sistemos",
+    "description": "Theme option: follow OS."
+  },
+  "theme_light": {
+    "message": "Šviesi",
+    "description": "Theme option: light."
+  },
+  "theme_dark": {
+    "message": "Tamsi",
+    "description": "Theme option: dark."
+  },
+  "tier_free": {
+    "message": "Nemokamas",
+    "description": "Free plan label."
+  },
+  "tier_trial": {
+    "message": "Bandomasis",
+    "description": "Trial plan label."
+  },
+  "tier_pro": {
+    "message": "Pro",
+    "description": "Pro plan label."
+  },
+  "tab_template": {
+    "message": "Šablonas",
+    "description": "Settings tab: naming template."
+  },
+  "tab_sites": {
+    "message": "Taisyklės pagal svetainę",
+    "description": "Settings tab: per-site rules."
+  },
+  "tab_advanced": {
+    "message": "Išplėstiniai",
+    "description": "Settings tab: advanced naming."
+  },
+  "tab_backup": {
+    "message": "Atsarginė kopija",
+    "description": "Settings tab: backup and restore."
+  },
+  "tab_license": {
+    "message": "Licencija",
+    "description": "Settings tab: license and plan."
+  },
+  "tpl_h1": {
+    "message": "Pavadinimų šablonas",
+    "description": "Template panel heading."
+  },
+  "tpl_lede": {
+    "message": "Sukurkite failo pavadinimą, kurį gauna kiekvienas atsisiuntimas. Tikrasis failo plėtinys visada išsaugomas.",
+    "description": "Template panel intro."
+  },
+  "tpl_label": {
+    "message": "Šablonas",
+    "description": "Template input label."
+  },
+  "tpl_tokens_aria": {
+    "message": "Įterpti žymę",
+    "description": "Aria label for the token chip row."
+  },
+  "tpl_conflict": {
+    "message": "Jei failas tokiu pavadinimu jau egzistuoja",
+    "description": "Conflict-policy select label."
+  },
+  "conflict_uniquify": {
+    "message": "Pridėti numerį — palikti abu",
+    "description": "Conflict policy: uniquify."
+  },
+  "conflict_overwrite": {
+    "message": "Perrašyti seną failą",
+    "description": "Conflict policy: overwrite."
+  },
+  "conflict_prompt": {
+    "message": "Klausti kiekvieną kartą",
+    "description": "Conflict policy: prompt."
+  },
+  "tpl_save": {
+    "message": "Išsaugoti šabloną",
+    "description": "Save-template button."
+  },
+  "tpl_preview_h": {
+    "message": "Tiesioginė peržiūra",
+    "description": "Preview section label."
+  },
+  "tpl_pv_host": {
+    "message": "Pavyzdinė svetainė",
+    "description": "Preview sample-host input label."
+  },
+  "tpl_pv_name": {
+    "message": "Pavyzdinis atsisiuntimas",
+    "description": "Preview sample-name input label."
+  },
+  "tpl_pv_result": {
+    "message": "Rezultatas",
+    "description": "Preview result label."
+  },
+  "tpl_pv_hint": {
+    "message": "„/“ nemokamame šablone išsaugomas kaip „-“. Aplankų nukreipimas yra „Pro“ funkcija.",
+    "description": "Preview hint about slashes and folder routing."
+  },
+  "sites_h1": {
+    "message": "Taisyklės pagal svetainę",
+    "description": "Sites panel heading."
+  },
+  "sites_lede": {
+    "message": "Suteikite konkrečiai svetainei savo šabloną — sąskaitos į aplankus, dokumentai su pavadinimais. Nemokamas apima vieną taisyklę, kad galėtumėte pajusti; „Pro“ yra neribotas.",
+    "description": "Sites panel intro."
+  },
+  "sites_count": {
+    "message": "Panaudota 0 iš 1 nemokamos taisyklės",
+    "description": "Initial site-rule count text."
+  },
+  "sites_count_free": {
+    "message": "Panaudota {n} iš 1 nemokamos taisyklės",
+    "description": "Site-rule count for Free. {n} is the count."
+  },
+  "sites_count_pro": {
+    "message": "{n} taisyklių",
+    "description": "Site-rule count for Pro. {n} is the count."
+  },
+  "sites_empty": {
+    "message": "Kol kas nėra svetainių taisyklių. Pridėkite vieną žemiau.",
+    "description": "Empty state for site rules."
+  },
+  "sites_add_h": {
+    "message": "Pridėti taisyklę",
+    "description": "Add-rule section label."
+  },
+  "sites_match": {
+    "message": "Svetainė (pagrindinis kompiuteris arba *.host)",
+    "description": "Rule match input label."
+  },
+  "sites_match_ph": {
+    "message": "stripe.com",
+    "description": "Rule match placeholder."
+  },
+  "sites_template": {
+    "message": "Šablonas šiai svetainei",
+    "description": "Rule template input label."
+  },
+  "sites_template_ph": {
+    "message": "{date}-invoice-{original}",
+    "description": "Rule template placeholder."
+  },
+  "sites_add_btn": {
+    "message": "Pridėti svetainės taisyklę",
+    "description": "Add-rule button."
+  },
+  "sites_delete": {
+    "message": "Ištrinti taisyklę",
+    "description": "Aria label for a rule's delete button."
+  },
+  "sites_need_both": {
+    "message": "Įveskite ir svetainę, ir šabloną.",
+    "description": "Validation when a rule field is empty."
+  },
+  "sites_add_err": {
+    "message": "Šios taisyklės pridėti nepavyko.",
+    "description": "Generic add-rule failure."
+  },
+  "adv_h1": {
+    "message": "Išplėstinis pavadinimų kūrimas",
+    "description": "Advanced panel heading."
+  },
+  "adv_lede": {
+    "message": "Galingi įrankiai pagal tai, kaip iš tikrųjų tvarkote atsisiuntimus. Įtraukta į „Zovo Pro“.",
+    "description": "Advanced panel intro."
+  },
+  "adv_save": {
+    "message": "Išsaugoti",
+    "description": "Generic save button."
+  },
+  "adv_clear": {
+    "message": "Išvalyti",
+    "description": "Generic clear button."
+  },
+  "adv_unlock": {
+    "message": "Atrakinti su „Pro“",
+    "description": "CTA on a locked Pro card."
+  },
+  "adv_on": {
+    "message": "Įjungta",
+    "description": "Feature toggled on."
+  },
+  "adv_off": {
+    "message": "Išjungta",
+    "description": "Feature toggled off."
+  },
+  "adv_perm_needed": {
+    "message": "Norint tai įjungti, reikalingas leidimas.",
+    "description": "Shown when an optional permission is denied."
+  },
+  "adv_toggle_err": {
+    "message": "Nepavyko atnaujinti šio nustatymo.",
+    "description": "Generic toggle failure."
+  },
+  "adv_folder_h": {
+    "message": "Aplankų nukreipimas",
+    "description": "Folder-routing card heading."
+  },
+  "adv_folder_note": {
+    "message": "Atsisiunčia failus į jūsų atsisiuntimų aplanko poaplankius, pvz. Downloads/{hostname}/…",
+    "description": "Folder-routing explanation."
+  },
+  "adv_folder_label": {
+    "message": "Poaplankio kelias (žymės leidžiamos)",
+    "description": "Folder-path input label."
+  },
+  "adv_folder_ph": {
+    "message": "{hostname}",
+    "description": "Folder-path placeholder."
+  },
+  "adv_folder_err": {
+    "message": "Nepavyko išsaugoti aplankų nukreipimo.",
+    "description": "Folder-routing save failure."
+  },
+  "adv_regex_h": {
+    "message": "Rasti ir pakeisti (regex)",
+    "description": "Regex card heading."
+  },
+  "adv_regex_note": {
+    "message": "Sutvarkykite pavadinimus reguliariąja išraiška prieš juos išsaugant.",
+    "description": "Regex explanation."
+  },
+  "adv_regex_find": {
+    "message": "Rasti",
+    "description": "Regex find input label."
+  },
+  "adv_regex_find_ph": {
+    "message": "\\s+",
+    "description": "Regex find placeholder."
+  },
+  "adv_regex_replace": {
+    "message": "Pakeisti",
+    "description": "Regex replace input label."
+  },
+  "adv_regex_replace_ph": {
+    "message": "-",
+    "description": "Regex replace placeholder."
+  },
+  "adv_regex_flags": {
+    "message": "Vėliavėlės",
+    "description": "Regex flags input label."
+  },
+  "adv_regex_need": {
+    "message": "Įveskite ieškotiną šabloną.",
+    "description": "Validation when the regex find is empty."
+  },
+  "adv_regex_bad": {
+    "message": "Šis šablonas neteisingas arba nesaugus.",
+    "description": "Regex validation failure."
+  },
+  "adv_regex_err": {
+    "message": "Nepavyko išsaugoti šablono.",
+    "description": "Generic regex save failure."
+  },
+  "adv_cleared": {
+    "message": "Išvalyta",
+    "description": "Regex cleared confirmation."
+  },
+  "adv_title_h": {
+    "message": "Puslapio pavadinimo žymė {title}",
+    "description": "Title-token card heading."
+  },
+  "adv_title_note": {
+    "message": "Naudokite šaltinio puslapio pavadinimą failų pavadinimuose. Įjungus tai, „Chrome“ prašo skirtukų leidimo.",
+    "description": "Title-token explanation."
+  },
+  "adv_title_toggle": {
+    "message": "Įjungti {title} žymę",
+    "description": "Title-token toggle label."
+  },
+  "adv_title_aria": {
+    "message": "Įjungti puslapio pavadinimo žymę",
+    "description": "Accessible name for the title-token switch."
+  },
+  "adv_pdf_h": {
+    "message": "PDF pavadinimo žymė {pdftitle}",
+    "description": "PDF-token card heading."
+  },
+  "adv_pdf_note": {
+    "message": "Pavadinkite PDF failus pagal viduje saugomą pavadinimą. Tai nuskaito PDF per tinklą, todėl prašoma prieigos prie svetainės ir pagal numatymą išjungta.",
+    "description": "PDF-token explanation."
+  },
+  "adv_pdf_toggle": {
+    "message": "Įjungti {pdftitle} žymę",
+    "description": "PDF-token toggle label."
+  },
+  "adv_pdf_aria": {
+    "message": "Įjungti PDF pavadinimo žymę",
+    "description": "Accessible name for the PDF-token switch."
+  },
+  "backup_h1": {
+    "message": "Atsarginė kopija ir atkūrimas",
+    "description": "Backup panel heading."
+  },
+  "backup_lede": {
+    "message": "Eksportuokite savo sąranką į failą arba perkelkite ją į kitą įrenginį. Įtraukta į „Zovo Pro“.",
+    "description": "Backup panel intro."
+  },
+  "backup_export_h": {
+    "message": "Eksportuoti konfigūraciją",
+    "description": "Export card heading."
+  },
+  "backup_export_note": {
+    "message": "Atsisiunčia JSON failą su jūsų šablonu, taisyklėmis ir nustatymais. Jokios istorijos, jokių asmens duomenų.",
+    "description": "Export explanation."
+  },
+  "backup_export_btn": {
+    "message": "Eksportuoti į failą",
+    "description": "Export button."
+  },
+  "backup_exported": {
+    "message": "Eksportuota",
+    "description": "Export confirmation."
+  },
+  "backup_export_err": {
+    "message": "Eksportuoti nepavyko.",
+    "description": "Export failure."
+  },
+  "backup_import_h": {
+    "message": "Importuoti konfigūraciją",
+    "description": "Import card heading."
+  },
+  "backup_import_label": {
+    "message": "Įklijuokite eksportuotą konfigūraciją",
+    "description": "Import textarea label."
+  },
+  "backup_import_ph": {
+    "message": "{\"zovo_template\":\"…\"}",
+    "description": "Import textarea placeholder."
+  },
+  "backup_import_btn": {
+    "message": "Importuoti",
+    "description": "Import button."
+  },
+  "backup_imported": {
+    "message": "Importuota",
+    "description": "Import confirmation."
+  },
+  "backup_need_json": {
+    "message": "Pirmiausia įklijuokite konfigūraciją.",
+    "description": "Validation when import is empty."
+  },
+  "backup_import_err": {
+    "message": "Šio failo importuoti nepavyko.",
+    "description": "Import failure."
+  },
+  "lic_h1": {
+    "message": "Jūsų planas",
+    "description": "License panel heading."
+  },
+  "lic_lede": {
+    "message": "Vienas mokėjimas atrakina visas pavadinimų funkcijas visam laikui. Jokios prenumeratos.",
+    "description": "License panel intro."
+  },
+  "lic_current": {
+    "message": "Dabartinis planas",
+    "description": "Current-plan label."
+  },
+  "lic_free_sub": {
+    "message": "Pagrindinis pervadinimas, viena svetainės taisyklė, visam laikui.",
+    "description": "Free-plan subtitle."
+  },
+  "lic_pro_sub": {
+    "message": "Visos pavadinimų funkcijos atrakintos. Dėkojame, kad palaikote „Zovo“.",
+    "description": "Pro-plan subtitle."
+  },
+  "lic_upgrade": {
+    "message": "Atnaujinti į „Pro“",
+    "description": "Upgrade button on the License tab."
+  },
+  "lic_have_key": {
+    "message": "Turiu raktą",
+    "description": "License-key button."
+  },
+  "lic_included_h": {
+    "message": "Ką atrakina „Pro“",
+    "description": "Benefits section label."
+  },
+  "lic_b1": {
+    "message": "Neribotos taisyklės pagal svetainę",
+    "description": "Pro benefit 1."
+  },
+  "lic_b2": {
+    "message": "Aplankų nukreipimas į poaplankius",
+    "description": "Pro benefit 2."
+  },
+  "lic_b3": {
+    "message": "Regex rasti ir pakeisti",
+    "description": "Pro benefit 3."
+  },
+  "lic_b4": {
+    "message": "Puslapio pavadinimo ir PDF pavadinimo žymės",
+    "description": "Pro benefit 4."
+  },
+  "lic_b5": {
+    "message": "Konfigūracijos atsarginė kopija, eksportas ir importas",
+    "description": "Pro benefit 5."
+  },
+  "saved": {
+    "message": "Išsaugota",
+    "description": "Generic saved confirmation."
+  },
+  "err_template": {
+    "message": "Šio šablono išsaugoti nepavyko.",
+    "description": "Generic template save failure."
+  },
+  "err_bad_token": {
+    "message": "Nežinoma žymė šablone: ",
+    "description": "Prefix before the offending token name."
+  },
+  "ob_brand": {
+    "message": "Smart Rename Downloads",
+    "description": "Onboarding brand name."
+  },
+  "ob_by": {
+    "message": "· nuo Zovo",
+    "description": "Onboarding brand attribution suffix."
+  },
+  "ob_skip": {
+    "message": "Praleisti įžangą",
+    "description": "Skip onboarding button."
+  },
+  "ob_back": {
+    "message": "Atgal",
+    "description": "Previous-step button."
+  },
+  "ob_next": {
+    "message": "Toliau",
+    "description": "Next-step button."
+  },
+  "ob_later": {
+    "message": "Galbūt vėliau",
+    "description": "Next-button label on the offer step."
+  },
+  "ob_start": {
+    "message": "Pradėti naudoti",
+    "description": "Final onboarding button."
+  },
+  "ob_stepno": {
+    "message": "{a} iš {b}",
+    "description": "Step counter, e.g. 1 of 6. {a} current, {b} total."
+  },
+  "ob_s1_kicker": {
+    "message": "Atsisiuntimų aplanko problema",
+    "description": "Step 1 kicker."
+  },
+  "ob_s1_title": {
+    "message": "To failo daugiau niekada nerasite.",
+    "description": "Step 1 title."
+  },
+  "ob_s1_pt": {
+    "message": "Sukurta žmonėms, kurie atsisiunčia visą dieną. Tyrėjams, buhalteriams, visiems, kurių atsisiuntimų aplankas tyliai ištrūko iš kontrolės.",
+    "description": "Step 1 secondary paragraph."
+  },
+  "ob_s2_kicker": {
+    "message": "Viena taisyklė, jau įjungta",
+    "description": "Step 2 kicker."
+  },
+  "ob_s2_title": {
+    "message": "Stebėkite, kaip šiukšlinis pavadinimas virsta tikru.",
+    "description": "Step 2 title."
+  },
+  "ob_s2_lede": {
+    "message": "Numatytasis šablonas yra data, tada svetainė, tada originalus pavadinimas. Vos tik atsisiuntimas baigiasi, pavadinimas perrašomas ir įrašomas tiesiai į diską. Jokio paspaudimo, jokio dialogo. Štai jis su tikru failu.",
+    "description": "Step 2 body."
+  },
+  "ob_demo_btn": {
+    "message": "Stebėti pervadinimą",
+    "description": "Button that replays the rename demo."
+  },
+  "ob_saved_as": {
+    "message": "Išsaugota kaip",
+    "description": "Demo label for the original filename."
+  },
+  "ob_renamed_to": {
+    "message": "Pervadinta į",
+    "description": "Demo label for the renamed filename."
+  },
+  "ob_fw_kept": {
+    "message": ".pdf išsaugota",
+    "description": "Token chip: the real extension is kept."
+  },
+  "ob_s3_kicker": {
+    "message": "Dvi minutės, vieną kartą",
+    "description": "Step 3 kicker."
+  },
+  "ob_s3_title": {
+    "message": "Nustatykite pavadinimų šabloną, kurį paliksite visam laikui.",
+    "description": "Step 3 title."
+  },
+  "ob_s3_lede": {
+    "message": "Sukurkite jį iš žymių. Spustelėkite vieną, kad įterptumėte į šabloną ir stebėkite, kaip atsinaujina pavyzdys. Tikrasis failo plėtinys visada paliekamas gale. Išsaugokite, ir kiekvienas būsimas atsisiuntimas sekės tai.",
+    "description": "Step 3 body."
+  },
+  "ob_s3_pt": {
+    "message": "Jis gyvena jūsų naršyklėje. Keiskite bet kada iš nustatymų, ir niekas apie jūsų failus niekada niekur nesiunčiama.",
+    "description": "Step 3 secondary paragraph."
+  },
+  "ob_template_label": {
+    "message": "Jūsų pavadinimų šablonas",
+    "description": "Onboarding template input label."
+  },
+  "ob_result": {
+    "message": "Rezultatas",
+    "description": "Onboarding preview result label."
+  },
+  "ob_save_btn": {
+    "message": "Išsaugoti mano šabloną",
+    "description": "Save-pattern button."
+  },
+  "ob_pattern_saved": {
+    "message": "Šablonas išsaugotas",
+    "description": "Save-pattern button after saving."
+  },
+  "ob_saved_msg": {
+    "message": "Išsaugota. Kiekvienas atsisiuntimas dabar seka tai.",
+    "description": "Confirmation after the pattern is saved."
+  },
+  "ob_s4_kicker": {
+    "message": "Kodėl galite palikti veikti",
+    "description": "Step 4 kicker."
+  },
+  "ob_s4_title": {
+    "message": "Vietinis iš prigimties, sukurtas atvirai vieno kūrėjo.",
+    "description": "Step 4 title."
+  },
+  "ob_s4_lede": {
+    "message": "Jūsų failai ir pervadinimų istorija niekada nepalieka šio įrenginio. Nemokamame plane plėtinys visiškai neatlieka jokio tinklo skambučio, o kodas pakankamai mažas, kad būtų galima perskaityti per vieną kartą.",
+    "description": "Step 4 body."
+  },
+  "ob_stat1_n": {
+    "message": "Vietinis",
+    "description": "Stat 1 value."
+  },
+  "ob_stat1_l": {
+    "message": "kiekvienas pervadinimas vyksta jūsų įrenginyje",
+    "description": "Stat 1 label."
+  },
+  "ob_stat2_n": {
+    "message": "Privatu",
+    "description": "Stat 2 value."
+  },
+  "ob_stat2_l": {
+    "message": "niekas nepalieka šio įrenginio",
+    "description": "Stat 2 label."
+  },
+  "ob_stat3_n": {
+    "message": "Atvira",
+    "description": "Stat 3 value."
+  },
+  "ob_stat3_l": {
+    "message": "sukurta viešai, kiekvienas įrašas",
+    "description": "Stat 3 label."
+  },
+  "ob_s4_pt": {
+    "message": "Atsisiuntimų pervadintuvas yra ta vieta, kur susitinkate su „Zovo“. Didesnis planas — sąžiningas sluoksnis visam plėtinių pasauliui, po vieną įrankį, be šlamšto ir be sekimo.",
+    "description": "Step 4 secondary paragraph."
+  },
+  "ob_link_why": {
+    "message": "Kodėl kuriu „Zovo“",
+    "description": "Link: why Zovo."
+  },
+  "ob_link_vision": {
+    "message": "Vizija",
+    "description": "Link: the vision."
+  },
+  "ob_link_safe": {
+    "message": "Kaip apsaugome jus",
+    "description": "Link: safety."
+  },
+  "ob_trust1_h": {
+    "message": "Viskas lieka jūsų įrenginyje",
+    "description": "Trust point 1 heading."
+  },
+  "ob_trust1_b": {
+    "message": "Jūsų šablonas, taisyklės ir istorija gyvena vietinėje naršyklės saugykloje. Jokios paskyros, jokio sinchronizavimo serverio, niekas neišsiunčiama.",
+    "description": "Trust point 1 body."
+  },
+  "ob_trust2_h": {
+    "message": "Vienas žmogus, kuriantis atvirai",
+    "description": "Trust point 2 heading."
+  },
+  "ob_s5_kicker": {
+    "message": "Sąžiningas sandoris",
+    "description": "Step 5 kicker."
+  },
+  "ob_s5_title": {
+    "message": "Nemokami pervadinimai visam laikui. Arba turėkite viską, vieną kartą.",
+    "description": "Step 5 title."
+  },
+  "ob_s5_lede": {
+    "message": "Tylusis pervadinimo branduolys lieka nemokamas, be jokio apribojimo, kiek failų jis paliečia. Vienas devyniasdešimt devynių dolerių mokėjimas įjungia neribotas taisykles pagal svetainę, aplankų nukreipimą, regex valymą ir pavadinimą pagal puslapio ar PDF pavadinimą.",
+    "description": "Step 5 body."
+  },
+  "ob_plan_free": {
+    "message": "Nemokamas",
+    "description": "Free plan name."
+  },
+  "ob_free_unit": {
+    "message": "visam laikui",
+    "description": "Free plan price unit."
+  },
+  "ob_free1": {
+    "message": "Kiekvienas atsisiuntimas pervadinamas savaime",
+    "description": "Free benefit 1."
+  },
+  "ob_free2": {
+    "message": "Trys pagrindinės žymės: data, svetainė, originalus pavadinimas",
+    "description": "Free benefit 2."
+  },
+  "ob_free3": {
+    "message": "Viena išsaugota taisyklė pagal svetainę",
+    "description": "Free benefit 3."
+  },
+  "ob_free4": {
+    "message": "Konfliktų tvarkymas ir tiesioginis skaitiklis",
+    "description": "Free benefit 4."
+  },
+  "ob_ribbon": {
+    "message": "Geriausia vertė",
+    "description": "Lifetime plan ribbon."
+  },
+  "ob_plan_life": {
+    "message": "Visam laikui",
+    "description": "Lifetime plan name."
+  },
+  "ob_life_unit": {
+    "message": "vienkartinis",
+    "description": "Lifetime plan price unit."
+  },
+  "ob_life1": {
+    "message": "Neribotos taisyklės pagal svetainę",
+    "description": "Lifetime benefit 1."
+  },
+  "ob_life2": {
+    "message": "Nukreipkite failus į atsisiuntimų poaplankius pagal svetainę ar datą",
+    "description": "Lifetime benefit 2."
+  },
+  "ob_life3": {
+    "message": "Regex valymas plius puslapio pavadinimo ir PDF pavadinimo žymės",
+    "description": "Lifetime benefit 3."
+  },
+  "ob_life4": {
+    "message": "Konfigūracijos atsarginė kopija ir importas tarp įrenginių",
+    "description": "Lifetime benefit 4."
+  },
+  "ob_life5": {
+    "message": "Kiekvienas būsimas šio įrankio atnaujinimas, įtrauktas",
+    "description": "Lifetime benefit 5."
+  },
+  "ob_life6": {
+    "message": "Vienas mokėjimas, jokios prenumeratos, niekada",
+    "description": "Lifetime benefit 6."
+  },
+  "ob_life_cta": {
+    "message": "Įsigyti visam laikui už $$99",
+    "description": "Lifetime purchase CTA."
+  },
+  "ob_guarantee": {
+    "message": "14 dienų grąžinimas, be klausimų. Norite mėnesinio? Tame pačiame puslapyje jis kainuoja $$4.99.",
+    "description": "Refund guarantee line."
+  },
+  "ob_s6_kicker": {
+    "message": "Jūs pasiruošę",
+    "description": "Step 6 kicker."
+  },
+  "ob_s6_title": {
+    "message": "Nieko nebeliko daryti. Jau veikia.",
+    "description": "Step 6 title."
+  },
+  "ob_s6_lede": {
+    "message": "Kitas jūsų atsisiųstas failas savaime gauna švarų pavadinimą. Jokio mygtuko spausti, jokio dialogo patvirtinti. Štai kas vyksta nuo dabar.",
+    "description": "Step 6 body."
+  },
+  "ob_dev_h": {
+    "message": "Nuo kūrėjo",
+    "description": "Developer note heading."
+  },
+  "ob_dev_b": {
+    "message": "Kuriu „Zovo“ pats, atvirai. Jei kas nors sugenda, parašykite man, ir aš atsakau. Pervadintuvai yra tik pradžia. Planas — sąžiningas sluoksnis visai naršyklei, o jūsų devyniasdešimt devyni doleriai išleidžia kitą jo dalį.",
+    "description": "Developer note body."
+  },
+  "ob_link_github": {
+    "message": "Susisiekite su manimi „GitHub“",
+    "description": "Link: GitHub."
+  },
+  "ob_link_going": {
+    "message": "Kur tai eina",
+    "description": "Link: roadmap."
+  },
+  "ob_cheat1_k": {
+    "message": "Kiekvienas atsisiuntimas",
+    "description": "Cheat-sheet row 1 key."
+  },
+  "ob_cheat1_v": {
+    "message": "Pervadinta įrašant",
+    "description": "Cheat-sheet row 1 value."
+  },
+  "ob_cheat2_k": {
+    "message": "Iškylantis langas",
+    "description": "Cheat-sheet row 2 key."
+  },
+  "ob_cheat2_v": {
+    "message": "Skaičiuoja kiekvieną pervadinimą",
+    "description": "Cheat-sheet row 2 value."
+  },
+  "ob_cheat3_k": {
+    "message": "Jūsų šablonas",
+    "description": "Cheat-sheet row 3 key."
+  },
+  "ob_cheat3_v": {
+    "message": "Redaguokite jį nustatymuose",
+    "description": "Cheat-sheet row 3 value."
+  },
+  "ob_cheat4_k": {
+    "message": "Pirma svetainės taisyklė",
+    "description": "Cheat-sheet row 4 key."
+  },
+  "ob_cheat4_v": {
+    "message": "Nemokama pridėti",
+    "description": "Cheat-sheet row 4 value."
+  }
+}

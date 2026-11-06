@@ -1,0 +1,834 @@
+{
+  "extName": {
+    "message": "Smart Rename Downloads",
+    "description": "Extension name shown in the Chrome Web Store and toolbar."
+  },
+  "extDesc": {
+    "message": "Namakan semula setiap muat turun secara automatik dengan token tarikh, tapak dan tajuk. Peraturan setiap tapak, regex",
+    "description": "Chrome Web Store short description (max 132 chars)."
+  },
+  "popup_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Popup header title."
+  },
+  "popup_open_settings": {
+    "message": "Buka tetapan",
+    "description": "Aria label for the settings gear button."
+  },
+  "popup_settings": {
+    "message": "Tetapan",
+    "description": "Tooltip for the settings gear button."
+  },
+  "popup_health": {
+    "message": "Penamaan semula dijeda — kebenaran Muat Turun telah dialih keluar.",
+    "description": "Shown when the downloads permission is missing."
+  },
+  "popup_regrant": {
+    "message": "Dayakan semula",
+    "description": "Link to re-grant the downloads permission."
+  },
+  "popup_hero_label": {
+    "message": "Fail dinamakan semula",
+    "description": "Label under the big lifetime rename counter."
+  },
+  "popup_hero_sub": {
+    "message": "Setiap muat turun dinamakan semula secara automatik, sebelum ia mencapai cakera anda.",
+    "description": "Supporting line under the hero counter."
+  },
+  "popup_master_title": {
+    "message": "Nama semula muat turun secara automatik",
+    "description": "Master on/off switch title."
+  },
+  "popup_master_aria": {
+    "message": "Togol penamaan semula muat turun automatik",
+    "description": "Accessible name for the master switch."
+  },
+  "popup_master_on": {
+    "message": "Hidup — menamakan semula setiap muat turun",
+    "description": "Master switch note when enabled."
+  },
+  "popup_master_off": {
+    "message": "Mati — Chrome mengekalkan nama lalainya",
+    "description": "Master switch note when disabled."
+  },
+  "popup_recent": {
+    "message": "Penamaan semula terkini",
+    "description": "Section label for the recent-renames list."
+  },
+  "popup_empty_title": {
+    "message": "Sedia bila-bila anda mahu",
+    "description": "Empty-state headline in the popup."
+  },
+  "popup_empty_text": {
+    "message": "Muat turun anda seterusnya akan dinamakan semula secara automatik. Ia akan muncul di sini.",
+    "description": "Empty-state body in the popup."
+  },
+  "popup_milestone_text": {
+    "message": "Smart Rename telah menyusun {n} muat turun. Pro memfailkannya ke dalam folder secara automatik.",
+    "description": "Post-success upgrade nudge. {n} is the rename count."
+  },
+  "popup_milestone_cta": {
+    "message": "Lihat Pro",
+    "description": "CTA on the milestone nudge."
+  },
+  "popup_dismiss": {
+    "message": "Tolak",
+    "description": "Dismiss the milestone nudge."
+  },
+  "popup_trust": {
+    "message": "Setempat · Tanpa akaun · Tanpa penjejakan",
+    "description": "Trust line in the popup footer."
+  },
+  "popup_upgrade": {
+    "message": "Naik taraf ke Pro",
+    "description": "Upgrade button in the popup footer."
+  },
+  "flag_timeout": {
+    "message": "kekal lalai",
+    "description": "Recent-list flag: rename fell back to Chrome's default name (timeout)."
+  },
+  "flag_sanitize": {
+    "message": "kekal lalai",
+    "description": "Recent-list flag: name could not be sanitized."
+  },
+  "flag_nomatch": {
+    "message": "tiada padanan",
+    "description": "Recent-list flag: no site rule matched."
+  },
+  "opt_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Options brand name."
+  },
+  "opt_trust": {
+    "message": "Segalanya kekal pada peranti ini. Tanpa penjejakan.",
+    "description": "Options sidebar trust line."
+  },
+  "aria_theme": {
+    "message": "Tema warna",
+    "description": "Aria label for the theme radiogroup."
+  },
+  "theme_system": {
+    "message": "Sistem",
+    "description": "Theme option: follow OS."
+  },
+  "theme_light": {
+    "message": "Cerah",
+    "description": "Theme option: light."
+  },
+  "theme_dark": {
+    "message": "Gelap",
+    "description": "Theme option: dark."
+  },
+  "tier_free": {
+    "message": "Percuma",
+    "description": "Free plan label."
+  },
+  "tier_trial": {
+    "message": "Percubaan",
+    "description": "Trial plan label."
+  },
+  "tier_pro": {
+    "message": "Pro",
+    "description": "Pro plan label."
+  },
+  "tab_template": {
+    "message": "Templat",
+    "description": "Settings tab: naming template."
+  },
+  "tab_sites": {
+    "message": "Peraturan setiap tapak",
+    "description": "Settings tab: per-site rules."
+  },
+  "tab_advanced": {
+    "message": "Lanjutan",
+    "description": "Settings tab: advanced naming."
+  },
+  "tab_backup": {
+    "message": "Sandaran",
+    "description": "Settings tab: backup and restore."
+  },
+  "tab_license": {
+    "message": "Lesen",
+    "description": "Settings tab: license and plan."
+  },
+  "tpl_h1": {
+    "message": "Templat penamaan",
+    "description": "Template panel heading."
+  },
+  "tpl_lede": {
+    "message": "Bina nama fail yang diterima oleh setiap muat turun. Sambungan fail sebenar sentiasa dikekalkan.",
+    "description": "Template panel intro."
+  },
+  "tpl_label": {
+    "message": "Templat",
+    "description": "Template input label."
+  },
+  "tpl_tokens_aria": {
+    "message": "Sisipkan token",
+    "description": "Aria label for the token chip row."
+  },
+  "tpl_conflict": {
+    "message": "Jika fail dengan nama itu sudah wujud",
+    "description": "Conflict-policy select label."
+  },
+  "conflict_uniquify": {
+    "message": "Tambah nombor — kekalkan kedua-duanya",
+    "description": "Conflict policy: uniquify."
+  },
+  "conflict_overwrite": {
+    "message": "Tulis ganti fail lama",
+    "description": "Conflict policy: overwrite."
+  },
+  "conflict_prompt": {
+    "message": "Tanya saya setiap kali",
+    "description": "Conflict policy: prompt."
+  },
+  "tpl_save": {
+    "message": "Simpan templat",
+    "description": "Save-template button."
+  },
+  "tpl_preview_h": {
+    "message": "Pratonton langsung",
+    "description": "Preview section label."
+  },
+  "tpl_pv_host": {
+    "message": "Tapak contoh",
+    "description": "Preview sample-host input label."
+  },
+  "tpl_pv_name": {
+    "message": "Muat turun contoh",
+    "description": "Preview sample-name input label."
+  },
+  "tpl_pv_result": {
+    "message": "Keputusan",
+    "description": "Preview result label."
+  },
+  "tpl_pv_hint": {
+    "message": "“/” dalam templat Percuma disimpan sebagai “-”. Penghalaan folder ialah ciri Pro.",
+    "description": "Preview hint about slashes and folder routing."
+  },
+  "sites_h1": {
+    "message": "Peraturan setiap tapak",
+    "description": "Sites panel heading."
+  },
+  "sites_lede": {
+    "message": "Beri tapak tertentu templatnya sendiri — invois difailkan, kertas dinamakan. Percuma termasuk satu peraturan supaya anda boleh merasainya; Pro tidak terhad.",
+    "description": "Sites panel intro."
+  },
+  "sites_count": {
+    "message": "0 daripada 1 peraturan percuma digunakan",
+    "description": "Initial site-rule count text."
+  },
+  "sites_count_free": {
+    "message": "{n} daripada 1 peraturan percuma digunakan",
+    "description": "Site-rule count for Free. {n} is the count."
+  },
+  "sites_count_pro": {
+    "message": "{n} peraturan",
+    "description": "Site-rule count for Pro. {n} is the count."
+  },
+  "sites_empty": {
+    "message": "Belum ada peraturan tapak. Tambah satu di bawah.",
+    "description": "Empty state for site rules."
+  },
+  "sites_add_h": {
+    "message": "Tambah peraturan",
+    "description": "Add-rule section label."
+  },
+  "sites_match": {
+    "message": "Tapak (hos atau *.host)",
+    "description": "Rule match input label."
+  },
+  "sites_match_ph": {
+    "message": "stripe.com",
+    "description": "Rule match placeholder."
+  },
+  "sites_template": {
+    "message": "Templat untuk tapak ini",
+    "description": "Rule template input label."
+  },
+  "sites_template_ph": {
+    "message": "{date}-invoice-{original}",
+    "description": "Rule template placeholder."
+  },
+  "sites_add_btn": {
+    "message": "Tambah peraturan tapak",
+    "description": "Add-rule button."
+  },
+  "sites_delete": {
+    "message": "Padam peraturan",
+    "description": "Aria label for a rule's delete button."
+  },
+  "sites_need_both": {
+    "message": "Masukkan kedua-dua tapak dan templat.",
+    "description": "Validation when a rule field is empty."
+  },
+  "sites_add_err": {
+    "message": "Peraturan itu tidak dapat ditambah.",
+    "description": "Generic add-rule failure."
+  },
+  "adv_h1": {
+    "message": "Penamaan lanjutan",
+    "description": "Advanced panel heading."
+  },
+  "adv_lede": {
+    "message": "Alat berkuasa untuk cara anda benar-benar memfailkan muat turun. Termasuk dalam Zovo Pro.",
+    "description": "Advanced panel intro."
+  },
+  "adv_save": {
+    "message": "Simpan",
+    "description": "Generic save button."
+  },
+  "adv_clear": {
+    "message": "Kosongkan",
+    "description": "Generic clear button."
+  },
+  "adv_unlock": {
+    "message": "Buka kunci dengan Pro",
+    "description": "CTA on a locked Pro card."
+  },
+  "adv_on": {
+    "message": "Didayakan",
+    "description": "Feature toggled on."
+  },
+  "adv_off": {
+    "message": "Dilumpuhkan",
+    "description": "Feature toggled off."
+  },
+  "adv_perm_needed": {
+    "message": "Kebenaran diperlukan untuk mendayakan ini.",
+    "description": "Shown when an optional permission is denied."
+  },
+  "adv_toggle_err": {
+    "message": "Tidak dapat mengemas kini tetapan ini.",
+    "description": "Generic toggle failure."
+  },
+  "adv_folder_h": {
+    "message": "Penghalaan folder",
+    "description": "Folder-routing card heading."
+  },
+  "adv_folder_note": {
+    "message": "Muat turun fail ke dalam subfolder folder Muat Turun anda, cth. Downloads/{hostname}/…",
+    "description": "Folder-routing explanation."
+  },
+  "adv_folder_label": {
+    "message": "Laluan subfolder (token dibenarkan)",
+    "description": "Folder-path input label."
+  },
+  "adv_folder_ph": {
+    "message": "{hostname}",
+    "description": "Folder-path placeholder."
+  },
+  "adv_folder_err": {
+    "message": "Tidak dapat menyimpan penghalaan folder.",
+    "description": "Folder-routing save failure."
+  },
+  "adv_regex_h": {
+    "message": "Cari & ganti (regex)",
+    "description": "Regex card heading."
+  },
+  "adv_regex_note": {
+    "message": "Kemas kini nama dengan ungkapan biasa sebelum ia disimpan.",
+    "description": "Regex explanation."
+  },
+  "adv_regex_find": {
+    "message": "Cari",
+    "description": "Regex find input label."
+  },
+  "adv_regex_find_ph": {
+    "message": "\\s+",
+    "description": "Regex find placeholder."
+  },
+  "adv_regex_replace": {
+    "message": "Ganti",
+    "description": "Regex replace input label."
+  },
+  "adv_regex_replace_ph": {
+    "message": "-",
+    "description": "Regex replace placeholder."
+  },
+  "adv_regex_flags": {
+    "message": "Bendera",
+    "description": "Regex flags input label."
+  },
+  "adv_regex_need": {
+    "message": "Masukkan corak untuk dicari.",
+    "description": "Validation when the regex find is empty."
+  },
+  "adv_regex_bad": {
+    "message": "Corak itu tidak sah atau tidak selamat.",
+    "description": "Regex validation failure."
+  },
+  "adv_regex_err": {
+    "message": "Tidak dapat menyimpan corak.",
+    "description": "Generic regex save failure."
+  },
+  "adv_cleared": {
+    "message": "Dikosongkan",
+    "description": "Regex cleared confirmation."
+  },
+  "adv_title_h": {
+    "message": "Token tajuk halaman {title}",
+    "description": "Title-token card heading."
+  },
+  "adv_title_note": {
+    "message": "Gunakan tajuk halaman sumber dalam nama fail. Menghidupkan ini meminta kebenaran Tab daripada Chrome.",
+    "description": "Title-token explanation."
+  },
+  "adv_title_toggle": {
+    "message": "Dayakan token {title}",
+    "description": "Title-token toggle label."
+  },
+  "adv_title_aria": {
+    "message": "Dayakan token tajuk halaman",
+    "description": "Accessible name for the title-token switch."
+  },
+  "adv_pdf_h": {
+    "message": "Token tajuk PDF {pdftitle}",
+    "description": "PDF-token card heading."
+  },
+  "adv_pdf_note": {
+    "message": "Namakan PDF mengikut tajuk yang disimpan dalam fail. Ini membaca PDF melalui rangkaian, jadi ia meminta akses tapak dan dimatikan secara lalai.",
+    "description": "PDF-token explanation."
+  },
+  "adv_pdf_toggle": {
+    "message": "Dayakan token {pdftitle}",
+    "description": "PDF-token toggle label."
+  },
+  "adv_pdf_aria": {
+    "message": "Dayakan token tajuk PDF",
+    "description": "Accessible name for the PDF-token switch."
+  },
+  "backup_h1": {
+    "message": "Sandaran & pemulihan",
+    "description": "Backup panel heading."
+  },
+  "backup_lede": {
+    "message": "Eksport persediaan anda ke fail, atau pindahkannya ke mesin lain. Termasuk dalam Zovo Pro.",
+    "description": "Backup panel intro."
+  },
+  "backup_export_h": {
+    "message": "Eksport konfigurasi",
+    "description": "Export card heading."
+  },
+  "backup_export_note": {
+    "message": "Muat turun fail JSON dengan templat, peraturan dan tetapan anda. Tiada sejarah, tiada data peribadi.",
+    "description": "Export explanation."
+  },
+  "backup_export_btn": {
+    "message": "Eksport ke fail",
+    "description": "Export button."
+  },
+  "backup_exported": {
+    "message": "Dieksport",
+    "description": "Export confirmation."
+  },
+  "backup_export_err": {
+    "message": "Eksport gagal.",
+    "description": "Export failure."
+  },
+  "backup_import_h": {
+    "message": "Import konfigurasi",
+    "description": "Import card heading."
+  },
+  "backup_import_label": {
+    "message": "Tampal konfigurasi yang dieksport",
+    "description": "Import textarea label."
+  },
+  "backup_import_ph": {
+    "message": "{\"zovo_template\":\"…\"}",
+    "description": "Import textarea placeholder."
+  },
+  "backup_import_btn": {
+    "message": "Import",
+    "description": "Import button."
+  },
+  "backup_imported": {
+    "message": "Diimport",
+    "description": "Import confirmation."
+  },
+  "backup_need_json": {
+    "message": "Tampal konfigurasi dahulu.",
+    "description": "Validation when import is empty."
+  },
+  "backup_import_err": {
+    "message": "Fail itu tidak dapat diimport.",
+    "description": "Import failure."
+  },
+  "lic_h1": {
+    "message": "Pelan anda",
+    "description": "License panel heading."
+  },
+  "lic_lede": {
+    "message": "Satu pembayaran membuka kunci setiap ciri penamaan, selamanya. Tiada langganan.",
+    "description": "License panel intro."
+  },
+  "lic_current": {
+    "message": "Pelan semasa",
+    "description": "Current-plan label."
+  },
+  "lic_free_sub": {
+    "message": "Penamaan semula teras, satu peraturan tapak, selamanya.",
+    "description": "Free-plan subtitle."
+  },
+  "lic_pro_sub": {
+    "message": "Setiap ciri penamaan dibuka kunci. Terima kasih kerana menyokong Zovo.",
+    "description": "Pro-plan subtitle."
+  },
+  "lic_upgrade": {
+    "message": "Naik taraf ke Pro",
+    "description": "Upgrade button on the License tab."
+  },
+  "lic_have_key": {
+    "message": "Saya ada kunci",
+    "description": "License-key button."
+  },
+  "lic_included_h": {
+    "message": "Apa yang Pro buka kunci",
+    "description": "Benefits section label."
+  },
+  "lic_b1": {
+    "message": "Peraturan setiap tapak tanpa had",
+    "description": "Pro benefit 1."
+  },
+  "lic_b2": {
+    "message": "Penghalaan folder ke dalam subfolder",
+    "description": "Pro benefit 2."
+  },
+  "lic_b3": {
+    "message": "Regex cari & ganti",
+    "description": "Pro benefit 3."
+  },
+  "lic_b4": {
+    "message": "Token tajuk halaman dan tajuk PDF",
+    "description": "Pro benefit 4."
+  },
+  "lic_b5": {
+    "message": "Sandaran, eksport & import konfigurasi",
+    "description": "Pro benefit 5."
+  },
+  "saved": {
+    "message": "Disimpan",
+    "description": "Generic saved confirmation."
+  },
+  "err_template": {
+    "message": "Templat itu tidak dapat disimpan.",
+    "description": "Generic template save failure."
+  },
+  "err_bad_token": {
+    "message": "Token tidak dikenali dalam templat: ",
+    "description": "Prefix before the offending token name."
+  },
+  "ob_brand": {
+    "message": "Smart Rename Downloads",
+    "description": "Onboarding brand name."
+  },
+  "ob_by": {
+    "message": "· oleh Zovo",
+    "description": "Onboarding brand attribution suffix."
+  },
+  "ob_skip": {
+    "message": "Langkau pengenalan",
+    "description": "Skip onboarding button."
+  },
+  "ob_back": {
+    "message": "Kembali",
+    "description": "Previous-step button."
+  },
+  "ob_next": {
+    "message": "Seterusnya",
+    "description": "Next-step button."
+  },
+  "ob_later": {
+    "message": "Mungkin nanti",
+    "description": "Next-button label on the offer step."
+  },
+  "ob_start": {
+    "message": "Mula menggunakannya",
+    "description": "Final onboarding button."
+  },
+  "ob_stepno": {
+    "message": "{a} daripada {b}",
+    "description": "Step counter, e.g. 1 of 6. {a} current, {b} total."
+  },
+  "ob_s1_kicker": {
+    "message": "Masalah folder muat turun",
+    "description": "Step 1 kicker."
+  },
+  "ob_s1_title": {
+    "message": "Anda tidak akan menemui fail itu lagi.",
+    "description": "Step 1 title."
+  },
+  "ob_s1_pt": {
+    "message": "Dibina untuk orang yang memuat turun sepanjang hari. Penyelidik, akauntan, sesiapa yang folder Muat Turunnya diam-diam tidak terkawal.",
+    "description": "Step 1 secondary paragraph."
+  },
+  "ob_s2_kicker": {
+    "message": "Satu peraturan, sudah hidup",
+    "description": "Step 2 kicker."
+  },
+  "ob_s2_title": {
+    "message": "Saksikan nama sampah bertukar menjadi nama sebenar.",
+    "description": "Step 2 title."
+  },
+  "ob_s2_lede": {
+    "message": "Corak lalai ialah tarikh, kemudian tapak, kemudian nama asal. Sebaik sahaja muat turun selesai, nama ditulis semula dan disimpan terus ke cakera. Tiada klik, tiada dialog. Inilah dia pada fail sebenar.",
+    "description": "Step 2 body."
+  },
+  "ob_demo_btn": {
+    "message": "Saksikan penamaan semula",
+    "description": "Button that replays the rename demo."
+  },
+  "ob_saved_as": {
+    "message": "Disimpan sebagai",
+    "description": "Demo label for the original filename."
+  },
+  "ob_renamed_to": {
+    "message": "Dinamakan semula kepada",
+    "description": "Demo label for the renamed filename."
+  },
+  "ob_fw_kept": {
+    "message": ".pdf dikekalkan",
+    "description": "Token chip: the real extension is kept."
+  },
+  "ob_s3_kicker": {
+    "message": "Dua minit, sekali sahaja",
+    "description": "Step 3 kicker."
+  },
+  "ob_s3_title": {
+    "message": "Tetapkan corak penamaan yang anda kekalkan selamanya.",
+    "description": "Step 3 title."
+  },
+  "ob_s3_lede": {
+    "message": "Bina daripada token. Klik satu untuk menjatuhkannya ke dalam corak dan saksikan sampel dikemas kini. Sambungan fail sebenar sentiasa dikekalkan di hujung. Simpan ia dan setiap muat turun masa depan mengikutinya.",
+    "description": "Step 3 body."
+  },
+  "ob_s3_pt": {
+    "message": "Ia berada dalam pelayar anda. Ubah bila-bila masa daripada tetapan, dan tiada apa-apa tentang fail anda pernah dihantar ke mana-mana.",
+    "description": "Step 3 secondary paragraph."
+  },
+  "ob_template_label": {
+    "message": "Corak penamaan anda",
+    "description": "Onboarding template input label."
+  },
+  "ob_result": {
+    "message": "Keputusan",
+    "description": "Onboarding preview result label."
+  },
+  "ob_save_btn": {
+    "message": "Simpan corak saya",
+    "description": "Save-pattern button."
+  },
+  "ob_pattern_saved": {
+    "message": "Corak disimpan",
+    "description": "Save-pattern button after saving."
+  },
+  "ob_saved_msg": {
+    "message": "Disimpan. Setiap muat turun mengikutinya sekarang.",
+    "description": "Confirmation after the pattern is saved."
+  },
+  "ob_s4_kicker": {
+    "message": "Mengapa anda boleh biarkannya berjalan",
+    "description": "Step 4 kicker."
+  },
+  "ob_s4_title": {
+    "message": "Setempat mengikut reka bentuk, dibina secara terbuka oleh seorang pembangun.",
+    "description": "Step 4 title."
+  },
+  "ob_s4_lede": {
+    "message": "Fail anda dan sejarah penamaan semula anda tidak pernah meninggalkan mesin ini. Pada pelan percuma, sambungan tidak membuat sebarang panggilan rangkaian langsung, dan kod cukup kecil untuk dibaca dalam satu duduk.",
+    "description": "Step 4 body."
+  },
+  "ob_stat1_n": {
+    "message": "Setempat",
+    "description": "Stat 1 value."
+  },
+  "ob_stat1_l": {
+    "message": "setiap penamaan semula berjalan pada peranti anda",
+    "description": "Stat 1 label."
+  },
+  "ob_stat2_n": {
+    "message": "Peribadi",
+    "description": "Stat 2 value."
+  },
+  "ob_stat2_l": {
+    "message": "tiada apa-apa meninggalkan mesin ini",
+    "description": "Stat 2 label."
+  },
+  "ob_stat3_n": {
+    "message": "Terbuka",
+    "description": "Stat 3 value."
+  },
+  "ob_stat3_l": {
+    "message": "dibina secara terbuka, setiap commit",
+    "description": "Stat 3 label."
+  },
+  "ob_s4_pt": {
+    "message": "Penama semula muat turun ialah tempat anda bertemu Zovo. Pelan yang lebih besar ialah lapisan jujur untuk seluruh dunia sambungan, satu alat pada satu masa, tanpa spam dan tanpa penjejakan.",
+    "description": "Step 4 secondary paragraph."
+  },
+  "ob_link_why": {
+    "message": "Mengapa saya membina Zovo",
+    "description": "Link: why Zovo."
+  },
+  "ob_link_vision": {
+    "message": "Visinya",
+    "description": "Link: the vision."
+  },
+  "ob_link_safe": {
+    "message": "Bagaimana kami memastikan anda selamat",
+    "description": "Link: safety."
+  },
+  "ob_trust1_h": {
+    "message": "Segalanya kekal pada peranti anda",
+    "description": "Trust point 1 heading."
+  },
+  "ob_trust1_b": {
+    "message": "Corak, peraturan dan sejarah anda berada dalam storan pelayar setempat. Tiada akaun, tiada pelayan penyegerakan, tiada apa-apa dihantar keluar.",
+    "description": "Trust point 1 body."
+  },
+  "ob_trust2_h": {
+    "message": "Seorang, membina secara terbuka",
+    "description": "Trust point 2 heading."
+  },
+  "ob_s5_kicker": {
+    "message": "Pertukaran yang jujur",
+    "description": "Step 5 kicker."
+  },
+  "ob_s5_title": {
+    "message": "Penamaan semula percuma selamanya. Atau miliki semuanya, sekali.",
+    "description": "Step 5 title."
+  },
+  "ob_s5_lede": {
+    "message": "Teras penamaan semula senyap kekal percuma, tanpa had berapa banyak fail yang disentuhnya. Satu pembayaran sembilan puluh sembilan dolar menghidupkan peraturan setiap tapak tanpa had, penghalaan folder, pembersihan regex, dan penamaan daripada tajuk halaman atau PDF.",
+    "description": "Step 5 body."
+  },
+  "ob_plan_free": {
+    "message": "Percuma",
+    "description": "Free plan name."
+  },
+  "ob_free_unit": {
+    "message": "selamanya",
+    "description": "Free plan price unit."
+  },
+  "ob_free1": {
+    "message": "Setiap muat turun dinamakan semula dengan sendirinya",
+    "description": "Free benefit 1."
+  },
+  "ob_free2": {
+    "message": "Tiga token teras: tarikh, tapak, nama asal",
+    "description": "Free benefit 2."
+  },
+  "ob_free3": {
+    "message": "Satu peraturan setiap tapak yang disimpan",
+    "description": "Free benefit 3."
+  },
+  "ob_free4": {
+    "message": "Pengendalian konflik dan pembilang langsung",
+    "description": "Free benefit 4."
+  },
+  "ob_ribbon": {
+    "message": "Nilai terbaik",
+    "description": "Lifetime plan ribbon."
+  },
+  "ob_plan_life": {
+    "message": "Seumur hidup",
+    "description": "Lifetime plan name."
+  },
+  "ob_life_unit": {
+    "message": "sekali sahaja",
+    "description": "Lifetime plan price unit."
+  },
+  "ob_life1": {
+    "message": "Peraturan setiap tapak tanpa had",
+    "description": "Lifetime benefit 1."
+  },
+  "ob_life2": {
+    "message": "Halakan fail ke dalam subfolder Muat Turun mengikut tapak atau tarikh",
+    "description": "Lifetime benefit 2."
+  },
+  "ob_life3": {
+    "message": "Pembersihan regex serta token tajuk halaman dan tajuk PDF",
+    "description": "Lifetime benefit 3."
+  },
+  "ob_life4": {
+    "message": "Sandaran dan import konfigurasi merentas mesin",
+    "description": "Lifetime benefit 4."
+  },
+  "ob_life5": {
+    "message": "Setiap kemas kini masa depan untuk alat ini, termasuk",
+    "description": "Lifetime benefit 5."
+  },
+  "ob_life6": {
+    "message": "Satu pembayaran, tiada langganan, selamanya",
+    "description": "Lifetime benefit 6."
+  },
+  "ob_life_cta": {
+    "message": "Dapatkan seumur hidup dengan $$99",
+    "description": "Lifetime purchase CTA."
+  },
+  "ob_guarantee": {
+    "message": "Bayaran balik 14 hari, tanpa soalan. Lebih suka bulanan? Ia $$4.99 pada halaman yang sama.",
+    "description": "Refund guarantee line."
+  },
+  "ob_s6_kicker": {
+    "message": "Anda sudah sedia",
+    "description": "Step 6 kicker."
+  },
+  "ob_s6_title": {
+    "message": "Tiada apa-apa lagi untuk dilakukan. Ia sudah berfungsi.",
+    "description": "Step 6 title."
+  },
+  "ob_s6_lede": {
+    "message": "Fail seterusnya yang anda muat turun mendapat nama yang bersih dengan sendirinya. Tiada butang untuk ditekan, tiada dialog untuk disahkan. Inilah yang berlaku dari sini.",
+    "description": "Step 6 body."
+  },
+  "ob_dev_h": {
+    "message": "Daripada pembangun",
+    "description": "Developer note heading."
+  },
+  "ob_dev_b": {
+    "message": "Saya membina Zovo sendiri, secara terbuka. Jika sesuatu rosak, tulis kepada saya dan saya menjawab. Penama semula hanyalah permulaan. Rancangannya ialah lapisan jujur untuk seluruh pelayar, dan sembilan puluh sembilan dolar anda menghantar bahagian seterusnya.",
+    "description": "Developer note body."
+  },
+  "ob_link_github": {
+    "message": "Hubungi saya di GitHub",
+    "description": "Link: GitHub."
+  },
+  "ob_link_going": {
+    "message": "Ke mana ini menuju",
+    "description": "Link: roadmap."
+  },
+  "ob_cheat1_k": {
+    "message": "Setiap muat turun",
+    "description": "Cheat-sheet row 1 key."
+  },
+  "ob_cheat1_v": {
+    "message": "Dinamakan semula semasa disimpan",
+    "description": "Cheat-sheet row 1 value."
+  },
+  "ob_cheat2_k": {
+    "message": "Pop timbul",
+    "description": "Cheat-sheet row 2 key."
+  },
+  "ob_cheat2_v": {
+    "message": "Mengira setiap penamaan semula",
+    "description": "Cheat-sheet row 2 value."
+  },
+  "ob_cheat3_k": {
+    "message": "Corak anda",
+    "description": "Cheat-sheet row 3 key."
+  },
+  "ob_cheat3_v": {
+    "message": "Edit dalam tetapan",
+    "description": "Cheat-sheet row 3 value."
+  },
+  "ob_cheat4_k": {
+    "message": "Peraturan tapak pertama",
+    "description": "Cheat-sheet row 4 key."
+  },
+  "ob_cheat4_v": {
+    "message": "Percuma untuk ditambah",
+    "description": "Cheat-sheet row 4 value."
+  }
+}

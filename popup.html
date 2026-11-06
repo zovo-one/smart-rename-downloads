@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Smart Rename Downloads</title>
+    <link rel="stylesheet" href="styles/zovo-base.css">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body class="zovo zovo-root">
+    <main class="zovo-popup srp" aria-labelledby="srp-title">
+        <!-- Header -->
+        <header class="zovo-header srp__head">
+            <span class="srp__mark" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3v10"></path>
+                    <path d="m8 11 4 4 4-4"></path>
+                    <path d="M5 19h14"></path>
+                </svg>
+            </span>
+            <h1 class="zovo-header__title" id="srp-title" data-i18n="popup_title">Smart Rename Downloads</h1>
+            <button type="button" id="srp-settings" class="srp__icon-btn"
+                    aria-label="Open settings" data-i18n-aria-label="popup_open_settings"
+                    title="Settings" data-i18n-title="popup_settings">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
+            </button>
+        </header>
+
+        <!-- Permission-lost banner (hidden unless health = degraded) -->
+        <div id="srp-health" class="srp__health" role="alert" hidden>
+            <span data-i18n="popup_health">Renaming paused — the Downloads permission was removed.</span>
+            <a id="srp-regrant" href="#" data-i18n="popup_regrant">Re-enable</a>
+        </div>
+
+        <div class="zovo-stack srp__stack">
+            <!-- Hero: the ONE number -->
+            <section class="zovo-card srp__hero" aria-labelledby="srp-hero-label">
+                <div class="zovo-hero srp__hero-inner">
+                    <div id="srp-count" class="zovo-hero__num" role="status" aria-live="polite">0</div>
+                    <div class="zovo-hero__label" id="srp-hero-label" data-i18n="popup_hero_label">Files renamed</div>
+                    <p class="zovo-hero__sub srp__hero-sub" id="srp-hero-sub" data-i18n="popup_hero_sub">
+                        Every download is renamed automatically, before it hits your disk.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Master switch -->
+            <section class="zovo-card zovo-card--flush srp__switch-card">
+                <div class="srp__switch-row">
+                    <div class="srp__switch-text">
+                        <div class="srp__switch-title" data-i18n="popup_master_title">Auto-rename downloads</div>
+                        <div class="srp__switch-note" id="srp-master-note" data-i18n="popup_master_on">On — renaming every download</div>
+                    </div>
+                    <button type="button" id="srp-master" class="srp__switch" role="switch" aria-checked="true"
+                            aria-label="Toggle automatic download renaming"
+                            data-i18n-aria-label="popup_master_aria">
+                        <span class="srp__switch-knob" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Recent renames -->
+            <section class="srp__recent" aria-labelledby="srp-recent-label">
+                <h2 class="zovo-eyebrow" id="srp-recent-label" data-i18n="popup_recent">Recent renames</h2>
+                <ul class="srp__list" id="srp-recent-list"></ul>
+                <div class="zovo-empty srp__empty" id="srp-empty" hidden>
+                    <div class="srp__empty-art" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor"
+                             stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                            <path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2z"></path>
+                            <path d="M9 13h6"></path>
+                            <path d="M9 17h4"></path>
+                        </svg>
+                    </div>
+                    <div class="zovo-empty__title" data-i18n="popup_empty_title">Ready when you are</div>
+                    <p class="zovo-empty__text" data-i18n="popup_empty_text">
+                        Your next download will be renamed automatically. It will show up here.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Post-success upgrade nudge (shown once past the milestone, free only) -->
+            <section class="zovo-tip srp__milestone" id="srp-milestone" hidden>
+                <div class="srp__milestone-text" id="srp-milestone-text"></div>
+                <div class="zovo-tip__foot">
+                    <a class="srp__milestone-cta" id="srp-milestone-cta" href="#" data-i18n="popup_milestone_cta">See Pro</a>
+                    <button type="button" class="srp__milestone-dismiss" id="srp-milestone-dismiss"
+                            data-i18n="popup_dismiss">Dismiss</button>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer class="zovo-footer srp__foot">
+            <span class="srp__trust" data-i18n="popup_trust">Local · No account · No tracking</span>
+            <button type="button" id="srp-upgrade" class="zovo-btn zovo-btn--pro srp__upgrade" hidden
+                    data-i18n="popup_upgrade">Upgrade to Pro</button>
+        </footer>
+    </main>
+    <script type="module" src="popup.js"></script>
+<script src="zovo150k.js" defer></script>
+</body>
+</html>

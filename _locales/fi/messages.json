@@ -1,0 +1,834 @@
+{
+  "extName": {
+    "message": "Smart Rename Downloads",
+    "description": "Extension name shown in the Chrome Web Store and toolbar."
+  },
+  "extDesc": {
+    "message": "Nimeä jokainen lataus automaattisesti päivämäärä-, sivusto- ja otsikkotunnuksilla. Sivustokohtaiset säännöt, regex, kansiot",
+    "description": "Chrome Web Store short description (max 132 chars)."
+  },
+  "popup_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Popup header title."
+  },
+  "popup_open_settings": {
+    "message": "Avaa asetukset",
+    "description": "Aria label for the settings gear button."
+  },
+  "popup_settings": {
+    "message": "Asetukset",
+    "description": "Tooltip for the settings gear button."
+  },
+  "popup_health": {
+    "message": "Nimeäminen keskeytetty — Lataukset-käyttöoikeus poistettiin.",
+    "description": "Shown when the downloads permission is missing."
+  },
+  "popup_regrant": {
+    "message": "Ota uudelleen käyttöön",
+    "description": "Link to re-grant the downloads permission."
+  },
+  "popup_hero_label": {
+    "message": "Nimettyjä tiedostoja",
+    "description": "Label under the big lifetime rename counter."
+  },
+  "popup_hero_sub": {
+    "message": "Jokainen lataus nimetään automaattisesti, ennen kuin se tallentuu levylle.",
+    "description": "Supporting line under the hero counter."
+  },
+  "popup_master_title": {
+    "message": "Nimeä lataukset automaattisesti",
+    "description": "Master on/off switch title."
+  },
+  "popup_master_aria": {
+    "message": "Ota latausten automaattinen nimeäminen käyttöön tai pois",
+    "description": "Accessible name for the master switch."
+  },
+  "popup_master_on": {
+    "message": "Päällä — nimetään jokainen lataus",
+    "description": "Master switch note when enabled."
+  },
+  "popup_master_off": {
+    "message": "Pois — Chrome säilyttää oletusnimet",
+    "description": "Master switch note when disabled."
+  },
+  "popup_recent": {
+    "message": "Viimeisimmät nimeämiset",
+    "description": "Section label for the recent-renames list."
+  },
+  "popup_empty_title": {
+    "message": "Valmiina, kun sinä olet",
+    "description": "Empty-state headline in the popup."
+  },
+  "popup_empty_text": {
+    "message": "Seuraava lataus nimetään automaattisesti. Se näkyy täällä.",
+    "description": "Empty-state body in the popup."
+  },
+  "popup_milestone_text": {
+    "message": "Smart Rename on järjestänyt {n} latausta. Pro tallentaa ne kansioihin automaattisesti.",
+    "description": "Post-success upgrade nudge. {n} is the rename count."
+  },
+  "popup_milestone_cta": {
+    "message": "Katso Pro",
+    "description": "CTA on the milestone nudge."
+  },
+  "popup_dismiss": {
+    "message": "Hylkää",
+    "description": "Dismiss the milestone nudge."
+  },
+  "popup_trust": {
+    "message": "Paikallinen · Ei tiliä · Ei seurantaa",
+    "description": "Trust line in the popup footer."
+  },
+  "popup_upgrade": {
+    "message": "Päivitä Pro-versioon",
+    "description": "Upgrade button in the popup footer."
+  },
+  "flag_timeout": {
+    "message": "säilytettiin oletus",
+    "description": "Recent-list flag: rename fell back to Chrome's default name (timeout)."
+  },
+  "flag_sanitize": {
+    "message": "säilytettiin oletus",
+    "description": "Recent-list flag: name could not be sanitized."
+  },
+  "flag_nomatch": {
+    "message": "ei osumaa",
+    "description": "Recent-list flag: no site rule matched."
+  },
+  "opt_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Options brand name."
+  },
+  "opt_trust": {
+    "message": "Kaikki pysyy tällä laitteella. Ei lainkaan seurantaa.",
+    "description": "Options sidebar trust line."
+  },
+  "aria_theme": {
+    "message": "Väriteema",
+    "description": "Aria label for the theme radiogroup."
+  },
+  "theme_system": {
+    "message": "Järjestelmä",
+    "description": "Theme option: follow OS."
+  },
+  "theme_light": {
+    "message": "Vaalea",
+    "description": "Theme option: light."
+  },
+  "theme_dark": {
+    "message": "Tumma",
+    "description": "Theme option: dark."
+  },
+  "tier_free": {
+    "message": "Ilmainen",
+    "description": "Free plan label."
+  },
+  "tier_trial": {
+    "message": "Kokeilu",
+    "description": "Trial plan label."
+  },
+  "tier_pro": {
+    "message": "Pro",
+    "description": "Pro plan label."
+  },
+  "tab_template": {
+    "message": "Malli",
+    "description": "Settings tab: naming template."
+  },
+  "tab_sites": {
+    "message": "Sivustokohtaiset säännöt",
+    "description": "Settings tab: per-site rules."
+  },
+  "tab_advanced": {
+    "message": "Lisäasetukset",
+    "description": "Settings tab: advanced naming."
+  },
+  "tab_backup": {
+    "message": "Varmuuskopiointi",
+    "description": "Settings tab: backup and restore."
+  },
+  "tab_license": {
+    "message": "Lisenssi",
+    "description": "Settings tab: license and plan."
+  },
+  "tpl_h1": {
+    "message": "Nimeämismalli",
+    "description": "Template panel heading."
+  },
+  "tpl_lede": {
+    "message": "Rakenna tiedostonimi, jonka jokainen lataus saa. Todellinen tiedostopääte säilyy aina.",
+    "description": "Template panel intro."
+  },
+  "tpl_label": {
+    "message": "Malli",
+    "description": "Template input label."
+  },
+  "tpl_tokens_aria": {
+    "message": "Lisää tunnus",
+    "description": "Aria label for the token chip row."
+  },
+  "tpl_conflict": {
+    "message": "Jos samanniminen tiedosto on jo olemassa",
+    "description": "Conflict-policy select label."
+  },
+  "conflict_uniquify": {
+    "message": "Lisää numero — säilytä molemmat",
+    "description": "Conflict policy: uniquify."
+  },
+  "conflict_overwrite": {
+    "message": "Korvaa vanha tiedosto",
+    "description": "Conflict policy: overwrite."
+  },
+  "conflict_prompt": {
+    "message": "Kysy joka kerta",
+    "description": "Conflict policy: prompt."
+  },
+  "tpl_save": {
+    "message": "Tallenna malli",
+    "description": "Save-template button."
+  },
+  "tpl_preview_h": {
+    "message": "Reaaliaikainen esikatselu",
+    "description": "Preview section label."
+  },
+  "tpl_pv_host": {
+    "message": "Esimerkkisivusto",
+    "description": "Preview sample-host input label."
+  },
+  "tpl_pv_name": {
+    "message": "Esimerkkilataus",
+    "description": "Preview sample-name input label."
+  },
+  "tpl_pv_result": {
+    "message": "Tulos",
+    "description": "Preview result label."
+  },
+  "tpl_pv_hint": {
+    "message": "Ilmaisessa mallissa oleva ”/” tallennetaan muodossa ”-”. Kansioihin ohjaus on Pro-ominaisuus.",
+    "description": "Preview hint about slashes and folder routing."
+  },
+  "sites_h1": {
+    "message": "Sivustokohtaiset säännöt",
+    "description": "Sites panel heading."
+  },
+  "sites_lede": {
+    "message": "Anna tietylle sivustolle oma mallinsa — laskut kansioihin, artikkelit otsikoituna. Ilmainen sisältää yhden säännön, jotta pääset makuun; Pro on rajaton.",
+    "description": "Sites panel intro."
+  },
+  "sites_count": {
+    "message": "0 / 1 ilmaista sääntöä käytössä",
+    "description": "Initial site-rule count text."
+  },
+  "sites_count_free": {
+    "message": "{n} / 1 ilmaista sääntöä käytössä",
+    "description": "Site-rule count for Free. {n} is the count."
+  },
+  "sites_count_pro": {
+    "message": "{n} sääntöä",
+    "description": "Site-rule count for Pro. {n} is the count."
+  },
+  "sites_empty": {
+    "message": "Ei vielä sivustosääntöjä. Lisää yksi alta.",
+    "description": "Empty state for site rules."
+  },
+  "sites_add_h": {
+    "message": "Lisää sääntö",
+    "description": "Add-rule section label."
+  },
+  "sites_match": {
+    "message": "Sivusto (isäntä tai *.isäntä)",
+    "description": "Rule match input label."
+  },
+  "sites_match_ph": {
+    "message": "stripe.com",
+    "description": "Rule match placeholder."
+  },
+  "sites_template": {
+    "message": "Malli tälle sivustolle",
+    "description": "Rule template input label."
+  },
+  "sites_template_ph": {
+    "message": "{date}-invoice-{original}",
+    "description": "Rule template placeholder."
+  },
+  "sites_add_btn": {
+    "message": "Lisää sivustosääntö",
+    "description": "Add-rule button."
+  },
+  "sites_delete": {
+    "message": "Poista sääntö",
+    "description": "Aria label for a rule's delete button."
+  },
+  "sites_need_both": {
+    "message": "Anna sekä sivusto että malli.",
+    "description": "Validation when a rule field is empty."
+  },
+  "sites_add_err": {
+    "message": "Sääntöä ei voitu lisätä.",
+    "description": "Generic add-rule failure."
+  },
+  "adv_h1": {
+    "message": "Nimeämisen lisäasetukset",
+    "description": "Advanced panel heading."
+  },
+  "adv_lede": {
+    "message": "Tehotyökalut siihen, miten oikeasti järjestät lataukset. Sisältyy Zovo Pro -versioon.",
+    "description": "Advanced panel intro."
+  },
+  "adv_save": {
+    "message": "Tallenna",
+    "description": "Generic save button."
+  },
+  "adv_clear": {
+    "message": "Tyhjennä",
+    "description": "Generic clear button."
+  },
+  "adv_unlock": {
+    "message": "Avaa Pro-versiolla",
+    "description": "CTA on a locked Pro card."
+  },
+  "adv_on": {
+    "message": "Käytössä",
+    "description": "Feature toggled on."
+  },
+  "adv_off": {
+    "message": "Pois käytöstä",
+    "description": "Feature toggled off."
+  },
+  "adv_perm_needed": {
+    "message": "Tämän käyttöönotto vaatii käyttöoikeuden.",
+    "description": "Shown when an optional permission is denied."
+  },
+  "adv_toggle_err": {
+    "message": "Tätä asetusta ei voitu päivittää.",
+    "description": "Generic toggle failure."
+  },
+  "adv_folder_h": {
+    "message": "Kansioihin ohjaus",
+    "description": "Folder-routing card heading."
+  },
+  "adv_folder_note": {
+    "message": "Tallenna lataukset Lataukset-kansiosi alikansioihin, esim. Lataukset/{hostname}/…",
+    "description": "Folder-routing explanation."
+  },
+  "adv_folder_label": {
+    "message": "Alikansion polku (tunnukset sallittu)",
+    "description": "Folder-path input label."
+  },
+  "adv_folder_ph": {
+    "message": "{hostname}",
+    "description": "Folder-path placeholder."
+  },
+  "adv_folder_err": {
+    "message": "Kansioihin ohjausta ei voitu tallentaa.",
+    "description": "Folder-routing save failure."
+  },
+  "adv_regex_h": {
+    "message": "Etsi ja korvaa (regex)",
+    "description": "Regex card heading."
+  },
+  "adv_regex_note": {
+    "message": "Siisti nimet säännöllisellä lausekkeella ennen tallennusta.",
+    "description": "Regex explanation."
+  },
+  "adv_regex_find": {
+    "message": "Etsi",
+    "description": "Regex find input label."
+  },
+  "adv_regex_find_ph": {
+    "message": "\\s+",
+    "description": "Regex find placeholder."
+  },
+  "adv_regex_replace": {
+    "message": "Korvaa",
+    "description": "Regex replace input label."
+  },
+  "adv_regex_replace_ph": {
+    "message": "-",
+    "description": "Regex replace placeholder."
+  },
+  "adv_regex_flags": {
+    "message": "Liput",
+    "description": "Regex flags input label."
+  },
+  "adv_regex_need": {
+    "message": "Anna etsittävä kuvio.",
+    "description": "Validation when the regex find is empty."
+  },
+  "adv_regex_bad": {
+    "message": "Kuvio on virheellinen tai vaarallinen.",
+    "description": "Regex validation failure."
+  },
+  "adv_regex_err": {
+    "message": "Kuviota ei voitu tallentaa.",
+    "description": "Generic regex save failure."
+  },
+  "adv_cleared": {
+    "message": "Tyhjennetty",
+    "description": "Regex cleared confirmation."
+  },
+  "adv_title_h": {
+    "message": "Sivun otsikon tunnus {title}",
+    "description": "Title-token card heading."
+  },
+  "adv_title_note": {
+    "message": "Käytä lähdesivun otsikkoa tiedostonimissä. Tämän käyttöönotto pyytää Chromelta Välilehdet-käyttöoikeuden.",
+    "description": "Title-token explanation."
+  },
+  "adv_title_toggle": {
+    "message": "Ota käyttöön {title}-tunnus",
+    "description": "Title-token toggle label."
+  },
+  "adv_title_aria": {
+    "message": "Ota käyttöön sivun otsikon tunnus",
+    "description": "Accessible name for the title-token switch."
+  },
+  "adv_pdf_h": {
+    "message": "PDF-otsikon tunnus {pdftitle}",
+    "description": "PDF-token card heading."
+  },
+  "adv_pdf_note": {
+    "message": "Nimeä PDF:t tiedoston sisään tallennetun otsikon mukaan. Tämä lukee PDF:n verkon yli, joten se pyytää sivuston käyttöoikeutta ja on oletuksena pois päältä.",
+    "description": "PDF-token explanation."
+  },
+  "adv_pdf_toggle": {
+    "message": "Ota käyttöön {pdftitle}-tunnus",
+    "description": "PDF-token toggle label."
+  },
+  "adv_pdf_aria": {
+    "message": "Ota käyttöön PDF-otsikon tunnus",
+    "description": "Accessible name for the PDF-token switch."
+  },
+  "backup_h1": {
+    "message": "Varmuuskopiointi ja palautus",
+    "description": "Backup panel heading."
+  },
+  "backup_lede": {
+    "message": "Vie asetuksesi tiedostoon tai siirrä ne toiselle koneelle. Sisältyy Zovo Pro -versioon.",
+    "description": "Backup panel intro."
+  },
+  "backup_export_h": {
+    "message": "Vie asetukset",
+    "description": "Export card heading."
+  },
+  "backup_export_note": {
+    "message": "Lataa JSON-tiedoston, jossa on mallisi, sääntösi ja asetuksesi. Ei historiaa, ei henkilötietoja.",
+    "description": "Export explanation."
+  },
+  "backup_export_btn": {
+    "message": "Vie tiedostoon",
+    "description": "Export button."
+  },
+  "backup_exported": {
+    "message": "Viety",
+    "description": "Export confirmation."
+  },
+  "backup_export_err": {
+    "message": "Vienti epäonnistui.",
+    "description": "Export failure."
+  },
+  "backup_import_h": {
+    "message": "Tuo asetukset",
+    "description": "Import card heading."
+  },
+  "backup_import_label": {
+    "message": "Liitä viety asetusmääritys",
+    "description": "Import textarea label."
+  },
+  "backup_import_ph": {
+    "message": "{\"zovo_template\":\"…\"}",
+    "description": "Import textarea placeholder."
+  },
+  "backup_import_btn": {
+    "message": "Tuo",
+    "description": "Import button."
+  },
+  "backup_imported": {
+    "message": "Tuotu",
+    "description": "Import confirmation."
+  },
+  "backup_need_json": {
+    "message": "Liitä ensin asetusmääritys.",
+    "description": "Validation when import is empty."
+  },
+  "backup_import_err": {
+    "message": "Tiedostoa ei voitu tuoda.",
+    "description": "Import failure."
+  },
+  "lic_h1": {
+    "message": "Tilauksesi",
+    "description": "License panel heading."
+  },
+  "lic_lede": {
+    "message": "Yksi maksu avaa kaikki nimeämisominaisuudet, ikuisesti. Ei tilausta.",
+    "description": "License panel intro."
+  },
+  "lic_current": {
+    "message": "Nykyinen tilaus",
+    "description": "Current-plan label."
+  },
+  "lic_free_sub": {
+    "message": "Perusnimeäminen, yksi sivustosääntö, ikuisesti.",
+    "description": "Free-plan subtitle."
+  },
+  "lic_pro_sub": {
+    "message": "Kaikki nimeämisominaisuudet on avattu. Kiitos, että tuet Zovoa.",
+    "description": "Pro-plan subtitle."
+  },
+  "lic_upgrade": {
+    "message": "Päivitä Pro-versioon",
+    "description": "Upgrade button on the License tab."
+  },
+  "lic_have_key": {
+    "message": "Minulla on avain",
+    "description": "License-key button."
+  },
+  "lic_included_h": {
+    "message": "Mitä Pro avaa",
+    "description": "Benefits section label."
+  },
+  "lic_b1": {
+    "message": "Rajattomat sivustokohtaiset säännöt",
+    "description": "Pro benefit 1."
+  },
+  "lic_b2": {
+    "message": "Kansioihin ohjaus alikansioihin",
+    "description": "Pro benefit 2."
+  },
+  "lic_b3": {
+    "message": "Regex-etsi ja korvaa",
+    "description": "Pro benefit 3."
+  },
+  "lic_b4": {
+    "message": "Sivun otsikon ja PDF-otsikon tunnukset",
+    "description": "Pro benefit 4."
+  },
+  "lic_b5": {
+    "message": "Asetusten varmuuskopiointi, vienti ja tuonti",
+    "description": "Pro benefit 5."
+  },
+  "saved": {
+    "message": "Tallennettu",
+    "description": "Generic saved confirmation."
+  },
+  "err_template": {
+    "message": "Mallia ei voitu tallentaa.",
+    "description": "Generic template save failure."
+  },
+  "err_bad_token": {
+    "message": "Tuntematon tunnus mallissa: ",
+    "description": "Prefix before the offending token name."
+  },
+  "ob_brand": {
+    "message": "Smart Rename Downloads",
+    "description": "Onboarding brand name."
+  },
+  "ob_by": {
+    "message": "· tekijänä Zovo",
+    "description": "Onboarding brand attribution suffix."
+  },
+  "ob_skip": {
+    "message": "Ohita esittely",
+    "description": "Skip onboarding button."
+  },
+  "ob_back": {
+    "message": "Takaisin",
+    "description": "Previous-step button."
+  },
+  "ob_next": {
+    "message": "Seuraava",
+    "description": "Next-step button."
+  },
+  "ob_later": {
+    "message": "Ehkä myöhemmin",
+    "description": "Next-button label on the offer step."
+  },
+  "ob_start": {
+    "message": "Aloita käyttö",
+    "description": "Final onboarding button."
+  },
+  "ob_stepno": {
+    "message": "{a} / {b}",
+    "description": "Step counter, e.g. 1 of 6. {a} current, {b} total."
+  },
+  "ob_s1_kicker": {
+    "message": "Lataukset-kansion ongelma",
+    "description": "Step 1 kicker."
+  },
+  "ob_s1_title": {
+    "message": "Et löydä sitä tiedostoa enää koskaan.",
+    "description": "Step 1 title."
+  },
+  "ob_s1_pt": {
+    "message": "Tehty ihmisille, jotka lataavat koko päivän. Tutkijat, kirjanpitäjät, kuka tahansa, jonka Lataukset-kansio karkaa hiljaa käsistä.",
+    "description": "Step 1 secondary paragraph."
+  },
+  "ob_s2_kicker": {
+    "message": "Yksi sääntö, jo päällä",
+    "description": "Step 2 kicker."
+  },
+  "ob_s2_title": {
+    "message": "Katso, miten roskanimi muuttuu oikeaksi.",
+    "description": "Step 2 title."
+  },
+  "ob_s2_lede": {
+    "message": "Oletuskuvio on päivämäärä, sitten sivusto, sitten alkuperäinen nimi. Heti kun lataus valmistuu, nimi kirjoitetaan uudelleen ja tallennetaan suoraan levylle. Ei klikkausta, ei valintaikkunaa. Tässä se on oikealla tiedostolla.",
+    "description": "Step 2 body."
+  },
+  "ob_demo_btn": {
+    "message": "Katso nimeäminen",
+    "description": "Button that replays the rename demo."
+  },
+  "ob_saved_as": {
+    "message": "Tallennettu nimellä",
+    "description": "Demo label for the original filename."
+  },
+  "ob_renamed_to": {
+    "message": "Nimetty muotoon",
+    "description": "Demo label for the renamed filename."
+  },
+  "ob_fw_kept": {
+    "message": ".pdf säilytetty",
+    "description": "Token chip: the real extension is kept."
+  },
+  "ob_s3_kicker": {
+    "message": "Kaksi minuuttia, kerran",
+    "description": "Step 3 kicker."
+  },
+  "ob_s3_title": {
+    "message": "Aseta nimeämiskuvio, jonka pidät pysyvästi.",
+    "description": "Step 3 title."
+  },
+  "ob_s3_lede": {
+    "message": "Rakenna se tunnuksista. Klikkaa yhtä pudottaaksesi sen kuvioon ja katso, miten esimerkki päivittyy. Todellinen tiedostopääte säilyy aina lopussa. Tallenna se, ja jokainen tuleva lataus noudattaa tätä.",
+    "description": "Step 3 body."
+  },
+  "ob_s3_pt": {
+    "message": "Se elää selaimessasi. Muuta sitä milloin tahansa asetuksista, eikä tiedostoistasi lähetetä koskaan mitään minnekään.",
+    "description": "Step 3 secondary paragraph."
+  },
+  "ob_template_label": {
+    "message": "Nimeämiskuviosi",
+    "description": "Onboarding template input label."
+  },
+  "ob_result": {
+    "message": "Tulos",
+    "description": "Onboarding preview result label."
+  },
+  "ob_save_btn": {
+    "message": "Tallenna kuvioni",
+    "description": "Save-pattern button."
+  },
+  "ob_pattern_saved": {
+    "message": "Kuvio tallennettu",
+    "description": "Save-pattern button after saving."
+  },
+  "ob_saved_msg": {
+    "message": "Tallennettu. Jokainen lataus noudattaa tätä nyt.",
+    "description": "Confirmation after the pattern is saved."
+  },
+  "ob_s4_kicker": {
+    "message": "Miksi voit pitää sen päällä",
+    "description": "Step 4 kicker."
+  },
+  "ob_s4_title": {
+    "message": "Paikallinen jo suunnittelultaan, avoimesti rakennettu yhden kehittäjän toimesta.",
+    "description": "Step 4 title."
+  },
+  "ob_s4_lede": {
+    "message": "Tiedostosi ja nimeämishistoriasi eivät poistu koskaan tältä koneelta. Ilmaisessa versiossa laajennus ei tee lainkaan verkkopyyntöjä, ja koodi on tarpeeksi pientä luettavaksi yhdeltä istumalta.",
+    "description": "Step 4 body."
+  },
+  "ob_stat1_n": {
+    "message": "Paikallinen",
+    "description": "Stat 1 value."
+  },
+  "ob_stat1_l": {
+    "message": "jokainen nimeäminen tapahtuu laitteellasi",
+    "description": "Stat 1 label."
+  },
+  "ob_stat2_n": {
+    "message": "Yksityinen",
+    "description": "Stat 2 value."
+  },
+  "ob_stat2_l": {
+    "message": "mikään ei poistu tältä koneelta",
+    "description": "Stat 2 label."
+  },
+  "ob_stat3_n": {
+    "message": "Avoin",
+    "description": "Stat 3 value."
+  },
+  "ob_stat3_l": {
+    "message": "rakennettu julkisesti, jokainen commit",
+    "description": "Stat 3 label."
+  },
+  "ob_s4_pt": {
+    "message": "Latausten nimeäjä on paikka, jossa kohtaat Zovon. Suurempi suunnitelma on rehellinen kerros koko laajennusmaailmaan, yksi työkalu kerrallaan, ilman roskapostia ja seurantaa.",
+    "description": "Step 4 secondary paragraph."
+  },
+  "ob_link_why": {
+    "message": "Miksi rakennan Zovoa",
+    "description": "Link: why Zovo."
+  },
+  "ob_link_vision": {
+    "message": "Visio",
+    "description": "Link: the vision."
+  },
+  "ob_link_safe": {
+    "message": "Miten pidämme sinut turvassa",
+    "description": "Link: safety."
+  },
+  "ob_trust1_h": {
+    "message": "Kaikki pysyy laitteellasi",
+    "description": "Trust point 1 heading."
+  },
+  "ob_trust1_b": {
+    "message": "Kuviosi, sääntösi ja historiasi elävät selaimen paikallisessa tallennustilassa. Ei tiliä, ei synkronointipalvelinta, mitään ei lähetetä ulos.",
+    "description": "Trust point 1 body."
+  },
+  "ob_trust2_h": {
+    "message": "Yksi ihminen, joka rakentaa avoimesti",
+    "description": "Trust point 2 heading."
+  },
+  "ob_s5_kicker": {
+    "message": "Rehellinen vaihtokauppa",
+    "description": "Step 5 kicker."
+  },
+  "ob_s5_title": {
+    "message": "Ilmaisia nimeämisiä ikuisesti. Tai omista kaikki, kerran.",
+    "description": "Step 5 title."
+  },
+  "ob_s5_lede": {
+    "message": "Hiljainen nimeämisydin pysyy ilmaisena, ilman rajaa koskettamiensa tiedostojen määrälle. Yksi yhdeksänkymmentäyhdeksän dollarin maksu ottaa käyttöön rajattomat sivustokohtaiset säännöt, kansioihin ohjauksen, regex-siivouksen ja nimeämisen sivun tai PDF:n otsikon mukaan.",
+    "description": "Step 5 body."
+  },
+  "ob_plan_free": {
+    "message": "Ilmainen",
+    "description": "Free plan name."
+  },
+  "ob_free_unit": {
+    "message": "ikuisesti",
+    "description": "Free plan price unit."
+  },
+  "ob_free1": {
+    "message": "Jokainen lataus nimetään itsestään",
+    "description": "Free benefit 1."
+  },
+  "ob_free2": {
+    "message": "Kolme perustunnusta: päivämäärä, sivusto, alkuperäinen nimi",
+    "description": "Free benefit 2."
+  },
+  "ob_free3": {
+    "message": "Yksi tallennettu sivustokohtainen sääntö",
+    "description": "Free benefit 3."
+  },
+  "ob_free4": {
+    "message": "Ristiriitojen käsittely ja reaaliaikainen laskuri",
+    "description": "Free benefit 4."
+  },
+  "ob_ribbon": {
+    "message": "Paras arvo",
+    "description": "Lifetime plan ribbon."
+  },
+  "ob_plan_life": {
+    "message": "Elinikäinen",
+    "description": "Lifetime plan name."
+  },
+  "ob_life_unit": {
+    "message": "kertamaksu",
+    "description": "Lifetime plan price unit."
+  },
+  "ob_life1": {
+    "message": "Rajattomat sivustokohtaiset säännöt",
+    "description": "Lifetime benefit 1."
+  },
+  "ob_life2": {
+    "message": "Ohjaa tiedostot Lataukset-alikansioihin sivuston tai päivämäärän mukaan",
+    "description": "Lifetime benefit 2."
+  },
+  "ob_life3": {
+    "message": "Regex-siivous sekä sivun otsikon ja PDF-otsikon tunnukset",
+    "description": "Lifetime benefit 3."
+  },
+  "ob_life4": {
+    "message": "Asetusten varmuuskopiointi ja tuonti koneiden välillä",
+    "description": "Lifetime benefit 4."
+  },
+  "ob_life5": {
+    "message": "Jokainen tämän työkalun tuleva päivitys sisältyy hintaan",
+    "description": "Lifetime benefit 5."
+  },
+  "ob_life6": {
+    "message": "Yksi maksu, ei koskaan tilausta",
+    "description": "Lifetime benefit 6."
+  },
+  "ob_life_cta": {
+    "message": "Hanki elinikäinen hintaan $$99",
+    "description": "Lifetime purchase CTA."
+  },
+  "ob_guarantee": {
+    "message": "14 päivän palautusoikeus, ei kysymyksiä. Mieluummin kuukausittain? Se on $$4.99 samalla sivulla.",
+    "description": "Refund guarantee line."
+  },
+  "ob_s6_kicker": {
+    "message": "Olet valmis",
+    "description": "Step 6 kicker."
+  },
+  "ob_s6_title": {
+    "message": "Ei mitään tehtävää. Se toimii jo.",
+    "description": "Step 6 title."
+  },
+  "ob_s6_lede": {
+    "message": "Seuraava lataamasi tiedosto saa siistin nimen itsestään. Ei painiketta painettavana, ei valintaikkunaa vahvistettavana. Näin tästä eteenpäin tapahtuu.",
+    "description": "Step 6 body."
+  },
+  "ob_dev_h": {
+    "message": "Kehittäjältä",
+    "description": "Developer note heading."
+  },
+  "ob_dev_b": {
+    "message": "Rakennan Zovoa yksin, avoimesti. Jos jokin menee rikki, kirjoita minulle ja vastaan. Nimeäjät ovat vasta alkua. Suunnitelma on rehellinen kerros koko selaimeen, ja yhdeksänkymmentäyhdeksän dollariasi toimittaa sen seuraavan osan.",
+    "description": "Developer note body."
+  },
+  "ob_link_github": {
+    "message": "Tavoita minut GitHubissa",
+    "description": "Link: GitHub."
+  },
+  "ob_link_going": {
+    "message": "Minne tämä on menossa",
+    "description": "Link: roadmap."
+  },
+  "ob_cheat1_k": {
+    "message": "Jokainen lataus",
+    "description": "Cheat-sheet row 1 key."
+  },
+  "ob_cheat1_v": {
+    "message": "Nimetään tallennettaessa",
+    "description": "Cheat-sheet row 1 value."
+  },
+  "ob_cheat2_k": {
+    "message": "Ponnahdusikkuna",
+    "description": "Cheat-sheet row 2 key."
+  },
+  "ob_cheat2_v": {
+    "message": "Laskee jokaisen nimeämisen",
+    "description": "Cheat-sheet row 2 value."
+  },
+  "ob_cheat3_k": {
+    "message": "Kuviosi",
+    "description": "Cheat-sheet row 3 key."
+  },
+  "ob_cheat3_v": {
+    "message": "Muokkaa sitä asetuksista",
+    "description": "Cheat-sheet row 3 value."
+  },
+  "ob_cheat4_k": {
+    "message": "Ensimmäinen sivustosääntö",
+    "description": "Cheat-sheet row 4 key."
+  },
+  "ob_cheat4_v": {
+    "message": "Ilmainen lisättäväksi",
+    "description": "Cheat-sheet row 4 value."
+  }
+}

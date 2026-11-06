@@ -1,0 +1,145 @@
+/* ============================================================================
+ * popup.css — Smart Rename Downloads popup. Depends on zovo-base.css tokens.
+ * Loaded after zovo-base.css so custom properties are already defined.
+ * ========================================================================== */
+
+.srp { width: var(--zovo-popup-w); background: var(--zovo-surface); }
+
+/* ---- Header --------------------------------------------------------------- */
+.srp__head { background: var(--zovo-bg); }
+.srp__mark {
+  display: grid; place-items: center;
+  width: 28px; height: 28px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--zovo-primary), var(--zovo-primary-light));
+  border-radius: var(--zovo-radius-input);
+  flex: 0 0 auto;
+}
+.srp__icon-btn {
+  display: grid; place-items: center;
+  width: 32px; height: 32px;
+  color: var(--zovo-text-secondary);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--zovo-radius-btn);
+  cursor: pointer;
+  transition: background var(--zovo-transition), color var(--zovo-transition);
+  flex: 0 0 auto;
+}
+.srp__icon-btn:hover { background: var(--zovo-surface-2); color: var(--zovo-text); }
+.srp__icon-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--zovo-bg), 0 0 0 4px var(--zovo-primary);
+}
+
+/* ---- Health banner -------------------------------------------------------- */
+.srp__health {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--zovo-space-3);
+  margin: 0;
+  padding: 10px var(--zovo-space-5);
+  font-size: var(--zovo-fs-caption);
+  color: var(--zovo-warning);
+  background: color-mix(in srgb, var(--zovo-warning) 12%, var(--zovo-bg));
+  border-bottom: 1px solid color-mix(in srgb, var(--zovo-warning) 30%, transparent);
+}
+.srp__health[hidden] { display: none; }
+.srp__health a { color: var(--zovo-warning); font-weight: var(--zovo-fw-heading); text-decoration: none; }
+.srp__health a:hover { text-decoration: underline; }
+
+/* ---- Stack / hero --------------------------------------------------------- */
+.srp__stack { gap: var(--zovo-space-3); padding: var(--zovo-space-4) var(--zovo-space-5); }
+.srp__hero { padding: 0; overflow: hidden; }
+.srp__hero-inner { padding: var(--zovo-space-6) var(--zovo-space-5); }
+.zovo-hero__num { font-variant-numeric: tabular-nums; transition: color var(--zovo-transition); }
+.zovo-hero__num.srp__count--off { color: var(--zovo-text-secondary); }
+.srp__hero-sub { font-size: var(--zovo-fs-caption); color: var(--zovo-text-secondary); max-width: 30ch; margin-left: auto; margin-right: auto; }
+
+/* ---- Master switch -------------------------------------------------------- */
+.srp__switch-card { padding: var(--zovo-space-4) var(--zovo-space-5); }
+.srp__switch-row { display: flex; align-items: center; justify-content: space-between; gap: var(--zovo-space-4); }
+.srp__switch-text { min-width: 0; }
+.srp__switch-title { font-weight: var(--zovo-fw-medium); }
+.srp__switch-note { margin-top: 2px; font-size: var(--zovo-fs-caption); color: var(--zovo-text-secondary); }
+
+.srp__switch {
+  position: relative;
+  flex: 0 0 auto;
+  width: 44px; height: 26px;
+  padding: 0;
+  background: var(--zovo-surface-2);
+  border: 1px solid var(--zovo-border);
+  border-radius: var(--zovo-radius-pill);
+  cursor: pointer;
+  transition: background var(--zovo-transition), border-color var(--zovo-transition);
+}
+.srp__switch-knob {
+  position: absolute; top: 2px; left: 2px;
+  width: 20px; height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: var(--zovo-shadow-sm);
+  transition: transform var(--zovo-transition);
+}
+.srp__switch[aria-checked='true'] { background: var(--zovo-primary); border-color: var(--zovo-primary); }
+.srp__switch[aria-checked='true'] .srp__switch-knob { transform: translateX(18px); }
+.srp__switch:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--zovo-bg), 0 0 0 4px var(--zovo-primary);
+}
+
+/* ---- Recent list ---------------------------------------------------------- */
+.srp__recent { padding: var(--zovo-space-1) var(--zovo-space-1) 0; }
+.srp__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+.srp__item {
+  display: flex; flex-direction: column; gap: 2px;
+  padding: var(--zovo-space-2) var(--zovo-space-3);
+  border-radius: var(--zovo-radius-btn);
+  transition: background var(--zovo-transition);
+}
+.srp__item:hover { background: var(--zovo-surface-2); }
+.srp__item-to {
+  font-family: var(--zovo-font-mono);
+  font-size: var(--zovo-fs-caption);
+  color: var(--zovo-text);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.srp__item-from {
+  font-family: var(--zovo-font-mono);
+  font-size: 11px;
+  color: var(--zovo-text-secondary);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.srp__item-from::before { content: '\2190\00a0'; opacity: 0.6; }
+.srp__item-flag {
+  align-self: flex-start;
+  margin-top: 2px;
+  padding: 1px 6px;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase;
+  color: var(--zovo-text-secondary);
+  background: var(--zovo-surface-2);
+  border-radius: var(--zovo-radius-pill);
+}
+
+.srp__empty { padding: var(--zovo-space-6) var(--zovo-space-5); }
+.srp__empty[hidden] { display: none; }
+.srp__empty-art { color: var(--zovo-primary); margin-bottom: var(--zovo-space-3); opacity: 0.85; }
+
+/* ---- Milestone nudge ------------------------------------------------------ */
+.srp__milestone { border-left-color: var(--zovo-pro); }
+.srp__milestone[hidden] { display: none; }
+.srp__milestone-text { font-size: var(--zovo-fs-caption); color: var(--zovo-text); }
+.srp__milestone-cta { color: var(--zovo-pro-dark); font-weight: var(--zovo-fw-heading); text-decoration: none; }
+.srp__milestone-cta:hover { text-decoration: underline; }
+.srp__milestone-dismiss {
+  background: none; border: none; padding: 0;
+  font: inherit; font-size: var(--zovo-fs-caption);
+  color: var(--zovo-text-secondary); cursor: pointer;
+}
+.srp__milestone-dismiss:hover { color: var(--zovo-text); }
+.srp__milestone-dismiss:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--zovo-primary); border-radius: 4px; }
+
+/* ---- Footer --------------------------------------------------------------- */
+.srp__foot { background: var(--zovo-bg); gap: var(--zovo-space-3); }
+.srp__trust { min-width: 0; }
+.srp__upgrade { min-height: 32px; padding: 6px 14px; font-size: var(--zovo-fs-caption); }
+.srp__upgrade[hidden] { display: none; }

@@ -1,0 +1,834 @@
+{
+  "extName": {
+    "message": "Smart Rename Downloads",
+    "description": "Extension name shown in the Chrome Web Store and toolbar."
+  },
+  "extDesc": {
+    "message": "أعِد تسمية كل تنزيل تلقائيًا برموز التاريخ والموقع والعنوان. قواعد لكل موقع، تعبيرات نمطية، وتوجيه للمجلدات. محلي، بلا نقرات.",
+    "description": "Chrome Web Store short description (max 132 chars)."
+  },
+  "popup_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Popup header title."
+  },
+  "popup_open_settings": {
+    "message": "فتح الإعدادات",
+    "description": "Aria label for the settings gear button."
+  },
+  "popup_settings": {
+    "message": "الإعدادات",
+    "description": "Tooltip for the settings gear button."
+  },
+  "popup_health": {
+    "message": "توقّفت إعادة التسمية — تمت إزالة إذن التنزيلات.",
+    "description": "Shown when the downloads permission is missing."
+  },
+  "popup_regrant": {
+    "message": "إعادة التفعيل",
+    "description": "Link to re-grant the downloads permission."
+  },
+  "popup_hero_label": {
+    "message": "الملفات المُعاد تسميتها",
+    "description": "Label under the big lifetime rename counter."
+  },
+  "popup_hero_sub": {
+    "message": "تُعاد تسمية كل تنزيل تلقائيًا قبل أن يصل إلى قرصك.",
+    "description": "Supporting line under the hero counter."
+  },
+  "popup_master_title": {
+    "message": "إعادة تسمية التنزيلات تلقائيًا",
+    "description": "Master on/off switch title."
+  },
+  "popup_master_aria": {
+    "message": "تبديل إعادة تسمية التنزيلات تلقائيًا",
+    "description": "Accessible name for the master switch."
+  },
+  "popup_master_on": {
+    "message": "مُفعّل — تُعاد تسمية كل تنزيل",
+    "description": "Master switch note when enabled."
+  },
+  "popup_master_off": {
+    "message": "مُعطّل — يحتفظ Chrome بأسمائه الافتراضية",
+    "description": "Master switch note when disabled."
+  },
+  "popup_recent": {
+    "message": "عمليات إعادة التسمية الأخيرة",
+    "description": "Section label for the recent-renames list."
+  },
+  "popup_empty_title": {
+    "message": "جاهز عندما تكون مستعدًا",
+    "description": "Empty-state headline in the popup."
+  },
+  "popup_empty_text": {
+    "message": "سيُعاد تسمية تنزيلك التالي تلقائيًا. وسيظهر هنا.",
+    "description": "Empty-state body in the popup."
+  },
+  "popup_milestone_text": {
+    "message": "نظّم Smart Rename {n} من التنزيلات. تُصنّفها النسخة Pro في مجلدات تلقائيًا.",
+    "description": "Post-success upgrade nudge. {n} is the rename count."
+  },
+  "popup_milestone_cta": {
+    "message": "استعرض Pro",
+    "description": "CTA on the milestone nudge."
+  },
+  "popup_dismiss": {
+    "message": "تجاهل",
+    "description": "Dismiss the milestone nudge."
+  },
+  "popup_trust": {
+    "message": "محلي · بلا حساب · بلا تتبّع",
+    "description": "Trust line in the popup footer."
+  },
+  "popup_upgrade": {
+    "message": "الترقية إلى Pro",
+    "description": "Upgrade button in the popup footer."
+  },
+  "flag_timeout": {
+    "message": "احتُفظ بالافتراضي",
+    "description": "Recent-list flag: rename fell back to Chrome's default name (timeout)."
+  },
+  "flag_sanitize": {
+    "message": "احتُفظ بالافتراضي",
+    "description": "Recent-list flag: name could not be sanitized."
+  },
+  "flag_nomatch": {
+    "message": "لا تطابق",
+    "description": "Recent-list flag: no site rule matched."
+  },
+  "opt_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Options brand name."
+  },
+  "opt_trust": {
+    "message": "كل شيء يبقى على هذا الجهاز. بلا تتبّع.",
+    "description": "Options sidebar trust line."
+  },
+  "aria_theme": {
+    "message": "سمة الألوان",
+    "description": "Aria label for the theme radiogroup."
+  },
+  "theme_system": {
+    "message": "النظام",
+    "description": "Theme option: follow OS."
+  },
+  "theme_light": {
+    "message": "فاتح",
+    "description": "Theme option: light."
+  },
+  "theme_dark": {
+    "message": "داكن",
+    "description": "Theme option: dark."
+  },
+  "tier_free": {
+    "message": "مجاني",
+    "description": "Free plan label."
+  },
+  "tier_trial": {
+    "message": "تجريبي",
+    "description": "Trial plan label."
+  },
+  "tier_pro": {
+    "message": "Pro",
+    "description": "Pro plan label."
+  },
+  "tab_template": {
+    "message": "القالب",
+    "description": "Settings tab: naming template."
+  },
+  "tab_sites": {
+    "message": "قواعد لكل موقع",
+    "description": "Settings tab: per-site rules."
+  },
+  "tab_advanced": {
+    "message": "متقدم",
+    "description": "Settings tab: advanced naming."
+  },
+  "tab_backup": {
+    "message": "النسخ الاحتياطي",
+    "description": "Settings tab: backup and restore."
+  },
+  "tab_license": {
+    "message": "الترخيص",
+    "description": "Settings tab: license and plan."
+  },
+  "tpl_h1": {
+    "message": "قالب التسمية",
+    "description": "Template panel heading."
+  },
+  "tpl_lede": {
+    "message": "أنشئ اسم الملف الذي يحصل عليه كل تنزيل. يُحتفظ دائمًا بامتداد الملف الحقيقي.",
+    "description": "Template panel intro."
+  },
+  "tpl_label": {
+    "message": "القالب",
+    "description": "Template input label."
+  },
+  "tpl_tokens_aria": {
+    "message": "إدراج رمز",
+    "description": "Aria label for the token chip row."
+  },
+  "tpl_conflict": {
+    "message": "إذا كان هناك ملف بهذا الاسم موجودًا بالفعل",
+    "description": "Conflict-policy select label."
+  },
+  "conflict_uniquify": {
+    "message": "أضِف رقمًا — احتفظ بكليهما",
+    "description": "Conflict policy: uniquify."
+  },
+  "conflict_overwrite": {
+    "message": "استبدال الملف القديم",
+    "description": "Conflict policy: overwrite."
+  },
+  "conflict_prompt": {
+    "message": "اسألني في كل مرة",
+    "description": "Conflict policy: prompt."
+  },
+  "tpl_save": {
+    "message": "حفظ القالب",
+    "description": "Save-template button."
+  },
+  "tpl_preview_h": {
+    "message": "معاينة مباشرة",
+    "description": "Preview section label."
+  },
+  "tpl_pv_host": {
+    "message": "موقع نموذجي",
+    "description": "Preview sample-host input label."
+  },
+  "tpl_pv_name": {
+    "message": "تنزيل نموذجي",
+    "description": "Preview sample-name input label."
+  },
+  "tpl_pv_result": {
+    "message": "النتيجة",
+    "description": "Preview result label."
+  },
+  "tpl_pv_hint": {
+    "message": "يُحفظ الرمز “/” في القالب المجاني بوصفه “-”. توجيه المجلدات ميزة Pro.",
+    "description": "Preview hint about slashes and folder routing."
+  },
+  "sites_h1": {
+    "message": "قواعد لكل موقع",
+    "description": "Sites panel heading."
+  },
+  "sites_lede": {
+    "message": "امنح موقعًا محددًا قالبه الخاص — فواتير في مجلدات، أوراق بعناوين. تتضمن النسخة المجانية قاعدة واحدة لتجربتها؛ وPro غير محدودة.",
+    "description": "Sites panel intro."
+  },
+  "sites_count": {
+    "message": "استُخدمت 0 من 1 قاعدة مجانية",
+    "description": "Initial site-rule count text."
+  },
+  "sites_count_free": {
+    "message": "استُخدمت {n} من 1 قاعدة مجانية",
+    "description": "Site-rule count for Free. {n} is the count."
+  },
+  "sites_count_pro": {
+    "message": "{n} قاعدة",
+    "description": "Site-rule count for Pro. {n} is the count."
+  },
+  "sites_empty": {
+    "message": "لا قواعد مواقع بعد. أضِف واحدة أدناه.",
+    "description": "Empty state for site rules."
+  },
+  "sites_add_h": {
+    "message": "إضافة قاعدة",
+    "description": "Add-rule section label."
+  },
+  "sites_match": {
+    "message": "الموقع (المضيف أو *.host)",
+    "description": "Rule match input label."
+  },
+  "sites_match_ph": {
+    "message": "stripe.com",
+    "description": "Rule match placeholder."
+  },
+  "sites_template": {
+    "message": "قالب هذا الموقع",
+    "description": "Rule template input label."
+  },
+  "sites_template_ph": {
+    "message": "{date}-invoice-{original}",
+    "description": "Rule template placeholder."
+  },
+  "sites_add_btn": {
+    "message": "إضافة قاعدة موقع",
+    "description": "Add-rule button."
+  },
+  "sites_delete": {
+    "message": "حذف القاعدة",
+    "description": "Aria label for a rule's delete button."
+  },
+  "sites_need_both": {
+    "message": "أدخِل الموقع والقالب معًا.",
+    "description": "Validation when a rule field is empty."
+  },
+  "sites_add_err": {
+    "message": "تعذّرت إضافة هذه القاعدة.",
+    "description": "Generic add-rule failure."
+  },
+  "adv_h1": {
+    "message": "التسمية المتقدمة",
+    "description": "Advanced panel heading."
+  },
+  "adv_lede": {
+    "message": "أدوات قوية للطريقة التي تنظّم بها تنزيلاتك فعليًا. مضمّنة في Zovo Pro.",
+    "description": "Advanced panel intro."
+  },
+  "adv_save": {
+    "message": "حفظ",
+    "description": "Generic save button."
+  },
+  "adv_clear": {
+    "message": "مسح",
+    "description": "Generic clear button."
+  },
+  "adv_unlock": {
+    "message": "الفتح مع Pro",
+    "description": "CTA on a locked Pro card."
+  },
+  "adv_on": {
+    "message": "مُفعّل",
+    "description": "Feature toggled on."
+  },
+  "adv_off": {
+    "message": "مُعطّل",
+    "description": "Feature toggled off."
+  },
+  "adv_perm_needed": {
+    "message": "يلزم إذن لتفعيل هذا.",
+    "description": "Shown when an optional permission is denied."
+  },
+  "adv_toggle_err": {
+    "message": "تعذّر تحديث هذا الإعداد.",
+    "description": "Generic toggle failure."
+  },
+  "adv_folder_h": {
+    "message": "توجيه المجلدات",
+    "description": "Folder-routing card heading."
+  },
+  "adv_folder_note": {
+    "message": "تنزيل الملفات إلى مجلدات فرعية داخل مجلد التنزيلات، مثل Downloads/{hostname}/…",
+    "description": "Folder-routing explanation."
+  },
+  "adv_folder_label": {
+    "message": "مسار المجلد الفرعي (الرموز مسموحة)",
+    "description": "Folder-path input label."
+  },
+  "adv_folder_ph": {
+    "message": "{hostname}",
+    "description": "Folder-path placeholder."
+  },
+  "adv_folder_err": {
+    "message": "تعذّر حفظ توجيه المجلدات.",
+    "description": "Folder-routing save failure."
+  },
+  "adv_regex_h": {
+    "message": "بحث واستبدال (تعبير نمطي)",
+    "description": "Regex card heading."
+  },
+  "adv_regex_note": {
+    "message": "نظّف الأسماء بتعبير نمطي قبل حفظها.",
+    "description": "Regex explanation."
+  },
+  "adv_regex_find": {
+    "message": "بحث",
+    "description": "Regex find input label."
+  },
+  "adv_regex_find_ph": {
+    "message": "\\s+",
+    "description": "Regex find placeholder."
+  },
+  "adv_regex_replace": {
+    "message": "استبدال",
+    "description": "Regex replace input label."
+  },
+  "adv_regex_replace_ph": {
+    "message": "-",
+    "description": "Regex replace placeholder."
+  },
+  "adv_regex_flags": {
+    "message": "الأعلام",
+    "description": "Regex flags input label."
+  },
+  "adv_regex_need": {
+    "message": "أدخِل نمطًا للبحث عنه.",
+    "description": "Validation when the regex find is empty."
+  },
+  "adv_regex_bad": {
+    "message": "هذا النمط غير صالح أو غير آمن.",
+    "description": "Regex validation failure."
+  },
+  "adv_regex_err": {
+    "message": "تعذّر حفظ النمط.",
+    "description": "Generic regex save failure."
+  },
+  "adv_cleared": {
+    "message": "تم المسح",
+    "description": "Regex cleared confirmation."
+  },
+  "adv_title_h": {
+    "message": "رمز عنوان الصفحة {title}",
+    "description": "Title-token card heading."
+  },
+  "adv_title_note": {
+    "message": "استخدم عنوان الصفحة المصدر في أسماء الملفات. تفعيل هذا يطلب من Chrome إذن علامات التبويب.",
+    "description": "Title-token explanation."
+  },
+  "adv_title_toggle": {
+    "message": "تفعيل الرمز {title}",
+    "description": "Title-token toggle label."
+  },
+  "adv_title_aria": {
+    "message": "تفعيل رمز عنوان الصفحة",
+    "description": "Accessible name for the title-token switch."
+  },
+  "adv_pdf_h": {
+    "message": "رمز عنوان PDF {pdftitle}",
+    "description": "PDF-token card heading."
+  },
+  "adv_pdf_note": {
+    "message": "سمِّ ملفات PDF بالعنوان المخزَّن داخل الملف. يقرأ هذا ملف PDF عبر الشبكة، لذا يطلب الوصول إلى الموقع وهو مُعطّل افتراضيًا.",
+    "description": "PDF-token explanation."
+  },
+  "adv_pdf_toggle": {
+    "message": "تفعيل الرمز {pdftitle}",
+    "description": "PDF-token toggle label."
+  },
+  "adv_pdf_aria": {
+    "message": "تفعيل رمز عنوان PDF",
+    "description": "Accessible name for the PDF-token switch."
+  },
+  "backup_h1": {
+    "message": "النسخ الاحتياطي والاستعادة",
+    "description": "Backup panel heading."
+  },
+  "backup_lede": {
+    "message": "صدِّر إعدادك إلى ملف، أو انقله إلى جهاز آخر. مضمّن في Zovo Pro.",
+    "description": "Backup panel intro."
+  },
+  "backup_export_h": {
+    "message": "تصدير الإعدادات",
+    "description": "Export card heading."
+  },
+  "backup_export_note": {
+    "message": "ينزّل ملف JSON يحتوي على قالبك وقواعدك وإعداداتك. بلا سجل، بلا بيانات شخصية.",
+    "description": "Export explanation."
+  },
+  "backup_export_btn": {
+    "message": "تصدير إلى ملف",
+    "description": "Export button."
+  },
+  "backup_exported": {
+    "message": "تم التصدير",
+    "description": "Export confirmation."
+  },
+  "backup_export_err": {
+    "message": "فشل التصدير.",
+    "description": "Export failure."
+  },
+  "backup_import_h": {
+    "message": "استيراد الإعدادات",
+    "description": "Import card heading."
+  },
+  "backup_import_label": {
+    "message": "الصق إعدادًا مُصدَّرًا",
+    "description": "Import textarea label."
+  },
+  "backup_import_ph": {
+    "message": "{\"zovo_template\":\"…\"}",
+    "description": "Import textarea placeholder."
+  },
+  "backup_import_btn": {
+    "message": "استيراد",
+    "description": "Import button."
+  },
+  "backup_imported": {
+    "message": "تم الاستيراد",
+    "description": "Import confirmation."
+  },
+  "backup_need_json": {
+    "message": "الصق إعدادًا أولًا.",
+    "description": "Validation when import is empty."
+  },
+  "backup_import_err": {
+    "message": "تعذّر استيراد هذا الملف.",
+    "description": "Import failure."
+  },
+  "lic_h1": {
+    "message": "خطتك",
+    "description": "License panel heading."
+  },
+  "lic_lede": {
+    "message": "دفعة واحدة تفتح كل ميزات التسمية، إلى الأبد. بلا اشتراك.",
+    "description": "License panel intro."
+  },
+  "lic_current": {
+    "message": "الخطة الحالية",
+    "description": "Current-plan label."
+  },
+  "lic_free_sub": {
+    "message": "إعادة التسمية الأساسية، قاعدة موقع واحدة، إلى الأبد.",
+    "description": "Free-plan subtitle."
+  },
+  "lic_pro_sub": {
+    "message": "كل ميزات التسمية مفتوحة. شكرًا لدعمك Zovo.",
+    "description": "Pro-plan subtitle."
+  },
+  "lic_upgrade": {
+    "message": "الترقية إلى Pro",
+    "description": "Upgrade button on the License tab."
+  },
+  "lic_have_key": {
+    "message": "لديّ مفتاح",
+    "description": "License-key button."
+  },
+  "lic_included_h": {
+    "message": "ما تفتحه Pro",
+    "description": "Benefits section label."
+  },
+  "lic_b1": {
+    "message": "قواعد غير محدودة لكل موقع",
+    "description": "Pro benefit 1."
+  },
+  "lic_b2": {
+    "message": "توجيه الملفات إلى مجلدات فرعية",
+    "description": "Pro benefit 2."
+  },
+  "lic_b3": {
+    "message": "بحث واستبدال بالتعبيرات النمطية",
+    "description": "Pro benefit 3."
+  },
+  "lic_b4": {
+    "message": "رموز عنوان الصفحة وعنوان PDF",
+    "description": "Pro benefit 4."
+  },
+  "lic_b5": {
+    "message": "نسخ احتياطي للإعدادات وتصدير واستيراد",
+    "description": "Pro benefit 5."
+  },
+  "saved": {
+    "message": "تم الحفظ",
+    "description": "Generic saved confirmation."
+  },
+  "err_template": {
+    "message": "تعذّر حفظ هذا القالب.",
+    "description": "Generic template save failure."
+  },
+  "err_bad_token": {
+    "message": "رمز غير معروف في القالب: ",
+    "description": "Prefix before the offending token name."
+  },
+  "ob_brand": {
+    "message": "Smart Rename Downloads",
+    "description": "Onboarding brand name."
+  },
+  "ob_by": {
+    "message": "· بواسطة Zovo",
+    "description": "Onboarding brand attribution suffix."
+  },
+  "ob_skip": {
+    "message": "تخطّي المقدمة",
+    "description": "Skip onboarding button."
+  },
+  "ob_back": {
+    "message": "رجوع",
+    "description": "Previous-step button."
+  },
+  "ob_next": {
+    "message": "التالي",
+    "description": "Next-step button."
+  },
+  "ob_later": {
+    "message": "ربما لاحقًا",
+    "description": "Next-button label on the offer step."
+  },
+  "ob_start": {
+    "message": "ابدأ استخدامه",
+    "description": "Final onboarding button."
+  },
+  "ob_stepno": {
+    "message": "{a} من {b}",
+    "description": "Step counter, e.g. 1 of 6. {a} current, {b} total."
+  },
+  "ob_s1_kicker": {
+    "message": "مشكلة مجلد التنزيلات",
+    "description": "Step 1 kicker."
+  },
+  "ob_s1_title": {
+    "message": "لن تجد ذلك الملف مرة أخرى أبدًا.",
+    "description": "Step 1 title."
+  },
+  "ob_s1_pt": {
+    "message": "مصمَّم لمن ينزّلون طوال اليوم. الباحثون والمحاسبون وكل من يخرج مجلد تنزيلاته عن السيطرة بهدوء.",
+    "description": "Step 1 secondary paragraph."
+  },
+  "ob_s2_kicker": {
+    "message": "قاعدة واحدة، مُفعّلة بالفعل",
+    "description": "Step 2 kicker."
+  },
+  "ob_s2_title": {
+    "message": "شاهد اسمًا رديئًا يتحوّل إلى اسم حقيقي.",
+    "description": "Step 2 title."
+  },
+  "ob_s2_lede": {
+    "message": "النمط الافتراضي هو التاريخ، ثم الموقع، ثم الاسم الأصلي. لحظة انتهاء التنزيل، تُعاد كتابة الاسم ويُحفظ مباشرة إلى القرص. بلا نقرة، بلا مربع حوار. ها هو على ملف حقيقي.",
+    "description": "Step 2 body."
+  },
+  "ob_demo_btn": {
+    "message": "شاهد إعادة التسمية",
+    "description": "Button that replays the rename demo."
+  },
+  "ob_saved_as": {
+    "message": "حُفظ باسم",
+    "description": "Demo label for the original filename."
+  },
+  "ob_renamed_to": {
+    "message": "أُعيدت تسميته إلى",
+    "description": "Demo label for the renamed filename."
+  },
+  "ob_fw_kept": {
+    "message": ".pdf محتفَظ به",
+    "description": "Token chip: the real extension is kept."
+  },
+  "ob_s3_kicker": {
+    "message": "دقيقتان، مرة واحدة",
+    "description": "Step 3 kicker."
+  },
+  "ob_s3_title": {
+    "message": "اضبط نمط التسمية الذي تبقيه إلى الأبد.",
+    "description": "Step 3 title."
+  },
+  "ob_s3_lede": {
+    "message": "أنشئه من الرموز. انقر أحدها لإدراجه في النمط وشاهد النموذج يتحدّث. يُحتفظ دائمًا بامتداد الملف الحقيقي في النهاية. احفظه ويتبعه كل تنزيل مستقبلي.",
+    "description": "Step 3 body."
+  },
+  "ob_s3_pt": {
+    "message": "يعيش في متصفحك. غيّره في أي وقت من الإعدادات، ولا يُرسَل أي شيء عن ملفاتك إلى أي مكان أبدًا.",
+    "description": "Step 3 secondary paragraph."
+  },
+  "ob_template_label": {
+    "message": "نمط التسمية الخاص بك",
+    "description": "Onboarding template input label."
+  },
+  "ob_result": {
+    "message": "النتيجة",
+    "description": "Onboarding preview result label."
+  },
+  "ob_save_btn": {
+    "message": "احفظ نمطي",
+    "description": "Save-pattern button."
+  },
+  "ob_pattern_saved": {
+    "message": "تم حفظ النمط",
+    "description": "Save-pattern button after saving."
+  },
+  "ob_saved_msg": {
+    "message": "تم الحفظ. كل تنزيل يتبع هذا الآن.",
+    "description": "Confirmation after the pattern is saved."
+  },
+  "ob_s4_kicker": {
+    "message": "لماذا يمكنك تركه يعمل",
+    "description": "Step 4 kicker."
+  },
+  "ob_s4_title": {
+    "message": "محلي بالتصميم، مبني علنًا بواسطة مطوّر واحد.",
+    "description": "Step 4 title."
+  },
+  "ob_s4_lede": {
+    "message": "ملفاتك وسجل إعادة التسمية لديك لا يغادران هذا الجهاز أبدًا. في الخطة المجانية لا يجري الإضافة أي اتصال بالشبكة إطلاقًا، والشفرة صغيرة بما يكفي لقراءتها في جلسة واحدة.",
+    "description": "Step 4 body."
+  },
+  "ob_stat1_n": {
+    "message": "محلي",
+    "description": "Stat 1 value."
+  },
+  "ob_stat1_l": {
+    "message": "كل إعادة تسمية تعمل على جهازك",
+    "description": "Stat 1 label."
+  },
+  "ob_stat2_n": {
+    "message": "خاص",
+    "description": "Stat 2 value."
+  },
+  "ob_stat2_l": {
+    "message": "لا شيء يغادر هذا الجهاز",
+    "description": "Stat 2 label."
+  },
+  "ob_stat3_n": {
+    "message": "مفتوح",
+    "description": "Stat 3 value."
+  },
+  "ob_stat3_l": {
+    "message": "مبني علنًا، كل التزام",
+    "description": "Stat 3 label."
+  },
+  "ob_s4_pt": {
+    "message": "أداة إعادة تسمية التنزيلات هي حيث تلتقي Zovo. الخطة الأكبر هي طبقة نزيهة لعالم الإضافات بأكمله، أداة تلو الأخرى، بلا بريد مزعج وبلا تتبّع.",
+    "description": "Step 4 secondary paragraph."
+  },
+  "ob_link_why": {
+    "message": "لماذا أبني Zovo",
+    "description": "Link: why Zovo."
+  },
+  "ob_link_vision": {
+    "message": "الرؤية",
+    "description": "Link: the vision."
+  },
+  "ob_link_safe": {
+    "message": "كيف نحافظ على سلامتك",
+    "description": "Link: safety."
+  },
+  "ob_trust1_h": {
+    "message": "كل شيء يبقى على جهازك",
+    "description": "Trust point 1 heading."
+  },
+  "ob_trust1_b": {
+    "message": "نمطك وقواعدك وسجلك يعيشون في تخزين المتصفح المحلي. بلا حساب، بلا خادم مزامنة، ولا شيء يُرسَل للخارج.",
+    "description": "Trust point 1 body."
+  },
+  "ob_trust2_h": {
+    "message": "شخص واحد، يبني علنًا",
+    "description": "Trust point 2 heading."
+  },
+  "ob_s5_kicker": {
+    "message": "المقايضة النزيهة",
+    "description": "Step 5 kicker."
+  },
+  "ob_s5_title": {
+    "message": "إعادة تسمية مجانية إلى الأبد. أو امتلكها كلها، مرة واحدة.",
+    "description": "Step 5 title."
+  },
+  "ob_s5_lede": {
+    "message": "يبقى محرك إعادة التسمية الصامت مجانيًا، بلا حد لعدد الملفات التي يمسّها. دفعة واحدة قدرها تسعة وتسعون دولارًا تُشغّل قواعد غير محدودة لكل موقع، وتوجيه المجلدات، وتنظيف التعبيرات النمطية، والتسمية من عنوان صفحة أو PDF.",
+    "description": "Step 5 body."
+  },
+  "ob_plan_free": {
+    "message": "مجاني",
+    "description": "Free plan name."
+  },
+  "ob_free_unit": {
+    "message": "إلى الأبد",
+    "description": "Free plan price unit."
+  },
+  "ob_free1": {
+    "message": "كل تنزيل يُعاد تسميته وحده",
+    "description": "Free benefit 1."
+  },
+  "ob_free2": {
+    "message": "الرموز الأساسية الثلاثة: التاريخ، الموقع، الاسم الأصلي",
+    "description": "Free benefit 2."
+  },
+  "ob_free3": {
+    "message": "قاعدة واحدة محفوظة لكل موقع",
+    "description": "Free benefit 3."
+  },
+  "ob_free4": {
+    "message": "معالجة التعارضات وعدّاد مباشر",
+    "description": "Free benefit 4."
+  },
+  "ob_ribbon": {
+    "message": "أفضل قيمة",
+    "description": "Lifetime plan ribbon."
+  },
+  "ob_plan_life": {
+    "message": "مدى الحياة",
+    "description": "Lifetime plan name."
+  },
+  "ob_life_unit": {
+    "message": "مرة واحدة",
+    "description": "Lifetime plan price unit."
+  },
+  "ob_life1": {
+    "message": "قواعد غير محدودة لكل موقع",
+    "description": "Lifetime benefit 1."
+  },
+  "ob_life2": {
+    "message": "توجيه الملفات إلى مجلدات فرعية للتنزيلات حسب الموقع أو التاريخ",
+    "description": "Lifetime benefit 2."
+  },
+  "ob_life3": {
+    "message": "تنظيف بالتعبيرات النمطية بالإضافة إلى رموز عنوان الصفحة وعنوان PDF",
+    "description": "Lifetime benefit 3."
+  },
+  "ob_life4": {
+    "message": "نسخ احتياطي للإعدادات واستيراد بين الأجهزة",
+    "description": "Lifetime benefit 4."
+  },
+  "ob_life5": {
+    "message": "كل تحديث مستقبلي لهذه الأداة، مضمّن",
+    "description": "Lifetime benefit 5."
+  },
+  "ob_life6": {
+    "message": "دفعة واحدة، بلا اشتراك، أبدًا",
+    "description": "Lifetime benefit 6."
+  },
+  "ob_life_cta": {
+    "message": "احصل على مدى الحياة مقابل $$99",
+    "description": "Lifetime purchase CTA."
+  },
+  "ob_guarantee": {
+    "message": "استرداد خلال 14 يومًا، بلا أسئلة. تفضّل الاشتراك الشهري؟ إنه $$4.99 على الصفحة نفسها.",
+    "description": "Refund guarantee line."
+  },
+  "ob_s6_kicker": {
+    "message": "أنت جاهز",
+    "description": "Step 6 kicker."
+  },
+  "ob_s6_title": {
+    "message": "لا شيء متبقٍّ لتفعله. إنه يعمل بالفعل.",
+    "description": "Step 6 title."
+  },
+  "ob_s6_lede": {
+    "message": "الملف التالي الذي تنزّله يحصل على اسم نظيف وحده. لا زر تضغطه، ولا مربع حوار تؤكّده. إليك ما يحدث من هنا.",
+    "description": "Step 6 body."
+  },
+  "ob_dev_h": {
+    "message": "من المطوّر",
+    "description": "Developer note heading."
+  },
+  "ob_dev_b": {
+    "message": "أبني Zovo بمفردي، علنًا. إذا تعطّل شيء، راسلني وسأردّ. أدوات إعادة التسمية مجرد بداية. الخطة هي طبقة نزيهة للمتصفح بأكمله، وتسعة وتسعون دولارًا منك تشحن الجزء التالي منها.",
+    "description": "Developer note body."
+  },
+  "ob_link_github": {
+    "message": "تواصل معي على GitHub",
+    "description": "Link: GitHub."
+  },
+  "ob_link_going": {
+    "message": "إلى أين يتجه هذا",
+    "description": "Link: roadmap."
+  },
+  "ob_cheat1_k": {
+    "message": "كل تنزيل",
+    "description": "Cheat-sheet row 1 key."
+  },
+  "ob_cheat1_v": {
+    "message": "يُعاد تسميته عند الحفظ",
+    "description": "Cheat-sheet row 1 value."
+  },
+  "ob_cheat2_k": {
+    "message": "النافذة المنبثقة",
+    "description": "Cheat-sheet row 2 key."
+  },
+  "ob_cheat2_v": {
+    "message": "تعدّ كل إعادة تسمية",
+    "description": "Cheat-sheet row 2 value."
+  },
+  "ob_cheat3_k": {
+    "message": "نمطك",
+    "description": "Cheat-sheet row 3 key."
+  },
+  "ob_cheat3_v": {
+    "message": "حرّره في الإعدادات",
+    "description": "Cheat-sheet row 3 value."
+  },
+  "ob_cheat4_k": {
+    "message": "أول قاعدة موقع",
+    "description": "Cheat-sheet row 4 key."
+  },
+  "ob_cheat4_v": {
+    "message": "مجانية للإضافة",
+    "description": "Cheat-sheet row 4 value."
+  }
+}

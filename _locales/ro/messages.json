@@ -1,0 +1,834 @@
+{
+  "extName": {
+    "message": "Smart Rename Downloads",
+    "description": "Extension name shown in the Chrome Web Store and toolbar."
+  },
+  "extDesc": {
+    "message": "Redenumește automat fiecare descărcare cu jetoane de dată, site și titlu. Reguli per-site, regex, rutare în foldere. Local",
+    "description": "Chrome Web Store short description (max 132 chars)."
+  },
+  "popup_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Popup header title."
+  },
+  "popup_open_settings": {
+    "message": "Deschide setările",
+    "description": "Aria label for the settings gear button."
+  },
+  "popup_settings": {
+    "message": "Setări",
+    "description": "Tooltip for the settings gear button."
+  },
+  "popup_health": {
+    "message": "Redenumirea este întreruptă — permisiunea pentru Descărcări a fost eliminată.",
+    "description": "Shown when the downloads permission is missing."
+  },
+  "popup_regrant": {
+    "message": "Reactivează",
+    "description": "Link to re-grant the downloads permission."
+  },
+  "popup_hero_label": {
+    "message": "Fișiere redenumite",
+    "description": "Label under the big lifetime rename counter."
+  },
+  "popup_hero_sub": {
+    "message": "Fiecare descărcare este redenumită automat, înainte să ajungă pe disc.",
+    "description": "Supporting line under the hero counter."
+  },
+  "popup_master_title": {
+    "message": "Redenumire automată a descărcărilor",
+    "description": "Master on/off switch title."
+  },
+  "popup_master_aria": {
+    "message": "Comută redenumirea automată a descărcărilor",
+    "description": "Accessible name for the master switch."
+  },
+  "popup_master_on": {
+    "message": "Activat — se redenumește fiecare descărcare",
+    "description": "Master switch note when enabled."
+  },
+  "popup_master_off": {
+    "message": "Dezactivat — Chrome păstrează numele implicite",
+    "description": "Master switch note when disabled."
+  },
+  "popup_recent": {
+    "message": "Redenumiri recente",
+    "description": "Section label for the recent-renames list."
+  },
+  "popup_empty_title": {
+    "message": "Gata când ești și tu",
+    "description": "Empty-state headline in the popup."
+  },
+  "popup_empty_text": {
+    "message": "Următoarea ta descărcare va fi redenumită automat. Va apărea aici.",
+    "description": "Empty-state body in the popup."
+  },
+  "popup_milestone_text": {
+    "message": "Smart Rename a organizat {n} descărcări. Pro le clasează automat în foldere.",
+    "description": "Post-success upgrade nudge. {n} is the rename count."
+  },
+  "popup_milestone_cta": {
+    "message": "Vezi Pro",
+    "description": "CTA on the milestone nudge."
+  },
+  "popup_dismiss": {
+    "message": "Închide",
+    "description": "Dismiss the milestone nudge."
+  },
+  "popup_trust": {
+    "message": "Local · Fără cont · Fără urmărire",
+    "description": "Trust line in the popup footer."
+  },
+  "popup_upgrade": {
+    "message": "Treci la Pro",
+    "description": "Upgrade button in the popup footer."
+  },
+  "flag_timeout": {
+    "message": "nume implicit păstrat",
+    "description": "Recent-list flag: rename fell back to Chrome's default name (timeout)."
+  },
+  "flag_sanitize": {
+    "message": "nume implicit păstrat",
+    "description": "Recent-list flag: name could not be sanitized."
+  },
+  "flag_nomatch": {
+    "message": "nicio potrivire",
+    "description": "Recent-list flag: no site rule matched."
+  },
+  "opt_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Options brand name."
+  },
+  "opt_trust": {
+    "message": "Totul rămâne pe acest dispozitiv. Zero urmărire.",
+    "description": "Options sidebar trust line."
+  },
+  "aria_theme": {
+    "message": "Temă de culoare",
+    "description": "Aria label for the theme radiogroup."
+  },
+  "theme_system": {
+    "message": "Sistem",
+    "description": "Theme option: follow OS."
+  },
+  "theme_light": {
+    "message": "Luminoasă",
+    "description": "Theme option: light."
+  },
+  "theme_dark": {
+    "message": "Întunecată",
+    "description": "Theme option: dark."
+  },
+  "tier_free": {
+    "message": "Gratuit",
+    "description": "Free plan label."
+  },
+  "tier_trial": {
+    "message": "Probă",
+    "description": "Trial plan label."
+  },
+  "tier_pro": {
+    "message": "Pro",
+    "description": "Pro plan label."
+  },
+  "tab_template": {
+    "message": "Șablon",
+    "description": "Settings tab: naming template."
+  },
+  "tab_sites": {
+    "message": "Reguli per-site",
+    "description": "Settings tab: per-site rules."
+  },
+  "tab_advanced": {
+    "message": "Avansat",
+    "description": "Settings tab: advanced naming."
+  },
+  "tab_backup": {
+    "message": "Copie de rezervă",
+    "description": "Settings tab: backup and restore."
+  },
+  "tab_license": {
+    "message": "Licență",
+    "description": "Settings tab: license and plan."
+  },
+  "tpl_h1": {
+    "message": "Șablon de denumire",
+    "description": "Template panel heading."
+  },
+  "tpl_lede": {
+    "message": "Construiește numele de fișier pe care îl primește fiecare descărcare. Extensia reală a fișierului este întotdeauna păstrată.",
+    "description": "Template panel intro."
+  },
+  "tpl_label": {
+    "message": "Șablon",
+    "description": "Template input label."
+  },
+  "tpl_tokens_aria": {
+    "message": "Inserează un jeton",
+    "description": "Aria label for the token chip row."
+  },
+  "tpl_conflict": {
+    "message": "Dacă există deja un fișier cu acel nume",
+    "description": "Conflict-policy select label."
+  },
+  "conflict_uniquify": {
+    "message": "Adaugă un număr — păstrează ambele",
+    "description": "Conflict policy: uniquify."
+  },
+  "conflict_overwrite": {
+    "message": "Suprascrie fișierul vechi",
+    "description": "Conflict policy: overwrite."
+  },
+  "conflict_prompt": {
+    "message": "Întreabă-mă de fiecare dată",
+    "description": "Conflict policy: prompt."
+  },
+  "tpl_save": {
+    "message": "Salvează șablonul",
+    "description": "Save-template button."
+  },
+  "tpl_preview_h": {
+    "message": "Previzualizare live",
+    "description": "Preview section label."
+  },
+  "tpl_pv_host": {
+    "message": "Site exemplu",
+    "description": "Preview sample-host input label."
+  },
+  "tpl_pv_name": {
+    "message": "Descărcare exemplu",
+    "description": "Preview sample-name input label."
+  },
+  "tpl_pv_result": {
+    "message": "Rezultat",
+    "description": "Preview result label."
+  },
+  "tpl_pv_hint": {
+    "message": "Un „/” într-un șablon Gratuit este salvat ca „-”. Rutarea în foldere este o funcție Pro.",
+    "description": "Preview hint about slashes and folder routing."
+  },
+  "sites_h1": {
+    "message": "Reguli per-site",
+    "description": "Sites panel heading."
+  },
+  "sites_lede": {
+    "message": "Dă unui anumit site propriul șablon — facturile în foldere, lucrările cu titlu. Gratuit include o regulă ca s-o simți; Pro este nelimitat.",
+    "description": "Sites panel intro."
+  },
+  "sites_count": {
+    "message": "0 din 1 reguli gratuite folosite",
+    "description": "Initial site-rule count text."
+  },
+  "sites_count_free": {
+    "message": "{n} din 1 reguli gratuite folosite",
+    "description": "Site-rule count for Free. {n} is the count."
+  },
+  "sites_count_pro": {
+    "message": "{n} reguli",
+    "description": "Site-rule count for Pro. {n} is the count."
+  },
+  "sites_empty": {
+    "message": "Încă nu există reguli pentru site-uri. Adaugă una mai jos.",
+    "description": "Empty state for site rules."
+  },
+  "sites_add_h": {
+    "message": "Adaugă o regulă",
+    "description": "Add-rule section label."
+  },
+  "sites_match": {
+    "message": "Site (gazdă sau *.gazdă)",
+    "description": "Rule match input label."
+  },
+  "sites_match_ph": {
+    "message": "stripe.com",
+    "description": "Rule match placeholder."
+  },
+  "sites_template": {
+    "message": "Șablon pentru acest site",
+    "description": "Rule template input label."
+  },
+  "sites_template_ph": {
+    "message": "{date}-invoice-{original}",
+    "description": "Rule template placeholder."
+  },
+  "sites_add_btn": {
+    "message": "Adaugă regulă de site",
+    "description": "Add-rule button."
+  },
+  "sites_delete": {
+    "message": "Șterge regula",
+    "description": "Aria label for a rule's delete button."
+  },
+  "sites_need_both": {
+    "message": "Introdu atât un site, cât și un șablon.",
+    "description": "Validation when a rule field is empty."
+  },
+  "sites_add_err": {
+    "message": "Acea regulă nu a putut fi adăugată.",
+    "description": "Generic add-rule failure."
+  },
+  "adv_h1": {
+    "message": "Denumire avansată",
+    "description": "Advanced panel heading."
+  },
+  "adv_lede": {
+    "message": "Unelte performante pentru felul în care chiar îți organizezi descărcările. Incluse în Zovo Pro.",
+    "description": "Advanced panel intro."
+  },
+  "adv_save": {
+    "message": "Salvează",
+    "description": "Generic save button."
+  },
+  "adv_clear": {
+    "message": "Golește",
+    "description": "Generic clear button."
+  },
+  "adv_unlock": {
+    "message": "Deblochează cu Pro",
+    "description": "CTA on a locked Pro card."
+  },
+  "adv_on": {
+    "message": "Activat",
+    "description": "Feature toggled on."
+  },
+  "adv_off": {
+    "message": "Dezactivat",
+    "description": "Feature toggled off."
+  },
+  "adv_perm_needed": {
+    "message": "Este necesară o permisiune pentru a activa acest lucru.",
+    "description": "Shown when an optional permission is denied."
+  },
+  "adv_toggle_err": {
+    "message": "Această setare nu a putut fi actualizată.",
+    "description": "Generic toggle failure."
+  },
+  "adv_folder_h": {
+    "message": "Rutare în foldere",
+    "description": "Folder-routing card heading."
+  },
+  "adv_folder_note": {
+    "message": "Descarcă fișierele în subfoldere ale folderului tău Descărcări, de ex. Downloads/{hostname}/…",
+    "description": "Folder-routing explanation."
+  },
+  "adv_folder_label": {
+    "message": "Cale subfolder (jetoane permise)",
+    "description": "Folder-path input label."
+  },
+  "adv_folder_ph": {
+    "message": "{hostname}",
+    "description": "Folder-path placeholder."
+  },
+  "adv_folder_err": {
+    "message": "Rutarea în foldere nu a putut fi salvată.",
+    "description": "Folder-routing save failure."
+  },
+  "adv_regex_h": {
+    "message": "Găsește și înlocuiește (regex)",
+    "description": "Regex card heading."
+  },
+  "adv_regex_note": {
+    "message": "Curăță numele cu o expresie regulată înainte să fie salvate.",
+    "description": "Regex explanation."
+  },
+  "adv_regex_find": {
+    "message": "Găsește",
+    "description": "Regex find input label."
+  },
+  "adv_regex_find_ph": {
+    "message": "\\s+",
+    "description": "Regex find placeholder."
+  },
+  "adv_regex_replace": {
+    "message": "Înlocuiește",
+    "description": "Regex replace input label."
+  },
+  "adv_regex_replace_ph": {
+    "message": "-",
+    "description": "Regex replace placeholder."
+  },
+  "adv_regex_flags": {
+    "message": "Indicatori",
+    "description": "Regex flags input label."
+  },
+  "adv_regex_need": {
+    "message": "Introdu un tipar de căutat.",
+    "description": "Validation when the regex find is empty."
+  },
+  "adv_regex_bad": {
+    "message": "Acel tipar este nevalid sau nesigur.",
+    "description": "Regex validation failure."
+  },
+  "adv_regex_err": {
+    "message": "Tiparul nu a putut fi salvat.",
+    "description": "Generic regex save failure."
+  },
+  "adv_cleared": {
+    "message": "Golit",
+    "description": "Regex cleared confirmation."
+  },
+  "adv_title_h": {
+    "message": "Jeton titlu de pagină {title}",
+    "description": "Title-token card heading."
+  },
+  "adv_title_note": {
+    "message": "Folosește titlul paginii sursă în numele fișierelor. Activarea acestuia cere permisiunea Tabs de la Chrome.",
+    "description": "Title-token explanation."
+  },
+  "adv_title_toggle": {
+    "message": "Activează jetonul {title}",
+    "description": "Title-token toggle label."
+  },
+  "adv_title_aria": {
+    "message": "Activează jetonul titlu de pagină",
+    "description": "Accessible name for the title-token switch."
+  },
+  "adv_pdf_h": {
+    "message": "Jeton titlu PDF {pdftitle}",
+    "description": "PDF-token card heading."
+  },
+  "adv_pdf_note": {
+    "message": "Denumește PDF-urile după titlul stocat în interiorul fișierului. Aceasta citește PDF-ul prin rețea, deci cere acces la site și este dezactivată implicit.",
+    "description": "PDF-token explanation."
+  },
+  "adv_pdf_toggle": {
+    "message": "Activează jetonul {pdftitle}",
+    "description": "PDF-token toggle label."
+  },
+  "adv_pdf_aria": {
+    "message": "Activează jetonul titlu PDF",
+    "description": "Accessible name for the PDF-token switch."
+  },
+  "backup_h1": {
+    "message": "Copie de rezervă și restaurare",
+    "description": "Backup panel heading."
+  },
+  "backup_lede": {
+    "message": "Exportă configurația ta într-un fișier sau mut-o pe alt calculator. Inclus în Zovo Pro.",
+    "description": "Backup panel intro."
+  },
+  "backup_export_h": {
+    "message": "Exportă configurația",
+    "description": "Export card heading."
+  },
+  "backup_export_note": {
+    "message": "Descarcă un fișier JSON cu șablonul, regulile și setările tale. Fără istoric, fără date personale.",
+    "description": "Export explanation."
+  },
+  "backup_export_btn": {
+    "message": "Exportă în fișier",
+    "description": "Export button."
+  },
+  "backup_exported": {
+    "message": "Exportat",
+    "description": "Export confirmation."
+  },
+  "backup_export_err": {
+    "message": "Exportul a eșuat.",
+    "description": "Export failure."
+  },
+  "backup_import_h": {
+    "message": "Importă configurația",
+    "description": "Import card heading."
+  },
+  "backup_import_label": {
+    "message": "Lipește o configurație exportată",
+    "description": "Import textarea label."
+  },
+  "backup_import_ph": {
+    "message": "{\"zovo_template\":\"…\"}",
+    "description": "Import textarea placeholder."
+  },
+  "backup_import_btn": {
+    "message": "Importă",
+    "description": "Import button."
+  },
+  "backup_imported": {
+    "message": "Importat",
+    "description": "Import confirmation."
+  },
+  "backup_need_json": {
+    "message": "Lipește mai întâi o configurație.",
+    "description": "Validation when import is empty."
+  },
+  "backup_import_err": {
+    "message": "Acel fișier nu a putut fi importat.",
+    "description": "Import failure."
+  },
+  "lic_h1": {
+    "message": "Planul tău",
+    "description": "License panel heading."
+  },
+  "lic_lede": {
+    "message": "O singură plată deblochează pentru totdeauna fiecare funcție de denumire. Fără abonament.",
+    "description": "License panel intro."
+  },
+  "lic_current": {
+    "message": "Planul actual",
+    "description": "Current-plan label."
+  },
+  "lic_free_sub": {
+    "message": "Redenumire de bază, o regulă de site, pentru totdeauna.",
+    "description": "Free-plan subtitle."
+  },
+  "lic_pro_sub": {
+    "message": "Fiecare funcție de denumire este deblocată. Îți mulțumim că susții Zovo.",
+    "description": "Pro-plan subtitle."
+  },
+  "lic_upgrade": {
+    "message": "Treci la Pro",
+    "description": "Upgrade button on the License tab."
+  },
+  "lic_have_key": {
+    "message": "Am o cheie",
+    "description": "License-key button."
+  },
+  "lic_included_h": {
+    "message": "Ce deblochează Pro",
+    "description": "Benefits section label."
+  },
+  "lic_b1": {
+    "message": "Reguli per-site nelimitate",
+    "description": "Pro benefit 1."
+  },
+  "lic_b2": {
+    "message": "Rutare în subfoldere",
+    "description": "Pro benefit 2."
+  },
+  "lic_b3": {
+    "message": "Găsire și înlocuire cu regex",
+    "description": "Pro benefit 3."
+  },
+  "lic_b4": {
+    "message": "Jetoane titlu de pagină și titlu PDF",
+    "description": "Pro benefit 4."
+  },
+  "lic_b5": {
+    "message": "Copie de rezervă, export și import al configurației",
+    "description": "Pro benefit 5."
+  },
+  "saved": {
+    "message": "Salvat",
+    "description": "Generic saved confirmation."
+  },
+  "err_template": {
+    "message": "Acel șablon nu a putut fi salvat.",
+    "description": "Generic template save failure."
+  },
+  "err_bad_token": {
+    "message": "Jeton necunoscut în șablon: ",
+    "description": "Prefix before the offending token name."
+  },
+  "ob_brand": {
+    "message": "Smart Rename Downloads",
+    "description": "Onboarding brand name."
+  },
+  "ob_by": {
+    "message": "· de Zovo",
+    "description": "Onboarding brand attribution suffix."
+  },
+  "ob_skip": {
+    "message": "Sari peste intro",
+    "description": "Skip onboarding button."
+  },
+  "ob_back": {
+    "message": "Înapoi",
+    "description": "Previous-step button."
+  },
+  "ob_next": {
+    "message": "Următorul",
+    "description": "Next-step button."
+  },
+  "ob_later": {
+    "message": "Poate mai târziu",
+    "description": "Next-button label on the offer step."
+  },
+  "ob_start": {
+    "message": "Începe să o folosești",
+    "description": "Final onboarding button."
+  },
+  "ob_stepno": {
+    "message": "{a} din {b}",
+    "description": "Step counter, e.g. 1 of 6. {a} current, {b} total."
+  },
+  "ob_s1_kicker": {
+    "message": "Problema folderului de descărcări",
+    "description": "Step 1 kicker."
+  },
+  "ob_s1_title": {
+    "message": "Nu vei mai găsi niciodată acel fișier.",
+    "description": "Step 1 title."
+  },
+  "ob_s1_pt": {
+    "message": "Creat pentru oamenii care descarcă toată ziua. Cercetători, contabili, oricine al cărui folder Descărcări scapă în tăcere de sub control.",
+    "description": "Step 1 secondary paragraph."
+  },
+  "ob_s2_kicker": {
+    "message": "O regulă, deja activă",
+    "description": "Step 2 kicker."
+  },
+  "ob_s2_title": {
+    "message": "Privește cum un nume-gunoi devine unul real.",
+    "description": "Step 2 title."
+  },
+  "ob_s2_lede": {
+    "message": "Tiparul implicit este data, apoi site-ul, apoi numele original. În clipa în care o descărcare se termină, numele este rescris și scris direct pe disc. Fără clic, fără dialog. Iată-l pe un fișier real.",
+    "description": "Step 2 body."
+  },
+  "ob_demo_btn": {
+    "message": "Privește cum redenumește",
+    "description": "Button that replays the rename demo."
+  },
+  "ob_saved_as": {
+    "message": "Salvat ca",
+    "description": "Demo label for the original filename."
+  },
+  "ob_renamed_to": {
+    "message": "Redenumit în",
+    "description": "Demo label for the renamed filename."
+  },
+  "ob_fw_kept": {
+    "message": ".pdf păstrat",
+    "description": "Token chip: the real extension is kept."
+  },
+  "ob_s3_kicker": {
+    "message": "Două minute, o singură dată",
+    "description": "Step 3 kicker."
+  },
+  "ob_s3_title": {
+    "message": "Stabilește tiparul de denumire pe care îl păstrezi definitiv.",
+    "description": "Step 3 title."
+  },
+  "ob_s3_lede": {
+    "message": "Construiește-l din jetoane. Fă clic pe unul ca să-l adaugi în tipar și privește cum se actualizează exemplul. Extensia reală a fișierului este întotdeauna păstrată la sfârșit. Salvează-l și fiecare descărcare viitoare îl va urma.",
+    "description": "Step 3 body."
+  },
+  "ob_s3_pt": {
+    "message": "El trăiește în browserul tău. Schimbă-l oricând din setări și nimic despre fișierele tale nu este vreodată trimis undeva.",
+    "description": "Step 3 secondary paragraph."
+  },
+  "ob_template_label": {
+    "message": "Tiparul tău de denumire",
+    "description": "Onboarding template input label."
+  },
+  "ob_result": {
+    "message": "Rezultat",
+    "description": "Onboarding preview result label."
+  },
+  "ob_save_btn": {
+    "message": "Salvează tiparul meu",
+    "description": "Save-pattern button."
+  },
+  "ob_pattern_saved": {
+    "message": "Tipar salvat",
+    "description": "Save-pattern button after saving."
+  },
+  "ob_saved_msg": {
+    "message": "Salvat. Fiecare descărcare urmează acum acest tipar.",
+    "description": "Confirmation after the pattern is saved."
+  },
+  "ob_s4_kicker": {
+    "message": "De ce îl poți lăsa să ruleze",
+    "description": "Step 4 kicker."
+  },
+  "ob_s4_title": {
+    "message": "Local prin proiectare, construit deschis de un singur dezvoltator.",
+    "description": "Step 4 title."
+  },
+  "ob_s4_lede": {
+    "message": "Fișierele tale și istoricul redenumirilor nu părăsesc niciodată acest calculator. Pe planul gratuit, extensia nu face niciun apel de rețea, iar codul este suficient de mic încât să-l citești dintr-o singură ședință.",
+    "description": "Step 4 body."
+  },
+  "ob_stat1_n": {
+    "message": "Local",
+    "description": "Stat 1 value."
+  },
+  "ob_stat1_l": {
+    "message": "fiecare redenumire rulează pe dispozitivul tău",
+    "description": "Stat 1 label."
+  },
+  "ob_stat2_n": {
+    "message": "Privat",
+    "description": "Stat 2 value."
+  },
+  "ob_stat2_l": {
+    "message": "nimic nu părăsește acest calculator",
+    "description": "Stat 2 label."
+  },
+  "ob_stat3_n": {
+    "message": "Deschis",
+    "description": "Stat 3 value."
+  },
+  "ob_stat3_l": {
+    "message": "construit în public, la fiecare commit",
+    "description": "Stat 3 label."
+  },
+  "ob_s4_pt": {
+    "message": "Un redenumitor de descărcări este locul unde întâlnești Zovo. Planul mai amplu este un strat onest pentru întreaga lume a extensiilor, o unealtă pe rând, fără spam și fără urmărire.",
+    "description": "Step 4 secondary paragraph."
+  },
+  "ob_link_why": {
+    "message": "De ce construiesc Zovo",
+    "description": "Link: why Zovo."
+  },
+  "ob_link_vision": {
+    "message": "Viziunea",
+    "description": "Link: the vision."
+  },
+  "ob_link_safe": {
+    "message": "Cum te ținem în siguranță",
+    "description": "Link: safety."
+  },
+  "ob_trust1_h": {
+    "message": "Totul rămâne pe dispozitivul tău",
+    "description": "Trust point 1 heading."
+  },
+  "ob_trust1_b": {
+    "message": "Tiparul, regulile și istoricul tău trăiesc în stocarea locală a browserului. Fără cont, fără server de sincronizare, nimic trimis afară.",
+    "description": "Trust point 1 body."
+  },
+  "ob_trust2_h": {
+    "message": "O singură persoană, construind în mod deschis",
+    "description": "Trust point 2 heading."
+  },
+  "ob_s5_kicker": {
+    "message": "Schimbul onest",
+    "description": "Step 5 kicker."
+  },
+  "ob_s5_title": {
+    "message": "Redenumiri gratuite pentru totdeauna. Sau deține totul, o singură dată.",
+    "description": "Step 5 title."
+  },
+  "ob_s5_lede": {
+    "message": "Nucleul de redenumire silențioasă rămâne gratuit, fără limită de câte fișiere atinge. O singură plată de nouăzeci și nouă de dolari activează reguli per-site nelimitate, rutare în foldere, curățare cu regex și denumire după titlul unei pagini sau al unui PDF.",
+    "description": "Step 5 body."
+  },
+  "ob_plan_free": {
+    "message": "Gratuit",
+    "description": "Free plan name."
+  },
+  "ob_free_unit": {
+    "message": "pentru totdeauna",
+    "description": "Free plan price unit."
+  },
+  "ob_free1": {
+    "message": "Fiecare descărcare redenumită de la sine",
+    "description": "Free benefit 1."
+  },
+  "ob_free2": {
+    "message": "Cele trei jetoane de bază: dată, site, nume original",
+    "description": "Free benefit 2."
+  },
+  "ob_free3": {
+    "message": "O regulă per-site salvată",
+    "description": "Free benefit 3."
+  },
+  "ob_free4": {
+    "message": "Gestionarea conflictelor și un contor live",
+    "description": "Free benefit 4."
+  },
+  "ob_ribbon": {
+    "message": "Cea mai bună valoare",
+    "description": "Lifetime plan ribbon."
+  },
+  "ob_plan_life": {
+    "message": "Pe viață",
+    "description": "Lifetime plan name."
+  },
+  "ob_life_unit": {
+    "message": "o singură dată",
+    "description": "Lifetime plan price unit."
+  },
+  "ob_life1": {
+    "message": "Reguli per-site nelimitate",
+    "description": "Lifetime benefit 1."
+  },
+  "ob_life2": {
+    "message": "Rutează fișierele în subfoldere Descărcări după site sau dată",
+    "description": "Lifetime benefit 2."
+  },
+  "ob_life3": {
+    "message": "Curățare cu regex plus jetoane titlu de pagină și titlu PDF",
+    "description": "Lifetime benefit 3."
+  },
+  "ob_life4": {
+    "message": "Copie de rezervă și import al configurației între calculatoare",
+    "description": "Lifetime benefit 4."
+  },
+  "ob_life5": {
+    "message": "Fiecare actualizare viitoare a acestei unelte, inclusă",
+    "description": "Lifetime benefit 5."
+  },
+  "ob_life6": {
+    "message": "O singură plată, fără abonament, niciodată",
+    "description": "Lifetime benefit 6."
+  },
+  "ob_life_cta": {
+    "message": "Obține varianta pe viață pentru $$99",
+    "description": "Lifetime purchase CTA."
+  },
+  "ob_guarantee": {
+    "message": "Rambursare în 14 zile, fără întrebări. Preferi lunar? Este $$4.99 pe aceeași pagină.",
+    "description": "Refund guarantee line."
+  },
+  "ob_s6_kicker": {
+    "message": "Ești gata",
+    "description": "Step 6 kicker."
+  },
+  "ob_s6_title": {
+    "message": "Nimic de făcut. Deja funcționează.",
+    "description": "Step 6 title."
+  },
+  "ob_s6_lede": {
+    "message": "Următorul fișier pe care îl descarci primește de la sine un nume curat. Niciun buton de apăsat, niciun dialog de confirmat. Iată ce se întâmplă de aici încolo.",
+    "description": "Step 6 body."
+  },
+  "ob_dev_h": {
+    "message": "De la dezvoltator",
+    "description": "Developer note heading."
+  },
+  "ob_dev_b": {
+    "message": "Construiesc Zovo pe cont propriu, în mod deschis. Dacă ceva se strică, scrie-mi și îți răspund. Redenumitoarele sunt doar începutul. Planul este un strat onest pentru întregul browser, iar cei nouăzeci și nouă de dolari ai tăi lansează următoarea piesă a lui.",
+    "description": "Developer note body."
+  },
+  "ob_link_github": {
+    "message": "Contactează-mă pe GitHub",
+    "description": "Link: GitHub."
+  },
+  "ob_link_going": {
+    "message": "Încotro se îndreaptă",
+    "description": "Link: roadmap."
+  },
+  "ob_cheat1_k": {
+    "message": "Fiecare descărcare",
+    "description": "Cheat-sheet row 1 key."
+  },
+  "ob_cheat1_v": {
+    "message": "Redenumită la salvare",
+    "description": "Cheat-sheet row 1 value."
+  },
+  "ob_cheat2_k": {
+    "message": "Fereastra pop-up",
+    "description": "Cheat-sheet row 2 key."
+  },
+  "ob_cheat2_v": {
+    "message": "Numără fiecare redenumire",
+    "description": "Cheat-sheet row 2 value."
+  },
+  "ob_cheat3_k": {
+    "message": "Tiparul tău",
+    "description": "Cheat-sheet row 3 key."
+  },
+  "ob_cheat3_v": {
+    "message": "Editează-l în setări",
+    "description": "Cheat-sheet row 3 value."
+  },
+  "ob_cheat4_k": {
+    "message": "Prima regulă de site",
+    "description": "Cheat-sheet row 4 key."
+  },
+  "ob_cheat4_v": {
+    "message": "Gratuit de adăugat",
+    "description": "Cheat-sheet row 4 value."
+  }
+}

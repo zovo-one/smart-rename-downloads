@@ -1,0 +1,834 @@
+{
+  "extName": {
+    "message": "Smart Rename Downloads",
+    "description": "Extension name shown in the Chrome Web Store and toolbar."
+  },
+  "extDesc": {
+    "message": "به‌طور خودکار نام هر دانلود را با توکن‌های تاریخ، سایت و عنوان تغییر دهید. قوانین اختصاصی هر سایت، regex، مسیریابی پوشه. محلی،",
+    "description": "Chrome Web Store short description (max 132 chars)."
+  },
+  "popup_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Popup header title."
+  },
+  "popup_open_settings": {
+    "message": "باز کردن تنظیمات",
+    "description": "Aria label for the settings gear button."
+  },
+  "popup_settings": {
+    "message": "تنظیمات",
+    "description": "Tooltip for the settings gear button."
+  },
+  "popup_health": {
+    "message": "تغییر نام متوقف شد — مجوز دانلودها برداشته شد.",
+    "description": "Shown when the downloads permission is missing."
+  },
+  "popup_regrant": {
+    "message": "فعال‌سازی مجدد",
+    "description": "Link to re-grant the downloads permission."
+  },
+  "popup_hero_label": {
+    "message": "فایل‌های تغییرنام‌یافته",
+    "description": "Label under the big lifetime rename counter."
+  },
+  "popup_hero_sub": {
+    "message": "نام هر دانلود پیش از رسیدن به دیسک شما به‌طور خودکار تغییر می‌کند.",
+    "description": "Supporting line under the hero counter."
+  },
+  "popup_master_title": {
+    "message": "تغییر نام خودکار دانلودها",
+    "description": "Master on/off switch title."
+  },
+  "popup_master_aria": {
+    "message": "روشن/خاموش کردن تغییر نام خودکار دانلود",
+    "description": "Accessible name for the master switch."
+  },
+  "popup_master_on": {
+    "message": "روشن — تغییر نام هر دانلود",
+    "description": "Master switch note when enabled."
+  },
+  "popup_master_off": {
+    "message": "خاموش — Chrome نام‌های پیش‌فرض خود را نگه می‌دارد",
+    "description": "Master switch note when disabled."
+  },
+  "popup_recent": {
+    "message": "تغییر نام‌های اخیر",
+    "description": "Section label for the recent-renames list."
+  },
+  "popup_empty_title": {
+    "message": "هر وقت آماده بودید",
+    "description": "Empty-state headline in the popup."
+  },
+  "popup_empty_text": {
+    "message": "دانلود بعدی شما به‌طور خودکار تغییر نام می‌یابد. اینجا نمایش داده خواهد شد.",
+    "description": "Empty-state body in the popup."
+  },
+  "popup_milestone_text": {
+    "message": "Smart Rename تعداد {n} دانلود را سازماندهی کرده است. Pro آن‌ها را به‌طور خودکار در پوشه‌ها قرار می‌دهد.",
+    "description": "Post-success upgrade nudge. {n} is the rename count."
+  },
+  "popup_milestone_cta": {
+    "message": "مشاهده Pro",
+    "description": "CTA on the milestone nudge."
+  },
+  "popup_dismiss": {
+    "message": "بستن",
+    "description": "Dismiss the milestone nudge."
+  },
+  "popup_trust": {
+    "message": "محلی · بدون حساب · بدون ردیابی",
+    "description": "Trust line in the popup footer."
+  },
+  "popup_upgrade": {
+    "message": "ارتقا به Pro",
+    "description": "Upgrade button in the popup footer."
+  },
+  "flag_timeout": {
+    "message": "پیش‌فرض حفظ شد",
+    "description": "Recent-list flag: rename fell back to Chrome's default name (timeout)."
+  },
+  "flag_sanitize": {
+    "message": "پیش‌فرض حفظ شد",
+    "description": "Recent-list flag: name could not be sanitized."
+  },
+  "flag_nomatch": {
+    "message": "بدون تطابق",
+    "description": "Recent-list flag: no site rule matched."
+  },
+  "opt_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Options brand name."
+  },
+  "opt_trust": {
+    "message": "همه‌چیز روی این دستگاه باقی می‌ماند. بدون هیچ ردیابی.",
+    "description": "Options sidebar trust line."
+  },
+  "aria_theme": {
+    "message": "تم رنگی",
+    "description": "Aria label for the theme radiogroup."
+  },
+  "theme_system": {
+    "message": "سیستم",
+    "description": "Theme option: follow OS."
+  },
+  "theme_light": {
+    "message": "روشن",
+    "description": "Theme option: light."
+  },
+  "theme_dark": {
+    "message": "تیره",
+    "description": "Theme option: dark."
+  },
+  "tier_free": {
+    "message": "رایگان",
+    "description": "Free plan label."
+  },
+  "tier_trial": {
+    "message": "آزمایشی",
+    "description": "Trial plan label."
+  },
+  "tier_pro": {
+    "message": "Pro",
+    "description": "Pro plan label."
+  },
+  "tab_template": {
+    "message": "قالب",
+    "description": "Settings tab: naming template."
+  },
+  "tab_sites": {
+    "message": "قوانین هر سایت",
+    "description": "Settings tab: per-site rules."
+  },
+  "tab_advanced": {
+    "message": "پیشرفته",
+    "description": "Settings tab: advanced naming."
+  },
+  "tab_backup": {
+    "message": "پشتیبان",
+    "description": "Settings tab: backup and restore."
+  },
+  "tab_license": {
+    "message": "مجوز",
+    "description": "Settings tab: license and plan."
+  },
+  "tpl_h1": {
+    "message": "قالب نام‌گذاری",
+    "description": "Template panel heading."
+  },
+  "tpl_lede": {
+    "message": "نام فایلی را که هر دانلود می‌گیرد بسازید. پسوند واقعی فایل همیشه حفظ می‌شود.",
+    "description": "Template panel intro."
+  },
+  "tpl_label": {
+    "message": "قالب",
+    "description": "Template input label."
+  },
+  "tpl_tokens_aria": {
+    "message": "درج یک توکن",
+    "description": "Aria label for the token chip row."
+  },
+  "tpl_conflict": {
+    "message": "اگر فایلی با آن نام از قبل وجود داشته باشد",
+    "description": "Conflict-policy select label."
+  },
+  "conflict_uniquify": {
+    "message": "یک شماره اضافه کن — هر دو را نگه دار",
+    "description": "Conflict policy: uniquify."
+  },
+  "conflict_overwrite": {
+    "message": "فایل قدیمی را بازنویسی کن",
+    "description": "Conflict policy: overwrite."
+  },
+  "conflict_prompt": {
+    "message": "هر بار از من بپرس",
+    "description": "Conflict policy: prompt."
+  },
+  "tpl_save": {
+    "message": "ذخیره قالب",
+    "description": "Save-template button."
+  },
+  "tpl_preview_h": {
+    "message": "پیش‌نمایش زنده",
+    "description": "Preview section label."
+  },
+  "tpl_pv_host": {
+    "message": "سایت نمونه",
+    "description": "Preview sample-host input label."
+  },
+  "tpl_pv_name": {
+    "message": "دانلود نمونه",
+    "description": "Preview sample-name input label."
+  },
+  "tpl_pv_result": {
+    "message": "نتیجه",
+    "description": "Preview result label."
+  },
+  "tpl_pv_hint": {
+    "message": "یک «/» در قالب رایگان به‌صورت «-» ذخیره می‌شود. مسیریابی پوشه یک قابلیت Pro است.",
+    "description": "Preview hint about slashes and folder routing."
+  },
+  "sites_h1": {
+    "message": "قوانین هر سایت",
+    "description": "Sites panel heading."
+  },
+  "sites_lede": {
+    "message": "به یک سایت مشخص قالب اختصاصی خودش را بدهید — فاکتورها در پوشه، مقالات با عنوان. رایگان شامل یک قانون است تا حسش کنید؛ Pro نامحدود است.",
+    "description": "Sites panel intro."
+  },
+  "sites_count": {
+    "message": "۰ از ۱ قانون رایگان استفاده شد",
+    "description": "Initial site-rule count text."
+  },
+  "sites_count_free": {
+    "message": "{n} از ۱ قانون رایگان استفاده شد",
+    "description": "Site-rule count for Free. {n} is the count."
+  },
+  "sites_count_pro": {
+    "message": "{n} قانون",
+    "description": "Site-rule count for Pro. {n} is the count."
+  },
+  "sites_empty": {
+    "message": "هنوز قانونی برای سایت وجود ندارد. یکی در زیر اضافه کنید.",
+    "description": "Empty state for site rules."
+  },
+  "sites_add_h": {
+    "message": "افزودن یک قانون",
+    "description": "Add-rule section label."
+  },
+  "sites_match": {
+    "message": "سایت (میزبان یا *.host)",
+    "description": "Rule match input label."
+  },
+  "sites_match_ph": {
+    "message": "stripe.com",
+    "description": "Rule match placeholder."
+  },
+  "sites_template": {
+    "message": "قالب برای این سایت",
+    "description": "Rule template input label."
+  },
+  "sites_template_ph": {
+    "message": "{date}-invoice-{original}",
+    "description": "Rule template placeholder."
+  },
+  "sites_add_btn": {
+    "message": "افزودن قانون سایت",
+    "description": "Add-rule button."
+  },
+  "sites_delete": {
+    "message": "حذف قانون",
+    "description": "Aria label for a rule's delete button."
+  },
+  "sites_need_both": {
+    "message": "هم یک سایت و هم یک قالب وارد کنید.",
+    "description": "Validation when a rule field is empty."
+  },
+  "sites_add_err": {
+    "message": "آن قانون قابل افزودن نبود.",
+    "description": "Generic add-rule failure."
+  },
+  "adv_h1": {
+    "message": "نام‌گذاری پیشرفته",
+    "description": "Advanced panel heading."
+  },
+  "adv_lede": {
+    "message": "ابزارهای قدرتمند برای شیوه‌ای که واقعاً دانلودها را دسته‌بندی می‌کنید. شامل Zovo Pro.",
+    "description": "Advanced panel intro."
+  },
+  "adv_save": {
+    "message": "ذخیره",
+    "description": "Generic save button."
+  },
+  "adv_clear": {
+    "message": "پاک کردن",
+    "description": "Generic clear button."
+  },
+  "adv_unlock": {
+    "message": "باز کردن با Pro",
+    "description": "CTA on a locked Pro card."
+  },
+  "adv_on": {
+    "message": "فعال",
+    "description": "Feature toggled on."
+  },
+  "adv_off": {
+    "message": "غیرفعال",
+    "description": "Feature toggled off."
+  },
+  "adv_perm_needed": {
+    "message": "برای فعال کردن این، مجوز لازم است.",
+    "description": "Shown when an optional permission is denied."
+  },
+  "adv_toggle_err": {
+    "message": "این تنظیم قابل به‌روزرسانی نبود.",
+    "description": "Generic toggle failure."
+  },
+  "adv_folder_h": {
+    "message": "مسیریابی پوشه",
+    "description": "Folder-routing card heading."
+  },
+  "adv_folder_note": {
+    "message": "دانلودها را در زیرپوشه‌های پوشه Downloads خود قرار دهید، مثلاً Downloads/{hostname}/…",
+    "description": "Folder-routing explanation."
+  },
+  "adv_folder_label": {
+    "message": "مسیر زیرپوشه (توکن‌ها مجاز است)",
+    "description": "Folder-path input label."
+  },
+  "adv_folder_ph": {
+    "message": "{hostname}",
+    "description": "Folder-path placeholder."
+  },
+  "adv_folder_err": {
+    "message": "مسیریابی پوشه قابل ذخیره نبود.",
+    "description": "Folder-routing save failure."
+  },
+  "adv_regex_h": {
+    "message": "جست‌وجو و جایگزینی (regex)",
+    "description": "Regex card heading."
+  },
+  "adv_regex_note": {
+    "message": "نام‌ها را با یک عبارت باقاعده پیش از ذخیره تمیز کنید.",
+    "description": "Regex explanation."
+  },
+  "adv_regex_find": {
+    "message": "جست‌وجو",
+    "description": "Regex find input label."
+  },
+  "adv_regex_find_ph": {
+    "message": "\\s+",
+    "description": "Regex find placeholder."
+  },
+  "adv_regex_replace": {
+    "message": "جایگزینی",
+    "description": "Regex replace input label."
+  },
+  "adv_regex_replace_ph": {
+    "message": "-",
+    "description": "Regex replace placeholder."
+  },
+  "adv_regex_flags": {
+    "message": "پرچم‌ها",
+    "description": "Regex flags input label."
+  },
+  "adv_regex_need": {
+    "message": "یک الگو برای جست‌وجو وارد کنید.",
+    "description": "Validation when the regex find is empty."
+  },
+  "adv_regex_bad": {
+    "message": "آن الگو نامعتبر یا ناامن است.",
+    "description": "Regex validation failure."
+  },
+  "adv_regex_err": {
+    "message": "الگو قابل ذخیره نبود.",
+    "description": "Generic regex save failure."
+  },
+  "adv_cleared": {
+    "message": "پاک شد",
+    "description": "Regex cleared confirmation."
+  },
+  "adv_title_h": {
+    "message": "توکن عنوان صفحه {title}",
+    "description": "Title-token card heading."
+  },
+  "adv_title_note": {
+    "message": "از عنوان صفحه منبع در نام فایل‌ها استفاده کنید. روشن کردن این گزینه از Chrome مجوز Tabs را می‌خواهد.",
+    "description": "Title-token explanation."
+  },
+  "adv_title_toggle": {
+    "message": "فعال کردن توکن {title}",
+    "description": "Title-token toggle label."
+  },
+  "adv_title_aria": {
+    "message": "فعال کردن توکن عنوان صفحه",
+    "description": "Accessible name for the title-token switch."
+  },
+  "adv_pdf_h": {
+    "message": "توکن عنوان PDF {pdftitle}",
+    "description": "PDF-token card heading."
+  },
+  "adv_pdf_note": {
+    "message": "PDFها را با عنوان ذخیره‌شده در داخل فایل نام‌گذاری کنید. این کار PDF را از طریق شبکه می‌خواند، بنابراین درخواست دسترسی به سایت می‌دهد و به‌طور پیش‌فرض خاموش است.",
+    "description": "PDF-token explanation."
+  },
+  "adv_pdf_toggle": {
+    "message": "فعال کردن توکن {pdftitle}",
+    "description": "PDF-token toggle label."
+  },
+  "adv_pdf_aria": {
+    "message": "فعال کردن توکن عنوان PDF",
+    "description": "Accessible name for the PDF-token switch."
+  },
+  "backup_h1": {
+    "message": "پشتیبان‌گیری و بازیابی",
+    "description": "Backup panel heading."
+  },
+  "backup_lede": {
+    "message": "تنظیمات خود را به یک فایل صادر کنید، یا آن را به دستگاه دیگری منتقل کنید. شامل Zovo Pro.",
+    "description": "Backup panel intro."
+  },
+  "backup_export_h": {
+    "message": "صادر کردن پیکربندی",
+    "description": "Export card heading."
+  },
+  "backup_export_note": {
+    "message": "یک فایل JSON با قالب، قوانین و تنظیمات شما دانلود می‌کند. بدون تاریخچه، بدون داده شخصی.",
+    "description": "Export explanation."
+  },
+  "backup_export_btn": {
+    "message": "صادر کردن به فایل",
+    "description": "Export button."
+  },
+  "backup_exported": {
+    "message": "صادر شد",
+    "description": "Export confirmation."
+  },
+  "backup_export_err": {
+    "message": "صادرات ناموفق بود.",
+    "description": "Export failure."
+  },
+  "backup_import_h": {
+    "message": "وارد کردن پیکربندی",
+    "description": "Import card heading."
+  },
+  "backup_import_label": {
+    "message": "یک پیکربندی صادرشده را جای‌گذاری کنید",
+    "description": "Import textarea label."
+  },
+  "backup_import_ph": {
+    "message": "{\"zovo_template\":\"…\"}",
+    "description": "Import textarea placeholder."
+  },
+  "backup_import_btn": {
+    "message": "وارد کردن",
+    "description": "Import button."
+  },
+  "backup_imported": {
+    "message": "وارد شد",
+    "description": "Import confirmation."
+  },
+  "backup_need_json": {
+    "message": "ابتدا یک پیکربندی جای‌گذاری کنید.",
+    "description": "Validation when import is empty."
+  },
+  "backup_import_err": {
+    "message": "آن فایل قابل وارد کردن نبود.",
+    "description": "Import failure."
+  },
+  "lic_h1": {
+    "message": "طرح شما",
+    "description": "License panel heading."
+  },
+  "lic_lede": {
+    "message": "یک پرداخت، همه قابلیت‌های نام‌گذاری را برای همیشه باز می‌کند. بدون اشتراک.",
+    "description": "License panel intro."
+  },
+  "lic_current": {
+    "message": "طرح فعلی",
+    "description": "Current-plan label."
+  },
+  "lic_free_sub": {
+    "message": "تغییر نام هسته‌ای، یک قانون سایت، برای همیشه.",
+    "description": "Free-plan subtitle."
+  },
+  "lic_pro_sub": {
+    "message": "همه قابلیت‌های نام‌گذاری باز شده است. از حمایت شما از Zovo سپاسگزاریم.",
+    "description": "Pro-plan subtitle."
+  },
+  "lic_upgrade": {
+    "message": "ارتقا به Pro",
+    "description": "Upgrade button on the License tab."
+  },
+  "lic_have_key": {
+    "message": "من یک کلید دارم",
+    "description": "License-key button."
+  },
+  "lic_included_h": {
+    "message": "آنچه Pro باز می‌کند",
+    "description": "Benefits section label."
+  },
+  "lic_b1": {
+    "message": "قوانین نامحدود برای هر سایت",
+    "description": "Pro benefit 1."
+  },
+  "lic_b2": {
+    "message": "مسیریابی پوشه به زیرپوشه‌ها",
+    "description": "Pro benefit 2."
+  },
+  "lic_b3": {
+    "message": "جست‌وجو و جایگزینی regex",
+    "description": "Pro benefit 3."
+  },
+  "lic_b4": {
+    "message": "توکن‌های عنوان صفحه و عنوان PDF",
+    "description": "Pro benefit 4."
+  },
+  "lic_b5": {
+    "message": "پشتیبان‌گیری، صادرات و واردات پیکربندی",
+    "description": "Pro benefit 5."
+  },
+  "saved": {
+    "message": "ذخیره شد",
+    "description": "Generic saved confirmation."
+  },
+  "err_template": {
+    "message": "آن قالب قابل ذخیره نبود.",
+    "description": "Generic template save failure."
+  },
+  "err_bad_token": {
+    "message": "توکن ناشناخته در قالب: ",
+    "description": "Prefix before the offending token name."
+  },
+  "ob_brand": {
+    "message": "Smart Rename Downloads",
+    "description": "Onboarding brand name."
+  },
+  "ob_by": {
+    "message": "· توسط Zovo",
+    "description": "Onboarding brand attribution suffix."
+  },
+  "ob_skip": {
+    "message": "رد کردن معرفی",
+    "description": "Skip onboarding button."
+  },
+  "ob_back": {
+    "message": "بازگشت",
+    "description": "Previous-step button."
+  },
+  "ob_next": {
+    "message": "بعدی",
+    "description": "Next-step button."
+  },
+  "ob_later": {
+    "message": "شاید بعداً",
+    "description": "Next-button label on the offer step."
+  },
+  "ob_start": {
+    "message": "شروع به استفاده",
+    "description": "Final onboarding button."
+  },
+  "ob_stepno": {
+    "message": "{a} از {b}",
+    "description": "Step counter, e.g. 1 of 6. {a} current, {b} total."
+  },
+  "ob_s1_kicker": {
+    "message": "مشکل پوشه دانلود",
+    "description": "Step 1 kicker."
+  },
+  "ob_s1_title": {
+    "message": "دیگر هرگز آن فایل را پیدا نخواهید کرد.",
+    "description": "Step 1 title."
+  },
+  "ob_s1_pt": {
+    "message": "ساخته‌شده برای کسانی که تمام روز دانلود می‌کنند. پژوهشگران، حسابداران، هر کسی که پوشه دانلودش بی‌سروصدا از کنترل خارج شده است.",
+    "description": "Step 1 secondary paragraph."
+  },
+  "ob_s2_kicker": {
+    "message": "یک قانون، از قبل روشن",
+    "description": "Step 2 kicker."
+  },
+  "ob_s2_title": {
+    "message": "تماشا کنید یک نام بی‌معنی به یک نام واقعی تبدیل می‌شود.",
+    "description": "Step 2 title."
+  },
+  "ob_s2_lede": {
+    "message": "الگوی پیش‌فرض تاریخ است، سپس سایت، سپس نام اصلی. لحظه‌ای که یک دانلود تمام می‌شود، نام بازنویسی و مستقیم روی دیسک نوشته می‌شود. بدون کلیک، بدون گفت‌وگو. اینجا روی یک فایل واقعی است.",
+    "description": "Step 2 body."
+  },
+  "ob_demo_btn": {
+    "message": "تماشای تغییر نام",
+    "description": "Button that replays the rename demo."
+  },
+  "ob_saved_as": {
+    "message": "ذخیره‌شده به‌عنوان",
+    "description": "Demo label for the original filename."
+  },
+  "ob_renamed_to": {
+    "message": "تغییر نام‌یافته به",
+    "description": "Demo label for the renamed filename."
+  },
+  "ob_fw_kept": {
+    "message": ".pdf حفظ شد",
+    "description": "Token chip: the real extension is kept."
+  },
+  "ob_s3_kicker": {
+    "message": "دو دقیقه، یک بار",
+    "description": "Step 3 kicker."
+  },
+  "ob_s3_title": {
+    "message": "الگوی نام‌گذاری‌ای را که برای همیشه نگه می‌دارید تنظیم کنید.",
+    "description": "Step 3 title."
+  },
+  "ob_s3_lede": {
+    "message": "آن را از توکن‌ها بسازید. روی یکی کلیک کنید تا در الگو قرار گیرد و نمونه به‌روز شود. پسوند واقعی فایل همیشه در انتها حفظ می‌شود. آن را ذخیره کنید و هر دانلود آینده از این پیروی می‌کند.",
+    "description": "Step 3 body."
+  },
+  "ob_s3_pt": {
+    "message": "آن در مرورگر شما زندگی می‌کند. هر زمان از تنظیمات آن را تغییر دهید، و هیچ‌چیز درباره فایل‌های شما هرگز به جایی ارسال نمی‌شود.",
+    "description": "Step 3 secondary paragraph."
+  },
+  "ob_template_label": {
+    "message": "الگوی نام‌گذاری شما",
+    "description": "Onboarding template input label."
+  },
+  "ob_result": {
+    "message": "نتیجه",
+    "description": "Onboarding preview result label."
+  },
+  "ob_save_btn": {
+    "message": "ذخیره الگوی من",
+    "description": "Save-pattern button."
+  },
+  "ob_pattern_saved": {
+    "message": "الگو ذخیره شد",
+    "description": "Save-pattern button after saving."
+  },
+  "ob_saved_msg": {
+    "message": "ذخیره شد. اکنون هر دانلود از این پیروی می‌کند.",
+    "description": "Confirmation after the pattern is saved."
+  },
+  "ob_s4_kicker": {
+    "message": "چرا می‌توانید آن را در حال اجرا رها کنید",
+    "description": "Step 4 kicker."
+  },
+  "ob_s4_title": {
+    "message": "محلی از طراحی، ساخته‌شده به‌صورت باز توسط یک توسعه‌دهنده.",
+    "description": "Step 4 title."
+  },
+  "ob_s4_lede": {
+    "message": "فایل‌های شما و تاریخچه تغییر نام شما هرگز این دستگاه را ترک نمی‌کنند. در طرح رایگان، افزونه اصلاً هیچ تماس شبکه‌ای برقرار نمی‌کند، و کد به‌قدری کوچک است که در یک نشست خوانده می‌شود.",
+    "description": "Step 4 body."
+  },
+  "ob_stat1_n": {
+    "message": "محلی",
+    "description": "Stat 1 value."
+  },
+  "ob_stat1_l": {
+    "message": "هر تغییر نام روی دستگاه شما اجرا می‌شود",
+    "description": "Stat 1 label."
+  },
+  "ob_stat2_n": {
+    "message": "خصوصی",
+    "description": "Stat 2 value."
+  },
+  "ob_stat2_l": {
+    "message": "هیچ‌چیز این دستگاه را ترک نمی‌کند",
+    "description": "Stat 2 label."
+  },
+  "ob_stat3_n": {
+    "message": "باز",
+    "description": "Stat 3 value."
+  },
+  "ob_stat3_l": {
+    "message": "ساخته‌شده به‌صورت عمومی، هر کامیت",
+    "description": "Stat 3 label."
+  },
+  "ob_s4_pt": {
+    "message": "تغییردهنده نام دانلود جایی است که با Zovo آشنا می‌شوید. طرح بزرگ‌تر یک لایه صادقانه برای کل دنیای افزونه‌هاست، هر بار یک ابزار، بدون هرزنامه و بدون ردیابی.",
+    "description": "Step 4 secondary paragraph."
+  },
+  "ob_link_why": {
+    "message": "چرا Zovo را می‌سازم",
+    "description": "Link: why Zovo."
+  },
+  "ob_link_vision": {
+    "message": "چشم‌انداز",
+    "description": "Link: the vision."
+  },
+  "ob_link_safe": {
+    "message": "چگونه شما را ایمن نگه می‌داریم",
+    "description": "Link: safety."
+  },
+  "ob_trust1_h": {
+    "message": "همه‌چیز روی دستگاه شما باقی می‌ماند",
+    "description": "Trust point 1 heading."
+  },
+  "ob_trust1_b": {
+    "message": "الگو، قوانین و تاریخچه شما در حافظه محلی مرورگر زندگی می‌کنند. بدون حساب، بدون سرور همگام‌سازی، هیچ‌چیز به بیرون ارسال نمی‌شود.",
+    "description": "Trust point 1 body."
+  },
+  "ob_trust2_h": {
+    "message": "یک نفر، در حال ساخت به‌صورت باز",
+    "description": "Trust point 2 heading."
+  },
+  "ob_s5_kicker": {
+    "message": "معامله صادقانه",
+    "description": "Step 5 kicker."
+  },
+  "ob_s5_title": {
+    "message": "تغییر نام‌های رایگان برای همیشه. یا همه‌چیز را یک‌بار مالک شوید.",
+    "description": "Step 5 title."
+  },
+  "ob_s5_lede": {
+    "message": "هسته بی‌صدای تغییر نام رایگان می‌ماند، بدون محدودیت در تعداد فایل‌هایی که لمس می‌کند. یک پرداخت نودونه دلاری، قوانین نامحدود هر سایت، مسیریابی پوشه، پاک‌سازی regex و نام‌گذاری از عنوان صفحه یا PDF را روشن می‌کند.",
+    "description": "Step 5 body."
+  },
+  "ob_plan_free": {
+    "message": "رایگان",
+    "description": "Free plan name."
+  },
+  "ob_free_unit": {
+    "message": "برای همیشه",
+    "description": "Free plan price unit."
+  },
+  "ob_free1": {
+    "message": "هر دانلود خودبه‌خود تغییر نام می‌یابد",
+    "description": "Free benefit 1."
+  },
+  "ob_free2": {
+    "message": "سه توکن هسته‌ای: تاریخ، سایت، نام اصلی",
+    "description": "Free benefit 2."
+  },
+  "ob_free3": {
+    "message": "یک قانون سایت ذخیره‌شده",
+    "description": "Free benefit 3."
+  },
+  "ob_free4": {
+    "message": "مدیریت تعارض و یک شمارنده زنده",
+    "description": "Free benefit 4."
+  },
+  "ob_ribbon": {
+    "message": "بهترین ارزش",
+    "description": "Lifetime plan ribbon."
+  },
+  "ob_plan_life": {
+    "message": "مادام‌العمر",
+    "description": "Lifetime plan name."
+  },
+  "ob_life_unit": {
+    "message": "یک‌بار",
+    "description": "Lifetime plan price unit."
+  },
+  "ob_life1": {
+    "message": "قوانین نامحدود برای هر سایت",
+    "description": "Lifetime benefit 1."
+  },
+  "ob_life2": {
+    "message": "فایل‌ها را بر اساس سایت یا تاریخ به زیرپوشه‌های Downloads هدایت کنید",
+    "description": "Lifetime benefit 2."
+  },
+  "ob_life3": {
+    "message": "پاک‌سازی regex به‌علاوه توکن‌های عنوان صفحه و عنوان PDF",
+    "description": "Lifetime benefit 3."
+  },
+  "ob_life4": {
+    "message": "پشتیبان‌گیری و واردات پیکربندی بین دستگاه‌ها",
+    "description": "Lifetime benefit 4."
+  },
+  "ob_life5": {
+    "message": "هر به‌روزرسانی آینده این ابزار، شامل است",
+    "description": "Lifetime benefit 5."
+  },
+  "ob_life6": {
+    "message": "یک پرداخت، بدون اشتراک، هرگز",
+    "description": "Lifetime benefit 6."
+  },
+  "ob_life_cta": {
+    "message": "دریافت مادام‌العمر با $$99",
+    "description": "Lifetime purchase CTA."
+  },
+  "ob_guarantee": {
+    "message": "بازپرداخت ۱۴ روزه، بدون سؤال. ماهانه را ترجیح می‌دهید؟ در همان صفحه $$4.99 است.",
+    "description": "Refund guarantee line."
+  },
+  "ob_s6_kicker": {
+    "message": "شما آماده‌اید",
+    "description": "Step 6 kicker."
+  },
+  "ob_s6_title": {
+    "message": "چیزی برای انجام باقی نمانده. از قبل کار می‌کند.",
+    "description": "Step 6 title."
+  },
+  "ob_s6_lede": {
+    "message": "فایل بعدی که دانلود می‌کنید خودبه‌خود نام تمیزی می‌گیرد. هیچ دکمه‌ای برای فشردن، هیچ گفت‌وگویی برای تأیید. اینجا چیزی است که از این پس رخ می‌دهد.",
+    "description": "Step 6 body."
+  },
+  "ob_dev_h": {
+    "message": "از توسعه‌دهنده",
+    "description": "Developer note heading."
+  },
+  "ob_dev_b": {
+    "message": "من Zovo را به‌تنهایی و به‌صورت باز می‌سازم. اگر چیزی خراب شد، برایم بنویسید و پاسخ می‌دهم. تغییردهنده‌های نام تنها آغاز کار هستند. طرح، یک لایه صادقانه برای کل مرورگر است، و نودونه دلار شما بخش بعدی آن را عرضه می‌کند.",
+    "description": "Developer note body."
+  },
+  "ob_link_github": {
+    "message": "در GitHub با من در تماس باشید",
+    "description": "Link: GitHub."
+  },
+  "ob_link_going": {
+    "message": "این به کجا می‌رود",
+    "description": "Link: roadmap."
+  },
+  "ob_cheat1_k": {
+    "message": "هر دانلود",
+    "description": "Cheat-sheet row 1 key."
+  },
+  "ob_cheat1_v": {
+    "message": "هنگام ذخیره تغییر نام",
+    "description": "Cheat-sheet row 1 value."
+  },
+  "ob_cheat2_k": {
+    "message": "پنجره بازشو",
+    "description": "Cheat-sheet row 2 key."
+  },
+  "ob_cheat2_v": {
+    "message": "هر تغییر نام را می‌شمارد",
+    "description": "Cheat-sheet row 2 value."
+  },
+  "ob_cheat3_k": {
+    "message": "الگوی شما",
+    "description": "Cheat-sheet row 3 key."
+  },
+  "ob_cheat3_v": {
+    "message": "در تنظیمات ویرایش کنید",
+    "description": "Cheat-sheet row 3 value."
+  },
+  "ob_cheat4_k": {
+    "message": "اولین قانون سایت",
+    "description": "Cheat-sheet row 4 key."
+  },
+  "ob_cheat4_v": {
+    "message": "افزودن رایگان",
+    "description": "Cheat-sheet row 4 value."
+  }
+}

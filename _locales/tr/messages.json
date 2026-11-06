@@ -1,0 +1,834 @@
+{
+  "extName": {
+    "message": "Smart Rename Downloads",
+    "description": "Extension name shown in the Chrome Web Store and toolbar."
+  },
+  "extDesc": {
+    "message": "Her indirmeyi tarih, site ve başlık belirteçleriyle otomatik yeniden adlandırın. Site kuralları, regex, klasör yönlendirme",
+    "description": "Chrome Web Store short description (max 132 chars)."
+  },
+  "popup_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Popup header title."
+  },
+  "popup_open_settings": {
+    "message": "Ayarları aç",
+    "description": "Aria label for the settings gear button."
+  },
+  "popup_settings": {
+    "message": "Ayarlar",
+    "description": "Tooltip for the settings gear button."
+  },
+  "popup_health": {
+    "message": "Yeniden adlandırma duraklatıldı — İndirmeler izni kaldırıldı.",
+    "description": "Shown when the downloads permission is missing."
+  },
+  "popup_regrant": {
+    "message": "Yeniden etkinleştir",
+    "description": "Link to re-grant the downloads permission."
+  },
+  "popup_hero_label": {
+    "message": "Yeniden adlandırılan dosyalar",
+    "description": "Label under the big lifetime rename counter."
+  },
+  "popup_hero_sub": {
+    "message": "Her indirme, diskinize ulaşmadan önce otomatik olarak yeniden adlandırılır.",
+    "description": "Supporting line under the hero counter."
+  },
+  "popup_master_title": {
+    "message": "İndirmeleri otomatik yeniden adlandır",
+    "description": "Master on/off switch title."
+  },
+  "popup_master_aria": {
+    "message": "İndirmelerin otomatik yeniden adlandırılmasını aç/kapat",
+    "description": "Accessible name for the master switch."
+  },
+  "popup_master_on": {
+    "message": "Açık — her indirme yeniden adlandırılıyor",
+    "description": "Master switch note when enabled."
+  },
+  "popup_master_off": {
+    "message": "Kapalı — Chrome varsayılan adlarını kullanıyor",
+    "description": "Master switch note when disabled."
+  },
+  "popup_recent": {
+    "message": "Son yeniden adlandırmalar",
+    "description": "Section label for the recent-renames list."
+  },
+  "popup_empty_title": {
+    "message": "Hazır olduğunuzda hazır",
+    "description": "Empty-state headline in the popup."
+  },
+  "popup_empty_text": {
+    "message": "Bir sonraki indirmeniz otomatik olarak yeniden adlandırılacak. Burada görünecek.",
+    "description": "Empty-state body in the popup."
+  },
+  "popup_milestone_text": {
+    "message": "Smart Rename {n} indirmeyi düzenledi. Pro bunları otomatik olarak klasörlere yerleştirir.",
+    "description": "Post-success upgrade nudge. {n} is the rename count."
+  },
+  "popup_milestone_cta": {
+    "message": "Pro'yu gör",
+    "description": "CTA on the milestone nudge."
+  },
+  "popup_dismiss": {
+    "message": "Kapat",
+    "description": "Dismiss the milestone nudge."
+  },
+  "popup_trust": {
+    "message": "Yerel · Hesap yok · Takip yok",
+    "description": "Trust line in the popup footer."
+  },
+  "popup_upgrade": {
+    "message": "Pro'ya yükselt",
+    "description": "Upgrade button in the popup footer."
+  },
+  "flag_timeout": {
+    "message": "varsayılan korundu",
+    "description": "Recent-list flag: rename fell back to Chrome's default name (timeout)."
+  },
+  "flag_sanitize": {
+    "message": "varsayılan korundu",
+    "description": "Recent-list flag: name could not be sanitized."
+  },
+  "flag_nomatch": {
+    "message": "eşleşme yok",
+    "description": "Recent-list flag: no site rule matched."
+  },
+  "opt_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Options brand name."
+  },
+  "opt_trust": {
+    "message": "Her şey bu cihazda kalır. Sıfır takip.",
+    "description": "Options sidebar trust line."
+  },
+  "aria_theme": {
+    "message": "Renk teması",
+    "description": "Aria label for the theme radiogroup."
+  },
+  "theme_system": {
+    "message": "Sistem",
+    "description": "Theme option: follow OS."
+  },
+  "theme_light": {
+    "message": "Açık",
+    "description": "Theme option: light."
+  },
+  "theme_dark": {
+    "message": "Koyu",
+    "description": "Theme option: dark."
+  },
+  "tier_free": {
+    "message": "Ücretsiz",
+    "description": "Free plan label."
+  },
+  "tier_trial": {
+    "message": "Deneme",
+    "description": "Trial plan label."
+  },
+  "tier_pro": {
+    "message": "Pro",
+    "description": "Pro plan label."
+  },
+  "tab_template": {
+    "message": "Şablon",
+    "description": "Settings tab: naming template."
+  },
+  "tab_sites": {
+    "message": "Site kuralları",
+    "description": "Settings tab: per-site rules."
+  },
+  "tab_advanced": {
+    "message": "Gelişmiş",
+    "description": "Settings tab: advanced naming."
+  },
+  "tab_backup": {
+    "message": "Yedekleme",
+    "description": "Settings tab: backup and restore."
+  },
+  "tab_license": {
+    "message": "Lisans",
+    "description": "Settings tab: license and plan."
+  },
+  "tpl_h1": {
+    "message": "Adlandırma şablonu",
+    "description": "Template panel heading."
+  },
+  "tpl_lede": {
+    "message": "Her indirmenin alacağı dosya adını oluşturun. Gerçek dosya uzantısı her zaman korunur.",
+    "description": "Template panel intro."
+  },
+  "tpl_label": {
+    "message": "Şablon",
+    "description": "Template input label."
+  },
+  "tpl_tokens_aria": {
+    "message": "Bir belirteç ekle",
+    "description": "Aria label for the token chip row."
+  },
+  "tpl_conflict": {
+    "message": "Bu adda bir dosya zaten varsa",
+    "description": "Conflict-policy select label."
+  },
+  "conflict_uniquify": {
+    "message": "Bir sayı ekle — ikisini de tut",
+    "description": "Conflict policy: uniquify."
+  },
+  "conflict_overwrite": {
+    "message": "Eski dosyanın üzerine yaz",
+    "description": "Conflict policy: overwrite."
+  },
+  "conflict_prompt": {
+    "message": "Her seferinde bana sor",
+    "description": "Conflict policy: prompt."
+  },
+  "tpl_save": {
+    "message": "Şablonu kaydet",
+    "description": "Save-template button."
+  },
+  "tpl_preview_h": {
+    "message": "Canlı önizleme",
+    "description": "Preview section label."
+  },
+  "tpl_pv_host": {
+    "message": "Örnek site",
+    "description": "Preview sample-host input label."
+  },
+  "tpl_pv_name": {
+    "message": "Örnek indirme",
+    "description": "Preview sample-name input label."
+  },
+  "tpl_pv_result": {
+    "message": "Sonuç",
+    "description": "Preview result label."
+  },
+  "tpl_pv_hint": {
+    "message": "Ücretsiz bir şablondaki “/” işareti “-” olarak kaydedilir. Klasör yönlendirme bir Pro özelliğidir.",
+    "description": "Preview hint about slashes and folder routing."
+  },
+  "sites_h1": {
+    "message": "Site kuralları",
+    "description": "Sites panel heading."
+  },
+  "sites_lede": {
+    "message": "Belirli bir siteye kendi şablonunu verin — faturalar klasörlenir, makaleler başlıklanır. Ücretsiz sürüm hissedebilmeniz için bir kural içerir; Pro sınırsızdır.",
+    "description": "Sites panel intro."
+  },
+  "sites_count": {
+    "message": "1 ücretsiz kuraldan 0 tanesi kullanıldı",
+    "description": "Initial site-rule count text."
+  },
+  "sites_count_free": {
+    "message": "1 ücretsiz kuraldan {n} tanesi kullanıldı",
+    "description": "Site-rule count for Free. {n} is the count."
+  },
+  "sites_count_pro": {
+    "message": "{n} kural",
+    "description": "Site-rule count for Pro. {n} is the count."
+  },
+  "sites_empty": {
+    "message": "Henüz site kuralı yok. Aşağıdan bir tane ekleyin.",
+    "description": "Empty state for site rules."
+  },
+  "sites_add_h": {
+    "message": "Kural ekle",
+    "description": "Add-rule section label."
+  },
+  "sites_match": {
+    "message": "Site (ana bilgisayar veya *.host)",
+    "description": "Rule match input label."
+  },
+  "sites_match_ph": {
+    "message": "stripe.com",
+    "description": "Rule match placeholder."
+  },
+  "sites_template": {
+    "message": "Bu site için şablon",
+    "description": "Rule template input label."
+  },
+  "sites_template_ph": {
+    "message": "{date}-invoice-{original}",
+    "description": "Rule template placeholder."
+  },
+  "sites_add_btn": {
+    "message": "Site kuralı ekle",
+    "description": "Add-rule button."
+  },
+  "sites_delete": {
+    "message": "Kuralı sil",
+    "description": "Aria label for a rule's delete button."
+  },
+  "sites_need_both": {
+    "message": "Hem bir site hem de bir şablon girin.",
+    "description": "Validation when a rule field is empty."
+  },
+  "sites_add_err": {
+    "message": "Bu kural eklenemedi.",
+    "description": "Generic add-rule failure."
+  },
+  "adv_h1": {
+    "message": "Gelişmiş adlandırma",
+    "description": "Advanced panel heading."
+  },
+  "adv_lede": {
+    "message": "İndirmeleri gerçekte dosyalama şeklinize uygun güçlü araçlar. Zovo Pro'ya dahildir.",
+    "description": "Advanced panel intro."
+  },
+  "adv_save": {
+    "message": "Kaydet",
+    "description": "Generic save button."
+  },
+  "adv_clear": {
+    "message": "Temizle",
+    "description": "Generic clear button."
+  },
+  "adv_unlock": {
+    "message": "Pro ile kilidini aç",
+    "description": "CTA on a locked Pro card."
+  },
+  "adv_on": {
+    "message": "Etkin",
+    "description": "Feature toggled on."
+  },
+  "adv_off": {
+    "message": "Devre dışı",
+    "description": "Feature toggled off."
+  },
+  "adv_perm_needed": {
+    "message": "Bunu etkinleştirmek için izin gerekiyor.",
+    "description": "Shown when an optional permission is denied."
+  },
+  "adv_toggle_err": {
+    "message": "Bu ayar güncellenemedi.",
+    "description": "Generic toggle failure."
+  },
+  "adv_folder_h": {
+    "message": "Klasör yönlendirme",
+    "description": "Folder-routing card heading."
+  },
+  "adv_folder_note": {
+    "message": "Dosyaları İndirilenler klasörünüzün alt klasörlerine indirin, örn. Downloads/{hostname}/…",
+    "description": "Folder-routing explanation."
+  },
+  "adv_folder_label": {
+    "message": "Alt klasör yolu (belirteçlere izin verilir)",
+    "description": "Folder-path input label."
+  },
+  "adv_folder_ph": {
+    "message": "{hostname}",
+    "description": "Folder-path placeholder."
+  },
+  "adv_folder_err": {
+    "message": "Klasör yönlendirme kaydedilemedi.",
+    "description": "Folder-routing save failure."
+  },
+  "adv_regex_h": {
+    "message": "Bul ve değiştir (regex)",
+    "description": "Regex card heading."
+  },
+  "adv_regex_note": {
+    "message": "Adları kaydedilmeden önce bir düzenli ifadeyle temizleyin.",
+    "description": "Regex explanation."
+  },
+  "adv_regex_find": {
+    "message": "Bul",
+    "description": "Regex find input label."
+  },
+  "adv_regex_find_ph": {
+    "message": "\\s+",
+    "description": "Regex find placeholder."
+  },
+  "adv_regex_replace": {
+    "message": "Değiştir",
+    "description": "Regex replace input label."
+  },
+  "adv_regex_replace_ph": {
+    "message": "-",
+    "description": "Regex replace placeholder."
+  },
+  "adv_regex_flags": {
+    "message": "Bayraklar",
+    "description": "Regex flags input label."
+  },
+  "adv_regex_need": {
+    "message": "Bulunacak bir desen girin.",
+    "description": "Validation when the regex find is empty."
+  },
+  "adv_regex_bad": {
+    "message": "Bu desen geçersiz veya güvensiz.",
+    "description": "Regex validation failure."
+  },
+  "adv_regex_err": {
+    "message": "Desen kaydedilemedi.",
+    "description": "Generic regex save failure."
+  },
+  "adv_cleared": {
+    "message": "Temizlendi",
+    "description": "Regex cleared confirmation."
+  },
+  "adv_title_h": {
+    "message": "Sayfa başlığı belirteci {title}",
+    "description": "Title-token card heading."
+  },
+  "adv_title_note": {
+    "message": "Kaynak sayfanın başlığını dosya adlarında kullanın. Bunu açmak Chrome'dan Sekmeler iznini ister.",
+    "description": "Title-token explanation."
+  },
+  "adv_title_toggle": {
+    "message": "{title} belirtecini etkinleştir",
+    "description": "Title-token toggle label."
+  },
+  "adv_title_aria": {
+    "message": "Sayfa başlığı belirtecini etkinleştir",
+    "description": "Accessible name for the title-token switch."
+  },
+  "adv_pdf_h": {
+    "message": "PDF başlığı belirteci {pdftitle}",
+    "description": "PDF-token card heading."
+  },
+  "adv_pdf_note": {
+    "message": "PDF'leri dosyanın içinde saklanan başlığa göre adlandırın. Bu, PDF'yi ağ üzerinden okur, bu yüzden site erişimi ister ve varsayılan olarak kapalıdır.",
+    "description": "PDF-token explanation."
+  },
+  "adv_pdf_toggle": {
+    "message": "{pdftitle} belirtecini etkinleştir",
+    "description": "PDF-token toggle label."
+  },
+  "adv_pdf_aria": {
+    "message": "PDF başlığı belirtecini etkinleştir",
+    "description": "Accessible name for the PDF-token switch."
+  },
+  "backup_h1": {
+    "message": "Yedekle ve geri yükle",
+    "description": "Backup panel heading."
+  },
+  "backup_lede": {
+    "message": "Kurulumunuzu bir dosyaya aktarın veya başka bir makineye taşıyın. Zovo Pro'ya dahildir.",
+    "description": "Backup panel intro."
+  },
+  "backup_export_h": {
+    "message": "Yapılandırmayı dışa aktar",
+    "description": "Export card heading."
+  },
+  "backup_export_note": {
+    "message": "Şablonunuzu, kurallarınızı ve ayarlarınızı içeren bir JSON dosyası indirir. Geçmiş yok, kişisel veri yok.",
+    "description": "Export explanation."
+  },
+  "backup_export_btn": {
+    "message": "Dosyaya aktar",
+    "description": "Export button."
+  },
+  "backup_exported": {
+    "message": "Dışa aktarıldı",
+    "description": "Export confirmation."
+  },
+  "backup_export_err": {
+    "message": "Dışa aktarma başarısız oldu.",
+    "description": "Export failure."
+  },
+  "backup_import_h": {
+    "message": "Yapılandırmayı içe aktar",
+    "description": "Import card heading."
+  },
+  "backup_import_label": {
+    "message": "Dışa aktarılmış bir yapılandırmayı yapıştırın",
+    "description": "Import textarea label."
+  },
+  "backup_import_ph": {
+    "message": "{\"zovo_template\":\"…\"}",
+    "description": "Import textarea placeholder."
+  },
+  "backup_import_btn": {
+    "message": "İçe aktar",
+    "description": "Import button."
+  },
+  "backup_imported": {
+    "message": "İçe aktarıldı",
+    "description": "Import confirmation."
+  },
+  "backup_need_json": {
+    "message": "Önce bir yapılandırma yapıştırın.",
+    "description": "Validation when import is empty."
+  },
+  "backup_import_err": {
+    "message": "Bu dosya içe aktarılamadı.",
+    "description": "Import failure."
+  },
+  "lic_h1": {
+    "message": "Planınız",
+    "description": "License panel heading."
+  },
+  "lic_lede": {
+    "message": "Tek ödeme, her adlandırma özelliğinin kilidini sonsuza dek açar. Abonelik yok.",
+    "description": "License panel intro."
+  },
+  "lic_current": {
+    "message": "Mevcut plan",
+    "description": "Current-plan label."
+  },
+  "lic_free_sub": {
+    "message": "Temel yeniden adlandırma, tek site kuralı, sonsuza dek.",
+    "description": "Free-plan subtitle."
+  },
+  "lic_pro_sub": {
+    "message": "Her adlandırma özelliğinin kilidi açıldı. Zovo'yu desteklediğiniz için teşekkürler.",
+    "description": "Pro-plan subtitle."
+  },
+  "lic_upgrade": {
+    "message": "Pro'ya yükselt",
+    "description": "Upgrade button on the License tab."
+  },
+  "lic_have_key": {
+    "message": "Bir anahtarım var",
+    "description": "License-key button."
+  },
+  "lic_included_h": {
+    "message": "Pro neyin kilidini açar",
+    "description": "Benefits section label."
+  },
+  "lic_b1": {
+    "message": "Sınırsız site kuralı",
+    "description": "Pro benefit 1."
+  },
+  "lic_b2": {
+    "message": "Alt klasörlere klasör yönlendirme",
+    "description": "Pro benefit 2."
+  },
+  "lic_b3": {
+    "message": "Regex bul ve değiştir",
+    "description": "Pro benefit 3."
+  },
+  "lic_b4": {
+    "message": "Sayfa başlığı ve PDF başlığı belirteçleri",
+    "description": "Pro benefit 4."
+  },
+  "lic_b5": {
+    "message": "Yapılandırma yedekleme, dışa ve içe aktarma",
+    "description": "Pro benefit 5."
+  },
+  "saved": {
+    "message": "Kaydedildi",
+    "description": "Generic saved confirmation."
+  },
+  "err_template": {
+    "message": "Bu şablon kaydedilemedi.",
+    "description": "Generic template save failure."
+  },
+  "err_bad_token": {
+    "message": "Şablonda bilinmeyen belirteç: ",
+    "description": "Prefix before the offending token name."
+  },
+  "ob_brand": {
+    "message": "Smart Rename Downloads",
+    "description": "Onboarding brand name."
+  },
+  "ob_by": {
+    "message": "· Zovo tarafından",
+    "description": "Onboarding brand attribution suffix."
+  },
+  "ob_skip": {
+    "message": "Girişi atla",
+    "description": "Skip onboarding button."
+  },
+  "ob_back": {
+    "message": "Geri",
+    "description": "Previous-step button."
+  },
+  "ob_next": {
+    "message": "İleri",
+    "description": "Next-step button."
+  },
+  "ob_later": {
+    "message": "Belki sonra",
+    "description": "Next-button label on the offer step."
+  },
+  "ob_start": {
+    "message": "Kullanmaya başla",
+    "description": "Final onboarding button."
+  },
+  "ob_stepno": {
+    "message": "{a} / {b}",
+    "description": "Step counter, e.g. 1 of 6. {a} current, {b} total."
+  },
+  "ob_s1_kicker": {
+    "message": "İndirme klasörü sorunu",
+    "description": "Step 1 kicker."
+  },
+  "ob_s1_title": {
+    "message": "O dosyayı bir daha asla bulamayacaksınız.",
+    "description": "Step 1 title."
+  },
+  "ob_s1_pt": {
+    "message": "Bütün gün indirme yapan insanlar için tasarlandı. Araştırmacılar, muhasebeciler ve İndirilenler klasörü sessizce kontrolden çıkan herkes.",
+    "description": "Step 1 secondary paragraph."
+  },
+  "ob_s2_kicker": {
+    "message": "Bir kural, zaten açık",
+    "description": "Step 2 kicker."
+  },
+  "ob_s2_title": {
+    "message": "Bir çöp adın gerçek bir ada dönüşmesini izleyin.",
+    "description": "Step 2 title."
+  },
+  "ob_s2_lede": {
+    "message": "Varsayılan desen önce tarih, sonra site, ardından orijinal addır. Bir indirme biter bitmez ad yeniden yazılır ve doğrudan diske yazılır. Tıklama yok, iletişim kutusu yok. İşte gerçek bir dosyada.",
+    "description": "Step 2 body."
+  },
+  "ob_demo_btn": {
+    "message": "Yeniden adlandırmayı izle",
+    "description": "Button that replays the rename demo."
+  },
+  "ob_saved_as": {
+    "message": "Şöyle kaydedildi",
+    "description": "Demo label for the original filename."
+  },
+  "ob_renamed_to": {
+    "message": "Şöyle yeniden adlandırıldı",
+    "description": "Demo label for the renamed filename."
+  },
+  "ob_fw_kept": {
+    "message": ".pdf korundu",
+    "description": "Token chip: the real extension is kept."
+  },
+  "ob_s3_kicker": {
+    "message": "İki dakika, bir kez",
+    "description": "Step 3 kicker."
+  },
+  "ob_s3_title": {
+    "message": "Sonsuza dek koruyacağınız adlandırma desenini ayarlayın.",
+    "description": "Step 3 title."
+  },
+  "ob_s3_lede": {
+    "message": "Belirteçlerden oluşturun. Deseninize eklemek için birine tıklayın ve örneğin güncellenmesini izleyin. Gerçek dosya uzantısı her zaman sona eklenir. Kaydedin, gelecekteki her indirme bunu izlesin.",
+    "description": "Step 3 body."
+  },
+  "ob_s3_pt": {
+    "message": "Tarayıcınızda yaşar. İstediğiniz zaman ayarlardan değiştirin ve dosyalarınızla ilgili hiçbir şey asla hiçbir yere gönderilmez.",
+    "description": "Step 3 secondary paragraph."
+  },
+  "ob_template_label": {
+    "message": "Adlandırma deseniniz",
+    "description": "Onboarding template input label."
+  },
+  "ob_result": {
+    "message": "Sonuç",
+    "description": "Onboarding preview result label."
+  },
+  "ob_save_btn": {
+    "message": "Desenimi kaydet",
+    "description": "Save-pattern button."
+  },
+  "ob_pattern_saved": {
+    "message": "Desen kaydedildi",
+    "description": "Save-pattern button after saving."
+  },
+  "ob_saved_msg": {
+    "message": "Kaydedildi. Her indirme artık bunu izliyor.",
+    "description": "Confirmation after the pattern is saved."
+  },
+  "ob_s4_kicker": {
+    "message": "Neden çalışır durumda bırakabilirsiniz",
+    "description": "Step 4 kicker."
+  },
+  "ob_s4_title": {
+    "message": "Tasarımı gereği yerel, tek bir geliştirici tarafından açıkta geliştirildi.",
+    "description": "Step 4 title."
+  },
+  "ob_s4_lede": {
+    "message": "Dosyalarınız ve yeniden adlandırma geçmişiniz asla bu makineden ayrılmaz. Ücretsiz planda uzantı hiçbir ağ çağrısı yapmaz ve kod tek oturuşta okunabilecek kadar küçüktür.",
+    "description": "Step 4 body."
+  },
+  "ob_stat1_n": {
+    "message": "Yerel",
+    "description": "Stat 1 value."
+  },
+  "ob_stat1_l": {
+    "message": "her yeniden adlandırma cihazınızda çalışır",
+    "description": "Stat 1 label."
+  },
+  "ob_stat2_n": {
+    "message": "Gizli",
+    "description": "Stat 2 value."
+  },
+  "ob_stat2_l": {
+    "message": "hiçbir şey bu makineden ayrılmaz",
+    "description": "Stat 2 label."
+  },
+  "ob_stat3_n": {
+    "message": "Açık",
+    "description": "Stat 3 value."
+  },
+  "ob_stat3_l": {
+    "message": "herkese açık geliştirilir, her commit",
+    "description": "Stat 3 label."
+  },
+  "ob_s4_pt": {
+    "message": "Bir indirme yeniden adlandırıcı, Zovo ile tanıştığınız yerdir. Daha büyük plan, tüm uzantı dünyası için dürüst bir katman, her seferinde bir araç, spam ve takip olmadan.",
+    "description": "Step 4 secondary paragraph."
+  },
+  "ob_link_why": {
+    "message": "Zovo'yu neden geliştiriyorum",
+    "description": "Link: why Zovo."
+  },
+  "ob_link_vision": {
+    "message": "Vizyon",
+    "description": "Link: the vision."
+  },
+  "ob_link_safe": {
+    "message": "Sizi nasıl güvende tutuyoruz",
+    "description": "Link: safety."
+  },
+  "ob_trust1_h": {
+    "message": "Her şey cihazınızda kalır",
+    "description": "Trust point 1 heading."
+  },
+  "ob_trust1_b": {
+    "message": "Deseniniz, kurallarınız ve geçmişiniz yerel tarayıcı depolamasında yaşar. Hesap yok, senkronizasyon sunucusu yok, dışarı hiçbir şey gönderilmez.",
+    "description": "Trust point 1 body."
+  },
+  "ob_trust2_h": {
+    "message": "Tek kişi, açıkta geliştiriyor",
+    "description": "Trust point 2 heading."
+  },
+  "ob_s5_kicker": {
+    "message": "Dürüst takas",
+    "description": "Step 5 kicker."
+  },
+  "ob_s5_title": {
+    "message": "Sonsuza dek ücretsiz yeniden adlandırma. Ya da hepsine bir kez sahip olun.",
+    "description": "Step 5 title."
+  },
+  "ob_s5_lede": {
+    "message": "Sessiz yeniden adlandırma çekirdeği ücretsiz kalır, dokunduğu dosya sayısında bir sınır olmadan. Doksan dokuz dolarlık tek ödeme; sınırsız site kuralları, klasör yönlendirme, regex temizliği ve bir sayfa veya PDF başlığından adlandırmayı açar.",
+    "description": "Step 5 body."
+  },
+  "ob_plan_free": {
+    "message": "Ücretsiz",
+    "description": "Free plan name."
+  },
+  "ob_free_unit": {
+    "message": "sonsuza dek",
+    "description": "Free plan price unit."
+  },
+  "ob_free1": {
+    "message": "Her indirme kendiliğinden yeniden adlandırılır",
+    "description": "Free benefit 1."
+  },
+  "ob_free2": {
+    "message": "Üç temel belirteç: tarih, site, orijinal ad",
+    "description": "Free benefit 2."
+  },
+  "ob_free3": {
+    "message": "Bir kayıtlı site kuralı",
+    "description": "Free benefit 3."
+  },
+  "ob_free4": {
+    "message": "Çakışma yönetimi ve canlı bir sayaç",
+    "description": "Free benefit 4."
+  },
+  "ob_ribbon": {
+    "message": "En iyi değer",
+    "description": "Lifetime plan ribbon."
+  },
+  "ob_plan_life": {
+    "message": "Ömür boyu",
+    "description": "Lifetime plan name."
+  },
+  "ob_life_unit": {
+    "message": "tek seferlik",
+    "description": "Lifetime plan price unit."
+  },
+  "ob_life1": {
+    "message": "Sınırsız site kuralı",
+    "description": "Lifetime benefit 1."
+  },
+  "ob_life2": {
+    "message": "Dosyaları siteye veya tarihe göre İndirilenler alt klasörlerine yönlendir",
+    "description": "Lifetime benefit 2."
+  },
+  "ob_life3": {
+    "message": "Regex temizliği artı sayfa başlığı ve PDF başlığı belirteçleri",
+    "description": "Lifetime benefit 3."
+  },
+  "ob_life4": {
+    "message": "Makineler arası yapılandırma yedekleme ve içe aktarma",
+    "description": "Lifetime benefit 4."
+  },
+  "ob_life5": {
+    "message": "Bu araca gelecekteki her güncelleme dahil",
+    "description": "Lifetime benefit 5."
+  },
+  "ob_life6": {
+    "message": "Tek ödeme, asla abonelik yok",
+    "description": "Lifetime benefit 6."
+  },
+  "ob_life_cta": {
+    "message": "Ömür boyu için $$99 ödeyin",
+    "description": "Lifetime purchase CTA."
+  },
+  "ob_guarantee": {
+    "message": "14 gün içinde sorusuz iade. Aylık mı tercih edersiniz? Aynı sayfada $$4.99.",
+    "description": "Refund guarantee line."
+  },
+  "ob_s6_kicker": {
+    "message": "Hazırsınız",
+    "description": "Step 6 kicker."
+  },
+  "ob_s6_title": {
+    "message": "Yapılacak bir şey kalmadı. Zaten çalışıyor.",
+    "description": "Step 6 title."
+  },
+  "ob_s6_lede": {
+    "message": "İndireceğiniz bir sonraki dosya kendiliğinden temiz bir ad alır. Basılacak düğme yok, onaylanacak iletişim kutusu yok. İşte bundan sonra olanlar.",
+    "description": "Step 6 body."
+  },
+  "ob_dev_h": {
+    "message": "Geliştiriciden",
+    "description": "Developer note heading."
+  },
+  "ob_dev_b": {
+    "message": "Zovo'yu tek başıma, açıkta geliştiriyorum. Bir şey bozulursa bana yazın, cevap veririm. Yeniden adlandırıcılar sadece başlangıç. Plan, tüm tarayıcı için dürüst bir katman ve doksan dokuz dolarınız bir sonraki parçayı hayata geçiriyor.",
+    "description": "Developer note body."
+  },
+  "ob_link_github": {
+    "message": "GitHub'dan bana ulaşın",
+    "description": "Link: GitHub."
+  },
+  "ob_link_going": {
+    "message": "Bunun gittiği yer",
+    "description": "Link: roadmap."
+  },
+  "ob_cheat1_k": {
+    "message": "Her indirme",
+    "description": "Cheat-sheet row 1 key."
+  },
+  "ob_cheat1_v": {
+    "message": "Kaydedilirken yeniden adlandırılır",
+    "description": "Cheat-sheet row 1 value."
+  },
+  "ob_cheat2_k": {
+    "message": "Açılır pencere",
+    "description": "Cheat-sheet row 2 key."
+  },
+  "ob_cheat2_v": {
+    "message": "Her yeniden adlandırmayı sayar",
+    "description": "Cheat-sheet row 2 value."
+  },
+  "ob_cheat3_k": {
+    "message": "Deseniniz",
+    "description": "Cheat-sheet row 3 key."
+  },
+  "ob_cheat3_v": {
+    "message": "Ayarlardan düzenleyin",
+    "description": "Cheat-sheet row 3 value."
+  },
+  "ob_cheat4_k": {
+    "message": "İlk site kuralı",
+    "description": "Cheat-sheet row 4 key."
+  },
+  "ob_cheat4_v": {
+    "message": "Eklemesi ücretsiz",
+    "description": "Cheat-sheet row 4 value."
+  }
+}

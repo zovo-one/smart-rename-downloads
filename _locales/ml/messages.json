@@ -1,0 +1,834 @@
+{
+  "extName": {
+    "message": "Smart Rename Downloads",
+    "description": "Extension name shown in the Chrome Web Store and toolbar."
+  },
+  "extDesc": {
+    "message": "തീയതി, സൈറ്റ്, ടൈറ്റിൽ ടോക്കണുകൾ ഉപയോഗിച്ച് ഓരോ ഡൗൺലോഡും സ്വയമേവ പുനർനാമകരണം ചെയ്യുക. സൈറ്റ് നിയമങ്ങൾ, റെജെക്സ്, ഫോൾഡർ",
+    "description": "Chrome Web Store short description (max 132 chars)."
+  },
+  "popup_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Popup header title."
+  },
+  "popup_open_settings": {
+    "message": "ക്രമീകരണങ്ങൾ തുറക്കുക",
+    "description": "Aria label for the settings gear button."
+  },
+  "popup_settings": {
+    "message": "ക്രമീകരണങ്ങൾ",
+    "description": "Tooltip for the settings gear button."
+  },
+  "popup_health": {
+    "message": "പുനർനാമകരണം താൽക്കാലികമായി നിർത്തി — Downloads അനുമതി നീക്കം ചെയ്തു.",
+    "description": "Shown when the downloads permission is missing."
+  },
+  "popup_regrant": {
+    "message": "വീണ്ടും പ്രവർത്തനക്ഷമമാക്കുക",
+    "description": "Link to re-grant the downloads permission."
+  },
+  "popup_hero_label": {
+    "message": "പുനർനാമകരണം ചെയ്ത ഫയലുകൾ",
+    "description": "Label under the big lifetime rename counter."
+  },
+  "popup_hero_sub": {
+    "message": "ഓരോ ഡൗൺലോഡും നിങ്ങളുടെ ഡിസ്കിലെത്തുന്നതിന് മുമ്പ് സ്വയമേവ പുനർനാമകരണം ചെയ്യപ്പെടുന്നു.",
+    "description": "Supporting line under the hero counter."
+  },
+  "popup_master_title": {
+    "message": "ഡൗൺലോഡുകൾ സ്വയമേവ പുനർനാമകരണം ചെയ്യുക",
+    "description": "Master on/off switch title."
+  },
+  "popup_master_aria": {
+    "message": "ഡൗൺലോഡ് സ്വയമേവ പുനർനാമകരണം ടോഗിൾ ചെയ്യുക",
+    "description": "Accessible name for the master switch."
+  },
+  "popup_master_on": {
+    "message": "ഓൺ — ഓരോ ഡൗൺലോഡും പുനർനാമകരണം ചെയ്യുന്നു",
+    "description": "Master switch note when enabled."
+  },
+  "popup_master_off": {
+    "message": "ഓഫ് — Chrome അതിന്റെ സ്ഥിരസ്ഥിതി പേരുകൾ നിലനിർത്തുന്നു",
+    "description": "Master switch note when disabled."
+  },
+  "popup_recent": {
+    "message": "സമീപകാല പുനർനാമകരണങ്ങൾ",
+    "description": "Section label for the recent-renames list."
+  },
+  "popup_empty_title": {
+    "message": "നിങ്ങൾ തയ്യാറാകുമ്പോൾ റെഡി",
+    "description": "Empty-state headline in the popup."
+  },
+  "popup_empty_text": {
+    "message": "നിങ്ങളുടെ അടുത്ത ഡൗൺലോഡ് സ്വയമേവ പുനർനാമകരണം ചെയ്യപ്പെടും. അത് ഇവിടെ കാണിക്കും.",
+    "description": "Empty-state body in the popup."
+  },
+  "popup_milestone_text": {
+    "message": "Smart Rename {n} ഡൗൺലോഡുകൾ ക്രമീകരിച്ചു. Pro അവയെ സ്വയമേവ ഫോൾഡറുകളിലേക്ക് ഫയൽ ചെയ്യുന്നു.",
+    "description": "Post-success upgrade nudge. {n} is the rename count."
+  },
+  "popup_milestone_cta": {
+    "message": "Pro കാണുക",
+    "description": "CTA on the milestone nudge."
+  },
+  "popup_dismiss": {
+    "message": "ഒഴിവാക്കുക",
+    "description": "Dismiss the milestone nudge."
+  },
+  "popup_trust": {
+    "message": "ലോക്കൽ · അക്കൗണ്ട് ഇല്ല · ട്രാക്കിംഗ് ഇല്ല",
+    "description": "Trust line in the popup footer."
+  },
+  "popup_upgrade": {
+    "message": "Pro-ലേക്ക് അപ്ഗ്രേഡ് ചെയ്യുക",
+    "description": "Upgrade button in the popup footer."
+  },
+  "flag_timeout": {
+    "message": "സ്ഥിരസ്ഥിതി നിലനിർത്തി",
+    "description": "Recent-list flag: rename fell back to Chrome's default name (timeout)."
+  },
+  "flag_sanitize": {
+    "message": "സ്ഥിരസ്ഥിതി നിലനിർത്തി",
+    "description": "Recent-list flag: name could not be sanitized."
+  },
+  "flag_nomatch": {
+    "message": "പൊരുത്തമില്ല",
+    "description": "Recent-list flag: no site rule matched."
+  },
+  "opt_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Options brand name."
+  },
+  "opt_trust": {
+    "message": "എല്ലാം ഈ ഉപകരണത്തിൽ തന്നെ തുടരുന്നു. ട്രാക്കിംഗ് ഇല്ല.",
+    "description": "Options sidebar trust line."
+  },
+  "aria_theme": {
+    "message": "കളർ തീം",
+    "description": "Aria label for the theme radiogroup."
+  },
+  "theme_system": {
+    "message": "സിസ്റ്റം",
+    "description": "Theme option: follow OS."
+  },
+  "theme_light": {
+    "message": "ലൈറ്റ്",
+    "description": "Theme option: light."
+  },
+  "theme_dark": {
+    "message": "ഡാർക്ക്",
+    "description": "Theme option: dark."
+  },
+  "tier_free": {
+    "message": "സൗജന്യം",
+    "description": "Free plan label."
+  },
+  "tier_trial": {
+    "message": "ട്രയൽ",
+    "description": "Trial plan label."
+  },
+  "tier_pro": {
+    "message": "Pro",
+    "description": "Pro plan label."
+  },
+  "tab_template": {
+    "message": "ടെംപ്ലേറ്റ്",
+    "description": "Settings tab: naming template."
+  },
+  "tab_sites": {
+    "message": "സൈറ്റ് അനുസരിച്ചുള്ള നിയമങ്ങൾ",
+    "description": "Settings tab: per-site rules."
+  },
+  "tab_advanced": {
+    "message": "വിപുലം",
+    "description": "Settings tab: advanced naming."
+  },
+  "tab_backup": {
+    "message": "ബാക്കപ്പ്",
+    "description": "Settings tab: backup and restore."
+  },
+  "tab_license": {
+    "message": "ലൈസൻസ്",
+    "description": "Settings tab: license and plan."
+  },
+  "tpl_h1": {
+    "message": "നാമകരണ ടെംപ്ലേറ്റ്",
+    "description": "Template panel heading."
+  },
+  "tpl_lede": {
+    "message": "ഓരോ ഡൗൺലോഡിനും ലഭിക്കുന്ന ഫയൽ പേര് നിർമ്മിക്കുക. യഥാർത്ഥ ഫയൽ എക്സ്റ്റൻഷൻ എപ്പോഴും നിലനിർത്തുന്നു.",
+    "description": "Template panel intro."
+  },
+  "tpl_label": {
+    "message": "ടെംപ്ലേറ്റ്",
+    "description": "Template input label."
+  },
+  "tpl_tokens_aria": {
+    "message": "ഒരു ടോക്കൺ ചേർക്കുക",
+    "description": "Aria label for the token chip row."
+  },
+  "tpl_conflict": {
+    "message": "ആ പേരുള്ള ഒരു ഫയൽ ഇതിനകം ഉണ്ടെങ്കിൽ",
+    "description": "Conflict-policy select label."
+  },
+  "conflict_uniquify": {
+    "message": "ഒരു നമ്പർ ചേർക്കുക — രണ്ടും നിലനിർത്തുക",
+    "description": "Conflict policy: uniquify."
+  },
+  "conflict_overwrite": {
+    "message": "പഴയ ഫയൽ ഓവർറൈറ്റ് ചെയ്യുക",
+    "description": "Conflict policy: overwrite."
+  },
+  "conflict_prompt": {
+    "message": "ഓരോ തവണയും എന്നോട് ചോദിക്കുക",
+    "description": "Conflict policy: prompt."
+  },
+  "tpl_save": {
+    "message": "ടെംപ്ലേറ്റ് സംരക്ഷിക്കുക",
+    "description": "Save-template button."
+  },
+  "tpl_preview_h": {
+    "message": "തത്സമയ പ്രിവ്യൂ",
+    "description": "Preview section label."
+  },
+  "tpl_pv_host": {
+    "message": "സാമ്പിൾ സൈറ്റ്",
+    "description": "Preview sample-host input label."
+  },
+  "tpl_pv_name": {
+    "message": "സാമ്പിൾ ഡൗൺലോഡ്",
+    "description": "Preview sample-name input label."
+  },
+  "tpl_pv_result": {
+    "message": "ഫലം",
+    "description": "Preview result label."
+  },
+  "tpl_pv_hint": {
+    "message": "ഒരു സൗജന്യ ടെംപ്ലേറ്റിലെ “/” ഒരു “-” ആയി സംരക്ഷിക്കുന്നു. ഫോൾഡർ റൂട്ടിംഗ് ഒരു Pro ഫീച്ചറാണ്.",
+    "description": "Preview hint about slashes and folder routing."
+  },
+  "sites_h1": {
+    "message": "സൈറ്റ് അനുസരിച്ചുള്ള നിയമങ്ങൾ",
+    "description": "Sites panel heading."
+  },
+  "sites_lede": {
+    "message": "ഒരു നിർദ്ദിഷ്ട സൈറ്റിന് അതിന്റേതായ ടെംപ്ലേറ്റ് നൽകുക — ഇൻവോയ്‌സുകൾ ഫോൾഡറിലാക്കി, പേപ്പറുകൾക്ക് ടൈറ്റിൽ നൽകി. നിങ്ങൾക്ക് അനുഭവിക്കാൻ സൗജന്യത്തിൽ ഒരു നിയമം ഉൾപ്പെടുന്നു; Pro അപരിമിതമാണ്.",
+    "description": "Sites panel intro."
+  },
+  "sites_count": {
+    "message": "1 സൗജന്യ നിയമങ്ങളിൽ 0 ഉപയോഗിച്ചു",
+    "description": "Initial site-rule count text."
+  },
+  "sites_count_free": {
+    "message": "1 സൗജന്യ നിയമങ്ങളിൽ {n} ഉപയോഗിച്ചു",
+    "description": "Site-rule count for Free. {n} is the count."
+  },
+  "sites_count_pro": {
+    "message": "{n} നിയമങ്ങൾ",
+    "description": "Site-rule count for Pro. {n} is the count."
+  },
+  "sites_empty": {
+    "message": "ഇതുവരെ സൈറ്റ് നിയമങ്ങളൊന്നുമില്ല. താഴെ ഒന്ന് ചേർക്കുക.",
+    "description": "Empty state for site rules."
+  },
+  "sites_add_h": {
+    "message": "ഒരു നിയമം ചേർക്കുക",
+    "description": "Add-rule section label."
+  },
+  "sites_match": {
+    "message": "സൈറ്റ് (host അല്ലെങ്കിൽ *.host)",
+    "description": "Rule match input label."
+  },
+  "sites_match_ph": {
+    "message": "stripe.com",
+    "description": "Rule match placeholder."
+  },
+  "sites_template": {
+    "message": "ഈ സൈറ്റിനുള്ള ടെംപ്ലേറ്റ്",
+    "description": "Rule template input label."
+  },
+  "sites_template_ph": {
+    "message": "{date}-invoice-{original}",
+    "description": "Rule template placeholder."
+  },
+  "sites_add_btn": {
+    "message": "സൈറ്റ് നിയമം ചേർക്കുക",
+    "description": "Add-rule button."
+  },
+  "sites_delete": {
+    "message": "നിയമം ഇല്ലാതാക്കുക",
+    "description": "Aria label for a rule's delete button."
+  },
+  "sites_need_both": {
+    "message": "ഒരു സൈറ്റും ഒരു ടെംപ്ലേറ്റും രണ്ടും നൽകുക.",
+    "description": "Validation when a rule field is empty."
+  },
+  "sites_add_err": {
+    "message": "ആ നിയമം ചേർക്കാൻ കഴിഞ്ഞില്ല.",
+    "description": "Generic add-rule failure."
+  },
+  "adv_h1": {
+    "message": "വിപുലമായ നാമകരണം",
+    "description": "Advanced panel heading."
+  },
+  "adv_lede": {
+    "message": "നിങ്ങൾ യഥാർത്ഥത്തിൽ ഡൗൺലോഡുകൾ ഫയൽ ചെയ്യുന്ന രീതിക്കുള്ള പവർ ടൂളുകൾ. Zovo Pro-യിൽ ഉൾപ്പെടുന്നു.",
+    "description": "Advanced panel intro."
+  },
+  "adv_save": {
+    "message": "സംരക്ഷിക്കുക",
+    "description": "Generic save button."
+  },
+  "adv_clear": {
+    "message": "മായ്ക്കുക",
+    "description": "Generic clear button."
+  },
+  "adv_unlock": {
+    "message": "Pro ഉപയോഗിച്ച് അൺലോക്ക് ചെയ്യുക",
+    "description": "CTA on a locked Pro card."
+  },
+  "adv_on": {
+    "message": "പ്രവർത്തനക്ഷമം",
+    "description": "Feature toggled on."
+  },
+  "adv_off": {
+    "message": "പ്രവർത്തനരഹിതം",
+    "description": "Feature toggled off."
+  },
+  "adv_perm_needed": {
+    "message": "ഇത് പ്രവർത്തനക്ഷമമാക്കാൻ അനുമതി ആവശ്യമാണ്.",
+    "description": "Shown when an optional permission is denied."
+  },
+  "adv_toggle_err": {
+    "message": "ഈ ക്രമീകരണം അപ്ഡേറ്റ് ചെയ്യാൻ കഴിഞ്ഞില്ല.",
+    "description": "Generic toggle failure."
+  },
+  "adv_folder_h": {
+    "message": "ഫോൾഡർ റൂട്ടിംഗ്",
+    "description": "Folder-routing card heading."
+  },
+  "adv_folder_note": {
+    "message": "നിങ്ങളുടെ Downloads ഫോൾഡറിന്റെ സബ്ഫോൾഡറുകളിലേക്ക് ഫയൽ ഡൗൺലോഡ് ചെയ്യുക, ഉദാ. Downloads/{hostname}/…",
+    "description": "Folder-routing explanation."
+  },
+  "adv_folder_label": {
+    "message": "സബ്ഫോൾഡർ പാത്ത് (ടോക്കണുകൾ അനുവദനീയം)",
+    "description": "Folder-path input label."
+  },
+  "adv_folder_ph": {
+    "message": "{hostname}",
+    "description": "Folder-path placeholder."
+  },
+  "adv_folder_err": {
+    "message": "ഫോൾഡർ റൂട്ടിംഗ് സംരക്ഷിക്കാൻ കഴിഞ്ഞില്ല.",
+    "description": "Folder-routing save failure."
+  },
+  "adv_regex_h": {
+    "message": "കണ്ടെത്തി മാറ്റിസ്ഥാപിക്കുക (regex)",
+    "description": "Regex card heading."
+  },
+  "adv_regex_note": {
+    "message": "ഫയലുകൾ സംരക്ഷിക്കുന്നതിന് മുമ്പ് ഒരു റെഗുലർ എക്സ്പ്രഷൻ ഉപയോഗിച്ച് പേരുകൾ വൃത്തിയാക്കുക.",
+    "description": "Regex explanation."
+  },
+  "adv_regex_find": {
+    "message": "കണ്ടെത്തുക",
+    "description": "Regex find input label."
+  },
+  "adv_regex_find_ph": {
+    "message": "\\s+",
+    "description": "Regex find placeholder."
+  },
+  "adv_regex_replace": {
+    "message": "മാറ്റിസ്ഥാപിക്കുക",
+    "description": "Regex replace input label."
+  },
+  "adv_regex_replace_ph": {
+    "message": "-",
+    "description": "Regex replace placeholder."
+  },
+  "adv_regex_flags": {
+    "message": "ഫ്ലാഗുകൾ",
+    "description": "Regex flags input label."
+  },
+  "adv_regex_need": {
+    "message": "കണ്ടെത്താൻ ഒരു പാറ്റേൺ നൽകുക.",
+    "description": "Validation when the regex find is empty."
+  },
+  "adv_regex_bad": {
+    "message": "ആ പാറ്റേൺ അസാധുവാണ് അല്ലെങ്കിൽ സുരക്ഷിതമല്ല.",
+    "description": "Regex validation failure."
+  },
+  "adv_regex_err": {
+    "message": "പാറ്റേൺ സംരക്ഷിക്കാൻ കഴിഞ്ഞില്ല.",
+    "description": "Generic regex save failure."
+  },
+  "adv_cleared": {
+    "message": "മായ്ച്ചു",
+    "description": "Regex cleared confirmation."
+  },
+  "adv_title_h": {
+    "message": "പേജ്-ടൈറ്റിൽ ടോക്കൺ {title}",
+    "description": "Title-token card heading."
+  },
+  "adv_title_note": {
+    "message": "ഫയൽ പേരുകളിൽ ഉറവിട പേജിന്റെ ടൈറ്റിൽ ഉപയോഗിക്കുക. ഇത് ഓണാക്കുന്നത് Chrome-നോട് Tabs അനുമതി ചോദിക്കുന്നു.",
+    "description": "Title-token explanation."
+  },
+  "adv_title_toggle": {
+    "message": "{title} ടോക്കൺ പ്രവർത്തനക്ഷമമാക്കുക",
+    "description": "Title-token toggle label."
+  },
+  "adv_title_aria": {
+    "message": "പേജ്-ടൈറ്റിൽ ടോക്കൺ പ്രവർത്തനക്ഷമമാക്കുക",
+    "description": "Accessible name for the title-token switch."
+  },
+  "adv_pdf_h": {
+    "message": "PDF ടൈറ്റിൽ ടോക്കൺ {pdftitle}",
+    "description": "PDF-token card heading."
+  },
+  "adv_pdf_note": {
+    "message": "ഫയലിനുള്ളിൽ സംഭരിച്ചിരിക്കുന്ന ടൈറ്റിൽ ഉപയോഗിച്ച് PDF-കൾക്ക് പേരിടുക. ഇത് PDF-നെ നെറ്റ്‌വർക്കിലൂടെ വായിക്കുന്നു, അതിനാൽ ഇത് സൈറ്റ് ആക്‌സസ് ചോദിക്കുന്നു, സ്ഥിരസ്ഥിതിയായി ഓഫാണ്.",
+    "description": "PDF-token explanation."
+  },
+  "adv_pdf_toggle": {
+    "message": "{pdftitle} ടോക്കൺ പ്രവർത്തനക്ഷമമാക്കുക",
+    "description": "PDF-token toggle label."
+  },
+  "adv_pdf_aria": {
+    "message": "PDF ടൈറ്റിൽ ടോക്കൺ പ്രവർത്തനക്ഷമമാക്കുക",
+    "description": "Accessible name for the PDF-token switch."
+  },
+  "backup_h1": {
+    "message": "ബാക്കപ്പ് & പുനഃസ്ഥാപനം",
+    "description": "Backup panel heading."
+  },
+  "backup_lede": {
+    "message": "നിങ്ങളുടെ സജ്ജീകരണം ഒരു ഫയലിലേക്ക് എക്സ്പോർട്ട് ചെയ്യുക, അല്ലെങ്കിൽ അത് മറ്റൊരു മെഷീനിലേക്ക് നീക്കുക. Zovo Pro-യിൽ ഉൾപ്പെടുന്നു.",
+    "description": "Backup panel intro."
+  },
+  "backup_export_h": {
+    "message": "കോൺഫിഗറേഷൻ എക്സ്പോർട്ട് ചെയ്യുക",
+    "description": "Export card heading."
+  },
+  "backup_export_note": {
+    "message": "നിങ്ങളുടെ ടെംപ്ലേറ്റ്, നിയമങ്ങൾ, ക്രമീകരണങ്ങൾ എന്നിവയുള്ള ഒരു JSON ഫയൽ ഡൗൺലോഡ് ചെയ്യുന്നു. ചരിത്രമില്ല, വ്യക്തിഗത ഡാറ്റയില്ല.",
+    "description": "Export explanation."
+  },
+  "backup_export_btn": {
+    "message": "ഫയലിലേക്ക് എക്സ്പോർട്ട് ചെയ്യുക",
+    "description": "Export button."
+  },
+  "backup_exported": {
+    "message": "എക്സ്പോർട്ട് ചെയ്തു",
+    "description": "Export confirmation."
+  },
+  "backup_export_err": {
+    "message": "എക്സ്പോർട്ട് പരാജയപ്പെട്ടു.",
+    "description": "Export failure."
+  },
+  "backup_import_h": {
+    "message": "കോൺഫിഗറേഷൻ ഇംപോർട്ട് ചെയ്യുക",
+    "description": "Import card heading."
+  },
+  "backup_import_label": {
+    "message": "എക്സ്പോർട്ട് ചെയ്ത ഒരു കോൺഫിഗറേഷൻ ഒട്ടിക്കുക",
+    "description": "Import textarea label."
+  },
+  "backup_import_ph": {
+    "message": "{\"zovo_template\":\"…\"}",
+    "description": "Import textarea placeholder."
+  },
+  "backup_import_btn": {
+    "message": "ഇംപോർട്ട് ചെയ്യുക",
+    "description": "Import button."
+  },
+  "backup_imported": {
+    "message": "ഇംപോർട്ട് ചെയ്തു",
+    "description": "Import confirmation."
+  },
+  "backup_need_json": {
+    "message": "ആദ്യം ഒരു കോൺഫിഗറേഷൻ ഒട്ടിക്കുക.",
+    "description": "Validation when import is empty."
+  },
+  "backup_import_err": {
+    "message": "ആ ഫയൽ ഇംപോർട്ട് ചെയ്യാൻ കഴിഞ്ഞില്ല.",
+    "description": "Import failure."
+  },
+  "lic_h1": {
+    "message": "നിങ്ങളുടെ പ്ലാൻ",
+    "description": "License panel heading."
+  },
+  "lic_lede": {
+    "message": "ഒരൊറ്റ പേയ്‌മെന്റ് എല്ലാ നാമകരണ ഫീച്ചറുകളും എന്നന്നേക്കുമായി അൺലോക്ക് ചെയ്യുന്നു. സബ്‌സ്‌ക്രിപ്ഷൻ ഇല്ല.",
+    "description": "License panel intro."
+  },
+  "lic_current": {
+    "message": "നിലവിലെ പ്ലാൻ",
+    "description": "Current-plan label."
+  },
+  "lic_free_sub": {
+    "message": "കോർ പുനർനാമകരണം, ഒരു സൈറ്റ് നിയമം, എന്നന്നേക്കും.",
+    "description": "Free-plan subtitle."
+  },
+  "lic_pro_sub": {
+    "message": "എല്ലാ നാമകരണ ഫീച്ചറും അൺലോക്ക് ചെയ്തു. Zovo-യെ പിന്തുണച്ചതിന് നന്ദി.",
+    "description": "Pro-plan subtitle."
+  },
+  "lic_upgrade": {
+    "message": "Pro-ലേക്ക് അപ്ഗ്രേഡ് ചെയ്യുക",
+    "description": "Upgrade button on the License tab."
+  },
+  "lic_have_key": {
+    "message": "എനിക്ക് ഒരു കീ ഉണ്ട്",
+    "description": "License-key button."
+  },
+  "lic_included_h": {
+    "message": "Pro എന്ത് അൺലോക്ക് ചെയ്യുന്നു",
+    "description": "Benefits section label."
+  },
+  "lic_b1": {
+    "message": "അപരിമിതമായ സൈറ്റ് അനുസരിച്ചുള്ള നിയമങ്ങൾ",
+    "description": "Pro benefit 1."
+  },
+  "lic_b2": {
+    "message": "സബ്ഫോൾഡറുകളിലേക്ക് ഫോൾഡർ റൂട്ടിംഗ്",
+    "description": "Pro benefit 2."
+  },
+  "lic_b3": {
+    "message": "Regex കണ്ടെത്തി മാറ്റിസ്ഥാപിക്കൽ",
+    "description": "Pro benefit 3."
+  },
+  "lic_b4": {
+    "message": "പേജ്-ടൈറ്റിൽ, PDF-ടൈറ്റിൽ ടോക്കണുകൾ",
+    "description": "Pro benefit 4."
+  },
+  "lic_b5": {
+    "message": "കോൺഫിഗ് ബാക്കപ്പ്, എക്സ്പോർട്ട് & ഇംപോർട്ട്",
+    "description": "Pro benefit 5."
+  },
+  "saved": {
+    "message": "സംരക്ഷിച്ചു",
+    "description": "Generic saved confirmation."
+  },
+  "err_template": {
+    "message": "ആ ടെംപ്ലേറ്റ് സംരക്ഷിക്കാൻ കഴിഞ്ഞില്ല.",
+    "description": "Generic template save failure."
+  },
+  "err_bad_token": {
+    "message": "ടെംപ്ലേറ്റിൽ അജ്ഞാത ടോക്കൺ: ",
+    "description": "Prefix before the offending token name."
+  },
+  "ob_brand": {
+    "message": "Smart Rename Downloads",
+    "description": "Onboarding brand name."
+  },
+  "ob_by": {
+    "message": "· Zovo-യിൽ നിന്ന്",
+    "description": "Onboarding brand attribution suffix."
+  },
+  "ob_skip": {
+    "message": "ആമുഖം ഒഴിവാക്കുക",
+    "description": "Skip onboarding button."
+  },
+  "ob_back": {
+    "message": "പിന്നോട്ട്",
+    "description": "Previous-step button."
+  },
+  "ob_next": {
+    "message": "അടുത്തത്",
+    "description": "Next-step button."
+  },
+  "ob_later": {
+    "message": "ഒരുപക്ഷേ പിന്നീട്",
+    "description": "Next-button label on the offer step."
+  },
+  "ob_start": {
+    "message": "ഇത് ഉപയോഗിക്കാൻ തുടങ്ങുക",
+    "description": "Final onboarding button."
+  },
+  "ob_stepno": {
+    "message": "{b}-ൽ {a}",
+    "description": "Step counter, e.g. 1 of 6. {a} current, {b} total."
+  },
+  "ob_s1_kicker": {
+    "message": "ഡൗൺലോഡ് ഫോൾഡർ പ്രശ്നം",
+    "description": "Step 1 kicker."
+  },
+  "ob_s1_title": {
+    "message": "നിങ്ങൾക്ക് ആ ഫയൽ ഒരിക്കലും വീണ്ടും കണ്ടെത്താനാവില്ല.",
+    "description": "Step 1 title."
+  },
+  "ob_s1_pt": {
+    "message": "ദിവസം മുഴുവൻ ഡൗൺലോഡ് ചെയ്യുന്നവർക്കായി നിർമ്മിച്ചത്. ഗവേഷകർ, അക്കൗണ്ടന്റുമാർ, Downloads ഫോൾഡർ നിശ്ശബ്ദമായി കൈവിട്ടുപോയ ആരും.",
+    "description": "Step 1 secondary paragraph."
+  },
+  "ob_s2_kicker": {
+    "message": "ഒരു നിയമം, ഇതിനകം ഓണാണ്",
+    "description": "Step 2 kicker."
+  },
+  "ob_s2_title": {
+    "message": "ഒരു ചവറ്റുപേര് യഥാർത്ഥ പേരായി മാറുന്നത് കാണുക.",
+    "description": "Step 2 title."
+  },
+  "ob_s2_lede": {
+    "message": "സ്ഥിരസ്ഥിതി പാറ്റേൺ ആദ്യം തീയതി, പിന്നെ സൈറ്റ്, പിന്നെ യഥാർത്ഥ പേര് എന്നിവയാണ്. ഒരു ഡൗൺലോഡ് പൂർത്തിയാകുന്ന നിമിഷം, പേര് വീണ്ടും എഴുതി നേരിട്ട് ഡിസ്കിലേക്ക് സംരക്ഷിക്കുന്നു. ക്ലിക്കില്ല, ഡയലോഗില്ല. ഇതാ ഒരു യഥാർത്ഥ ഫയലിൽ.",
+    "description": "Step 2 body."
+  },
+  "ob_demo_btn": {
+    "message": "പുനർനാമകരണം കാണുക",
+    "description": "Button that replays the rename demo."
+  },
+  "ob_saved_as": {
+    "message": "ഇങ്ങനെ സംരക്ഷിച്ചു",
+    "description": "Demo label for the original filename."
+  },
+  "ob_renamed_to": {
+    "message": "ഇങ്ങനെ പുനർനാമകരണം ചെയ്തു",
+    "description": "Demo label for the renamed filename."
+  },
+  "ob_fw_kept": {
+    "message": ".pdf നിലനിർത്തി",
+    "description": "Token chip: the real extension is kept."
+  },
+  "ob_s3_kicker": {
+    "message": "രണ്ട് മിനിറ്റ്, ഒരിക്കൽ",
+    "description": "Step 3 kicker."
+  },
+  "ob_s3_title": {
+    "message": "എന്നന്നേക്കും നിലനിർത്തുന്ന നാമകരണ പാറ്റേൺ സജ്ജമാക്കുക.",
+    "description": "Step 3 title."
+  },
+  "ob_s3_lede": {
+    "message": "ടോക്കണുകളിൽ നിന്ന് ഇത് നിർമ്മിക്കുക. അത് പാറ്റേണിലേക്ക് ചേർക്കാൻ ഒന്ന് ക്ലിക്ക് ചെയ്ത് സാമ്പിൾ അപ്ഡേറ്റ് ആകുന്നത് കാണുക. യഥാർത്ഥ ഫയൽ എക്സ്റ്റൻഷൻ എപ്പോഴും അവസാനം നിലനിർത്തുന്നു. അത് സംരക്ഷിക്കുക, ഭാവിയിലെ ഓരോ ഡൗൺലോഡും ഇത് പിന്തുടരും.",
+    "description": "Step 3 body."
+  },
+  "ob_s3_pt": {
+    "message": "ഇത് നിങ്ങളുടെ ബ്രൗസറിൽ തുടരുന്നു. ക്രമീകരണങ്ങളിൽ നിന്ന് എപ്പോൾ വേണമെങ്കിലും മാറ്റുക, നിങ്ങളുടെ ഫയലുകളെക്കുറിച്ചുള്ള ഒന്നും ഒരിക്കലും എവിടേക്കും അയക്കുന്നില്ല.",
+    "description": "Step 3 secondary paragraph."
+  },
+  "ob_template_label": {
+    "message": "നിങ്ങളുടെ നാമകരണ പാറ്റേൺ",
+    "description": "Onboarding template input label."
+  },
+  "ob_result": {
+    "message": "ഫലം",
+    "description": "Onboarding preview result label."
+  },
+  "ob_save_btn": {
+    "message": "എന്റെ പാറ്റേൺ സംരക്ഷിക്കുക",
+    "description": "Save-pattern button."
+  },
+  "ob_pattern_saved": {
+    "message": "പാറ്റേൺ സംരക്ഷിച്ചു",
+    "description": "Save-pattern button after saving."
+  },
+  "ob_saved_msg": {
+    "message": "സംരക്ഷിച്ചു. ഇപ്പോൾ ഓരോ ഡൗൺലോഡും ഇത് പിന്തുടരുന്നു.",
+    "description": "Confirmation after the pattern is saved."
+  },
+  "ob_s4_kicker": {
+    "message": "എന്തുകൊണ്ട് ഇത് പ്രവർത്തിക്കാൻ വിടാം",
+    "description": "Step 4 kicker."
+  },
+  "ob_s4_title": {
+    "message": "രൂപകൽപ്പന പ്രകാരം ലോക്കൽ, ഒരു ഡെവലപ്പർ പരസ്യമായി നിർമ്മിച്ചത്.",
+    "description": "Step 4 title."
+  },
+  "ob_s4_lede": {
+    "message": "നിങ്ങളുടെ ഫയലുകളും പുനർനാമകരണ ചരിത്രവും ഒരിക്കലും ഈ മെഷീൻ വിട്ടുപോകുന്നില്ല. സൗജന്യ പ്ലാനിൽ എക്സ്റ്റൻഷൻ ഒരു നെറ്റ്‌വർക്ക് കോളും നടത്തുന്നില്ല, കോഡ് ഒരു ഇരിപ്പിൽ വായിക്കാൻ കഴിയുന്നത്ര ചെറുതാണ്.",
+    "description": "Step 4 body."
+  },
+  "ob_stat1_n": {
+    "message": "ലോക്കൽ",
+    "description": "Stat 1 value."
+  },
+  "ob_stat1_l": {
+    "message": "ഓരോ പുനർനാമകരണവും നിങ്ങളുടെ ഉപകരണത്തിൽ പ്രവർത്തിക്കുന്നു",
+    "description": "Stat 1 label."
+  },
+  "ob_stat2_n": {
+    "message": "സ്വകാര്യം",
+    "description": "Stat 2 value."
+  },
+  "ob_stat2_l": {
+    "message": "ഒന്നും ഈ മെഷീൻ വിട്ടുപോകുന്നില്ല",
+    "description": "Stat 2 label."
+  },
+  "ob_stat3_n": {
+    "message": "ഓപ്പൺ",
+    "description": "Stat 3 value."
+  },
+  "ob_stat3_l": {
+    "message": "പരസ്യമായി നിർമ്മിച്ചത്, ഓരോ കമ്മിറ്റും",
+    "description": "Stat 3 label."
+  },
+  "ob_s4_pt": {
+    "message": "ഒരു ഡൗൺലോഡ് റീനെയിമർ ആണ് നിങ്ങൾ Zovo-യെ കാണുന്നിടം. വലിയ പദ്ധതി മുഴുവൻ എക്സ്റ്റൻഷൻ ലോകത്തിനുമുള്ള ഒരു സത്യസന്ധമായ പാളിയാണ്, ഓരോ ടൂളായി, സ്‌പാമോ ട്രാക്കിംഗോ ഇല്ലാതെ.",
+    "description": "Step 4 secondary paragraph."
+  },
+  "ob_link_why": {
+    "message": "ഞാൻ Zovo എന്തുകൊണ്ട് നിർമ്മിക്കുന്നു",
+    "description": "Link: why Zovo."
+  },
+  "ob_link_vision": {
+    "message": "കാഴ്ചപ്പാട്",
+    "description": "Link: the vision."
+  },
+  "ob_link_safe": {
+    "message": "നിങ്ങളെ എങ്ങനെ സുരക്ഷിതരാക്കുന്നു",
+    "description": "Link: safety."
+  },
+  "ob_trust1_h": {
+    "message": "എല്ലാം നിങ്ങളുടെ ഉപകരണത്തിൽ തന്നെ തുടരുന്നു",
+    "description": "Trust point 1 heading."
+  },
+  "ob_trust1_b": {
+    "message": "നിങ്ങളുടെ പാറ്റേൺ, നിയമങ്ങൾ, ചരിത്രം എന്നിവ ലോക്കൽ ബ്രൗസർ സ്റ്റോറേജിൽ തുടരുന്നു. അക്കൗണ്ടില്ല, സിങ്ക് സെർവറില്ല, ഒന്നും പുറത്തേക്ക് അയക്കുന്നില്ല.",
+    "description": "Trust point 1 body."
+  },
+  "ob_trust2_h": {
+    "message": "ഒരാൾ, പരസ്യമായി നിർമ്മിക്കുന്നു",
+    "description": "Trust point 2 heading."
+  },
+  "ob_s5_kicker": {
+    "message": "സത്യസന്ധമായ കൈമാറ്റം",
+    "description": "Step 5 kicker."
+  },
+  "ob_s5_title": {
+    "message": "എന്നന്നേക്കും സൗജന്യ പുനർനാമകരണം. അല്ലെങ്കിൽ എല്ലാം ഒരിക്കൽ സ്വന്തമാക്കുക.",
+    "description": "Step 5 title."
+  },
+  "ob_s5_lede": {
+    "message": "നിശ്ശബ്ദ പുനർനാമകരണ കോർ സൗജന്യമായി തുടരുന്നു, അത് സ്പർശിക്കുന്ന ഫയലുകളുടെ എണ്ണത്തിന് പരിധിയില്ല. തൊണ്ണൂറ്റിയൊമ്പത് ഡോളറിന്റെ ഒരൊറ്റ പേയ്‌മെന്റ് അപരിമിത സൈറ്റ് നിയമങ്ങൾ, ഫോൾഡർ റൂട്ടിംഗ്, regex വൃത്തിയാക്കൽ, ഒരു പേജ് അല്ലെങ്കിൽ PDF ടൈറ്റിലിൽ നിന്നുള്ള നാമകരണം എന്നിവ ഓണാക്കുന്നു.",
+    "description": "Step 5 body."
+  },
+  "ob_plan_free": {
+    "message": "സൗജന്യം",
+    "description": "Free plan name."
+  },
+  "ob_free_unit": {
+    "message": "എന്നന്നേക്കും",
+    "description": "Free plan price unit."
+  },
+  "ob_free1": {
+    "message": "ഓരോ ഡൗൺലോഡും സ്വയമേവ പുനർനാമകരണം ചെയ്യുന്നു",
+    "description": "Free benefit 1."
+  },
+  "ob_free2": {
+    "message": "മൂന്ന് കോർ ടോക്കണുകൾ: തീയതി, സൈറ്റ്, യഥാർത്ഥ പേര്",
+    "description": "Free benefit 2."
+  },
+  "ob_free3": {
+    "message": "ഒരു സംരക്ഷിച്ച സൈറ്റ് നിയമം",
+    "description": "Free benefit 3."
+  },
+  "ob_free4": {
+    "message": "വൈരുദ്ധ്യ കൈകാര്യം ചെയ്യലും തത്സമയ കൗണ്ടറും",
+    "description": "Free benefit 4."
+  },
+  "ob_ribbon": {
+    "message": "ഏറ്റവും മികച്ച മൂല്യം",
+    "description": "Lifetime plan ribbon."
+  },
+  "ob_plan_life": {
+    "message": "ആജീവനാന്തം",
+    "description": "Lifetime plan name."
+  },
+  "ob_life_unit": {
+    "message": "ഒറ്റത്തവണ",
+    "description": "Lifetime plan price unit."
+  },
+  "ob_life1": {
+    "message": "അപരിമിതമായ സൈറ്റ് അനുസരിച്ചുള്ള നിയമങ്ങൾ",
+    "description": "Lifetime benefit 1."
+  },
+  "ob_life2": {
+    "message": "സൈറ്റ് അല്ലെങ്കിൽ തീയതി അനുസരിച്ച് ഫയലുകൾ Downloads സബ്ഫോൾഡറുകളിലേക്ക് റൂട്ട് ചെയ്യുക",
+    "description": "Lifetime benefit 2."
+  },
+  "ob_life3": {
+    "message": "Regex വൃത്തിയാക്കൽ കൂടാതെ പേജ്-ടൈറ്റിൽ, PDF-ടൈറ്റിൽ ടോക്കണുകൾ",
+    "description": "Lifetime benefit 3."
+  },
+  "ob_life4": {
+    "message": "മെഷീനുകൾക്കിടയിൽ കോൺഫിഗ് ബാക്കപ്പും ഇംപോർട്ടും",
+    "description": "Lifetime benefit 4."
+  },
+  "ob_life5": {
+    "message": "ഈ ടൂളിന്റെ ഭാവിയിലെ എല്ലാ അപ്ഡേറ്റും, ഉൾപ്പെടുന്നു",
+    "description": "Lifetime benefit 5."
+  },
+  "ob_life6": {
+    "message": "ഒരൊറ്റ പേയ്‌മെന്റ്, സബ്‌സ്‌ക്രിപ്ഷൻ ഇല്ല, ഒരിക്കലും",
+    "description": "Lifetime benefit 6."
+  },
+  "ob_life_cta": {
+    "message": "ആജീവനാന്തം $$99-ന് നേടുക",
+    "description": "Lifetime purchase CTA."
+  },
+  "ob_guarantee": {
+    "message": "14 ദിവസത്തെ റീഫണ്ട്, ചോദ്യങ്ങളില്ല. പ്രതിമാസം ഇഷ്ടമാണോ? അതേ പേജിൽ അത് $$4.99 ആണ്.",
+    "description": "Refund guarantee line."
+  },
+  "ob_s6_kicker": {
+    "message": "നിങ്ങൾ സജ്ജമാണ്",
+    "description": "Step 6 kicker."
+  },
+  "ob_s6_title": {
+    "message": "ഒന്നും ചെയ്യാൻ ബാക്കിയില്ല. ഇത് ഇതിനകം പ്രവർത്തിക്കുന്നു.",
+    "description": "Step 6 title."
+  },
+  "ob_s6_lede": {
+    "message": "നിങ്ങൾ ഡൗൺലോഡ് ചെയ്യുന്ന അടുത്ത ഫയലിന് സ്വയമേവ ഒരു വൃത്തിയുള്ള പേര് ലഭിക്കുന്നു. അമർത്താൻ ബട്ടണില്ല, സ്ഥിരീകരിക്കാൻ ഡയലോഗില്ല. ഇവിടെ നിന്ന് എന്ത് സംഭവിക്കുന്നു എന്നതാണ് ഇത്.",
+    "description": "Step 6 body."
+  },
+  "ob_dev_h": {
+    "message": "ഡെവലപ്പറിൽ നിന്ന്",
+    "description": "Developer note heading."
+  },
+  "ob_dev_b": {
+    "message": "ഞാൻ Zovo സ്വന്തമായി, പരസ്യമായി നിർമ്മിക്കുന്നു. എന്തെങ്കിലും തകർന്നാൽ, എനിക്ക് എഴുതുക, ഞാൻ മറുപടി നൽകും. റീനെയിമറുകൾ വെറും തുടക്കമാണ്. പദ്ധതി മുഴുവൻ ബ്രൗസറിനുമുള്ള ഒരു സത്യസന്ധമായ പാളിയാണ്, നിങ്ങളുടെ തൊണ്ണൂറ്റിയൊമ്പത് ഡോളർ അതിന്റെ അടുത്ത ഭാഗം എത്തിക്കുന്നു.",
+    "description": "Developer note body."
+  },
+  "ob_link_github": {
+    "message": "GitHub-ൽ എന്നെ ബന്ധപ്പെടുക",
+    "description": "Link: GitHub."
+  },
+  "ob_link_going": {
+    "message": "ഇത് എവിടേക്ക് പോകുന്നു",
+    "description": "Link: roadmap."
+  },
+  "ob_cheat1_k": {
+    "message": "ഓരോ ഡൗൺലോഡും",
+    "description": "Cheat-sheet row 1 key."
+  },
+  "ob_cheat1_v": {
+    "message": "സംരക്ഷിക്കുമ്പോൾ പുനർനാമകരണം",
+    "description": "Cheat-sheet row 1 value."
+  },
+  "ob_cheat2_k": {
+    "message": "പോപ്പപ്പ്",
+    "description": "Cheat-sheet row 2 key."
+  },
+  "ob_cheat2_v": {
+    "message": "ഓരോ പുനർനാമകരണവും എണ്ണുന്നു",
+    "description": "Cheat-sheet row 2 value."
+  },
+  "ob_cheat3_k": {
+    "message": "നിങ്ങളുടെ പാറ്റേൺ",
+    "description": "Cheat-sheet row 3 key."
+  },
+  "ob_cheat3_v": {
+    "message": "ക്രമീകരണങ്ങളിൽ എഡിറ്റ് ചെയ്യുക",
+    "description": "Cheat-sheet row 3 value."
+  },
+  "ob_cheat4_k": {
+    "message": "ആദ്യ സൈറ്റ് നിയമം",
+    "description": "Cheat-sheet row 4 key."
+  },
+  "ob_cheat4_v": {
+    "message": "ചേർക്കാൻ സൗജന്യം",
+    "description": "Cheat-sheet row 4 value."
+  }
+}

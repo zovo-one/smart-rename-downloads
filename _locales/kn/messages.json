@@ -1,0 +1,834 @@
+{
+  "extName": {
+    "message": "Smart Rename Downloads",
+    "description": "Extension name shown in the Chrome Web Store and toolbar."
+  },
+  "extDesc": {
+    "message": "ದಿನಾಂಕ, ಸೈಟ್ ಮತ್ತು ಶೀರ್ಷಿಕೆ ಟೋಕನ್‌ಗಳೊಂದಿಗೆ ಪ್ರತಿ ಡೌನ್‌ಲೋಡ್ ಅನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಮರುಹೆಸರಿಸಿ. ಸೈಟ್-ವಾರು ನಿಯಮಗಳು, ರೆಜೆಕ್ಸ್",
+    "description": "Chrome Web Store short description (max 132 chars)."
+  },
+  "popup_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Popup header title."
+  },
+  "popup_open_settings": {
+    "message": "ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ತೆರೆಯಿರಿ",
+    "description": "Aria label for the settings gear button."
+  },
+  "popup_settings": {
+    "message": "ಸೆಟ್ಟಿಂಗ್‌ಗಳು",
+    "description": "Tooltip for the settings gear button."
+  },
+  "popup_health": {
+    "message": "ಮರುಹೆಸರಿಸುವಿಕೆ ವಿರಾಮಗೊಂಡಿದೆ — ಡೌನ್‌ಲೋಡ್‌ಗಳ ಅನುಮತಿಯನ್ನು ತೆಗೆದುಹಾಕಲಾಗಿದೆ.",
+    "description": "Shown when the downloads permission is missing."
+  },
+  "popup_regrant": {
+    "message": "ಮತ್ತೆ-ಸಕ್ರಿಯಗೊಳಿಸಿ",
+    "description": "Link to re-grant the downloads permission."
+  },
+  "popup_hero_label": {
+    "message": "ಮರುಹೆಸರಿಸಿದ ಫೈಲ್‌ಗಳು",
+    "description": "Label under the big lifetime rename counter."
+  },
+  "popup_hero_sub": {
+    "message": "ಪ್ರತಿ ಡೌನ್‌ಲೋಡ್ ನಿಮ್ಮ ಡಿಸ್ಕ್‌ಗೆ ತಲುಪುವ ಮೊದಲೇ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಮರುಹೆಸರಿಸಲ್ಪಡುತ್ತದೆ.",
+    "description": "Supporting line under the hero counter."
+  },
+  "popup_master_title": {
+    "message": "ಡೌನ್‌ಲೋಡ್‌ಗಳನ್ನು ಸ್ವಯಂ-ಮರುಹೆಸರಿಸಿ",
+    "description": "Master on/off switch title."
+  },
+  "popup_master_aria": {
+    "message": "ಸ್ವಯಂಚಾಲಿತ ಡೌನ್‌ಲೋಡ್ ಮರುಹೆಸರಿಸುವಿಕೆಯನ್ನು ಟಾಗಲ್ ಮಾಡಿ",
+    "description": "Accessible name for the master switch."
+  },
+  "popup_master_on": {
+    "message": "ಆನ್ — ಪ್ರತಿ ಡೌನ್‌ಲೋಡ್ ಅನ್ನು ಮರುಹೆಸರಿಸುತ್ತಿದೆ",
+    "description": "Master switch note when enabled."
+  },
+  "popup_master_off": {
+    "message": "ಆಫ್ — Chrome ತನ್ನ ಡೀಫಾಲ್ಟ್ ಹೆಸರುಗಳನ್ನು ಉಳಿಸಿಕೊಳ್ಳುತ್ತದೆ",
+    "description": "Master switch note when disabled."
+  },
+  "popup_recent": {
+    "message": "ಇತ್ತೀಚಿನ ಮರುಹೆಸರಿಸುವಿಕೆಗಳು",
+    "description": "Section label for the recent-renames list."
+  },
+  "popup_empty_title": {
+    "message": "ನೀವು ಸಿದ್ಧರಾದಾಗ ಸಿದ್ಧ",
+    "description": "Empty-state headline in the popup."
+  },
+  "popup_empty_text": {
+    "message": "ನಿಮ್ಮ ಮುಂದಿನ ಡೌನ್‌ಲೋಡ್ ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಮರುಹೆಸರಿಸಲ್ಪಡುತ್ತದೆ. ಅದು ಇಲ್ಲಿ ಕಾಣಿಸಿಕೊಳ್ಳುತ್ತದೆ.",
+    "description": "Empty-state body in the popup."
+  },
+  "popup_milestone_text": {
+    "message": "Smart Rename {n} ಡೌನ್‌ಲೋಡ್‌ಗಳನ್ನು ಸಂಘಟಿಸಿದೆ. Pro ಅವುಗಳನ್ನು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಫೋಲ್ಡರ್‌ಗಳಲ್ಲಿ ಸೇರಿಸುತ್ತದೆ.",
+    "description": "Post-success upgrade nudge. {n} is the rename count."
+  },
+  "popup_milestone_cta": {
+    "message": "Pro ನೋಡಿ",
+    "description": "CTA on the milestone nudge."
+  },
+  "popup_dismiss": {
+    "message": "ವಜಾಗೊಳಿಸಿ",
+    "description": "Dismiss the milestone nudge."
+  },
+  "popup_trust": {
+    "message": "ಸ್ಥಳೀಯ · ಖಾತೆ ಇಲ್ಲ · ಟ್ರ್ಯಾಕಿಂಗ್ ಇಲ್ಲ",
+    "description": "Trust line in the popup footer."
+  },
+  "popup_upgrade": {
+    "message": "Pro ಗೆ ಅಪ್‌ಗ್ರೇಡ್ ಮಾಡಿ",
+    "description": "Upgrade button in the popup footer."
+  },
+  "flag_timeout": {
+    "message": "ಡೀಫಾಲ್ಟ್ ಇರಿಸಲಾಗಿದೆ",
+    "description": "Recent-list flag: rename fell back to Chrome's default name (timeout)."
+  },
+  "flag_sanitize": {
+    "message": "ಡೀಫಾಲ್ಟ್ ಇರಿಸಲಾಗಿದೆ",
+    "description": "Recent-list flag: name could not be sanitized."
+  },
+  "flag_nomatch": {
+    "message": "ಹೊಂದಾಣಿಕೆ ಇಲ್ಲ",
+    "description": "Recent-list flag: no site rule matched."
+  },
+  "opt_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Options brand name."
+  },
+  "opt_trust": {
+    "message": "ಎಲ್ಲವೂ ಈ ಸಾಧನದಲ್ಲಿಯೇ ಉಳಿಯುತ್ತದೆ. ಶೂನ್ಯ ಟ್ರ್ಯಾಕಿಂಗ್.",
+    "description": "Options sidebar trust line."
+  },
+  "aria_theme": {
+    "message": "ಬಣ್ಣದ ಥೀಮ್",
+    "description": "Aria label for the theme radiogroup."
+  },
+  "theme_system": {
+    "message": "ಸಿಸ್ಟಂ",
+    "description": "Theme option: follow OS."
+  },
+  "theme_light": {
+    "message": "ಬೆಳಕು",
+    "description": "Theme option: light."
+  },
+  "theme_dark": {
+    "message": "ಕತ್ತಲೆ",
+    "description": "Theme option: dark."
+  },
+  "tier_free": {
+    "message": "ಉಚಿತ",
+    "description": "Free plan label."
+  },
+  "tier_trial": {
+    "message": "ಪ್ರಯೋಗ",
+    "description": "Trial plan label."
+  },
+  "tier_pro": {
+    "message": "Pro",
+    "description": "Pro plan label."
+  },
+  "tab_template": {
+    "message": "ಟೆಂಪ್ಲೇಟ್",
+    "description": "Settings tab: naming template."
+  },
+  "tab_sites": {
+    "message": "ಸೈಟ್-ವಾರು ನಿಯಮಗಳು",
+    "description": "Settings tab: per-site rules."
+  },
+  "tab_advanced": {
+    "message": "ಸುಧಾರಿತ",
+    "description": "Settings tab: advanced naming."
+  },
+  "tab_backup": {
+    "message": "ಬ್ಯಾಕಪ್",
+    "description": "Settings tab: backup and restore."
+  },
+  "tab_license": {
+    "message": "ಪರವಾನಗಿ",
+    "description": "Settings tab: license and plan."
+  },
+  "tpl_h1": {
+    "message": "ಹೆಸರಿಸುವ ಟೆಂಪ್ಲೇಟ್",
+    "description": "Template panel heading."
+  },
+  "tpl_lede": {
+    "message": "ಪ್ರತಿ ಡೌನ್‌ಲೋಡ್‌ಗೆ ಸಿಗುವ ಫೈಲ್‌ಹೆಸರನ್ನು ರಚಿಸಿ. ನಿಜವಾದ ಫೈಲ್ ವಿಸ್ತರಣೆಯನ್ನು ಯಾವಾಗಲೂ ಉಳಿಸಿಕೊಳ್ಳಲಾಗುತ್ತದೆ.",
+    "description": "Template panel intro."
+  },
+  "tpl_label": {
+    "message": "ಟೆಂಪ್ಲೇಟ್",
+    "description": "Template input label."
+  },
+  "tpl_tokens_aria": {
+    "message": "ಟೋಕನ್ ಸೇರಿಸಿ",
+    "description": "Aria label for the token chip row."
+  },
+  "tpl_conflict": {
+    "message": "ಆ ಹೆಸರಿನ ಫೈಲ್ ಈಗಾಗಲೇ ಇದ್ದರೆ",
+    "description": "Conflict-policy select label."
+  },
+  "conflict_uniquify": {
+    "message": "ಸಂಖ್ಯೆಯನ್ನು ಸೇರಿಸಿ — ಎರಡನ್ನೂ ಇರಿಸಿ",
+    "description": "Conflict policy: uniquify."
+  },
+  "conflict_overwrite": {
+    "message": "ಹಳೆಯ ಫೈಲ್ ಅನ್ನು ಪುನಃ ಬರೆಯಿರಿ",
+    "description": "Conflict policy: overwrite."
+  },
+  "conflict_prompt": {
+    "message": "ಪ್ರತಿ ಬಾರಿ ನನ್ನನ್ನು ಕೇಳಿ",
+    "description": "Conflict policy: prompt."
+  },
+  "tpl_save": {
+    "message": "ಟೆಂಪ್ಲೇಟ್ ಉಳಿಸಿ",
+    "description": "Save-template button."
+  },
+  "tpl_preview_h": {
+    "message": "ಲೈವ್ ಪೂರ್ವವೀಕ್ಷಣೆ",
+    "description": "Preview section label."
+  },
+  "tpl_pv_host": {
+    "message": "ಮಾದರಿ ಸೈಟ್",
+    "description": "Preview sample-host input label."
+  },
+  "tpl_pv_name": {
+    "message": "ಮಾದರಿ ಡೌನ್‌ಲೋಡ್",
+    "description": "Preview sample-name input label."
+  },
+  "tpl_pv_result": {
+    "message": "ಫಲಿತಾಂಶ",
+    "description": "Preview result label."
+  },
+  "tpl_pv_hint": {
+    "message": "ಉಚಿತ ಟೆಂಪ್ಲೇಟ್‌ನಲ್ಲಿ “/” ಅನ್ನು “-” ಆಗಿ ಉಳಿಸಲಾಗುತ್ತದೆ. ಫೋಲ್ಡರ್ ರೂಟಿಂಗ್ ಒಂದು Pro ವೈಶಿಷ್ಟ್ಯ.",
+    "description": "Preview hint about slashes and folder routing."
+  },
+  "sites_h1": {
+    "message": "ಸೈಟ್-ವಾರು ನಿಯಮಗಳು",
+    "description": "Sites panel heading."
+  },
+  "sites_lede": {
+    "message": "ನಿರ್ದಿಷ್ಟ ಸೈಟ್‌ಗೆ ಅದರದೇ ಟೆಂಪ್ಲೇಟ್ ನೀಡಿ — ಇನ್‌ವಾಯ್ಸ್‌ಗಳು ಫೋಲ್ಡರ್‌ನಲ್ಲಿ, ಪೇಪರ್‌ಗಳಿಗೆ ಶೀರ್ಷಿಕೆ. ಉಚಿತದಲ್ಲಿ ಒಂದು ನಿಯಮ ಸೇರಿದೆ, ಆದ್ದರಿಂದ ನೀವು ಅನುಭವಿಸಬಹುದು; Pro ಅನಿಯಮಿತ.",
+    "description": "Sites panel intro."
+  },
+  "sites_count": {
+    "message": "1 ಉಚಿತ ನಿಯಮಗಳಲ್ಲಿ 0 ಬಳಸಲಾಗಿದೆ",
+    "description": "Initial site-rule count text."
+  },
+  "sites_count_free": {
+    "message": "1 ಉಚಿತ ನಿಯಮಗಳಲ್ಲಿ {n} ಬಳಸಲಾಗಿದೆ",
+    "description": "Site-rule count for Free. {n} is the count."
+  },
+  "sites_count_pro": {
+    "message": "{n} ನಿಯಮಗಳು",
+    "description": "Site-rule count for Pro. {n} is the count."
+  },
+  "sites_empty": {
+    "message": "ಇನ್ನೂ ಸೈಟ್ ನಿಯಮಗಳಿಲ್ಲ. ಕೆಳಗೆ ಒಂದನ್ನು ಸೇರಿಸಿ.",
+    "description": "Empty state for site rules."
+  },
+  "sites_add_h": {
+    "message": "ನಿಯಮ ಸೇರಿಸಿ",
+    "description": "Add-rule section label."
+  },
+  "sites_match": {
+    "message": "ಸೈಟ್ (ಹೋಸ್ಟ್ ಅಥವಾ *.host)",
+    "description": "Rule match input label."
+  },
+  "sites_match_ph": {
+    "message": "stripe.com",
+    "description": "Rule match placeholder."
+  },
+  "sites_template": {
+    "message": "ಈ ಸೈಟ್‌ಗಾಗಿ ಟೆಂಪ್ಲೇಟ್",
+    "description": "Rule template input label."
+  },
+  "sites_template_ph": {
+    "message": "{date}-invoice-{original}",
+    "description": "Rule template placeholder."
+  },
+  "sites_add_btn": {
+    "message": "ಸೈಟ್ ನಿಯಮ ಸೇರಿಸಿ",
+    "description": "Add-rule button."
+  },
+  "sites_delete": {
+    "message": "ನಿಯಮ ಅಳಿಸಿ",
+    "description": "Aria label for a rule's delete button."
+  },
+  "sites_need_both": {
+    "message": "ಸೈಟ್ ಮತ್ತು ಟೆಂಪ್ಲೇಟ್ ಎರಡನ್ನೂ ನಮೂದಿಸಿ.",
+    "description": "Validation when a rule field is empty."
+  },
+  "sites_add_err": {
+    "message": "ಆ ನಿಯಮವನ್ನು ಸೇರಿಸಲಾಗಲಿಲ್ಲ.",
+    "description": "Generic add-rule failure."
+  },
+  "adv_h1": {
+    "message": "ಸುಧಾರಿತ ಹೆಸರಿಸುವಿಕೆ",
+    "description": "Advanced panel heading."
+  },
+  "adv_lede": {
+    "message": "ನೀವು ನಿಜವಾಗಿ ಡೌನ್‌ಲೋಡ್‌ಗಳನ್ನು ಫೈಲ್ ಮಾಡುವ ರೀತಿಗಾಗಿ ಪವರ್ ಟೂಲ್‌ಗಳು. Zovo Pro ನಲ್ಲಿ ಸೇರಿದೆ.",
+    "description": "Advanced panel intro."
+  },
+  "adv_save": {
+    "message": "ಉಳಿಸಿ",
+    "description": "Generic save button."
+  },
+  "adv_clear": {
+    "message": "ತೆರವುಗೊಳಿಸಿ",
+    "description": "Generic clear button."
+  },
+  "adv_unlock": {
+    "message": "Pro ಜೊತೆಗೆ ಅನ್‌ಲಾಕ್ ಮಾಡಿ",
+    "description": "CTA on a locked Pro card."
+  },
+  "adv_on": {
+    "message": "ಸಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ",
+    "description": "Feature toggled on."
+  },
+  "adv_off": {
+    "message": "ನಿಷ್ಕ್ರಿಯಗೊಳಿಸಲಾಗಿದೆ",
+    "description": "Feature toggled off."
+  },
+  "adv_perm_needed": {
+    "message": "ಇದನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಲು ಅನುಮತಿ ಅಗತ್ಯವಿದೆ.",
+    "description": "Shown when an optional permission is denied."
+  },
+  "adv_toggle_err": {
+    "message": "ಈ ಸೆಟ್ಟಿಂಗ್ ಅನ್ನು ನವೀಕರಿಸಲಾಗಲಿಲ್ಲ.",
+    "description": "Generic toggle failure."
+  },
+  "adv_folder_h": {
+    "message": "ಫೋಲ್ಡರ್ ರೂಟಿಂಗ್",
+    "description": "Folder-routing card heading."
+  },
+  "adv_folder_note": {
+    "message": "ನಿಮ್ಮ ಡೌನ್‌ಲೋಡ್‌ಗಳ ಫೋಲ್ಡರ್‌ನ ಉಪಫೋಲ್ಡರ್‌ಗಳಿಗೆ ಫೈಲ್‌ಗಳನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ, ಉದಾ. Downloads/{hostname}/…",
+    "description": "Folder-routing explanation."
+  },
+  "adv_folder_label": {
+    "message": "ಉಪಫೋಲ್ಡರ್ ಪಥ (ಟೋಕನ್‌ಗಳು ಅನುಮತಿಸಲಾಗಿದೆ)",
+    "description": "Folder-path input label."
+  },
+  "adv_folder_ph": {
+    "message": "{hostname}",
+    "description": "Folder-path placeholder."
+  },
+  "adv_folder_err": {
+    "message": "ಫೋಲ್ಡರ್ ರೂಟಿಂಗ್ ಉಳಿಸಲಾಗಲಿಲ್ಲ.",
+    "description": "Folder-routing save failure."
+  },
+  "adv_regex_h": {
+    "message": "ಹುಡುಕಿ ಮತ್ತು ಬದಲಾಯಿಸಿ (ರೆಜೆಕ್ಸ್)",
+    "description": "Regex card heading."
+  },
+  "adv_regex_note": {
+    "message": "ಫೈಲ್‌ಗಳನ್ನು ಉಳಿಸುವ ಮೊದಲು ರೆಗ್ಯುಲರ್ ಎಕ್ಸ್‌ಪ್ರೆಶನ್‌ನೊಂದಿಗೆ ಹೆಸರುಗಳನ್ನು ಸ್ವಚ್ಛಗೊಳಿಸಿ.",
+    "description": "Regex explanation."
+  },
+  "adv_regex_find": {
+    "message": "ಹುಡುಕಿ",
+    "description": "Regex find input label."
+  },
+  "adv_regex_find_ph": {
+    "message": "\\s+",
+    "description": "Regex find placeholder."
+  },
+  "adv_regex_replace": {
+    "message": "ಬದಲಾಯಿಸಿ",
+    "description": "Regex replace input label."
+  },
+  "adv_regex_replace_ph": {
+    "message": "-",
+    "description": "Regex replace placeholder."
+  },
+  "adv_regex_flags": {
+    "message": "ಫ್ಲ್ಯಾಗ್‌ಗಳು",
+    "description": "Regex flags input label."
+  },
+  "adv_regex_need": {
+    "message": "ಹುಡುಕಲು ಒಂದು ಪ್ಯಾಟರ್ನ್ ನಮೂದಿಸಿ.",
+    "description": "Validation when the regex find is empty."
+  },
+  "adv_regex_bad": {
+    "message": "ಆ ಪ್ಯಾಟರ್ನ್ ಅಮಾನ್ಯ ಅಥವಾ ಅಸುರಕ್ಷಿತ.",
+    "description": "Regex validation failure."
+  },
+  "adv_regex_err": {
+    "message": "ಪ್ಯಾಟರ್ನ್ ಉಳಿಸಲಾಗಲಿಲ್ಲ.",
+    "description": "Generic regex save failure."
+  },
+  "adv_cleared": {
+    "message": "ತೆರವುಗೊಳಿಸಲಾಗಿದೆ",
+    "description": "Regex cleared confirmation."
+  },
+  "adv_title_h": {
+    "message": "ಪುಟ-ಶೀರ್ಷಿಕೆ ಟೋಕನ್ {title}",
+    "description": "Title-token card heading."
+  },
+  "adv_title_note": {
+    "message": "ಫೈಲ್‌ಹೆಸರುಗಳಲ್ಲಿ ಮೂಲ ಪುಟದ ಶೀರ್ಷಿಕೆಯನ್ನು ಬಳಸಿ. ಇದನ್ನು ಆನ್ ಮಾಡಿದರೆ Chrome ನಿಂದ Tabs ಅನುಮತಿಯನ್ನು ಕೇಳುತ್ತದೆ.",
+    "description": "Title-token explanation."
+  },
+  "adv_title_toggle": {
+    "message": "{title} ಟೋಕನ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ",
+    "description": "Title-token toggle label."
+  },
+  "adv_title_aria": {
+    "message": "ಪುಟ-ಶೀರ್ಷಿಕೆ ಟೋಕನ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ",
+    "description": "Accessible name for the title-token switch."
+  },
+  "adv_pdf_h": {
+    "message": "PDF ಶೀರ್ಷಿಕೆ ಟೋಕನ್ {pdftitle}",
+    "description": "PDF-token card heading."
+  },
+  "adv_pdf_note": {
+    "message": "ಫೈಲ್ ಒಳಗೆ ಸಂಗ್ರಹಿಸಿದ ಶೀರ್ಷಿಕೆಯಿಂದ PDF ಗಳನ್ನು ಹೆಸರಿಸಿ. ಇದು PDF ಅನ್ನು ನೆಟ್‌ವರ್ಕ್‌ ಮೂಲಕ ಓದುತ್ತದೆ, ಆದ್ದರಿಂದ ಸೈಟ್ ಪ್ರವೇಶವನ್ನು ಕೇಳುತ್ತದೆ ಮತ್ತು ಡೀಫಾಲ್ಟ್ ಆಗಿ ಆಫ್ ಇರುತ್ತದೆ.",
+    "description": "PDF-token explanation."
+  },
+  "adv_pdf_toggle": {
+    "message": "{pdftitle} ಟೋಕನ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ",
+    "description": "PDF-token toggle label."
+  },
+  "adv_pdf_aria": {
+    "message": "PDF ಶೀರ್ಷಿಕೆ ಟೋಕನ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳಿಸಿ",
+    "description": "Accessible name for the PDF-token switch."
+  },
+  "backup_h1": {
+    "message": "ಬ್ಯಾಕಪ್ ಮತ್ತು ಪುನಃಸ್ಥಾಪನೆ",
+    "description": "Backup panel heading."
+  },
+  "backup_lede": {
+    "message": "ನಿಮ್ಮ ಸೆಟಪ್ ಅನ್ನು ಫೈಲ್‌ಗೆ ರಫ್ತು ಮಾಡಿ, ಅಥವಾ ಅದನ್ನು ಇನ್ನೊಂದು ಯಂತ್ರಕ್ಕೆ ಸರಿಸಿ. Zovo Pro ನಲ್ಲಿ ಸೇರಿದೆ.",
+    "description": "Backup panel intro."
+  },
+  "backup_export_h": {
+    "message": "ಕಾನ್ಫಿಗರೇಶನ್ ರಫ್ತು ಮಾಡಿ",
+    "description": "Export card heading."
+  },
+  "backup_export_note": {
+    "message": "ನಿಮ್ಮ ಟೆಂಪ್ಲೇಟ್, ನಿಯಮಗಳು ಮತ್ತು ಸೆಟ್ಟಿಂಗ್‌ಗಳ ಜೊತೆ ಒಂದು JSON ಫೈಲ್ ಅನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡುತ್ತದೆ. ಯಾವುದೇ ಇತಿಹಾಸ, ಯಾವುದೇ ವೈಯಕ್ತಿಕ ಡೇಟಾ ಇಲ್ಲ.",
+    "description": "Export explanation."
+  },
+  "backup_export_btn": {
+    "message": "ಫೈಲ್‌ಗೆ ರಫ್ತು ಮಾಡಿ",
+    "description": "Export button."
+  },
+  "backup_exported": {
+    "message": "ರಫ್ತು ಮಾಡಲಾಗಿದೆ",
+    "description": "Export confirmation."
+  },
+  "backup_export_err": {
+    "message": "ರಫ್ತು ವಿಫಲವಾಗಿದೆ.",
+    "description": "Export failure."
+  },
+  "backup_import_h": {
+    "message": "ಕಾನ್ಫಿಗರೇಶನ್ ಆಮದು ಮಾಡಿ",
+    "description": "Import card heading."
+  },
+  "backup_import_label": {
+    "message": "ರಫ್ತು ಮಾಡಿದ ಕಾನ್ಫಿಗರೇಶನ್ ಅನ್ನು ಅಂಟಿಸಿ",
+    "description": "Import textarea label."
+  },
+  "backup_import_ph": {
+    "message": "{\"zovo_template\":\"…\"}",
+    "description": "Import textarea placeholder."
+  },
+  "backup_import_btn": {
+    "message": "ಆಮದು ಮಾಡಿ",
+    "description": "Import button."
+  },
+  "backup_imported": {
+    "message": "ಆಮದು ಮಾಡಲಾಗಿದೆ",
+    "description": "Import confirmation."
+  },
+  "backup_need_json": {
+    "message": "ಮೊದಲು ಕಾನ್ಫಿಗರೇಶನ್ ಅನ್ನು ಅಂಟಿಸಿ.",
+    "description": "Validation when import is empty."
+  },
+  "backup_import_err": {
+    "message": "ಆ ಫೈಲ್ ಅನ್ನು ಆಮದು ಮಾಡಲಾಗಲಿಲ್ಲ.",
+    "description": "Import failure."
+  },
+  "lic_h1": {
+    "message": "ನಿಮ್ಮ ಯೋಜನೆ",
+    "description": "License panel heading."
+  },
+  "lic_lede": {
+    "message": "ಒಂದು ಪಾವತಿ ಪ್ರತಿ ಹೆಸರಿಸುವ ವೈಶಿಷ್ಟ್ಯವನ್ನು ಶಾಶ್ವತವಾಗಿ ಅನ್‌ಲಾಕ್ ಮಾಡುತ್ತದೆ. ಚಂದಾದಾರಿಕೆ ಇಲ್ಲ.",
+    "description": "License panel intro."
+  },
+  "lic_current": {
+    "message": "ಪ್ರಸ್ತುತ ಯೋಜನೆ",
+    "description": "Current-plan label."
+  },
+  "lic_free_sub": {
+    "message": "ಮೂಲ ಮರುಹೆಸರಿಸುವಿಕೆ, ಒಂದು ಸೈಟ್ ನಿಯಮ, ಶಾಶ್ವತವಾಗಿ.",
+    "description": "Free-plan subtitle."
+  },
+  "lic_pro_sub": {
+    "message": "ಪ್ರತಿ ಹೆಸರಿಸುವ ವೈಶಿಷ್ಟ್ಯ ಅನ್‌ಲಾಕ್ ಆಗಿದೆ. Zovo ಅನ್ನು ಬೆಂಬಲಿಸಿದ್ದಕ್ಕೆ ಧನ್ಯವಾದಗಳು.",
+    "description": "Pro-plan subtitle."
+  },
+  "lic_upgrade": {
+    "message": "Pro ಗೆ ಅಪ್‌ಗ್ರೇಡ್ ಮಾಡಿ",
+    "description": "Upgrade button on the License tab."
+  },
+  "lic_have_key": {
+    "message": "ನನ್ನ ಬಳಿ ಕೀ ಇದೆ",
+    "description": "License-key button."
+  },
+  "lic_included_h": {
+    "message": "Pro ಏನನ್ನು ಅನ್‌ಲಾಕ್ ಮಾಡುತ್ತದೆ",
+    "description": "Benefits section label."
+  },
+  "lic_b1": {
+    "message": "ಅನಿಯಮಿತ ಸೈಟ್-ವಾರು ನಿಯಮಗಳು",
+    "description": "Pro benefit 1."
+  },
+  "lic_b2": {
+    "message": "ಉಪಫೋಲ್ಡರ್‌ಗಳಿಗೆ ಫೋಲ್ಡರ್ ರೂಟಿಂಗ್",
+    "description": "Pro benefit 2."
+  },
+  "lic_b3": {
+    "message": "ರೆಜೆಕ್ಸ್ ಹುಡುಕಿ ಮತ್ತು ಬದಲಾಯಿಸಿ",
+    "description": "Pro benefit 3."
+  },
+  "lic_b4": {
+    "message": "ಪುಟ-ಶೀರ್ಷಿಕೆ ಮತ್ತು PDF-ಶೀರ್ಷಿಕೆ ಟೋಕನ್‌ಗಳು",
+    "description": "Pro benefit 4."
+  },
+  "lic_b5": {
+    "message": "ಕಾನ್ಫಿಗ್ ಬ್ಯಾಕಪ್, ರಫ್ತು ಮತ್ತು ಆಮದು",
+    "description": "Pro benefit 5."
+  },
+  "saved": {
+    "message": "ಉಳಿಸಲಾಗಿದೆ",
+    "description": "Generic saved confirmation."
+  },
+  "err_template": {
+    "message": "ಆ ಟೆಂಪ್ಲೇಟ್ ಅನ್ನು ಉಳಿಸಲಾಗಲಿಲ್ಲ.",
+    "description": "Generic template save failure."
+  },
+  "err_bad_token": {
+    "message": "ಟೆಂಪ್ಲೇಟ್‌ನಲ್ಲಿ ಅಜ್ಞಾತ ಟೋಕನ್: ",
+    "description": "Prefix before the offending token name."
+  },
+  "ob_brand": {
+    "message": "Smart Rename Downloads",
+    "description": "Onboarding brand name."
+  },
+  "ob_by": {
+    "message": "· Zovo ಇಂದ",
+    "description": "Onboarding brand attribution suffix."
+  },
+  "ob_skip": {
+    "message": "ಪರಿಚಯ ಬಿಟ್ಟುಬಿಡಿ",
+    "description": "Skip onboarding button."
+  },
+  "ob_back": {
+    "message": "ಹಿಂದೆ",
+    "description": "Previous-step button."
+  },
+  "ob_next": {
+    "message": "ಮುಂದೆ",
+    "description": "Next-step button."
+  },
+  "ob_later": {
+    "message": "ಬಹುಶಃ ನಂತರ",
+    "description": "Next-button label on the offer step."
+  },
+  "ob_start": {
+    "message": "ಬಳಸಲು ಪ್ರಾರಂಭಿಸಿ",
+    "description": "Final onboarding button."
+  },
+  "ob_stepno": {
+    "message": "{b} ರಲ್ಲಿ {a}",
+    "description": "Step counter, e.g. 1 of 6. {a} current, {b} total."
+  },
+  "ob_s1_kicker": {
+    "message": "ಡೌನ್‌ಲೋಡ್ ಫೋಲ್ಡರ್ ಸಮಸ್ಯೆ",
+    "description": "Step 1 kicker."
+  },
+  "ob_s1_title": {
+    "message": "ನೀವು ಆ ಫೈಲ್ ಅನ್ನು ಮತ್ತೆ ಎಂದಿಗೂ ಕಂಡುಹಿಡಿಯಲಾರಿರಿ.",
+    "description": "Step 1 title."
+  },
+  "ob_s1_pt": {
+    "message": "ದಿನವಿಡೀ ಡೌನ್‌ಲೋಡ್ ಮಾಡುವವರಿಗಾಗಿ ನಿರ್ಮಿಸಲಾಗಿದೆ. ಸಂಶೋಧಕರು, ಲೆಕ್ಕಪರಿಶೋಧಕರು, ಯಾರ Downloads ಫೋಲ್ಡರ್ ಸದ್ದಿಲ್ಲದೆ ಕೈಮೀರಿ ಹೋಗಿದೆಯೋ ಅಂಥವರಿಗಾಗಿ.",
+    "description": "Step 1 secondary paragraph."
+  },
+  "ob_s2_kicker": {
+    "message": "ಒಂದು ನಿಯಮ, ಈಗಾಗಲೇ ಆನ್",
+    "description": "Step 2 kicker."
+  },
+  "ob_s2_title": {
+    "message": "ಕಸದ ಹೆಸರೊಂದು ನಿಜವಾದದ್ದಾಗಿ ಬದಲಾಗುವುದನ್ನು ನೋಡಿ.",
+    "description": "Step 2 title."
+  },
+  "ob_s2_lede": {
+    "message": "ಡೀಫಾಲ್ಟ್ ಪ್ಯಾಟರ್ನ್ ದಿನಾಂಕ, ನಂತರ ಸೈಟ್, ನಂತರ ಮೂಲ ಹೆಸರು. ಡೌನ್‌ಲೋಡ್ ಮುಗಿದ ಕ್ಷಣ, ಹೆಸರನ್ನು ಪುನಃ ಬರೆದು ನೇರವಾಗಿ ಡಿಸ್ಕ್‌ಗೆ ಬರೆಯಲಾಗುತ್ತದೆ. ಕ್ಲಿಕ್ ಇಲ್ಲ, ಸಂವಾದ ಇಲ್ಲ. ನಿಜವಾದ ಫೈಲ್‌ನಲ್ಲಿ ಇಲ್ಲಿದೆ.",
+    "description": "Step 2 body."
+  },
+  "ob_demo_btn": {
+    "message": "ಅದು ಮರುಹೆಸರಿಸುವುದನ್ನು ನೋಡಿ",
+    "description": "Button that replays the rename demo."
+  },
+  "ob_saved_as": {
+    "message": "ಈ ಹೆಸರಿನಲ್ಲಿ ಉಳಿಸಲಾಗಿದೆ",
+    "description": "Demo label for the original filename."
+  },
+  "ob_renamed_to": {
+    "message": "ಈ ಹೆಸರಿಗೆ ಬದಲಾಯಿಸಲಾಗಿದೆ",
+    "description": "Demo label for the renamed filename."
+  },
+  "ob_fw_kept": {
+    "message": ".pdf ಇರಿಸಲಾಗಿದೆ",
+    "description": "Token chip: the real extension is kept."
+  },
+  "ob_s3_kicker": {
+    "message": "ಎರಡು ನಿಮಿಷ, ಒಮ್ಮೆ",
+    "description": "Step 3 kicker."
+  },
+  "ob_s3_title": {
+    "message": "ಶಾಶ್ವತವಾಗಿ ಇಟ್ಟುಕೊಳ್ಳುವ ಹೆಸರಿಸುವ ಪ್ಯಾಟರ್ನ್ ಅನ್ನು ಹೊಂದಿಸಿ.",
+    "description": "Step 3 title."
+  },
+  "ob_s3_lede": {
+    "message": "ಟೋಕನ್‌ಗಳಿಂದ ಅದನ್ನು ರಚಿಸಿ. ಒಂದನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ ಅದನ್ನು ಪ್ಯಾಟರ್ನ್‌ಗೆ ಸೇರಿಸಿ ಮತ್ತು ಮಾದರಿ ನವೀಕರಣಗೊಳ್ಳುವುದನ್ನು ನೋಡಿ. ನಿಜವಾದ ಫೈಲ್ ವಿಸ್ತರಣೆಯನ್ನು ಯಾವಾಗಲೂ ಕೊನೆಯಲ್ಲಿ ಇರಿಸಲಾಗುತ್ತದೆ. ಅದನ್ನು ಉಳಿಸಿ ಮತ್ತು ಪ್ರತಿ ಭವಿಷ್ಯದ ಡೌನ್‌ಲೋಡ್ ಇದನ್ನು ಅನುಸರಿಸುತ್ತದೆ.",
+    "description": "Step 3 body."
+  },
+  "ob_s3_pt": {
+    "message": "ಅದು ನಿಮ್ಮ ಬ್ರೌಸರ್‌ನಲ್ಲಿ ವಾಸಿಸುತ್ತದೆ. ಸೆಟ್ಟಿಂಗ್‌ಗಳಿಂದ ಯಾವಾಗ ಬೇಕಾದರೂ ಬದಲಾಯಿಸಿ, ಮತ್ತು ನಿಮ್ಮ ಫೈಲ್‌ಗಳ ಬಗ್ಗೆ ಏನನ್ನೂ ಎಲ್ಲಿಗೂ ಕಳುಹಿಸಲಾಗುವುದಿಲ್ಲ.",
+    "description": "Step 3 secondary paragraph."
+  },
+  "ob_template_label": {
+    "message": "ನಿಮ್ಮ ಹೆಸರಿಸುವ ಪ್ಯಾಟರ್ನ್",
+    "description": "Onboarding template input label."
+  },
+  "ob_result": {
+    "message": "ಫಲಿತಾಂಶ",
+    "description": "Onboarding preview result label."
+  },
+  "ob_save_btn": {
+    "message": "ನನ್ನ ಪ್ಯಾಟರ್ನ್ ಉಳಿಸಿ",
+    "description": "Save-pattern button."
+  },
+  "ob_pattern_saved": {
+    "message": "ಪ್ಯಾಟರ್ನ್ ಉಳಿಸಲಾಗಿದೆ",
+    "description": "Save-pattern button after saving."
+  },
+  "ob_saved_msg": {
+    "message": "ಉಳಿಸಲಾಗಿದೆ. ಪ್ರತಿ ಡೌನ್‌ಲೋಡ್ ಈಗ ಇದನ್ನು ಅನುಸರಿಸುತ್ತದೆ.",
+    "description": "Confirmation after the pattern is saved."
+  },
+  "ob_s4_kicker": {
+    "message": "ಅದನ್ನು ಚಾಲನೆಯಲ್ಲಿ ಬಿಡಬಹುದೇಕೆ",
+    "description": "Step 4 kicker."
+  },
+  "ob_s4_title": {
+    "message": "ವಿನ್ಯಾಸದಿಂದಲೇ ಸ್ಥಳೀಯ, ಒಬ್ಬ ಡೆವಲಪರ್‌ನಿಂದ ಬಹಿರಂಗವಾಗಿ ನಿರ್ಮಿಸಲಾಗಿದೆ.",
+    "description": "Step 4 title."
+  },
+  "ob_s4_lede": {
+    "message": "ನಿಮ್ಮ ಫೈಲ್‌ಗಳು ಮತ್ತು ನಿಮ್ಮ ಮರುಹೆಸರಿಸುವ ಇತಿಹಾಸ ಈ ಯಂತ್ರವನ್ನು ಎಂದಿಗೂ ಬಿಡುವುದಿಲ್ಲ. ಉಚಿತ ಯೋಜನೆಯಲ್ಲಿ ವಿಸ್ತರಣೆ ಯಾವುದೇ ನೆಟ್‌ವರ್ಕ್ ಕರೆ ಮಾಡುವುದಿಲ್ಲ, ಮತ್ತು ಕೋಡ್ ಒಂದೇ ಬಾರಿಗೆ ಓದುವಷ್ಟು ಚಿಕ್ಕದಾಗಿದೆ.",
+    "description": "Step 4 body."
+  },
+  "ob_stat1_n": {
+    "message": "ಸ್ಥಳೀಯ",
+    "description": "Stat 1 value."
+  },
+  "ob_stat1_l": {
+    "message": "ಪ್ರತಿ ಮರುಹೆಸರಿಸುವಿಕೆ ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿ ನಡೆಯುತ್ತದೆ",
+    "description": "Stat 1 label."
+  },
+  "ob_stat2_n": {
+    "message": "ಖಾಸಗಿ",
+    "description": "Stat 2 value."
+  },
+  "ob_stat2_l": {
+    "message": "ಈ ಯಂತ್ರವನ್ನು ಏನೂ ಬಿಡುವುದಿಲ್ಲ",
+    "description": "Stat 2 label."
+  },
+  "ob_stat3_n": {
+    "message": "ಮುಕ್ತ",
+    "description": "Stat 3 value."
+  },
+  "ob_stat3_l": {
+    "message": "ಸಾರ್ವಜನಿಕವಾಗಿ ನಿರ್ಮಿಸಲಾಗಿದೆ, ಪ್ರತಿ ಕಮಿಟ್",
+    "description": "Stat 3 label."
+  },
+  "ob_s4_pt": {
+    "message": "ಡೌನ್‌ಲೋಡ್ ಮರುಹೆಸರಿಸುವ ಟೂಲ್ ನೀವು Zovo ಅನ್ನು ಭೇಟಿಯಾಗುವ ಸ್ಥಳ. ದೊಡ್ಡ ಯೋಜನೆ ಇಡೀ ವಿಸ್ತರಣೆ ಜಗತ್ತಿಗೆ ಒಂದು ಪ್ರಾಮಾಣಿಕ ಪದರ, ಒಂದೊಂದೇ ಟೂಲ್, ಸ್ಪ್ಯಾಮ್ ಇಲ್ಲದೆ ಮತ್ತು ಟ್ರ್ಯಾಕಿಂಗ್ ಇಲ್ಲದೆ.",
+    "description": "Step 4 secondary paragraph."
+  },
+  "ob_link_why": {
+    "message": "ನಾನು Zovo ಅನ್ನು ಏಕೆ ನಿರ್ಮಿಸುತ್ತೇನೆ",
+    "description": "Link: why Zovo."
+  },
+  "ob_link_vision": {
+    "message": "ದೃಷ್ಟಿಕೋನ",
+    "description": "Link: the vision."
+  },
+  "ob_link_safe": {
+    "message": "ನಾವು ನಿಮ್ಮನ್ನು ಹೇಗೆ ಸುರಕ್ಷಿತವಾಗಿ ಇರಿಸುತ್ತೇವೆ",
+    "description": "Link: safety."
+  },
+  "ob_trust1_h": {
+    "message": "ಎಲ್ಲವೂ ನಿಮ್ಮ ಸಾಧನದಲ್ಲಿಯೇ ಉಳಿಯುತ್ತದೆ",
+    "description": "Trust point 1 heading."
+  },
+  "ob_trust1_b": {
+    "message": "ನಿಮ್ಮ ಪ್ಯಾಟರ್ನ್, ನಿಯಮಗಳು ಮತ್ತು ಇತಿಹಾಸ ಸ್ಥಳೀಯ ಬ್ರೌಸರ್ ಸಂಗ್ರಹಣೆಯಲ್ಲಿ ವಾಸಿಸುತ್ತವೆ. ಖಾತೆ ಇಲ್ಲ, ಸಿಂಕ್ ಸರ್ವರ್ ಇಲ್ಲ, ಏನೂ ಹೊರಗೆ ಕಳುಹಿಸಲಾಗುವುದಿಲ್ಲ.",
+    "description": "Trust point 1 body."
+  },
+  "ob_trust2_h": {
+    "message": "ಒಬ್ಬ ವ್ಯಕ್ತಿ, ಬಹಿರಂಗವಾಗಿ ನಿರ್ಮಿಸುತ್ತಿದ್ದಾರೆ",
+    "description": "Trust point 2 heading."
+  },
+  "ob_s5_kicker": {
+    "message": "ಪ್ರಾಮಾಣಿಕ ವಿನಿಮಯ",
+    "description": "Step 5 kicker."
+  },
+  "ob_s5_title": {
+    "message": "ಶಾಶ್ವತವಾಗಿ ಉಚಿತ ಮರುಹೆಸರಿಸುವಿಕೆ. ಅಥವಾ ಎಲ್ಲವನ್ನೂ ಒಮ್ಮೆ ಸ್ವಂತವಾಗಿಸಿಕೊಳ್ಳಿ.",
+    "description": "Step 5 title."
+  },
+  "ob_s5_lede": {
+    "message": "ಮೌನ ಮರುಹೆಸರಿಸುವ ಕೋರ್ ಉಚಿತವಾಗಿ ಉಳಿಯುತ್ತದೆ, ಅದು ಎಷ್ಟು ಫೈಲ್‌ಗಳನ್ನು ಸ್ಪರ್ಶಿಸುತ್ತದೆ ಎಂಬುದಕ್ಕೆ ಮಿತಿ ಇಲ್ಲ. ತೊಂಬತ್ತೊಂಬತ್ತು ಡಾಲರ್‌ಗಳ ಒಂದು ಪಾವತಿ ಅನಿಯಮಿತ ಸೈಟ್-ವಾರು ನಿಯಮಗಳು, ಫೋಲ್ಡರ್ ರೂಟಿಂಗ್, ರೆಜೆಕ್ಸ್ ಸ್ವಚ್ಛಗೊಳಿಸುವಿಕೆ, ಮತ್ತು ಪುಟ ಅಥವಾ PDF ಶೀರ್ಷಿಕೆಯಿಂದ ಹೆಸರಿಸುವಿಕೆಯನ್ನು ಆನ್ ಮಾಡುತ್ತದೆ.",
+    "description": "Step 5 body."
+  },
+  "ob_plan_free": {
+    "message": "ಉಚಿತ",
+    "description": "Free plan name."
+  },
+  "ob_free_unit": {
+    "message": "ಶಾಶ್ವತವಾಗಿ",
+    "description": "Free plan price unit."
+  },
+  "ob_free1": {
+    "message": "ಪ್ರತಿ ಡೌನ್‌ಲೋಡ್ ತಾನಾಗಿಯೇ ಮರುಹೆಸರಿಸಲ್ಪಡುತ್ತದೆ",
+    "description": "Free benefit 1."
+  },
+  "ob_free2": {
+    "message": "ಮೂರು ಕೋರ್ ಟೋಕನ್‌ಗಳು: ದಿನಾಂಕ, ಸೈಟ್, ಮೂಲ ಹೆಸರು",
+    "description": "Free benefit 2."
+  },
+  "ob_free3": {
+    "message": "ಒಂದು ಉಳಿಸಿದ ಸೈಟ್-ವಾರು ನಿಯಮ",
+    "description": "Free benefit 3."
+  },
+  "ob_free4": {
+    "message": "ಸಂಘರ್ಷ ನಿರ್ವಹಣೆ ಮತ್ತು ಲೈವ್ ಕೌಂಟರ್",
+    "description": "Free benefit 4."
+  },
+  "ob_ribbon": {
+    "message": "ಅತ್ಯುತ್ತಮ ಮೌಲ್ಯ",
+    "description": "Lifetime plan ribbon."
+  },
+  "ob_plan_life": {
+    "message": "ಜೀವಮಾನ",
+    "description": "Lifetime plan name."
+  },
+  "ob_life_unit": {
+    "message": "ಒಂದು ಬಾರಿ",
+    "description": "Lifetime plan price unit."
+  },
+  "ob_life1": {
+    "message": "ಅನಿಯಮಿತ ಸೈಟ್-ವಾರು ನಿಯಮಗಳು",
+    "description": "Lifetime benefit 1."
+  },
+  "ob_life2": {
+    "message": "ಸೈಟ್ ಅಥವಾ ದಿನಾಂಕದ ಪ್ರಕಾರ Downloads ಉಪಫೋಲ್ಡರ್‌ಗಳಿಗೆ ಫೈಲ್‌ಗಳನ್ನು ರೂಟ್ ಮಾಡಿ",
+    "description": "Lifetime benefit 2."
+  },
+  "ob_life3": {
+    "message": "ರೆಜೆಕ್ಸ್ ಸ್ವಚ್ಛಗೊಳಿಸುವಿಕೆ ಜೊತೆಗೆ ಪುಟ-ಶೀರ್ಷಿಕೆ ಮತ್ತು PDF-ಶೀರ್ಷಿಕೆ ಟೋಕನ್‌ಗಳು",
+    "description": "Lifetime benefit 3."
+  },
+  "ob_life4": {
+    "message": "ಯಂತ್ರಗಳ ನಡುವೆ ಕಾನ್ಫಿಗ್ ಬ್ಯಾಕಪ್ ಮತ್ತು ಆಮದು",
+    "description": "Lifetime benefit 4."
+  },
+  "ob_life5": {
+    "message": "ಈ ಟೂಲ್‌ಗೆ ಪ್ರತಿ ಭವಿಷ್ಯದ ನವೀಕರಣ, ಸೇರಿಸಲಾಗಿದೆ",
+    "description": "Lifetime benefit 5."
+  },
+  "ob_life6": {
+    "message": "ಒಂದು ಪಾವತಿ, ಚಂದಾದಾರಿಕೆ ಇಲ್ಲ, ಎಂದಿಗೂ",
+    "description": "Lifetime benefit 6."
+  },
+  "ob_life_cta": {
+    "message": "$$99 ಗೆ ಜೀವಮಾನ ಪಡೆಯಿರಿ",
+    "description": "Lifetime purchase CTA."
+  },
+  "ob_guarantee": {
+    "message": "14-ದಿನಗಳ ಮರುಪಾವತಿ, ಯಾವುದೇ ಪ್ರಶ್ನೆ ಇಲ್ಲ. ಮಾಸಿಕ ಬಯಸುವಿರಾ? ಅದೇ ಪುಟದಲ್ಲಿ ಇದು $$4.99.",
+    "description": "Refund guarantee line."
+  },
+  "ob_s6_kicker": {
+    "message": "ನೀವು ಸಿದ್ಧರಾಗಿದ್ದೀರಿ",
+    "description": "Step 6 kicker."
+  },
+  "ob_s6_title": {
+    "message": "ಮಾಡಲು ಏನೂ ಉಳಿದಿಲ್ಲ. ಅದು ಈಗಾಗಲೇ ಕೆಲಸ ಮಾಡುತ್ತಿದೆ.",
+    "description": "Step 6 title."
+  },
+  "ob_s6_lede": {
+    "message": "ನೀವು ಡೌನ್‌ಲೋಡ್ ಮಾಡುವ ಮುಂದಿನ ಫೈಲ್ ತಾನಾಗಿಯೇ ಸ್ವಚ್ಛ ಹೆಸರನ್ನು ಪಡೆಯುತ್ತದೆ. ಒತ್ತಲು ಬಟನ್ ಇಲ್ಲ, ದೃಢೀಕರಿಸಲು ಸಂವಾದ ಇಲ್ಲ. ಇಲ್ಲಿಂದ ಏನಾಗುತ್ತದೆ ಎಂಬುದು ಇಲ್ಲಿದೆ.",
+    "description": "Step 6 body."
+  },
+  "ob_dev_h": {
+    "message": "ಡೆವಲಪರ್‌ನಿಂದ",
+    "description": "Developer note heading."
+  },
+  "ob_dev_b": {
+    "message": "ನಾನು Zovo ಅನ್ನು ನನ್ನದೇ ಆಗಿ, ಬಹಿರಂಗವಾಗಿ ನಿರ್ಮಿಸುತ್ತೇನೆ. ಏನಾದರೂ ಮುರಿದರೆ, ನನಗೆ ಬರೆಯಿರಿ ಮತ್ತು ನಾನು ಉತ್ತರಿಸುತ್ತೇನೆ. ಮರುಹೆಸರಿಸುವ ಟೂಲ್‌ಗಳು ಕೇವಲ ಆರಂಭ. ಯೋಜನೆ ಇಡೀ ಬ್ರೌಸರ್‌ಗೆ ಒಂದು ಪ್ರಾಮಾಣಿಕ ಪದರ, ಮತ್ತು ನಿಮ್ಮ ತೊಂಬತ್ತೊಂಬತ್ತು ಡಾಲರ್‌ಗಳು ಅದರ ಮುಂದಿನ ಭಾಗವನ್ನು ರವಾನಿಸುತ್ತವೆ.",
+    "description": "Developer note body."
+  },
+  "ob_link_github": {
+    "message": "GitHub ನಲ್ಲಿ ನನ್ನನ್ನು ತಲುಪಿ",
+    "description": "Link: GitHub."
+  },
+  "ob_link_going": {
+    "message": "ಇದು ಎಲ್ಲಿಗೆ ಹೋಗುತ್ತಿದೆ",
+    "description": "Link: roadmap."
+  },
+  "ob_cheat1_k": {
+    "message": "ಪ್ರತಿ ಡೌನ್‌ಲೋಡ್",
+    "description": "Cheat-sheet row 1 key."
+  },
+  "ob_cheat1_v": {
+    "message": "ಉಳಿಸಿದಾಗ ಮರುಹೆಸರಿಸಲಾಗುತ್ತದೆ",
+    "description": "Cheat-sheet row 1 value."
+  },
+  "ob_cheat2_k": {
+    "message": "ಪಾಪ್‌ಅಪ್",
+    "description": "Cheat-sheet row 2 key."
+  },
+  "ob_cheat2_v": {
+    "message": "ಪ್ರತಿ ಮರುಹೆಸರಿಸುವಿಕೆಯನ್ನು ಎಣಿಸುತ್ತದೆ",
+    "description": "Cheat-sheet row 2 value."
+  },
+  "ob_cheat3_k": {
+    "message": "ನಿಮ್ಮ ಪ್ಯಾಟರ್ನ್",
+    "description": "Cheat-sheet row 3 key."
+  },
+  "ob_cheat3_v": {
+    "message": "ಸೆಟ್ಟಿಂಗ್‌ಗಳಲ್ಲಿ ಅದನ್ನು ಸಂಪಾದಿಸಿ",
+    "description": "Cheat-sheet row 3 value."
+  },
+  "ob_cheat4_k": {
+    "message": "ಮೊದಲ ಸೈಟ್ ನಿಯಮ",
+    "description": "Cheat-sheet row 4 key."
+  },
+  "ob_cheat4_v": {
+    "message": "ಸೇರಿಸಲು ಉಚಿತ",
+    "description": "Cheat-sheet row 4 value."
+  }
+}

@@ -1,0 +1,834 @@
+{
+  "extName": {
+    "message": "Smart Rename Downloads",
+    "description": "Extension name shown in the Chrome Web Store and toolbar."
+  },
+  "extDesc": {
+    "message": "Nevezz át minden letöltést automatikusan dátum, oldal és cím tokenekkel. Oldalankénti szabályok, regex, mappaútvonal. Helyi",
+    "description": "Chrome Web Store short description (max 132 chars)."
+  },
+  "popup_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Popup header title."
+  },
+  "popup_open_settings": {
+    "message": "Beállítások megnyitása",
+    "description": "Aria label for the settings gear button."
+  },
+  "popup_settings": {
+    "message": "Beállítások",
+    "description": "Tooltip for the settings gear button."
+  },
+  "popup_health": {
+    "message": "Átnevezés szüneteltetve — a Letöltések engedélyt eltávolították.",
+    "description": "Shown when the downloads permission is missing."
+  },
+  "popup_regrant": {
+    "message": "Újraengedélyezés",
+    "description": "Link to re-grant the downloads permission."
+  },
+  "popup_hero_label": {
+    "message": "Átnevezett fájlok",
+    "description": "Label under the big lifetime rename counter."
+  },
+  "popup_hero_sub": {
+    "message": "Minden letöltés automatikusan átnevezésre kerül, mielőtt a lemezre kerülne.",
+    "description": "Supporting line under the hero counter."
+  },
+  "popup_master_title": {
+    "message": "Letöltések automatikus átnevezése",
+    "description": "Master on/off switch title."
+  },
+  "popup_master_aria": {
+    "message": "Letöltések automatikus átnevezésének be- és kikapcsolása",
+    "description": "Accessible name for the master switch."
+  },
+  "popup_master_on": {
+    "message": "Be — minden letöltés átnevezése",
+    "description": "Master switch note when enabled."
+  },
+  "popup_master_off": {
+    "message": "Ki — a Chrome megtartja az alapértelmezett neveket",
+    "description": "Master switch note when disabled."
+  },
+  "popup_recent": {
+    "message": "Legutóbbi átnevezések",
+    "description": "Section label for the recent-renames list."
+  },
+  "popup_empty_title": {
+    "message": "Készen áll, amikor te is",
+    "description": "Empty-state headline in the popup."
+  },
+  "popup_empty_text": {
+    "message": "A következő letöltésed automatikusan átnevezésre kerül. Itt fog megjelenni.",
+    "description": "Empty-state body in the popup."
+  },
+  "popup_milestone_text": {
+    "message": "A Smart Rename {n} letöltést rendszerezett. A Pro automatikusan mappákba rendezi őket.",
+    "description": "Post-success upgrade nudge. {n} is the rename count."
+  },
+  "popup_milestone_cta": {
+    "message": "Pro megtekintése",
+    "description": "CTA on the milestone nudge."
+  },
+  "popup_dismiss": {
+    "message": "Elvetés",
+    "description": "Dismiss the milestone nudge."
+  },
+  "popup_trust": {
+    "message": "Helyi · Fiók nélkül · Követés nélkül",
+    "description": "Trust line in the popup footer."
+  },
+  "popup_upgrade": {
+    "message": "Váltás Pro verzióra",
+    "description": "Upgrade button in the popup footer."
+  },
+  "flag_timeout": {
+    "message": "alapértelmezett megtartva",
+    "description": "Recent-list flag: rename fell back to Chrome's default name (timeout)."
+  },
+  "flag_sanitize": {
+    "message": "alapértelmezett megtartva",
+    "description": "Recent-list flag: name could not be sanitized."
+  },
+  "flag_nomatch": {
+    "message": "nincs találat",
+    "description": "Recent-list flag: no site rule matched."
+  },
+  "opt_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Options brand name."
+  },
+  "opt_trust": {
+    "message": "Minden ezen az eszközön marad. Nulla követés.",
+    "description": "Options sidebar trust line."
+  },
+  "aria_theme": {
+    "message": "Színséma",
+    "description": "Aria label for the theme radiogroup."
+  },
+  "theme_system": {
+    "message": "Rendszer",
+    "description": "Theme option: follow OS."
+  },
+  "theme_light": {
+    "message": "Világos",
+    "description": "Theme option: light."
+  },
+  "theme_dark": {
+    "message": "Sötét",
+    "description": "Theme option: dark."
+  },
+  "tier_free": {
+    "message": "Ingyenes",
+    "description": "Free plan label."
+  },
+  "tier_trial": {
+    "message": "Próbaverzió",
+    "description": "Trial plan label."
+  },
+  "tier_pro": {
+    "message": "Pro",
+    "description": "Pro plan label."
+  },
+  "tab_template": {
+    "message": "Sablon",
+    "description": "Settings tab: naming template."
+  },
+  "tab_sites": {
+    "message": "Oldalankénti szabályok",
+    "description": "Settings tab: per-site rules."
+  },
+  "tab_advanced": {
+    "message": "Speciális",
+    "description": "Settings tab: advanced naming."
+  },
+  "tab_backup": {
+    "message": "Biztonsági mentés",
+    "description": "Settings tab: backup and restore."
+  },
+  "tab_license": {
+    "message": "Licenc",
+    "description": "Settings tab: license and plan."
+  },
+  "tpl_h1": {
+    "message": "Elnevezési sablon",
+    "description": "Template panel heading."
+  },
+  "tpl_lede": {
+    "message": "Állítsd össze a fájlnevet, amelyet minden letöltés kap. A valódi fájlkiterjesztés mindig megmarad.",
+    "description": "Template panel intro."
+  },
+  "tpl_label": {
+    "message": "Sablon",
+    "description": "Template input label."
+  },
+  "tpl_tokens_aria": {
+    "message": "Token beszúrása",
+    "description": "Aria label for the token chip row."
+  },
+  "tpl_conflict": {
+    "message": "Ha már létezik ilyen nevű fájl",
+    "description": "Conflict-policy select label."
+  },
+  "conflict_uniquify": {
+    "message": "Szám hozzáadása — mindkettő megtartása",
+    "description": "Conflict policy: uniquify."
+  },
+  "conflict_overwrite": {
+    "message": "A régi fájl felülírása",
+    "description": "Conflict policy: overwrite."
+  },
+  "conflict_prompt": {
+    "message": "Kérdezz meg minden alkalommal",
+    "description": "Conflict policy: prompt."
+  },
+  "tpl_save": {
+    "message": "Sablon mentése",
+    "description": "Save-template button."
+  },
+  "tpl_preview_h": {
+    "message": "Élő előnézet",
+    "description": "Preview section label."
+  },
+  "tpl_pv_host": {
+    "message": "Példa oldal",
+    "description": "Preview sample-host input label."
+  },
+  "tpl_pv_name": {
+    "message": "Példa letöltés",
+    "description": "Preview sample-name input label."
+  },
+  "tpl_pv_result": {
+    "message": "Eredmény",
+    "description": "Preview result label."
+  },
+  "tpl_pv_hint": {
+    "message": "Egy „/” az ingyenes sablonban „-” jelként kerül mentésre. A mappaútvonal Pro funkció.",
+    "description": "Preview hint about slashes and folder routing."
+  },
+  "sites_h1": {
+    "message": "Oldalankénti szabályok",
+    "description": "Sites panel heading."
+  },
+  "sites_lede": {
+    "message": "Adj egy adott oldalnak saját sablont — a számlák mappázva, a dokumentumok címezve. Az ingyenes csomag egy szabályt tartalmaz, hogy kipróbálhasd; a Pro korlátlan.",
+    "description": "Sites panel intro."
+  },
+  "sites_count": {
+    "message": "1-ből 0 ingyenes szabály használatban",
+    "description": "Initial site-rule count text."
+  },
+  "sites_count_free": {
+    "message": "1-ből {n} ingyenes szabály használatban",
+    "description": "Site-rule count for Free. {n} is the count."
+  },
+  "sites_count_pro": {
+    "message": "{n} szabály",
+    "description": "Site-rule count for Pro. {n} is the count."
+  },
+  "sites_empty": {
+    "message": "Még nincsenek oldalszabályok. Adj hozzá egyet alább.",
+    "description": "Empty state for site rules."
+  },
+  "sites_add_h": {
+    "message": "Szabály hozzáadása",
+    "description": "Add-rule section label."
+  },
+  "sites_match": {
+    "message": "Oldal (host vagy *.host)",
+    "description": "Rule match input label."
+  },
+  "sites_match_ph": {
+    "message": "stripe.com",
+    "description": "Rule match placeholder."
+  },
+  "sites_template": {
+    "message": "Sablon ehhez az oldalhoz",
+    "description": "Rule template input label."
+  },
+  "sites_template_ph": {
+    "message": "{date}-invoice-{original}",
+    "description": "Rule template placeholder."
+  },
+  "sites_add_btn": {
+    "message": "Oldalszabály hozzáadása",
+    "description": "Add-rule button."
+  },
+  "sites_delete": {
+    "message": "Szabály törlése",
+    "description": "Aria label for a rule's delete button."
+  },
+  "sites_need_both": {
+    "message": "Adj meg egy oldalt és egy sablont is.",
+    "description": "Validation when a rule field is empty."
+  },
+  "sites_add_err": {
+    "message": "Ezt a szabályt nem sikerült hozzáadni.",
+    "description": "Generic add-rule failure."
+  },
+  "adv_h1": {
+    "message": "Speciális elnevezés",
+    "description": "Advanced panel heading."
+  },
+  "adv_lede": {
+    "message": "Erős eszközök ahhoz, ahogyan valójában rendszerezed a letöltéseket. A Zovo Pro része.",
+    "description": "Advanced panel intro."
+  },
+  "adv_save": {
+    "message": "Mentés",
+    "description": "Generic save button."
+  },
+  "adv_clear": {
+    "message": "Törlés",
+    "description": "Generic clear button."
+  },
+  "adv_unlock": {
+    "message": "Feloldás a Pro verzióval",
+    "description": "CTA on a locked Pro card."
+  },
+  "adv_on": {
+    "message": "Engedélyezve",
+    "description": "Feature toggled on."
+  },
+  "adv_off": {
+    "message": "Letiltva",
+    "description": "Feature toggled off."
+  },
+  "adv_perm_needed": {
+    "message": "Ehhez engedély szükséges.",
+    "description": "Shown when an optional permission is denied."
+  },
+  "adv_toggle_err": {
+    "message": "Ezt a beállítást nem sikerült frissíteni.",
+    "description": "Generic toggle failure."
+  },
+  "adv_folder_h": {
+    "message": "Mappaútvonal",
+    "description": "Folder-routing card heading."
+  },
+  "adv_folder_note": {
+    "message": "A fájlok a Letöltések mappa almappáiba töltődnek, pl. Downloads/{hostname}/…",
+    "description": "Folder-routing explanation."
+  },
+  "adv_folder_label": {
+    "message": "Almappa útvonala (tokenek megengedettek)",
+    "description": "Folder-path input label."
+  },
+  "adv_folder_ph": {
+    "message": "{hostname}",
+    "description": "Folder-path placeholder."
+  },
+  "adv_folder_err": {
+    "message": "Nem sikerült menteni a mappaútvonalat.",
+    "description": "Folder-routing save failure."
+  },
+  "adv_regex_h": {
+    "message": "Keresés és csere (regex)",
+    "description": "Regex card heading."
+  },
+  "adv_regex_note": {
+    "message": "Tisztítsd meg a neveket reguláris kifejezéssel, mielőtt mentésre kerülnek.",
+    "description": "Regex explanation."
+  },
+  "adv_regex_find": {
+    "message": "Keresés",
+    "description": "Regex find input label."
+  },
+  "adv_regex_find_ph": {
+    "message": "\\s+",
+    "description": "Regex find placeholder."
+  },
+  "adv_regex_replace": {
+    "message": "Csere",
+    "description": "Regex replace input label."
+  },
+  "adv_regex_replace_ph": {
+    "message": "-",
+    "description": "Regex replace placeholder."
+  },
+  "adv_regex_flags": {
+    "message": "Jelzők",
+    "description": "Regex flags input label."
+  },
+  "adv_regex_need": {
+    "message": "Adj meg egy keresendő mintát.",
+    "description": "Validation when the regex find is empty."
+  },
+  "adv_regex_bad": {
+    "message": "Ez a minta érvénytelen vagy nem biztonságos.",
+    "description": "Regex validation failure."
+  },
+  "adv_regex_err": {
+    "message": "Nem sikerült menteni a mintát.",
+    "description": "Generic regex save failure."
+  },
+  "adv_cleared": {
+    "message": "Törölve",
+    "description": "Regex cleared confirmation."
+  },
+  "adv_title_h": {
+    "message": "Oldalcím token {title}",
+    "description": "Title-token card heading."
+  },
+  "adv_title_note": {
+    "message": "Használd a forrásoldal címét a fájlnevekben. Ennek bekapcsolása a Lapok engedélyt kéri a Chrome-tól.",
+    "description": "Title-token explanation."
+  },
+  "adv_title_toggle": {
+    "message": "A {title} token engedélyezése",
+    "description": "Title-token toggle label."
+  },
+  "adv_title_aria": {
+    "message": "Az oldalcím token engedélyezése",
+    "description": "Accessible name for the title-token switch."
+  },
+  "adv_pdf_h": {
+    "message": "PDF-cím token {pdftitle}",
+    "description": "PDF-token card heading."
+  },
+  "adv_pdf_note": {
+    "message": "Nevezd el a PDF-eket a fájlban tárolt cím alapján. Ez a hálózaton keresztül olvassa be a PDF-et, ezért oldal-hozzáférést kér, és alapból ki van kapcsolva.",
+    "description": "PDF-token explanation."
+  },
+  "adv_pdf_toggle": {
+    "message": "A {pdftitle} token engedélyezése",
+    "description": "PDF-token toggle label."
+  },
+  "adv_pdf_aria": {
+    "message": "A PDF-cím token engedélyezése",
+    "description": "Accessible name for the PDF-token switch."
+  },
+  "backup_h1": {
+    "message": "Biztonsági mentés és visszaállítás",
+    "description": "Backup panel heading."
+  },
+  "backup_lede": {
+    "message": "Exportáld a beállításaidat egy fájlba, vagy vidd át egy másik gépre. A Zovo Pro része.",
+    "description": "Backup panel intro."
+  },
+  "backup_export_h": {
+    "message": "Konfiguráció exportálása",
+    "description": "Export card heading."
+  },
+  "backup_export_note": {
+    "message": "Letölt egy JSON-fájlt a sablonoddal, szabályaiddal és beállításaiddal. Előzmény és személyes adat nélkül.",
+    "description": "Export explanation."
+  },
+  "backup_export_btn": {
+    "message": "Exportálás fájlba",
+    "description": "Export button."
+  },
+  "backup_exported": {
+    "message": "Exportálva",
+    "description": "Export confirmation."
+  },
+  "backup_export_err": {
+    "message": "Az exportálás sikertelen.",
+    "description": "Export failure."
+  },
+  "backup_import_h": {
+    "message": "Konfiguráció importálása",
+    "description": "Import card heading."
+  },
+  "backup_import_label": {
+    "message": "Illessz be egy exportált konfigurációt",
+    "description": "Import textarea label."
+  },
+  "backup_import_ph": {
+    "message": "{\"zovo_template\":\"…\"}",
+    "description": "Import textarea placeholder."
+  },
+  "backup_import_btn": {
+    "message": "Importálás",
+    "description": "Import button."
+  },
+  "backup_imported": {
+    "message": "Importálva",
+    "description": "Import confirmation."
+  },
+  "backup_need_json": {
+    "message": "Először illessz be egy konfigurációt.",
+    "description": "Validation when import is empty."
+  },
+  "backup_import_err": {
+    "message": "Ezt a fájlt nem sikerült importálni.",
+    "description": "Import failure."
+  },
+  "lic_h1": {
+    "message": "A csomagod",
+    "description": "License panel heading."
+  },
+  "lic_lede": {
+    "message": "Egyetlen fizetés örökre feloldja az összes elnevezési funkciót. Előfizetés nélkül.",
+    "description": "License panel intro."
+  },
+  "lic_current": {
+    "message": "Jelenlegi csomag",
+    "description": "Current-plan label."
+  },
+  "lic_free_sub": {
+    "message": "Alapvető átnevezés, egy oldalszabály, örökre.",
+    "description": "Free-plan subtitle."
+  },
+  "lic_pro_sub": {
+    "message": "Minden elnevezési funkció fel van oldva. Köszönjük, hogy támogatod a Zovót.",
+    "description": "Pro-plan subtitle."
+  },
+  "lic_upgrade": {
+    "message": "Váltás Pro verzióra",
+    "description": "Upgrade button on the License tab."
+  },
+  "lic_have_key": {
+    "message": "Van kulcsom",
+    "description": "License-key button."
+  },
+  "lic_included_h": {
+    "message": "Mit old fel a Pro",
+    "description": "Benefits section label."
+  },
+  "lic_b1": {
+    "message": "Korlátlan oldalankénti szabályok",
+    "description": "Pro benefit 1."
+  },
+  "lic_b2": {
+    "message": "Mappaútvonal almappákba",
+    "description": "Pro benefit 2."
+  },
+  "lic_b3": {
+    "message": "Regex keresés és csere",
+    "description": "Pro benefit 3."
+  },
+  "lic_b4": {
+    "message": "Oldalcím- és PDF-cím tokenek",
+    "description": "Pro benefit 4."
+  },
+  "lic_b5": {
+    "message": "Konfiguráció mentése, exportálása és importálása",
+    "description": "Pro benefit 5."
+  },
+  "saved": {
+    "message": "Mentve",
+    "description": "Generic saved confirmation."
+  },
+  "err_template": {
+    "message": "Ezt a sablont nem sikerült menteni.",
+    "description": "Generic template save failure."
+  },
+  "err_bad_token": {
+    "message": "Ismeretlen token a sablonban: ",
+    "description": "Prefix before the offending token name."
+  },
+  "ob_brand": {
+    "message": "Smart Rename Downloads",
+    "description": "Onboarding brand name."
+  },
+  "ob_by": {
+    "message": "· a Zovótól",
+    "description": "Onboarding brand attribution suffix."
+  },
+  "ob_skip": {
+    "message": "Bevezető kihagyása",
+    "description": "Skip onboarding button."
+  },
+  "ob_back": {
+    "message": "Vissza",
+    "description": "Previous-step button."
+  },
+  "ob_next": {
+    "message": "Tovább",
+    "description": "Next-step button."
+  },
+  "ob_later": {
+    "message": "Talán később",
+    "description": "Next-button label on the offer step."
+  },
+  "ob_start": {
+    "message": "Kezdd el használni",
+    "description": "Final onboarding button."
+  },
+  "ob_stepno": {
+    "message": "{a} / {b}",
+    "description": "Step counter, e.g. 1 of 6. {a} current, {b} total."
+  },
+  "ob_s1_kicker": {
+    "message": "A letöltési mappa problémája",
+    "description": "Step 1 kicker."
+  },
+  "ob_s1_title": {
+    "message": "Soha többé nem találod meg azt a fájlt.",
+    "description": "Step 1 title."
+  },
+  "ob_s1_pt": {
+    "message": "Azoknak készült, akik egész nap letöltenek. Kutatóknak, könyvelőknek, bárkinek, akinek a Letöltések mappája csendben elszabadul.",
+    "description": "Step 1 secondary paragraph."
+  },
+  "ob_s2_kicker": {
+    "message": "Egy szabály, már bekapcsolva",
+    "description": "Step 2 kicker."
+  },
+  "ob_s2_title": {
+    "message": "Nézd, ahogy egy kacatnévből valódi lesz.",
+    "description": "Step 2 title."
+  },
+  "ob_s2_lede": {
+    "message": "Az alapértelmezett minta a dátum, majd az oldal, majd az eredeti név. Abban a pillanatban, amikor egy letöltés befejeződik, a név átíródik, és egyenesen a lemezre kerül. Kattintás nélkül, párbeszédpanel nélkül. Íme egy valódi fájlon.",
+    "description": "Step 2 body."
+  },
+  "ob_demo_btn": {
+    "message": "Nézd meg az átnevezést",
+    "description": "Button that replays the rename demo."
+  },
+  "ob_saved_as": {
+    "message": "Mentve mint",
+    "description": "Demo label for the original filename."
+  },
+  "ob_renamed_to": {
+    "message": "Átnevezve erre",
+    "description": "Demo label for the renamed filename."
+  },
+  "ob_fw_kept": {
+    "message": ".pdf megtartva",
+    "description": "Token chip: the real extension is kept."
+  },
+  "ob_s3_kicker": {
+    "message": "Két perc, egyszer",
+    "description": "Step 3 kicker."
+  },
+  "ob_s3_title": {
+    "message": "Állítsd be az elnevezési mintát, amit tartósan megtartasz.",
+    "description": "Step 3 title."
+  },
+  "ob_s3_lede": {
+    "message": "Építsd fel tokenekből. Kattints egyre, hogy beszúrd a mintába, és nézd, ahogy a példa frissül. A valódi fájlkiterjesztés mindig a végén marad. Mentsd el, és minden jövőbeli letöltés ezt követi.",
+    "description": "Step 3 body."
+  },
+  "ob_s3_pt": {
+    "message": "A böngésződben él. Bármikor módosíthatod a beállításokból, és a fájljaidról semmit sem küldünk sehová.",
+    "description": "Step 3 secondary paragraph."
+  },
+  "ob_template_label": {
+    "message": "Az elnevezési mintád",
+    "description": "Onboarding template input label."
+  },
+  "ob_result": {
+    "message": "Eredmény",
+    "description": "Onboarding preview result label."
+  },
+  "ob_save_btn": {
+    "message": "Minta mentése",
+    "description": "Save-pattern button."
+  },
+  "ob_pattern_saved": {
+    "message": "Minta mentve",
+    "description": "Save-pattern button after saving."
+  },
+  "ob_saved_msg": {
+    "message": "Mentve. Minden letöltés mostantól ezt követi.",
+    "description": "Confirmation after the pattern is saved."
+  },
+  "ob_s4_kicker": {
+    "message": "Miért hagyhatod futni",
+    "description": "Step 4 kicker."
+  },
+  "ob_s4_title": {
+    "message": "Helyi felépítésű, nyíltan építve egyetlen fejlesztő által.",
+    "description": "Step 4 title."
+  },
+  "ob_s4_lede": {
+    "message": "A fájljaid és az átnevezési előzményeid soha nem hagyják el ezt a gépet. Az ingyenes csomagban a bővítmény egyáltalán nem kezdeményez hálózati hívást, és a kód elég kicsi ahhoz, hogy egy ülésben elolvasható legyen.",
+    "description": "Step 4 body."
+  },
+  "ob_stat1_n": {
+    "message": "Helyi",
+    "description": "Stat 1 value."
+  },
+  "ob_stat1_l": {
+    "message": "minden átnevezés az eszközödön fut",
+    "description": "Stat 1 label."
+  },
+  "ob_stat2_n": {
+    "message": "Privát",
+    "description": "Stat 2 value."
+  },
+  "ob_stat2_l": {
+    "message": "semmi nem hagyja el ezt a gépet",
+    "description": "Stat 2 label."
+  },
+  "ob_stat3_n": {
+    "message": "Nyílt",
+    "description": "Stat 3 value."
+  },
+  "ob_stat3_l": {
+    "message": "nyilvánosan építve, minden commit",
+    "description": "Stat 3 label."
+  },
+  "ob_s4_pt": {
+    "message": "Egy letöltés-átnevező az, ahol találkozol a Zovóval. A nagyobb terv egy őszinte réteg az egész bővítmény-világ számára, egy eszköz egyszerre, spam és követés nélkül.",
+    "description": "Step 4 secondary paragraph."
+  },
+  "ob_link_why": {
+    "message": "Miért építem a Zovót",
+    "description": "Link: why Zovo."
+  },
+  "ob_link_vision": {
+    "message": "A jövőkép",
+    "description": "Link: the vision."
+  },
+  "ob_link_safe": {
+    "message": "Hogyan tartunk biztonságban",
+    "description": "Link: safety."
+  },
+  "ob_trust1_h": {
+    "message": "Minden az eszközödön marad",
+    "description": "Trust point 1 heading."
+  },
+  "ob_trust1_b": {
+    "message": "A mintád, szabályaid és előzményeid a helyi böngészőtárban élnek. Fiók nélkül, szinkronszerver nélkül, semmit sem küldünk ki.",
+    "description": "Trust point 1 body."
+  },
+  "ob_trust2_h": {
+    "message": "Egy ember, nyíltan építve",
+    "description": "Trust point 2 heading."
+  },
+  "ob_s5_kicker": {
+    "message": "Az őszinte alku",
+    "description": "Step 5 kicker."
+  },
+  "ob_s5_title": {
+    "message": "Ingyenes átnevezések örökre. Vagy tedd magadévá az egészet, egyszer.",
+    "description": "Step 5 title."
+  },
+  "ob_s5_lede": {
+    "message": "A csendes átnevező mag ingyenes marad, korlát nélkül arra, hogy hány fájlt érint. Egyetlen kilencvenkilenc dolláros fizetés bekapcsolja a korlátlan oldalankénti szabályokat, a mappaútvonalat, a regex tisztítást és az elnevezést egy oldal vagy PDF címéből.",
+    "description": "Step 5 body."
+  },
+  "ob_plan_free": {
+    "message": "Ingyenes",
+    "description": "Free plan name."
+  },
+  "ob_free_unit": {
+    "message": "örökre",
+    "description": "Free plan price unit."
+  },
+  "ob_free1": {
+    "message": "Minden letöltés automatikusan átnevezve",
+    "description": "Free benefit 1."
+  },
+  "ob_free2": {
+    "message": "A három alap token: dátum, oldal, eredeti név",
+    "description": "Free benefit 2."
+  },
+  "ob_free3": {
+    "message": "Egy mentett oldalszabály",
+    "description": "Free benefit 3."
+  },
+  "ob_free4": {
+    "message": "Ütközéskezelés és élő számláló",
+    "description": "Free benefit 4."
+  },
+  "ob_ribbon": {
+    "message": "Legjobb ár-érték",
+    "description": "Lifetime plan ribbon."
+  },
+  "ob_plan_life": {
+    "message": "Élethosszig",
+    "description": "Lifetime plan name."
+  },
+  "ob_life_unit": {
+    "message": "egyszeri",
+    "description": "Lifetime plan price unit."
+  },
+  "ob_life1": {
+    "message": "Korlátlan oldalankénti szabályok",
+    "description": "Lifetime benefit 1."
+  },
+  "ob_life2": {
+    "message": "Fájlok rendezése a Letöltések almappáiba oldal vagy dátum szerint",
+    "description": "Lifetime benefit 2."
+  },
+  "ob_life3": {
+    "message": "Regex tisztítás, valamint oldalcím- és PDF-cím tokenek",
+    "description": "Lifetime benefit 3."
+  },
+  "ob_life4": {
+    "message": "Konfiguráció mentése és importálása gépek között",
+    "description": "Lifetime benefit 4."
+  },
+  "ob_life5": {
+    "message": "Ennek az eszköznek minden jövőbeli frissítése, benne",
+    "description": "Lifetime benefit 5."
+  },
+  "ob_life6": {
+    "message": "Egyetlen fizetés, előfizetés nélkül, örökre",
+    "description": "Lifetime benefit 6."
+  },
+  "ob_life_cta": {
+    "message": "Szerezd meg élethosszig $$99-ért",
+    "description": "Lifetime purchase CTA."
+  },
+  "ob_guarantee": {
+    "message": "14 napos visszatérítés, kérdés nélkül. Inkább havonta? Ugyanazon az oldalon $$4.99.",
+    "description": "Refund guarantee line."
+  },
+  "ob_s6_kicker": {
+    "message": "Készen állsz",
+    "description": "Step 6 kicker."
+  },
+  "ob_s6_title": {
+    "message": "Nincs több teendő. Már működik.",
+    "description": "Step 6 title."
+  },
+  "ob_s6_lede": {
+    "message": "A következő letöltött fájlod magától tiszta nevet kap. Nincs gomb, amit meg kell nyomni, nincs párbeszédpanel, amit meg kell erősíteni. Íme, mi történik innentől.",
+    "description": "Step 6 body."
+  },
+  "ob_dev_h": {
+    "message": "A fejlesztőtől",
+    "description": "Developer note heading."
+  },
+  "ob_dev_b": {
+    "message": "Egyedül építem a Zovót, nyíltan. Ha valami elromlik, írj nekem, és válaszolok. Az átnevezők csak a kezdet. A terv egy őszinte réteg az egész böngésző számára, és a te kilencvenkilenc dollárod szállítja a következő darabját.",
+    "description": "Developer note body."
+  },
+  "ob_link_github": {
+    "message": "Elérsz a GitHubon",
+    "description": "Link: GitHub."
+  },
+  "ob_link_going": {
+    "message": "Merre tart ez",
+    "description": "Link: roadmap."
+  },
+  "ob_cheat1_k": {
+    "message": "Minden letöltés",
+    "description": "Cheat-sheet row 1 key."
+  },
+  "ob_cheat1_v": {
+    "message": "Átnevezve mentéskor",
+    "description": "Cheat-sheet row 1 value."
+  },
+  "ob_cheat2_k": {
+    "message": "A felugró ablak",
+    "description": "Cheat-sheet row 2 key."
+  },
+  "ob_cheat2_v": {
+    "message": "Számolja minden átnevezést",
+    "description": "Cheat-sheet row 2 value."
+  },
+  "ob_cheat3_k": {
+    "message": "A mintád",
+    "description": "Cheat-sheet row 3 key."
+  },
+  "ob_cheat3_v": {
+    "message": "Szerkeszd a beállításokban",
+    "description": "Cheat-sheet row 3 value."
+  },
+  "ob_cheat4_k": {
+    "message": "Első oldalszabály",
+    "description": "Cheat-sheet row 4 key."
+  },
+  "ob_cheat4_v": {
+    "message": "Ingyen hozzáadható",
+    "description": "Cheat-sheet row 4 value."
+  }
+}

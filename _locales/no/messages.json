@@ -1,0 +1,834 @@
+{
+  "extName": {
+    "message": "Smart Rename Downloads",
+    "description": "Extension name shown in the Chrome Web Store and toolbar."
+  },
+  "extDesc": {
+    "message": "Gi automatisk nytt navn til alle nedlastinger med dato-, nettsted- og tittel-tokener. Regler per side, regex, mapperuting",
+    "description": "Chrome Web Store short description (max 132 chars)."
+  },
+  "popup_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Popup header title."
+  },
+  "popup_open_settings": {
+    "message": "Åpne innstillinger",
+    "description": "Aria label for the settings gear button."
+  },
+  "popup_settings": {
+    "message": "Innstillinger",
+    "description": "Tooltip for the settings gear button."
+  },
+  "popup_health": {
+    "message": "Endring av navn er satt på pause — nedlastingstillatelsen ble fjernet.",
+    "description": "Shown when the downloads permission is missing."
+  },
+  "popup_regrant": {
+    "message": "Aktiver på nytt",
+    "description": "Link to re-grant the downloads permission."
+  },
+  "popup_hero_label": {
+    "message": "Filer omdøpt",
+    "description": "Label under the big lifetime rename counter."
+  },
+  "popup_hero_sub": {
+    "message": "Hver nedlasting får automatisk nytt navn før den lagres på disken.",
+    "description": "Supporting line under the hero counter."
+  },
+  "popup_master_title": {
+    "message": "Endre navn på nedlastinger automatisk",
+    "description": "Master on/off switch title."
+  },
+  "popup_master_aria": {
+    "message": "Slå automatisk navneendring av nedlastinger av og på",
+    "description": "Accessible name for the master switch."
+  },
+  "popup_master_on": {
+    "message": "På — endrer navn på hver nedlasting",
+    "description": "Master switch note when enabled."
+  },
+  "popup_master_off": {
+    "message": "Av — Chrome beholder standardnavnene sine",
+    "description": "Master switch note when disabled."
+  },
+  "popup_recent": {
+    "message": "Nylige navneendringer",
+    "description": "Section label for the recent-renames list."
+  },
+  "popup_empty_title": {
+    "message": "Klar når du er",
+    "description": "Empty-state headline in the popup."
+  },
+  "popup_empty_text": {
+    "message": "Neste nedlasting får automatisk nytt navn. Den vil vises her.",
+    "description": "Empty-state body in the popup."
+  },
+  "popup_milestone_text": {
+    "message": "Smart Rename har organisert {n} nedlastinger. Pro legger dem automatisk i mapper.",
+    "description": "Post-success upgrade nudge. {n} is the rename count."
+  },
+  "popup_milestone_cta": {
+    "message": "Se Pro",
+    "description": "CTA on the milestone nudge."
+  },
+  "popup_dismiss": {
+    "message": "Lukk",
+    "description": "Dismiss the milestone nudge."
+  },
+  "popup_trust": {
+    "message": "Lokalt · Ingen konto · Ingen sporing",
+    "description": "Trust line in the popup footer."
+  },
+  "popup_upgrade": {
+    "message": "Oppgrader til Pro",
+    "description": "Upgrade button in the popup footer."
+  },
+  "flag_timeout": {
+    "message": "beholdt standard",
+    "description": "Recent-list flag: rename fell back to Chrome's default name (timeout)."
+  },
+  "flag_sanitize": {
+    "message": "beholdt standard",
+    "description": "Recent-list flag: name could not be sanitized."
+  },
+  "flag_nomatch": {
+    "message": "ingen treff",
+    "description": "Recent-list flag: no site rule matched."
+  },
+  "opt_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Options brand name."
+  },
+  "opt_trust": {
+    "message": "Alt forblir på denne enheten. Null sporing.",
+    "description": "Options sidebar trust line."
+  },
+  "aria_theme": {
+    "message": "Fargetema",
+    "description": "Aria label for the theme radiogroup."
+  },
+  "theme_system": {
+    "message": "System",
+    "description": "Theme option: follow OS."
+  },
+  "theme_light": {
+    "message": "Lyst",
+    "description": "Theme option: light."
+  },
+  "theme_dark": {
+    "message": "Mørkt",
+    "description": "Theme option: dark."
+  },
+  "tier_free": {
+    "message": "Gratis",
+    "description": "Free plan label."
+  },
+  "tier_trial": {
+    "message": "Prøveperiode",
+    "description": "Trial plan label."
+  },
+  "tier_pro": {
+    "message": "Pro",
+    "description": "Pro plan label."
+  },
+  "tab_template": {
+    "message": "Mal",
+    "description": "Settings tab: naming template."
+  },
+  "tab_sites": {
+    "message": "Regler per side",
+    "description": "Settings tab: per-site rules."
+  },
+  "tab_advanced": {
+    "message": "Avansert",
+    "description": "Settings tab: advanced naming."
+  },
+  "tab_backup": {
+    "message": "Sikkerhetskopi",
+    "description": "Settings tab: backup and restore."
+  },
+  "tab_license": {
+    "message": "Lisens",
+    "description": "Settings tab: license and plan."
+  },
+  "tpl_h1": {
+    "message": "Navnemal",
+    "description": "Template panel heading."
+  },
+  "tpl_lede": {
+    "message": "Bygg filnavnet hver nedlasting får. Den ekte filendelsen beholdes alltid.",
+    "description": "Template panel intro."
+  },
+  "tpl_label": {
+    "message": "Mal",
+    "description": "Template input label."
+  },
+  "tpl_tokens_aria": {
+    "message": "Sett inn et token",
+    "description": "Aria label for the token chip row."
+  },
+  "tpl_conflict": {
+    "message": "Hvis en fil med det navnet allerede finnes",
+    "description": "Conflict-policy select label."
+  },
+  "conflict_uniquify": {
+    "message": "Legg til et tall — behold begge",
+    "description": "Conflict policy: uniquify."
+  },
+  "conflict_overwrite": {
+    "message": "Overskriv den gamle filen",
+    "description": "Conflict policy: overwrite."
+  },
+  "conflict_prompt": {
+    "message": "Spør meg hver gang",
+    "description": "Conflict policy: prompt."
+  },
+  "tpl_save": {
+    "message": "Lagre mal",
+    "description": "Save-template button."
+  },
+  "tpl_preview_h": {
+    "message": "Forhåndsvisning",
+    "description": "Preview section label."
+  },
+  "tpl_pv_host": {
+    "message": "Eksempelnettsted",
+    "description": "Preview sample-host input label."
+  },
+  "tpl_pv_name": {
+    "message": "Eksempelnedlasting",
+    "description": "Preview sample-name input label."
+  },
+  "tpl_pv_result": {
+    "message": "Resultat",
+    "description": "Preview result label."
+  },
+  "tpl_pv_hint": {
+    "message": "En «/» i en gratis mal lagres som «-». Mapperuting er en Pro-funksjon.",
+    "description": "Preview hint about slashes and folder routing."
+  },
+  "sites_h1": {
+    "message": "Regler per side",
+    "description": "Sites panel heading."
+  },
+  "sites_lede": {
+    "message": "Gi et bestemt nettsted sin egen mal — fakturaer i mapper, dokumenter med tittel. Gratis inkluderer én regel så du kan prøve det; Pro er ubegrenset.",
+    "description": "Sites panel intro."
+  },
+  "sites_count": {
+    "message": "0 av 1 gratis regler brukt",
+    "description": "Initial site-rule count text."
+  },
+  "sites_count_free": {
+    "message": "{n} av 1 gratis regler brukt",
+    "description": "Site-rule count for Free. {n} is the count."
+  },
+  "sites_count_pro": {
+    "message": "{n} regler",
+    "description": "Site-rule count for Pro. {n} is the count."
+  },
+  "sites_empty": {
+    "message": "Ingen sideregler ennå. Legg til en nedenfor.",
+    "description": "Empty state for site rules."
+  },
+  "sites_add_h": {
+    "message": "Legg til en regel",
+    "description": "Add-rule section label."
+  },
+  "sites_match": {
+    "message": "Nettsted (vert eller *.vert)",
+    "description": "Rule match input label."
+  },
+  "sites_match_ph": {
+    "message": "stripe.com",
+    "description": "Rule match placeholder."
+  },
+  "sites_template": {
+    "message": "Mal for dette nettstedet",
+    "description": "Rule template input label."
+  },
+  "sites_template_ph": {
+    "message": "{date}-invoice-{original}",
+    "description": "Rule template placeholder."
+  },
+  "sites_add_btn": {
+    "message": "Legg til sideregel",
+    "description": "Add-rule button."
+  },
+  "sites_delete": {
+    "message": "Slett regel",
+    "description": "Aria label for a rule's delete button."
+  },
+  "sites_need_both": {
+    "message": "Skriv inn både et nettsted og en mal.",
+    "description": "Validation when a rule field is empty."
+  },
+  "sites_add_err": {
+    "message": "Den regelen kunne ikke legges til.",
+    "description": "Generic add-rule failure."
+  },
+  "adv_h1": {
+    "message": "Avansert navngivning",
+    "description": "Advanced panel heading."
+  },
+  "adv_lede": {
+    "message": "Kraftverktøy for måten du faktisk sorterer nedlastinger på. Inkludert i Zovo Pro.",
+    "description": "Advanced panel intro."
+  },
+  "adv_save": {
+    "message": "Lagre",
+    "description": "Generic save button."
+  },
+  "adv_clear": {
+    "message": "Tøm",
+    "description": "Generic clear button."
+  },
+  "adv_unlock": {
+    "message": "Lås opp med Pro",
+    "description": "CTA on a locked Pro card."
+  },
+  "adv_on": {
+    "message": "Aktivert",
+    "description": "Feature toggled on."
+  },
+  "adv_off": {
+    "message": "Deaktivert",
+    "description": "Feature toggled off."
+  },
+  "adv_perm_needed": {
+    "message": "Tillatelse kreves for å aktivere dette.",
+    "description": "Shown when an optional permission is denied."
+  },
+  "adv_toggle_err": {
+    "message": "Kunne ikke oppdatere denne innstillingen.",
+    "description": "Generic toggle failure."
+  },
+  "adv_folder_h": {
+    "message": "Mapperuting",
+    "description": "Folder-routing card heading."
+  },
+  "adv_folder_note": {
+    "message": "Legg nedlastinger i undermapper av nedlastingsmappen din, f.eks. Downloads/{hostname}/…",
+    "description": "Folder-routing explanation."
+  },
+  "adv_folder_label": {
+    "message": "Undermappesti (tokener tillatt)",
+    "description": "Folder-path input label."
+  },
+  "adv_folder_ph": {
+    "message": "{hostname}",
+    "description": "Folder-path placeholder."
+  },
+  "adv_folder_err": {
+    "message": "Kunne ikke lagre mapperuting.",
+    "description": "Folder-routing save failure."
+  },
+  "adv_regex_h": {
+    "message": "Søk og erstatt (regex)",
+    "description": "Regex card heading."
+  },
+  "adv_regex_note": {
+    "message": "Rydd opp i navn med et regulært uttrykk før de lagres.",
+    "description": "Regex explanation."
+  },
+  "adv_regex_find": {
+    "message": "Søk",
+    "description": "Regex find input label."
+  },
+  "adv_regex_find_ph": {
+    "message": "\\s+",
+    "description": "Regex find placeholder."
+  },
+  "adv_regex_replace": {
+    "message": "Erstatt",
+    "description": "Regex replace input label."
+  },
+  "adv_regex_replace_ph": {
+    "message": "-",
+    "description": "Regex replace placeholder."
+  },
+  "adv_regex_flags": {
+    "message": "Flagg",
+    "description": "Regex flags input label."
+  },
+  "adv_regex_need": {
+    "message": "Skriv inn et mønster å søke etter.",
+    "description": "Validation when the regex find is empty."
+  },
+  "adv_regex_bad": {
+    "message": "Det mønsteret er ugyldig eller utrygt.",
+    "description": "Regex validation failure."
+  },
+  "adv_regex_err": {
+    "message": "Kunne ikke lagre mønsteret.",
+    "description": "Generic regex save failure."
+  },
+  "adv_cleared": {
+    "message": "Tømt",
+    "description": "Regex cleared confirmation."
+  },
+  "adv_title_h": {
+    "message": "Sidetittel-token {title}",
+    "description": "Title-token card heading."
+  },
+  "adv_title_note": {
+    "message": "Bruk tittelen på kildesiden i filnavn. Å slå på dette ber Chrome om Faner-tillatelsen.",
+    "description": "Title-token explanation."
+  },
+  "adv_title_toggle": {
+    "message": "Aktiver {title}-tokenet",
+    "description": "Title-token toggle label."
+  },
+  "adv_title_aria": {
+    "message": "Aktiver sidetittel-tokenet",
+    "description": "Accessible name for the title-token switch."
+  },
+  "adv_pdf_h": {
+    "message": "PDF-tittel-token {pdftitle}",
+    "description": "PDF-token card heading."
+  },
+  "adv_pdf_note": {
+    "message": "Navngi PDF-er etter tittelen som er lagret inne i filen. Dette leser PDF-en over nettverket, så det ber om nettstedtilgang og er av som standard.",
+    "description": "PDF-token explanation."
+  },
+  "adv_pdf_toggle": {
+    "message": "Aktiver {pdftitle}-tokenet",
+    "description": "PDF-token toggle label."
+  },
+  "adv_pdf_aria": {
+    "message": "Aktiver PDF-tittel-tokenet",
+    "description": "Accessible name for the PDF-token switch."
+  },
+  "backup_h1": {
+    "message": "Sikkerhetskopi og gjenoppretting",
+    "description": "Backup panel heading."
+  },
+  "backup_lede": {
+    "message": "Eksporter oppsettet ditt til en fil, eller flytt det til en annen maskin. Inkludert i Zovo Pro.",
+    "description": "Backup panel intro."
+  },
+  "backup_export_h": {
+    "message": "Eksporter konfigurasjon",
+    "description": "Export card heading."
+  },
+  "backup_export_note": {
+    "message": "Laster ned en JSON-fil med malen, reglene og innstillingene dine. Ingen historikk, ingen personlige data.",
+    "description": "Export explanation."
+  },
+  "backup_export_btn": {
+    "message": "Eksporter til fil",
+    "description": "Export button."
+  },
+  "backup_exported": {
+    "message": "Eksportert",
+    "description": "Export confirmation."
+  },
+  "backup_export_err": {
+    "message": "Eksport mislyktes.",
+    "description": "Export failure."
+  },
+  "backup_import_h": {
+    "message": "Importer konfigurasjon",
+    "description": "Import card heading."
+  },
+  "backup_import_label": {
+    "message": "Lim inn en eksportert konfigurasjon",
+    "description": "Import textarea label."
+  },
+  "backup_import_ph": {
+    "message": "{\"zovo_template\":\"…\"}",
+    "description": "Import textarea placeholder."
+  },
+  "backup_import_btn": {
+    "message": "Importer",
+    "description": "Import button."
+  },
+  "backup_imported": {
+    "message": "Importert",
+    "description": "Import confirmation."
+  },
+  "backup_need_json": {
+    "message": "Lim inn en konfigurasjon først.",
+    "description": "Validation when import is empty."
+  },
+  "backup_import_err": {
+    "message": "Den filen kunne ikke importeres.",
+    "description": "Import failure."
+  },
+  "lic_h1": {
+    "message": "Planen din",
+    "description": "License panel heading."
+  },
+  "lic_lede": {
+    "message": "Én betaling låser opp alle navnefunksjoner, for alltid. Ingen abonnement.",
+    "description": "License panel intro."
+  },
+  "lic_current": {
+    "message": "Nåværende plan",
+    "description": "Current-plan label."
+  },
+  "lic_free_sub": {
+    "message": "Kjerne-navneendring, én sideregel, for alltid.",
+    "description": "Free-plan subtitle."
+  },
+  "lic_pro_sub": {
+    "message": "Alle navnefunksjoner er låst opp. Takk for at du støtter Zovo.",
+    "description": "Pro-plan subtitle."
+  },
+  "lic_upgrade": {
+    "message": "Oppgrader til Pro",
+    "description": "Upgrade button on the License tab."
+  },
+  "lic_have_key": {
+    "message": "Jeg har en nøkkel",
+    "description": "License-key button."
+  },
+  "lic_included_h": {
+    "message": "Hva Pro låser opp",
+    "description": "Benefits section label."
+  },
+  "lic_b1": {
+    "message": "Ubegrensede regler per side",
+    "description": "Pro benefit 1."
+  },
+  "lic_b2": {
+    "message": "Mapperuting til undermapper",
+    "description": "Pro benefit 2."
+  },
+  "lic_b3": {
+    "message": "Regex-søk og erstatt",
+    "description": "Pro benefit 3."
+  },
+  "lic_b4": {
+    "message": "Sidetittel- og PDF-tittel-tokener",
+    "description": "Pro benefit 4."
+  },
+  "lic_b5": {
+    "message": "Sikkerhetskopi, eksport og import av konfigurasjon",
+    "description": "Pro benefit 5."
+  },
+  "saved": {
+    "message": "Lagret",
+    "description": "Generic saved confirmation."
+  },
+  "err_template": {
+    "message": "Den malen kunne ikke lagres.",
+    "description": "Generic template save failure."
+  },
+  "err_bad_token": {
+    "message": "Ukjent token i malen: ",
+    "description": "Prefix before the offending token name."
+  },
+  "ob_brand": {
+    "message": "Smart Rename Downloads",
+    "description": "Onboarding brand name."
+  },
+  "ob_by": {
+    "message": "· av Zovo",
+    "description": "Onboarding brand attribution suffix."
+  },
+  "ob_skip": {
+    "message": "Hopp over intro",
+    "description": "Skip onboarding button."
+  },
+  "ob_back": {
+    "message": "Tilbake",
+    "description": "Previous-step button."
+  },
+  "ob_next": {
+    "message": "Neste",
+    "description": "Next-step button."
+  },
+  "ob_later": {
+    "message": "Kanskje senere",
+    "description": "Next-button label on the offer step."
+  },
+  "ob_start": {
+    "message": "Begynn å bruke det",
+    "description": "Final onboarding button."
+  },
+  "ob_stepno": {
+    "message": "{a} av {b}",
+    "description": "Step counter, e.g. 1 of 6. {a} current, {b} total."
+  },
+  "ob_s1_kicker": {
+    "message": "Problemet med nedlastingsmappen",
+    "description": "Step 1 kicker."
+  },
+  "ob_s1_title": {
+    "message": "Du kommer aldri til å finne den filen igjen.",
+    "description": "Step 1 title."
+  },
+  "ob_s1_pt": {
+    "message": "Bygget for folk som laster ned hele dagen. Forskere, regnskapsførere, alle som har en nedlastingsmappe som stille har kommet ut av kontroll.",
+    "description": "Step 1 secondary paragraph."
+  },
+  "ob_s2_kicker": {
+    "message": "Én regel, allerede på",
+    "description": "Step 2 kicker."
+  },
+  "ob_s2_title": {
+    "message": "Se et rotete navn bli til et ekte et.",
+    "description": "Step 2 title."
+  },
+  "ob_s2_lede": {
+    "message": "Standardmønsteret er datoen, så nettstedet, så det opprinnelige navnet. Straks en nedlasting er ferdig, blir navnet skrevet om og lagret rett til disk. Ingen klikk, ingen dialog. Her er det på en ekte fil.",
+    "description": "Step 2 body."
+  },
+  "ob_demo_btn": {
+    "message": "Se det endre navn",
+    "description": "Button that replays the rename demo."
+  },
+  "ob_saved_as": {
+    "message": "Lagret som",
+    "description": "Demo label for the original filename."
+  },
+  "ob_renamed_to": {
+    "message": "Omdøpt til",
+    "description": "Demo label for the renamed filename."
+  },
+  "ob_fw_kept": {
+    "message": ".pdf beholdt",
+    "description": "Token chip: the real extension is kept."
+  },
+  "ob_s3_kicker": {
+    "message": "To minutter, én gang",
+    "description": "Step 3 kicker."
+  },
+  "ob_s3_title": {
+    "message": "Angi navnemønsteret du beholder for godt.",
+    "description": "Step 3 title."
+  },
+  "ob_s3_lede": {
+    "message": "Bygg det fra tokener. Klikk på ett for å sette det inn i mønsteret og se eksempelet oppdateres. Den ekte filendelsen beholdes alltid på slutten. Lagre det, og hver fremtidig nedlasting følger dette.",
+    "description": "Step 3 body."
+  },
+  "ob_s3_pt": {
+    "message": "Det bor i nettleseren din. Endre det når som helst fra innstillingene, og ingenting om filene dine sendes noen gang noe sted.",
+    "description": "Step 3 secondary paragraph."
+  },
+  "ob_template_label": {
+    "message": "Ditt navnemønster",
+    "description": "Onboarding template input label."
+  },
+  "ob_result": {
+    "message": "Resultat",
+    "description": "Onboarding preview result label."
+  },
+  "ob_save_btn": {
+    "message": "Lagre mønsteret mitt",
+    "description": "Save-pattern button."
+  },
+  "ob_pattern_saved": {
+    "message": "Mønster lagret",
+    "description": "Save-pattern button after saving."
+  },
+  "ob_saved_msg": {
+    "message": "Lagret. Hver nedlasting følger dette nå.",
+    "description": "Confirmation after the pattern is saved."
+  },
+  "ob_s4_kicker": {
+    "message": "Hvorfor du kan la det gå",
+    "description": "Step 4 kicker."
+  },
+  "ob_s4_title": {
+    "message": "Lokal av design, bygget åpent av én utvikler.",
+    "description": "Step 4 title."
+  },
+  "ob_s4_lede": {
+    "message": "Filene dine og navneendringshistorikken din forlater aldri denne maskinen. På gratisplanen gjør utvidelsen ingen nettverkskall i det hele tatt, og koden er liten nok til å leses på én økt.",
+    "description": "Step 4 body."
+  },
+  "ob_stat1_n": {
+    "message": "Lokalt",
+    "description": "Stat 1 value."
+  },
+  "ob_stat1_l": {
+    "message": "hver navneendring kjører på din enhet",
+    "description": "Stat 1 label."
+  },
+  "ob_stat2_n": {
+    "message": "Privat",
+    "description": "Stat 2 value."
+  },
+  "ob_stat2_l": {
+    "message": "ingenting forlater denne maskinen",
+    "description": "Stat 2 label."
+  },
+  "ob_stat3_n": {
+    "message": "Åpent",
+    "description": "Stat 3 value."
+  },
+  "ob_stat3_l": {
+    "message": "bygget åpent, hver commit",
+    "description": "Stat 3 label."
+  },
+  "ob_s4_pt": {
+    "message": "En nedlastings-navneendrer er der du møter Zovo. Den større planen er et ærlig lag for hele utvidelsesverdenen, ett verktøy om gangen, uten spam og uten sporing.",
+    "description": "Step 4 secondary paragraph."
+  },
+  "ob_link_why": {
+    "message": "Hvorfor jeg bygger Zovo",
+    "description": "Link: why Zovo."
+  },
+  "ob_link_vision": {
+    "message": "Visjonen",
+    "description": "Link: the vision."
+  },
+  "ob_link_safe": {
+    "message": "Hvordan vi holder deg trygg",
+    "description": "Link: safety."
+  },
+  "ob_trust1_h": {
+    "message": "Alt forblir på enheten din",
+    "description": "Trust point 1 heading."
+  },
+  "ob_trust1_b": {
+    "message": "Mønsteret, reglene og historikken din bor i lokal nettleserlagring. Ingen konto, ingen synkroniseringsserver, ingenting sendes ut.",
+    "description": "Trust point 1 body."
+  },
+  "ob_trust2_h": {
+    "message": "Én person, som bygger i det åpne",
+    "description": "Trust point 2 heading."
+  },
+  "ob_s5_kicker": {
+    "message": "Den ærlige avtalen",
+    "description": "Step 5 kicker."
+  },
+  "ob_s5_title": {
+    "message": "Gratis navneendringer for alltid. Eller eie alt, én gang.",
+    "description": "Step 5 title."
+  },
+  "ob_s5_lede": {
+    "message": "Den stille navneendrings-kjernen forblir gratis, uten grense for hvor mange filer den berører. Én betaling på nittini dollar slår på ubegrensede regler per side, mapperuting, regex-opprydding og navngivning fra en side- eller PDF-tittel.",
+    "description": "Step 5 body."
+  },
+  "ob_plan_free": {
+    "message": "Gratis",
+    "description": "Free plan name."
+  },
+  "ob_free_unit": {
+    "message": "for alltid",
+    "description": "Free plan price unit."
+  },
+  "ob_free1": {
+    "message": "Hver nedlasting får nytt navn av seg selv",
+    "description": "Free benefit 1."
+  },
+  "ob_free2": {
+    "message": "De tre kjernetokenene: dato, nettsted, opprinnelig navn",
+    "description": "Free benefit 2."
+  },
+  "ob_free3": {
+    "message": "Én lagret regel per side",
+    "description": "Free benefit 3."
+  },
+  "ob_free4": {
+    "message": "Konflikthåndtering og en levende teller",
+    "description": "Free benefit 4."
+  },
+  "ob_ribbon": {
+    "message": "Best verdi",
+    "description": "Lifetime plan ribbon."
+  },
+  "ob_plan_life": {
+    "message": "Livstid",
+    "description": "Lifetime plan name."
+  },
+  "ob_life_unit": {
+    "message": "engangs",
+    "description": "Lifetime plan price unit."
+  },
+  "ob_life1": {
+    "message": "Ubegrensede regler per side",
+    "description": "Lifetime benefit 1."
+  },
+  "ob_life2": {
+    "message": "Rut filer inn i Downloads-undermapper etter side eller dato",
+    "description": "Lifetime benefit 2."
+  },
+  "ob_life3": {
+    "message": "Regex-opprydding pluss sidetittel- og PDF-tittel-tokener",
+    "description": "Lifetime benefit 3."
+  },
+  "ob_life4": {
+    "message": "Sikkerhetskopi og import av konfigurasjon på tvers av maskiner",
+    "description": "Lifetime benefit 4."
+  },
+  "ob_life5": {
+    "message": "Hver fremtidig oppdatering til dette verktøyet, inkludert",
+    "description": "Lifetime benefit 5."
+  },
+  "ob_life6": {
+    "message": "Én betaling, ingen abonnement, noensinne",
+    "description": "Lifetime benefit 6."
+  },
+  "ob_life_cta": {
+    "message": "Få livstid for $$99",
+    "description": "Lifetime purchase CTA."
+  },
+  "ob_guarantee": {
+    "message": "14 dagers refusjon, ingen spørsmål. Foretrekker du månedlig? Det er $$4.99 på samme side.",
+    "description": "Refund guarantee line."
+  },
+  "ob_s6_kicker": {
+    "message": "Du er klar",
+    "description": "Step 6 kicker."
+  },
+  "ob_s6_title": {
+    "message": "Ingenting igjen å gjøre. Det virker allerede.",
+    "description": "Step 6 title."
+  },
+  "ob_s6_lede": {
+    "message": "Den neste filen du laster ned får et rent navn av seg selv. Ingen knapp å trykke på, ingen dialog å bekrefte. Her er hva som skjer fra nå av.",
+    "description": "Step 6 body."
+  },
+  "ob_dev_h": {
+    "message": "Fra utvikleren",
+    "description": "Developer note heading."
+  },
+  "ob_dev_b": {
+    "message": "Jeg bygger Zovo på egen hånd, i det åpne. Hvis noe går i stykker, skriv til meg og jeg svarer. Navneendrere er bare begynnelsen. Planen er et ærlig lag for hele nettleseren, og dine nittini dollar sender den neste delen av det.",
+    "description": "Developer note body."
+  },
+  "ob_link_github": {
+    "message": "Nå meg på GitHub",
+    "description": "Link: GitHub."
+  },
+  "ob_link_going": {
+    "message": "Hvor dette er på vei",
+    "description": "Link: roadmap."
+  },
+  "ob_cheat1_k": {
+    "message": "Hver nedlasting",
+    "description": "Cheat-sheet row 1 key."
+  },
+  "ob_cheat1_v": {
+    "message": "Omdøpt ved lagring",
+    "description": "Cheat-sheet row 1 value."
+  },
+  "ob_cheat2_k": {
+    "message": "Popup-vinduet",
+    "description": "Cheat-sheet row 2 key."
+  },
+  "ob_cheat2_v": {
+    "message": "Teller hver navneendring",
+    "description": "Cheat-sheet row 2 value."
+  },
+  "ob_cheat3_k": {
+    "message": "Mønsteret ditt",
+    "description": "Cheat-sheet row 3 key."
+  },
+  "ob_cheat3_v": {
+    "message": "Rediger det i innstillinger",
+    "description": "Cheat-sheet row 3 value."
+  },
+  "ob_cheat4_k": {
+    "message": "Første sideregel",
+    "description": "Cheat-sheet row 4 key."
+  },
+  "ob_cheat4_v": {
+    "message": "Gratis å legge til",
+    "description": "Cheat-sheet row 4 value."
+  }
+}

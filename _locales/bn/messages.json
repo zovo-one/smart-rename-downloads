@@ -1,0 +1,834 @@
+{
+  "extName": {
+    "message": "Smart Rename Downloads",
+    "description": "Extension name shown in the Chrome Web Store and toolbar."
+  },
+  "extDesc": {
+    "message": "তারিখ, সাইট ও শিরোনাম টোকেন দিয়ে প্রতিটি ডাউনলোড স্বয়ংক্রিয় পুনঃনামকরণ। সাইট-নিয়ম, রেজেক্স, ফোল্ডার রাউটিং। লোকাল, শূন্য ক্লিক।",
+    "description": "Chrome Web Store short description (max 132 chars)."
+  },
+  "popup_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Popup header title."
+  },
+  "popup_open_settings": {
+    "message": "সেটিংস খুলুন",
+    "description": "Aria label for the settings gear button."
+  },
+  "popup_settings": {
+    "message": "সেটিংস",
+    "description": "Tooltip for the settings gear button."
+  },
+  "popup_health": {
+    "message": "পুনঃনামকরণ থামানো হয়েছে — ডাউনলোড অনুমতি সরানো হয়েছে।",
+    "description": "Shown when the downloads permission is missing."
+  },
+  "popup_regrant": {
+    "message": "পুনরায় সক্ষম করুন",
+    "description": "Link to re-grant the downloads permission."
+  },
+  "popup_hero_label": {
+    "message": "পুনঃনামকৃত ফাইল",
+    "description": "Label under the big lifetime rename counter."
+  },
+  "popup_hero_sub": {
+    "message": "প্রতিটি ডাউনলোড আপনার ডিস্কে পৌঁছানোর আগেই স্বয়ংক্রিয়ভাবে পুনঃনামকরণ হয়।",
+    "description": "Supporting line under the hero counter."
+  },
+  "popup_master_title": {
+    "message": "ডাউনলোড স্বয়ংক্রিয় পুনঃনামকরণ",
+    "description": "Master on/off switch title."
+  },
+  "popup_master_aria": {
+    "message": "স্বয়ংক্রিয় ডাউনলোড পুনঃনামকরণ চালু/বন্ধ করুন",
+    "description": "Accessible name for the master switch."
+  },
+  "popup_master_on": {
+    "message": "চালু — প্রতিটি ডাউনলোড পুনঃনামকরণ হচ্ছে",
+    "description": "Master switch note when enabled."
+  },
+  "popup_master_off": {
+    "message": "বন্ধ — Chrome তার ডিফল্ট নাম রাখে",
+    "description": "Master switch note when disabled."
+  },
+  "popup_recent": {
+    "message": "সাম্প্রতিক পুনঃনামকরণ",
+    "description": "Section label for the recent-renames list."
+  },
+  "popup_empty_title": {
+    "message": "আপনি প্রস্তুত হলেই তৈরি",
+    "description": "Empty-state headline in the popup."
+  },
+  "popup_empty_text": {
+    "message": "আপনার পরবর্তী ডাউনলোড স্বয়ংক্রিয়ভাবে পুনঃনামকরণ হবে। এটি এখানে দেখা যাবে।",
+    "description": "Empty-state body in the popup."
+  },
+  "popup_milestone_text": {
+    "message": "Smart Rename {n}টি ডাউনলোড সাজিয়েছে। Pro সেগুলো স্বয়ংক্রিয়ভাবে ফোল্ডারে সাজায়।",
+    "description": "Post-success upgrade nudge. {n} is the rename count."
+  },
+  "popup_milestone_cta": {
+    "message": "Pro দেখুন",
+    "description": "CTA on the milestone nudge."
+  },
+  "popup_dismiss": {
+    "message": "বাতিল করুন",
+    "description": "Dismiss the milestone nudge."
+  },
+  "popup_trust": {
+    "message": "লোকাল · কোনো অ্যাকাউন্ট নেই · কোনো ট্র্যাকিং নেই",
+    "description": "Trust line in the popup footer."
+  },
+  "popup_upgrade": {
+    "message": "Pro-তে আপগ্রেড করুন",
+    "description": "Upgrade button in the popup footer."
+  },
+  "flag_timeout": {
+    "message": "ডিফল্ট রাখা হয়েছে",
+    "description": "Recent-list flag: rename fell back to Chrome's default name (timeout)."
+  },
+  "flag_sanitize": {
+    "message": "ডিফল্ট রাখা হয়েছে",
+    "description": "Recent-list flag: name could not be sanitized."
+  },
+  "flag_nomatch": {
+    "message": "কোনো মিল নেই",
+    "description": "Recent-list flag: no site rule matched."
+  },
+  "opt_title": {
+    "message": "Smart Rename Downloads",
+    "description": "Options brand name."
+  },
+  "opt_trust": {
+    "message": "সবকিছু এই ডিভাইসে থাকে। কোনো ট্র্যাকিং নেই।",
+    "description": "Options sidebar trust line."
+  },
+  "aria_theme": {
+    "message": "রঙের থিম",
+    "description": "Aria label for the theme radiogroup."
+  },
+  "theme_system": {
+    "message": "সিস্টেম",
+    "description": "Theme option: follow OS."
+  },
+  "theme_light": {
+    "message": "হালকা",
+    "description": "Theme option: light."
+  },
+  "theme_dark": {
+    "message": "গাঢ়",
+    "description": "Theme option: dark."
+  },
+  "tier_free": {
+    "message": "ফ্রি",
+    "description": "Free plan label."
+  },
+  "tier_trial": {
+    "message": "ট্রায়াল",
+    "description": "Trial plan label."
+  },
+  "tier_pro": {
+    "message": "Pro",
+    "description": "Pro plan label."
+  },
+  "tab_template": {
+    "message": "টেমপ্লেট",
+    "description": "Settings tab: naming template."
+  },
+  "tab_sites": {
+    "message": "সাইট-ভিত্তিক নিয়ম",
+    "description": "Settings tab: per-site rules."
+  },
+  "tab_advanced": {
+    "message": "উন্নত",
+    "description": "Settings tab: advanced naming."
+  },
+  "tab_backup": {
+    "message": "ব্যাকআপ",
+    "description": "Settings tab: backup and restore."
+  },
+  "tab_license": {
+    "message": "লাইসেন্স",
+    "description": "Settings tab: license and plan."
+  },
+  "tpl_h1": {
+    "message": "নামকরণ টেমপ্লেট",
+    "description": "Template panel heading."
+  },
+  "tpl_lede": {
+    "message": "প্রতিটি ডাউনলোড যে ফাইলনাম পায় তা তৈরি করুন। আসল ফাইল এক্সটেনশন সবসময় রাখা হয়।",
+    "description": "Template panel intro."
+  },
+  "tpl_label": {
+    "message": "টেমপ্লেট",
+    "description": "Template input label."
+  },
+  "tpl_tokens_aria": {
+    "message": "একটি টোকেন যোগ করুন",
+    "description": "Aria label for the token chip row."
+  },
+  "tpl_conflict": {
+    "message": "যদি সেই নামের একটি ফাইল ইতিমধ্যেই থাকে",
+    "description": "Conflict-policy select label."
+  },
+  "conflict_uniquify": {
+    "message": "একটি সংখ্যা যোগ করুন — উভয়ই রাখুন",
+    "description": "Conflict policy: uniquify."
+  },
+  "conflict_overwrite": {
+    "message": "পুরনো ফাইলটি ওভাররাইট করুন",
+    "description": "Conflict policy: overwrite."
+  },
+  "conflict_prompt": {
+    "message": "প্রতিবার আমাকে জিজ্ঞাসা করুন",
+    "description": "Conflict policy: prompt."
+  },
+  "tpl_save": {
+    "message": "টেমপ্লেট সংরক্ষণ করুন",
+    "description": "Save-template button."
+  },
+  "tpl_preview_h": {
+    "message": "লাইভ প্রিভিউ",
+    "description": "Preview section label."
+  },
+  "tpl_pv_host": {
+    "message": "নমুনা সাইট",
+    "description": "Preview sample-host input label."
+  },
+  "tpl_pv_name": {
+    "message": "নমুনা ডাউনলোড",
+    "description": "Preview sample-name input label."
+  },
+  "tpl_pv_result": {
+    "message": "ফলাফল",
+    "description": "Preview result label."
+  },
+  "tpl_pv_hint": {
+    "message": "ফ্রি টেমপ্লেটে একটি “/” “-” হিসেবে সংরক্ষিত হয়। ফোল্ডার রাউটিং একটি Pro ফিচার।",
+    "description": "Preview hint about slashes and folder routing."
+  },
+  "sites_h1": {
+    "message": "সাইট-ভিত্তিক নিয়ম",
+    "description": "Sites panel heading."
+  },
+  "sites_lede": {
+    "message": "একটি নির্দিষ্ট সাইটকে তার নিজস্ব টেমপ্লেট দিন — ইনভয়েস ফোল্ডারে, নথি শিরোনামে। ফ্রি-তে একটি নিয়ম আছে যাতে আপনি অনুভব করতে পারেন; Pro সীমাহীন।",
+    "description": "Sites panel intro."
+  },
+  "sites_count": {
+    "message": "1টির মধ্যে 0টি ফ্রি নিয়ম ব্যবহৃত",
+    "description": "Initial site-rule count text."
+  },
+  "sites_count_free": {
+    "message": "1টির মধ্যে {n}টি ফ্রি নিয়ম ব্যবহৃত",
+    "description": "Site-rule count for Free. {n} is the count."
+  },
+  "sites_count_pro": {
+    "message": "{n}টি নিয়ম",
+    "description": "Site-rule count for Pro. {n} is the count."
+  },
+  "sites_empty": {
+    "message": "এখনও কোনো সাইট নিয়ম নেই। নিচে একটি যোগ করুন।",
+    "description": "Empty state for site rules."
+  },
+  "sites_add_h": {
+    "message": "একটি নিয়ম যোগ করুন",
+    "description": "Add-rule section label."
+  },
+  "sites_match": {
+    "message": "সাইট (হোস্ট বা *.host)",
+    "description": "Rule match input label."
+  },
+  "sites_match_ph": {
+    "message": "stripe.com",
+    "description": "Rule match placeholder."
+  },
+  "sites_template": {
+    "message": "এই সাইটের জন্য টেমপ্লেট",
+    "description": "Rule template input label."
+  },
+  "sites_template_ph": {
+    "message": "{date}-invoice-{original}",
+    "description": "Rule template placeholder."
+  },
+  "sites_add_btn": {
+    "message": "সাইট নিয়ম যোগ করুন",
+    "description": "Add-rule button."
+  },
+  "sites_delete": {
+    "message": "নিয়ম মুছুন",
+    "description": "Aria label for a rule's delete button."
+  },
+  "sites_need_both": {
+    "message": "একটি সাইট এবং একটি টেমপ্লেট উভয়ই লিখুন।",
+    "description": "Validation when a rule field is empty."
+  },
+  "sites_add_err": {
+    "message": "সেই নিয়মটি যোগ করা যায়নি।",
+    "description": "Generic add-rule failure."
+  },
+  "adv_h1": {
+    "message": "উন্নত নামকরণ",
+    "description": "Advanced panel heading."
+  },
+  "adv_lede": {
+    "message": "আপনি আসলে যেভাবে ডাউনলোড সাজান তার জন্য শক্তিশালী টুল। Zovo Pro-তে অন্তর্ভুক্ত।",
+    "description": "Advanced panel intro."
+  },
+  "adv_save": {
+    "message": "সংরক্ষণ করুন",
+    "description": "Generic save button."
+  },
+  "adv_clear": {
+    "message": "মুছুন",
+    "description": "Generic clear button."
+  },
+  "adv_unlock": {
+    "message": "Pro দিয়ে আনলক করুন",
+    "description": "CTA on a locked Pro card."
+  },
+  "adv_on": {
+    "message": "সক্ষম",
+    "description": "Feature toggled on."
+  },
+  "adv_off": {
+    "message": "নিষ্ক্রিয়",
+    "description": "Feature toggled off."
+  },
+  "adv_perm_needed": {
+    "message": "এটি সক্ষম করতে অনুমতি প্রয়োজন।",
+    "description": "Shown when an optional permission is denied."
+  },
+  "adv_toggle_err": {
+    "message": "এই সেটিং আপডেট করা যায়নি।",
+    "description": "Generic toggle failure."
+  },
+  "adv_folder_h": {
+    "message": "ফোল্ডার রাউটিং",
+    "description": "Folder-routing card heading."
+  },
+  "adv_folder_note": {
+    "message": "ফাইল আপনার ডাউনলোড ফোল্ডারের সাবফোল্ডারে ডাউনলোড করুন, যেমন Downloads/{hostname}/…",
+    "description": "Folder-routing explanation."
+  },
+  "adv_folder_label": {
+    "message": "সাবফোল্ডার পাথ (টোকেন অনুমোদিত)",
+    "description": "Folder-path input label."
+  },
+  "adv_folder_ph": {
+    "message": "{hostname}",
+    "description": "Folder-path placeholder."
+  },
+  "adv_folder_err": {
+    "message": "ফোল্ডার রাউটিং সংরক্ষণ করা যায়নি।",
+    "description": "Folder-routing save failure."
+  },
+  "adv_regex_h": {
+    "message": "খুঁজুন ও প্রতিস্থাপন (রেজেক্স)",
+    "description": "Regex card heading."
+  },
+  "adv_regex_note": {
+    "message": "সংরক্ষণের আগে একটি রেগুলার এক্সপ্রেশন দিয়ে নাম পরিষ্কার করুন।",
+    "description": "Regex explanation."
+  },
+  "adv_regex_find": {
+    "message": "খুঁজুন",
+    "description": "Regex find input label."
+  },
+  "adv_regex_find_ph": {
+    "message": "\\s+",
+    "description": "Regex find placeholder."
+  },
+  "adv_regex_replace": {
+    "message": "প্রতিস্থাপন",
+    "description": "Regex replace input label."
+  },
+  "adv_regex_replace_ph": {
+    "message": "-",
+    "description": "Regex replace placeholder."
+  },
+  "adv_regex_flags": {
+    "message": "ফ্ল্যাগ",
+    "description": "Regex flags input label."
+  },
+  "adv_regex_need": {
+    "message": "খুঁজতে একটি প্যাটার্ন লিখুন।",
+    "description": "Validation when the regex find is empty."
+  },
+  "adv_regex_bad": {
+    "message": "সেই প্যাটার্নটি অবৈধ বা অনিরাপদ।",
+    "description": "Regex validation failure."
+  },
+  "adv_regex_err": {
+    "message": "প্যাটার্নটি সংরক্ষণ করা যায়নি।",
+    "description": "Generic regex save failure."
+  },
+  "adv_cleared": {
+    "message": "মুছে ফেলা হয়েছে",
+    "description": "Regex cleared confirmation."
+  },
+  "adv_title_h": {
+    "message": "পৃষ্ঠা-শিরোনাম টোকেন {title}",
+    "description": "Title-token card heading."
+  },
+  "adv_title_note": {
+    "message": "ফাইলনামে উৎস পৃষ্ঠার শিরোনাম ব্যবহার করুন। এটি চালু করলে Chrome-এর কাছে ট্যাব অনুমতি চাওয়া হয়।",
+    "description": "Title-token explanation."
+  },
+  "adv_title_toggle": {
+    "message": "{title} টোকেন সক্ষম করুন",
+    "description": "Title-token toggle label."
+  },
+  "adv_title_aria": {
+    "message": "পৃষ্ঠা-শিরোনাম টোকেন সক্ষম করুন",
+    "description": "Accessible name for the title-token switch."
+  },
+  "adv_pdf_h": {
+    "message": "PDF শিরোনাম টোকেন {pdftitle}",
+    "description": "PDF-token card heading."
+  },
+  "adv_pdf_note": {
+    "message": "ফাইলের ভিতরে সংরক্ষিত শিরোনাম দিয়ে PDF-এর নাম দিন। এটি নেটওয়ার্কের মাধ্যমে PDF পড়ে, তাই সাইট অ্যাক্সেস চায় এবং ডিফল্টভাবে বন্ধ থাকে।",
+    "description": "PDF-token explanation."
+  },
+  "adv_pdf_toggle": {
+    "message": "{pdftitle} টোকেন সক্ষম করুন",
+    "description": "PDF-token toggle label."
+  },
+  "adv_pdf_aria": {
+    "message": "PDF শিরোনাম টোকেন সক্ষম করুন",
+    "description": "Accessible name for the PDF-token switch."
+  },
+  "backup_h1": {
+    "message": "ব্যাকআপ ও পুনরুদ্ধার",
+    "description": "Backup panel heading."
+  },
+  "backup_lede": {
+    "message": "আপনার সেটআপ একটি ফাইলে এক্সপোর্ট করুন, বা অন্য মেশিনে নিয়ে যান। Zovo Pro-তে অন্তর্ভুক্ত।",
+    "description": "Backup panel intro."
+  },
+  "backup_export_h": {
+    "message": "কনফিগারেশন এক্সপোর্ট করুন",
+    "description": "Export card heading."
+  },
+  "backup_export_note": {
+    "message": "আপনার টেমপ্লেট, নিয়ম ও সেটিংস সহ একটি JSON ফাইল ডাউনলোড করে। কোনো ইতিহাস নেই, কোনো ব্যক্তিগত তথ্য নেই।",
+    "description": "Export explanation."
+  },
+  "backup_export_btn": {
+    "message": "ফাইলে এক্সপোর্ট করুন",
+    "description": "Export button."
+  },
+  "backup_exported": {
+    "message": "এক্সপোর্ট হয়েছে",
+    "description": "Export confirmation."
+  },
+  "backup_export_err": {
+    "message": "এক্সপোর্ট ব্যর্থ হয়েছে।",
+    "description": "Export failure."
+  },
+  "backup_import_h": {
+    "message": "কনফিগারেশন ইমপোর্ট করুন",
+    "description": "Import card heading."
+  },
+  "backup_import_label": {
+    "message": "একটি এক্সপোর্ট করা কনফিগারেশন পেস্ট করুন",
+    "description": "Import textarea label."
+  },
+  "backup_import_ph": {
+    "message": "{\"zovo_template\":\"…\"}",
+    "description": "Import textarea placeholder."
+  },
+  "backup_import_btn": {
+    "message": "ইমপোর্ট করুন",
+    "description": "Import button."
+  },
+  "backup_imported": {
+    "message": "ইমপোর্ট হয়েছে",
+    "description": "Import confirmation."
+  },
+  "backup_need_json": {
+    "message": "প্রথমে একটি কনফিগারেশন পেস্ট করুন।",
+    "description": "Validation when import is empty."
+  },
+  "backup_import_err": {
+    "message": "সেই ফাইলটি ইমপোর্ট করা যায়নি।",
+    "description": "Import failure."
+  },
+  "lic_h1": {
+    "message": "আপনার প্ল্যান",
+    "description": "License panel heading."
+  },
+  "lic_lede": {
+    "message": "একটি পেমেন্ট প্রতিটি নামকরণ ফিচার চিরকালের জন্য আনলক করে। কোনো সাবস্ক্রিপশন নেই।",
+    "description": "License panel intro."
+  },
+  "lic_current": {
+    "message": "বর্তমান প্ল্যান",
+    "description": "Current-plan label."
+  },
+  "lic_free_sub": {
+    "message": "মূল পুনঃনামকরণ, একটি সাইট নিয়ম, চিরকাল।",
+    "description": "Free-plan subtitle."
+  },
+  "lic_pro_sub": {
+    "message": "প্রতিটি নামকরণ ফিচার আনলক হয়েছে। Zovo-কে সমর্থন করার জন্য ধন্যবাদ।",
+    "description": "Pro-plan subtitle."
+  },
+  "lic_upgrade": {
+    "message": "Pro-তে আপগ্রেড করুন",
+    "description": "Upgrade button on the License tab."
+  },
+  "lic_have_key": {
+    "message": "আমার একটি কী আছে",
+    "description": "License-key button."
+  },
+  "lic_included_h": {
+    "message": "Pro যা আনলক করে",
+    "description": "Benefits section label."
+  },
+  "lic_b1": {
+    "message": "সীমাহীন সাইট-ভিত্তিক নিয়ম",
+    "description": "Pro benefit 1."
+  },
+  "lic_b2": {
+    "message": "সাবফোল্ডারে ফোল্ডার রাউটিং",
+    "description": "Pro benefit 2."
+  },
+  "lic_b3": {
+    "message": "রেজেক্স খুঁজুন ও প্রতিস্থাপন",
+    "description": "Pro benefit 3."
+  },
+  "lic_b4": {
+    "message": "পৃষ্ঠা-শিরোনাম ও PDF-শিরোনাম টোকেন",
+    "description": "Pro benefit 4."
+  },
+  "lic_b5": {
+    "message": "কনফিগ ব্যাকআপ, এক্সপোর্ট ও ইমপোর্ট",
+    "description": "Pro benefit 5."
+  },
+  "saved": {
+    "message": "সংরক্ষিত হয়েছে",
+    "description": "Generic saved confirmation."
+  },
+  "err_template": {
+    "message": "সেই টেমপ্লেটটি সংরক্ষণ করা যায়নি।",
+    "description": "Generic template save failure."
+  },
+  "err_bad_token": {
+    "message": "টেমপ্লেটে অজানা টোকেন: ",
+    "description": "Prefix before the offending token name."
+  },
+  "ob_brand": {
+    "message": "Smart Rename Downloads",
+    "description": "Onboarding brand name."
+  },
+  "ob_by": {
+    "message": "· Zovo দ্বারা",
+    "description": "Onboarding brand attribution suffix."
+  },
+  "ob_skip": {
+    "message": "ভূমিকা এড়িয়ে যান",
+    "description": "Skip onboarding button."
+  },
+  "ob_back": {
+    "message": "পেছনে",
+    "description": "Previous-step button."
+  },
+  "ob_next": {
+    "message": "পরবর্তী",
+    "description": "Next-step button."
+  },
+  "ob_later": {
+    "message": "হয়তো পরে",
+    "description": "Next-button label on the offer step."
+  },
+  "ob_start": {
+    "message": "এটি ব্যবহার শুরু করুন",
+    "description": "Final onboarding button."
+  },
+  "ob_stepno": {
+    "message": "{a} / {b}",
+    "description": "Step counter, e.g. 1 of 6. {a} current, {b} total."
+  },
+  "ob_s1_kicker": {
+    "message": "ডাউনলোড ফোল্ডারের সমস্যা",
+    "description": "Step 1 kicker."
+  },
+  "ob_s1_title": {
+    "message": "আপনি সেই ফাইলটি আর কখনও খুঁজে পাবেন না।",
+    "description": "Step 1 title."
+  },
+  "ob_s1_pt": {
+    "message": "যারা সারাদিন ডাউনলোড করেন তাদের জন্য তৈরি। গবেষক, হিসাবরক্ষক, এবং যাদের ডাউনলোড ফোল্ডার নীরবে নিয়ন্ত্রণের বাইরে চলে যায়।",
+    "description": "Step 1 secondary paragraph."
+  },
+  "ob_s2_kicker": {
+    "message": "একটি নিয়ম, ইতিমধ্যেই চালু",
+    "description": "Step 2 kicker."
+  },
+  "ob_s2_title": {
+    "message": "একটি অকেজো নাম একটি আসল নামে বদলে যেতে দেখুন।",
+    "description": "Step 2 title."
+  },
+  "ob_s2_lede": {
+    "message": "ডিফল্ট প্যাটার্ন হলো তারিখ, তারপর সাইট, তারপর আসল নাম। ডাউনলোড শেষ হওয়ার মুহূর্তে, নামটি পুনর্লিখিত হয় এবং সরাসরি ডিস্কে লেখা হয়। কোনো ক্লিক নেই, কোনো ডায়ালগ নেই। এই যে একটি আসল ফাইলে।",
+    "description": "Step 2 body."
+  },
+  "ob_demo_btn": {
+    "message": "পুনঃনামকরণ দেখুন",
+    "description": "Button that replays the rename demo."
+  },
+  "ob_saved_as": {
+    "message": "যে নামে সংরক্ষিত",
+    "description": "Demo label for the original filename."
+  },
+  "ob_renamed_to": {
+    "message": "যে নামে পুনঃনামকৃত",
+    "description": "Demo label for the renamed filename."
+  },
+  "ob_fw_kept": {
+    "message": ".pdf রাখা হয়েছে",
+    "description": "Token chip: the real extension is kept."
+  },
+  "ob_s3_kicker": {
+    "message": "দুই মিনিট, একবার",
+    "description": "Step 3 kicker."
+  },
+  "ob_s3_title": {
+    "message": "যে নামকরণ প্যাটার্ন চিরকাল রাখবেন তা সেট করুন।",
+    "description": "Step 3 title."
+  },
+  "ob_s3_lede": {
+    "message": "টোকেন থেকে এটি তৈরি করুন। একটিতে ক্লিক করে প্যাটার্নে ফেলুন এবং নমুনা আপডেট হতে দেখুন। আসল ফাইল এক্সটেনশন সবসময় শেষে রাখা হয়। এটি সংরক্ষণ করুন এবং ভবিষ্যতের প্রতিটি ডাউনলোড এটি অনুসরণ করবে।",
+    "description": "Step 3 body."
+  },
+  "ob_s3_pt": {
+    "message": "এটি আপনার ব্রাউজারে থাকে। সেটিংস থেকে যেকোনো সময় পরিবর্তন করুন, এবং আপনার ফাইল সম্পর্কে কিছুই কখনও কোথাও পাঠানো হয় না।",
+    "description": "Step 3 secondary paragraph."
+  },
+  "ob_template_label": {
+    "message": "আপনার নামকরণ প্যাটার্ন",
+    "description": "Onboarding template input label."
+  },
+  "ob_result": {
+    "message": "ফলাফল",
+    "description": "Onboarding preview result label."
+  },
+  "ob_save_btn": {
+    "message": "আমার প্যাটার্ন সংরক্ষণ করুন",
+    "description": "Save-pattern button."
+  },
+  "ob_pattern_saved": {
+    "message": "প্যাটার্ন সংরক্ষিত হয়েছে",
+    "description": "Save-pattern button after saving."
+  },
+  "ob_saved_msg": {
+    "message": "সংরক্ষিত হয়েছে। প্রতিটি ডাউনলোড এখন এটি অনুসরণ করে।",
+    "description": "Confirmation after the pattern is saved."
+  },
+  "ob_s4_kicker": {
+    "message": "কেন আপনি এটি চালু রাখতে পারেন",
+    "description": "Step 4 kicker."
+  },
+  "ob_s4_title": {
+    "message": "ডিজাইনে লোকাল, একজন ডেভেলপার দ্বারা প্রকাশ্যে নির্মিত।",
+    "description": "Step 4 title."
+  },
+  "ob_s4_lede": {
+    "message": "আপনার ফাইল এবং আপনার পুনঃনামকরণ ইতিহাস কখনও এই মেশিন ছাড়ে না। ফ্রি প্ল্যানে এক্সটেনশনটি কোনো নেটওয়ার্ক কল করে না, এবং কোডটি এক বসায় পড়ার মতো ছোট।",
+    "description": "Step 4 body."
+  },
+  "ob_stat1_n": {
+    "message": "লোকাল",
+    "description": "Stat 1 value."
+  },
+  "ob_stat1_l": {
+    "message": "প্রতিটি পুনঃনামকরণ আপনার ডিভাইসে চলে",
+    "description": "Stat 1 label."
+  },
+  "ob_stat2_n": {
+    "message": "ব্যক্তিগত",
+    "description": "Stat 2 value."
+  },
+  "ob_stat2_l": {
+    "message": "কিছুই এই মেশিন ছাড়ে না",
+    "description": "Stat 2 label."
+  },
+  "ob_stat3_n": {
+    "message": "উন্মুক্ত",
+    "description": "Stat 3 value."
+  },
+  "ob_stat3_l": {
+    "message": "প্রকাশ্যে নির্মিত, প্রতিটি কমিট",
+    "description": "Stat 3 label."
+  },
+  "ob_s4_pt": {
+    "message": "একটি ডাউনলোড রিনেমার হলো যেখানে আপনি Zovo-র সাথে পরিচিত হন। বড় পরিকল্পনা হলো পুরো এক্সটেনশন জগতের জন্য একটি সৎ স্তর, একবারে একটি টুল, কোনো স্প্যাম ও কোনো ট্র্যাকিং ছাড়া।",
+    "description": "Step 4 secondary paragraph."
+  },
+  "ob_link_why": {
+    "message": "কেন আমি Zovo তৈরি করি",
+    "description": "Link: why Zovo."
+  },
+  "ob_link_vision": {
+    "message": "দৃষ্টিভঙ্গি",
+    "description": "Link: the vision."
+  },
+  "ob_link_safe": {
+    "message": "আমরা কীভাবে আপনাকে সুরক্ষিত রাখি",
+    "description": "Link: safety."
+  },
+  "ob_trust1_h": {
+    "message": "সবকিছু আপনার ডিভাইসে থাকে",
+    "description": "Trust point 1 heading."
+  },
+  "ob_trust1_b": {
+    "message": "আপনার প্যাটার্ন, নিয়ম ও ইতিহাস লোকাল ব্রাউজার স্টোরেজে থাকে। কোনো অ্যাকাউন্ট নেই, কোনো সিঙ্ক সার্ভার নেই, কিছুই বাইরে পাঠানো হয় না।",
+    "description": "Trust point 1 body."
+  },
+  "ob_trust2_h": {
+    "message": "একজন ব্যক্তি, প্রকাশ্যে নির্মাণ করছেন",
+    "description": "Trust point 2 heading."
+  },
+  "ob_s5_kicker": {
+    "message": "সৎ বিনিময়",
+    "description": "Step 5 kicker."
+  },
+  "ob_s5_title": {
+    "message": "চিরকাল ফ্রি পুনঃনামকরণ। অথবা একবারে সবকিছুর মালিক হন।",
+    "description": "Step 5 title."
+  },
+  "ob_s5_lede": {
+    "message": "নীরব পুনঃনামকরণ কোর ফ্রি থাকে, কতগুলো ফাইল স্পর্শ করে তার কোনো সীমা ছাড়াই। নিরানব্বই ডলারের একটি পেমেন্ট সীমাহীন সাইট-ভিত্তিক নিয়ম, ফোল্ডার রাউটিং, রেজেক্স পরিষ্কার, এবং একটি পৃষ্ঠা বা PDF শিরোনাম থেকে নামকরণ চালু করে।",
+    "description": "Step 5 body."
+  },
+  "ob_plan_free": {
+    "message": "ফ্রি",
+    "description": "Free plan name."
+  },
+  "ob_free_unit": {
+    "message": "চিরকাল",
+    "description": "Free plan price unit."
+  },
+  "ob_free1": {
+    "message": "প্রতিটি ডাউনলোড নিজে থেকে পুনঃনামকৃত",
+    "description": "Free benefit 1."
+  },
+  "ob_free2": {
+    "message": "তিনটি মূল টোকেন: তারিখ, সাইট, আসল নাম",
+    "description": "Free benefit 2."
+  },
+  "ob_free3": {
+    "message": "একটি সংরক্ষিত সাইট-ভিত্তিক নিয়ম",
+    "description": "Free benefit 3."
+  },
+  "ob_free4": {
+    "message": "কনফ্লিক্ট হ্যান্ডলিং এবং একটি লাইভ কাউন্টার",
+    "description": "Free benefit 4."
+  },
+  "ob_ribbon": {
+    "message": "সেরা মূল্য",
+    "description": "Lifetime plan ribbon."
+  },
+  "ob_plan_life": {
+    "message": "আজীবন",
+    "description": "Lifetime plan name."
+  },
+  "ob_life_unit": {
+    "message": "একবার",
+    "description": "Lifetime plan price unit."
+  },
+  "ob_life1": {
+    "message": "সীমাহীন সাইট-ভিত্তিক নিয়ম",
+    "description": "Lifetime benefit 1."
+  },
+  "ob_life2": {
+    "message": "সাইট বা তারিখ অনুযায়ী ফাইল ডাউনলোড সাবফোল্ডারে রাউট করুন",
+    "description": "Lifetime benefit 2."
+  },
+  "ob_life3": {
+    "message": "রেজেক্স পরিষ্কার এবং পৃষ্ঠা-শিরোনাম ও PDF-শিরোনাম টোকেন",
+    "description": "Lifetime benefit 3."
+  },
+  "ob_life4": {
+    "message": "মেশিনগুলোর মধ্যে কনফিগ ব্যাকআপ ও ইমপোর্ট",
+    "description": "Lifetime benefit 4."
+  },
+  "ob_life5": {
+    "message": "এই টুলের প্রতিটি ভবিষ্যৎ আপডেট, অন্তর্ভুক্ত",
+    "description": "Lifetime benefit 5."
+  },
+  "ob_life6": {
+    "message": "একটি পেমেন্ট, কোনো সাবস্ক্রিপশন নেই, কখনও নয়",
+    "description": "Lifetime benefit 6."
+  },
+  "ob_life_cta": {
+    "message": "$$99-এ আজীবন পান",
+    "description": "Lifetime purchase CTA."
+  },
+  "ob_guarantee": {
+    "message": "14 দিনের রিফান্ড, কোনো প্রশ্ন ছাড়াই। মাসিক পছন্দ করেন? এটি একই পৃষ্ঠায় $$4.99।",
+    "description": "Refund guarantee line."
+  },
+  "ob_s6_kicker": {
+    "message": "আপনি প্রস্তুত",
+    "description": "Step 6 kicker."
+  },
+  "ob_s6_title": {
+    "message": "আর কিছু করার নেই। এটি ইতিমধ্যেই কাজ করছে।",
+    "description": "Step 6 title."
+  },
+  "ob_s6_lede": {
+    "message": "আপনার ডাউনলোড করা পরবর্তী ফাইল নিজে থেকেই একটি পরিষ্কার নাম পায়। চাপার কোনো বোতাম নেই, নিশ্চিত করার কোনো ডায়ালগ নেই। এখান থেকে যা ঘটে তা এই।",
+    "description": "Step 6 body."
+  },
+  "ob_dev_h": {
+    "message": "ডেভেলপারের কাছ থেকে",
+    "description": "Developer note heading."
+  },
+  "ob_dev_b": {
+    "message": "আমি Zovo একা, প্রকাশ্যে তৈরি করি। কিছু ভেঙে গেলে, আমাকে লিখুন এবং আমি উত্তর দিই। রিনেমার শুধু শুরু। পরিকল্পনা হলো পুরো ব্রাউজারের জন্য একটি সৎ স্তর, এবং আপনার নিরানব্বই ডলার এর পরবর্তী অংশটি পাঠায়।",
+    "description": "Developer note body."
+  },
+  "ob_link_github": {
+    "message": "GitHub-এ আমার সাথে যোগাযোগ করুন",
+    "description": "Link: GitHub."
+  },
+  "ob_link_going": {
+    "message": "এটি কোথায় যাচ্ছে",
+    "description": "Link: roadmap."
+  },
+  "ob_cheat1_k": {
+    "message": "প্রতিটি ডাউনলোড",
+    "description": "Cheat-sheet row 1 key."
+  },
+  "ob_cheat1_v": {
+    "message": "সংরক্ষণে পুনঃনামকৃত",
+    "description": "Cheat-sheet row 1 value."
+  },
+  "ob_cheat2_k": {
+    "message": "পপআপ",
+    "description": "Cheat-sheet row 2 key."
+  },
+  "ob_cheat2_v": {
+    "message": "প্রতিটি পুনঃনামকরণ গণনা করে",
+    "description": "Cheat-sheet row 2 value."
+  },
+  "ob_cheat3_k": {
+    "message": "আপনার প্যাটার্ন",
+    "description": "Cheat-sheet row 3 key."
+  },
+  "ob_cheat3_v": {
+    "message": "সেটিংসে এটি সম্পাদনা করুন",
+    "description": "Cheat-sheet row 3 value."
+  },
+  "ob_cheat4_k": {
+    "message": "প্রথম সাইট নিয়ম",
+    "description": "Cheat-sheet row 4 key."
+  },
+  "ob_cheat4_v": {
+    "message": "যোগ করা ফ্রি",
+    "description": "Cheat-sheet row 4 value."
+  }
+}
